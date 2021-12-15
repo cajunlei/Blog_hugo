@@ -1,0 +1,33 @@
+#content .table-wrapper table {
+  border: 2px solid black !important;
+  border-collapse: separate !important;
+  border-spacing: 2px !important;
+}
+#content .table-wrapper table th {
+  background-color: black !important;
+  border: 1px solid black !important;
+  color: white;
+  padding: 0 !important;
+  text-align: center;
+}
+#content .table-wrapper table td {
+  border: 1px solid black !important;
+  padding: 0 !important;
+  text-align: center;
+}
+#content .table-wrapper table tr .number {
+  width: 10%;
+}
+#content .table-wrapper table tr .color {
+  width: 10%;
+}
+#content .table-wrapper table tr .text {
+  width: 20%;
+}
+@media screen and (max-width:680px) {
+  #content .table-wrapper table {
+    table-layout:fixed;
+    word-wrap: break-word;
+    font-size: .85rem !important;
+  }
+}

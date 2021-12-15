@@ -1,0 +1,17 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - 标签 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/tags/hugo/</link>
+        <description>Hugo - 标签 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 15 Oct 2021 13:05:36 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo &amp; Algolia 实现站内搜索</title>
+    <link>https://ll.sc.cn/posts/hugo-algolia-site-search/</link>
+    <pubDate>Fri, 15 Oct 2021 13:05:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/hugo-algolia-site-search/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Z-Turn/00_01_Hugo_Algolia_Search_cover.jpg" referrerpolicy="no-referrer">
+            </div><p>很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。</p>]]></description>
+</item></channel>
+</rss>

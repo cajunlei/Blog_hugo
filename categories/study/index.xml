@@ -1,0 +1,50 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>爱学习 - 分类 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/categories/study/</link>
+        <description>爱学习 - 分类 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://ll.sc.cn/categories/study/" rel="self" type="application/rss+xml" /><item>
+    <title>Markdown - 进阶知识</title>
+    <link>https://ll.sc.cn/posts/markdown-high-level/</link>
+    <pubDate>Tue, 07 Dec 2021 11:35:43 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/markdown-high-level/</guid>
+    <description><![CDATA[<p>Mermaid的功能介绍及使用方法；</p>]]></description>
+</item><item>
+    <title>Markdown - 基础知识</title>
+    <link>https://ll.sc.cn/posts/markdown-basics/</link>
+    <pubDate>Mon, 06 Dec 2021 21:35:33 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/markdown-basics/</guid>
+    <description><![CDATA[<p>Markdown是一种纯文本格式的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>]]></description>
+</item><item>
+    <title>CSS - 学习笔记</title>
+    <link>https://ll.sc.cn/posts/css-study-notes/</link>
+    <pubDate>Sun, 05 Dec 2021 09:24:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/css-study-notes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>颜色中英文对照表</title>
+    <link>https://ll.sc.cn/posts/color-chinese-and-english/</link>
+    <pubDate>Sat, 04 Dec 2021 11:45:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/color-chinese-and-english/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Bat - 学习笔记</title>
+    <link>https://ll.sc.cn/posts/bat-study-notes/</link>
+    <pubDate>Wed, 27 Oct 2021 15:42:53 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/bat-study-notes/</guid>
+    <description><![CDATA[<p>在学习 bat 批处理过程中学习的一些笔记分享……</p>]]></description>
+</item><item>
+    <title>SVG - 学习笔记</title>
+    <link>https://ll.sc.cn/posts/svg-study-notes/</link>
+    <pubDate>Mon, 25 Oct 2021 19:58:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/svg-study-notes/</guid>
+    <description><![CDATA[<p>在学习 SVG 过程中的一些笔记分享……</p>]]></description>
+</item></channel>
+</rss>

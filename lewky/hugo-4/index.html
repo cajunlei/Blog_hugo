@@ -1,0 +1,819 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building]">
+
+<meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录" />
+<meta property="og:description" content="前言
+本文主要记录从Hexo迁移至Hugo所遇到的一些坑，以及Hugo的LoveIt主题的一些bug之类的应对方案。下面是涉及到的Hexo、Hugo以及LoveIt各自的版本：
+
+
+1
+2
+3
+4
+5
+
+
+hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+
+
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ll.sc.cn/lewky/hugo-4/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.png"/><meta property="article:section" content="lewky" />
+<meta property="article:published_time" content="2020-10-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-30T23:07:05+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ll.sc.cn/images/logo.png"/>
+
+<meta name="twitter:title" content="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录"/>
+<meta name="twitter:description" content="前言
+本文主要记录从Hexo迁移至Hugo所遇到的一些坑，以及Hugo的LoveIt主题的一些bug之类的应对方案。下面是涉及到的Hexo、Hugo以及LoveIt各自的版本：
+
+
+1
+2
+3
+4
+5
+
+
+hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+
+
+"/>
+<meta name="application-name" content="LoveIt">
+<meta name="apple-mobile-web-app-title" content="LoveIt"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ec5c6d"><link rel="manifest" href="/images/site.webmanifest"><link rel="canonical" href="https://ll.sc.cn/lewky/hugo-4/" /><link rel="prev" href="https://ll.sc.cn/lewky/hugo-1/" /><link rel="next" href="https://ll.sc.cn/lewky/hugo-3.2/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><meta name="google-site-verification" content="google699009ae438f1e4d" /><meta name="msvalidate.01" content="0AA62D35A93C9239B95F5187EC12FAF1" /><meta name="baidu-site-verification" content="3f7de7fba11a61559c21d907904d0a1b" /><meta name="sogou_site_verification" content="VgMMts5sWb"/><meta name="360-site-verification" content="8eda9335dc386f7c204d42bfe6c012da" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ll.sc.cn\/lewky\/hugo-4\/"
+        },"genre": "lewky","keywords": "Lewky-Hugo","wordcount":  5159 ,
+        "url": "https:\/\/ll.sc.cn\/lewky\/hugo-4\/","datePublished": "2020-10-12T00:00:00+00:00","dateModified": "2021-11-30T23:07:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "雷相君","logo": "https:\/\/ll.sc.cn\/images\/avatar.png"},"author": {
+                "@type": "Person",
+                "name": "Lewky"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                        </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
+                        </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                        </div>
+                    <a class="menu-item" href="/about/"><i class='fas fa-info-circle'></i> 关于 
+                        </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
+                    </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                    </div>
+                <a class="menu-item" href="/about/"><i class='fas fa-info-circle'></i> 关于 
+                    </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://lewky.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Lewky</a></span></div>
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2020-10-12">2020-10-12</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-11-30">2021-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5159 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 11 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#hugo无法使用abbrlink导致的url与原本hexo的url不同步">Hugo无法使用<code>abbrlink</code>导致的URL与原本Hexo的URL不同步</a></li>
+    <li><a href="#valine评论功能无法使用">Valine评论功能无法使用</a></li>
+    <li><a href="#lightgallery图片相册功能无法使用">lightgallery图片相册功能无法使用</a></li>
+    <li><a href="#lightgallery启用时第二次加载页面时图片会变小">lightgallery启用时，第二次加载页面时图片会变小</a></li>
+    <li><a href="#翻页后首页的图片显示不了">翻页后首页的图片显示不了</a></li>
+    <li><a href="#自定义样式文件_customscss无法生效">自定义样式文件<code>_custom.scss</code>无法生效</a></li>
+    <li><a href="#无法直接自定义javascript">无法直接自定义JavaScript</a></li>
+    <li><a href="#文章摘要标志不生效">文章摘要标志不生效</a></li>
+    <li><a href="#文章标题里的特殊符号不需要使用字符实体">文章标题里的特殊符号不需要使用字符实体</a></li>
+    <li><a href="#console报错找不到sitewebmanifest">Console报错找不到<code>/site.webmanifest</code></a></li>
+    <li><a href="#远程部署到github-pages后build失败">远程部署到GitHub Pages后build失败</a>
+      <ol>
+        <li><a href="#全局禁用markdown输出功能">全局禁用Markdown输出功能</a></li>
+        <li><a href="#局部禁用markdown输出功能">局部禁用Markdown输出功能</a></li>
+        <li><a href="#终极方案新增nojekyll文件">终极方案：新增<code>.nojekyll</code>文件</a></li>
+      </ol>
+    </li>
+    <li><a href="#网站配置了keywords没有生效">网站配置了keywords没有生效</a></li>
+    <li><a href="#配置文件里的license不生效">配置文件里的<code>license</code>不生效</a></li>
+    <li><a href="#参考链接">参考链接</a></li>
+  </ol>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>本文主要记录从Hexo迁移至Hugo所遇到的一些坑，以及Hugo的LoveIt主题的一些bug之类的应对方案。下面是涉及到的Hexo、Hugo以及LoveIt各自的版本：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="hugo无法使用abbrlink导致的url与原本hexo的url不同步">Hugo无法使用<code>abbrlink</code>导致的URL与原本Hexo的URL不同步</h2>
+<p>原本的Hexo博客使用了<code>hexo-abbrlink</code>插件，目的是为每篇文章生成由字母和数字组成的随机URL，这样有利于SEO。迁移到Hugo后没找到类似的插件，只能用自带的<code>slug</code>功能来代替。</p>
+<p>原本的文章文件头里有一个abbrlink属性，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
+abbrlink: 71bd19d3
+---
+</code></pre></td></tr></table>
+</div>
+</div><p>为了让旧的文章url和以前保存一致，于是全部加上一个slug属性，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
+abbrlink: 71bd19d3
+slug: 71bd19d3
+---
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在站点配置文件里这样配置：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[permalinks]
+  posts = &#34;/posts/:slug.html&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就可以避免旧文章的URL在迁移后不一致的问题，但是这也引入了另一个问题，那就是每一篇新文章都要手动添加<code>slug</code>属性，否则就还是会直接拿文章标题来作为URL的一部分。</p>
+<p>不过这点还是可以接受的，每篇文章额外配置slug也不算麻烦，毕竟博客园同样有提供这种给URL起别名的功能，可以把一系列的文章起一些比较接近的URL，更有利于访问。</p>
+<h2 id="valine评论功能无法使用">Valine评论功能无法使用</h2>
+<p>LoveIt主题的评论功能默认情况下是无法在本地使用的，除非修改模板渲染文件，或者启动本地服务时添加参数，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hugo server -e production
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就可以在本地调试时使用&quot;评论系统&quot;, &ldquo;CDN&rdquo; 和 &ldquo;fingerprint&rdquo;。</p>
+<p>但是对于<code>v0.2.10</code>版本的LoveIt主题，只是加入启动参数依然无法使用Valine评论功能，原因是评论功能的模板文件有问题，需要我们自己修改才能正常使用，如下：</p>
+<ol>
+<li>把<code>\themes\LoveIt\layouts\partials\comment.html</code>拷贝到站点根目录下的<code>\layouts\partials\comment.html</code></li>
+<li>打开拷贝后的<code>comment.html</code>，找到<code>Valine</code>相关的代码，把<code>{{- if $valine.enable -}}</code>和<code>{{- end -}}</code>之间的代码改成如下：</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- if $valine.enable -}}
+    &lt;div id=&#34;valine&#34; class=&#34;comment&#34;&gt;&lt;/div&gt;
+    &lt;script src=&#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&#34;&gt;&lt;/script&gt;
+	&lt;script src=&#39;{{ $cdn.valineJS }}&#39;&gt;&lt;/script&gt;
+
+	&lt;script type=&#34;text/javascript&#34;&gt;
+		new Valine({
+			el: &#39;#valine&#39; ,
+			appId: &#39;{{ $valine.appId }}&#39;,
+			appKey: &#39;{{ $valine.appKey }}&#39;,
+			notify: &#39;{{ $valine.notify }}&#39;, 
+			verify: &#39;{{ $valine.verify }}&#39;, 
+			avatar:&#39;{{ $valine.avatar }}&#39;, 
+			placeholder: &#39;{{ $valine.placeholder }}&#39;,
+			visitor: &#39;{{ $valine.visitor }}&#39;
+		});
+	&lt;/script&gt;
+{{- end -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>之后在站点配置文件里启用<code>valine</code>，然后填上从<code>LeanCloud</code>的应用中得到的<code>appId</code>和<code>appKey</code>就可以用了。并且在使用了<code>valine</code>的同时，还可以顺带启用阅读次数的统计功能。以前用Hexo的时候，就是用的<code>LeanCloud</code>来帮忙统计阅读次数的。</p>
+<p><code>LeanCloud</code>的使用也很简单，去官网注册个账号，然后创建一个应用，然后进入该应用的配置，选择<code>设置</code> -&gt; <code>应用Keys</code>，然后复制该应用的<code>appId</code>和<code>appKey</code>到站点配置文件里就行了。</p>
+<h2 id="lightgallery图片相册功能无法使用">lightgallery图片相册功能无法使用</h2>
+<p>在启用了lightgallery功能后无法触发，然后在LoveIt仓库里找到了类似的issue，发现必须使用带标题的图片才能使用相册功能，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">![Alt Text](/url/to/your/image &#34;Title&#34;)
+</code></pre></td></tr></table>
+</div>
+</div><p>但是一般情况下在引入图片时都不会再特地起一个标题，尤其是原本就已经有大量文章里使用了不带标题的图片，想全部改过来是不可能的。</p>
+<p>接着发现已经有人发起了PR修复了该issue，只是作者还没merge，所以只能把这段代码自行合并到自己的博客项目了。做法也很简单：</p>
+<ul>
+<li>在站点根目录下创建的<code>/layouts/_default/_markup/render-image.html</code></li>
+<li>在新创建的这个<code>render-image.html</code>文件里黏贴下面的代码即可：</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ $figcap := or .Title .Text }}
+{{ $caption := or .Text &#34; &#34; }}
+{{- if eq $figcap $caption -}}
+    {{ $caption = &#34; &#34; }}
+{{- end -}}
+
+{{- if $figcap -}}
+    <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+        {{- dict &#34;Src&#34; .Destination &#34;Title&#34; $figcap &#34;Caption&#34; $caption &#34;Linked&#34; true &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
+        <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;image-caption&#34;</span><span class="p">&gt;</span>
+            {{- $figcap | safeHTML -}}
+        <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+{{- else -}}
+    {{- dict &#34;Src&#34; .Destination &#34;Title&#34; (path.Base .Destination) &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
+{{- end -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>另外，该做法会导致生成的图片下方多出一个<code>figcaption</code>标签，觉得这个图片名字标签太碍眼的，可以用下面的样式隐藏掉：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 图片 */</span>
+<span class="nt">figcaption</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="lightgallery启用时第二次加载页面时图片会变小">lightgallery启用时，第二次加载页面时图片会变小</h2>
+<p>该issue可见于<a href="https://github.com/dillonzq/LoveIt/issues/311?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener noreffer">lightgallery启用时，图片会显示得很小，是设计如此还是bug#311</a></p>
+<p>这是lazysizes的问题，具体参见[aFarkas/lazysizes#508]，解决方法是修改样式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">img</span><span class="o">[</span><span class="nt">data-sizes</span><span class="o">=</span><span class="s2">&#34;auto&#34;</span><span class="o">]</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>如果觉得100%太大可以改成别的比例，我用的是<code>width: 50%;</code>。</p>
+<h2 id="翻页后首页的图片显示不了">翻页后首页的图片显示不了</h2>
+<p>首页的头像和文章图片显示正常，但是点击跳转到第二页或者其他除第一页以外的页数时，所有的图片全部显示不了。按下F12查看显示不了的图片的url，可以发现图片的地址不正确，并没有附加上正确的网站地址前缀。</p>
+<p>这个是因为图片的url配置不正确导致的。整个网站所使用的图片，其url要以<code>/</code>开头！这个涉及到站点的相对路径和绝对路径。</p>
+<p>比如站点头像，是在站点配置文件里的<code>avatarURL</code>属性决定的。如果你的头像是存放在<code>images/avatar.jpg</code>，那么就要配置成<code>avatarURL = &quot;/images/avatar.jpg&quot;</code>。</p>
+<p>其他图片同理，在文章里插入图片一般用法如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">avatar</span>](<span class="na">/images/avatar.jpg</span>)
+</code></pre></td></tr></table>
+</div>
+</div><p>当然了，如果你有图床之类的，直接写完整的地址也不会出现这个问题，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">avatar</span>](<span class="na">https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg</span>)
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="自定义样式文件_customscss无法生效">自定义样式文件<code>_custom.scss</code>无法生效</h2>
+<p>LoveIt主题有提供<code>\themes\LoveIt\assets\css\_custom.scss</code>，可以在该文件内自定义页面的样式，但是经过测试并无法生效。不过最终还是在stackoverflow上找到了答案：</p>
+<blockquote>
+<p>You can use hugo&rsquo;s extended (like <a href="https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_extended_0.53_Windows-64bit.zip" target="_blank" rel="noopener noreffer">https://github.com/gohugoio/hugo/releases/download/v0.53/hugo_extended_0.53_Windows-64bit.zip</a>) version which automatically compiles SCSS to CSS for you. You can then customize all the setup. If you don&rsquo;t want to/aren&rsquo;t using the extended version, then ofc you will have to go old school with a watcher like ruby SASS or Gulp, etc.</p>
+</blockquote>
+<p>简单的说，只有使用的是扩展版本的Hugo，才能令<code>_custom.scss</code>文件生效！！！因为原生的Hugo并不支持编译sass文件，必须使用扩展版本的Hugo才行。</p>
+<p>所以请查看你所使用的Hugo版本，如果不是<code>hugo_extended</code>版本，请前往<a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">Hugo Release页面</a>下载你当前版本Hugo所对应的<code>hugo_extended</code>版本。</p>
+<p>比如我原本使用的是<code>hugo_0.74.0_Windows-64bit.zip</code>，就需要改为使用<code>hugo_extended_0.74.0_Windows-64bit.zip</code>。</p>
+<h2 id="无法直接自定义javascript">无法直接自定义JavaScript</h2>
+<p>LoveIt主题没有直接提供自定义JavaScript的文件，只能通过修改页面的模板文件来引入自定义的JavaScript文件，具体做法可以参考<a href="/lewky/hugo-3/#%e6%b7%bb%e5%8a%a0%e8%87%aa%e5%ae%9a%e4%b9%89%e7%9a%84customjs" rel="">Hugo系列(3) - LoveIt主题美化与博客功能增强#添加自定义的custom.js</a>。</p>
+<h2 id="文章摘要标志不生效">文章摘要标志不生效</h2>
+<p>和Hexo不同，Hugo的文章摘要标志必须是<code>&lt;!--more--&gt;</code>，在<code>more</code>的两边不能有任何空格，且必须全小写，否则便不会生效。用法如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">## Title
+
+Content.
+&lt;!--more--&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="文章标题里的特殊符号不需要使用字符实体">文章标题里的特殊符号不需要使用字符实体</h2>
+<p>在Hexo里，如果文章的标题里存在英文的双引号、冒号等特定的符号，必须使用字符实体来替代，否则就会报错。而在Hugo里，则没有这个需要，直接使用原本的符号就行。如果在标题里使用字符实体，并不会被自动解析成对应的字符。</p>
+<h2 id="console报错找不到sitewebmanifest">Console报错找不到<code>/site.webmanifest</code></h2>
+<p>该文件和<code>Progressive web applications (PWA) </code>有关，通过添加PWA到Hugo站点，可以实现离线访问的功能，也就是说断网状态下依然可以访问到你之前访问过的网页，换言之就是通过PWA来将访问过的网页资源缓存到了本地，所以断网下仍然可以继续访问网站。当然，恢复网络时会自动更新最新的页面资源。</p>
+<p>有兴趣的可以去看看下面这几个网站：</p>
+<ul>
+<li><a href="https://techformist.com/add-pwa-hugo/" target="_blank" rel="noopener noreffer">Add PWA to your Hugo site</a></li>
+<li><a href="https://www.jianshu.com/p/7546527a786d" target="_blank" rel="noopener noreffer">改造你的网站，变身 PWA</a></li>
+<li><a href="https://bbs.ichunqiu.com/thread-39418-1-1.html" target="_blank" rel="noopener noreffer">基于Service Worker 的XSS攻击面拓展</a></li>
+</ul>
+<p>后来又在LoveIt主题作者的一篇文章中找到了答案，如下：</p>
+<blockquote>
+<p>强烈建议你把:</p>
+</blockquote>
+<ul>
+<li>apple-touch-icon.png (180x180)</li>
+<li>favicon-32x32.png (32x32)</li>
+<li>favicon-16x16.png (16x16)</li>
+<li>mstile-150x150.png (150x150)</li>
+<li>android-chrome-192x192.png (192x192)</li>
+<li>android-chrome-512x512.png (512x512)
+放在	<code>/static</code>目录. 利用 <a href="https://realfavicongenerator.net/" target="_blank" rel="noopener noreffer">https://realfavicongenerator.net/</a> 可以很容易地生成这些文件.</li>
+</ul>
+<blockquote>
+<p>可以自定义<code>browserconfig.xml</code>和<code>site.webmanifest</code>文件来设置<code>theme-color</code>和<code>background-color</code>.</p>
+</blockquote>
+<p>打开上面提及的网站，上传你想要作为网站图标的图片，按照提示走，会生成上述提及的所有文件，最后再下载下来，解压后将所有文件放置到站点根目录下的<code>/static</code>目录里即可。</p>
+<p>记得把<code>site.webmanifest</code>的<code>name</code>和<code>short_name</code>填上你的网站名字。</p>
+<h2 id="远程部署到github-pages后build失败">远程部署到GitHub Pages后build失败</h2>
+<p>在本地调试没问题，部署到Coding Pages也没问题，偏偏部署到GitHub Pages 就一直build失败，并一直发送邮件，可以从邮件里看到报错的原因，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">The</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">master</span><span class="o">`</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="n">Page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="p">.</span><span class="w"> </span><span class="k">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">working</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">errors</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">-</span><span class="n">sites</span><span class="c1">#troubleshooting-build-errors.
+</span><span class="c1"></span><span class="w">
+</span><span class="w"></span><span class="k">For</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">troubleshooting</span><span class="w"> </span><span class="n">Jekyll</span><span class="w"> </span><span class="n">see</span><span class="p">:</span><span class="w">
+</span><span class="w">
+</span><span class="w">  </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">articles</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">builds</span><span class="w">
+</span><span class="w">
+</span><span class="w"></span><span class="k">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">questions</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">submit</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Contact</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">contact</span><span class="o">?</span><span class="n">repo_id</span><span class="o">=</span><span class="mi">130235157</span><span class="o">&amp;</span><span class="n">page_build_id</span><span class="o">=</span><span class="mi">208464262</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>可以看到报错说是<code>Page build failed.</code>，描述太过模糊不清，我只能一篇篇文章的排查测试。最终发现，问题出在了某篇文章里的代码块，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+  ....
+
+  {% include &#39;_custom/custom-foot.swig&#39; %}
+<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>问题就出在了这个<code>{%  %}</code>上，经过几番测试，发现一旦启用了<code>LoveIt</code>主题的Markdown输出功能（即将每篇文章link到原本的Markdown文件），就会造成GitHub Pages服务build失败。</p>
+<h3 id="全局禁用markdown输出功能">全局禁用Markdown输出功能</h3>
+<p>由于不想把这些造成问题的代码块删掉，于是最佳的解决方案就变成了禁用Markdown输出功能，在站点配置文件如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[params]
+  [params.page]
+    # whether to show link to Raw Markdown content of the content
+    # 是否显示原始 Markdown 文档内容的链接
+    linkToMarkdown = false
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+#[mediaTypes]
+#  [mediaTypes.&#34;text/plain&#34;]
+#    suffixes = [&#34;md&#34;]
+
+# Options to make output .md files
+# 用于输出 Markdown 格式文档的设置
+#[outputFormats.MarkDown]
+#  mediaType = &#34;text/plain&#34;
+#  isPlainText = true
+#  isHTML = false
+
+# Options to make hugo output files
+# 用于 Hugo 输出文档的设置
+[outputs]
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+#  page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
+  page = [&#34;HTML&#34;]
+  section = [&#34;HTML&#34;, &#34;RSS&#34;]
+  taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
+  taxonomyTerm = [&#34;HTML&#34;]
+</code></pre></td></tr></table>
+</div>
+</div><p>在站点配置文件了将<code>linkToMarkdown</code>配置为<code>false</code>，并将对应的三项Markdown输出的属性注释掉，终于解决了GitHub Pages编译失败的问题。</p>
+<p>这个做法属于一刀切，后面考虑到依然需要输出md文件，于是想到了另一个解决方法，那就是把某些在GitHub Pages解析有问题的md文件给干掉，让这些引入了“问题”代码块的md文件不生成即可。</p>
+<h3 id="局部禁用markdown输出功能">局部禁用Markdown输出功能</h3>
+<p>首先要改模板文件，将<code>\themes\LoveIt\layouts\_default\single.md</code>拷贝到<code>\layouts\_default\single.md</code>，打开拷贝后的文件修改成如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- $params := .Scratch.Get &#34;params&#34; -}}
+{{- if $params.linkToMarkdown -}}
+# {{ .Title }}
+
+{{ .RawContent }}
+{{- end -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在不想生成md文件的文章头里加上<code>linkToMarkdown: false</code>，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
+title: Hexo系列(3) - NexT主题和Markdown的写作技巧
+tags:
+  - Hexo
+  - NexT主题
+  - 写作技巧
+categories:
+  - Hexo系列
+abbrlink: 576ee548
+slug: hexo-3
+date: 2018-07-19T23:00:36+08:00
+linkToMarkdown: false
+---
+</code></pre></td></tr></table>
+</div>
+</div><p>这样就不会生成对应的md文件，也不会在页面尾部有<code>阅读原始文档</code>这个链接。</p>
+<h3 id="终极方案新增nojekyll文件">终极方案：新增<code>.nojekyll</code>文件</h3>
+<p>在学习docsify的时候意外找到了最简单有效的解决方法，就是在站点根目录的<code>static</code>目录下添加一个名为<code>.nojekyll</code>的空内容文件。</p>
+<p><code>.nojekyll</code>文件会告知GitHub Pages不使用jekyll来渲染静态站点，这样就不会和md文件里的某些代码冲突而build失败。</p>
+<h2 id="网站配置了keywords没有生效">网站配置了keywords没有生效</h2>
+<p>在 <a href="https://seo.chinaz.com" target="_blank" rel="noopener noreffer">https://seo.chinaz.com</a> 里查询站点时发现页面TDK信息里的关键词(KeyWords)为空，然而站点配置文件里是有配置的，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  # 网站关键词
+  keywords = &#34;雨临Lewis,Java,hugo,hexo,博客&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>F12查看网站源码后发现缺少keywords这个meta标签，检查了模板文件后发现是LoveIt没有引入该标签，需要修改模板才行。</p>
+<p>将<code>\themes\LoveIt\layouts\partials\head\meta.html</code>拷贝到<code>\layouts\partials\head\meta.html</code>，打开该文件并在<code>&lt;meta name=&quot;Description&quot; content=&quot;{{ $params.description | default .Site.Params.description }}&quot;&gt;</code>上方加上如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;meta name=&#34;keywords&#34; content=&#34;{{ $params.keywords | default .Site.Params.keywords }}&#34;&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="配置文件里的license不生效">配置文件里的<code>license</code>不生效</h2>
+<p>这个是模板文件有问题，拷贝<code>\themes\LoveIt\layouts\partials\single\footer.html</code>到<code>\layouts\partials\single\footer.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
+    {{- with $params.license | string -}}
+        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+            {{- . | safeHTML -}}
+        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    {{- end -}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
+    {{- with $params.license | default .Site.Params.footer.license | string -}}
+        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+            {{- . | safeHTML -}}
+        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+    {{- end -}}
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://github.com/dillonzq/LoveIt/pull/522" target="_blank" rel="noopener noreffer">add more markdown images to gallery when lightgallery is enabled</a></li>
+<li><a href="https://valine.js.org/configuration.html" target="_blank" rel="noopener noreffer">Valine中文文档</a></li>
+<li><a href="https://stackoverflow.com/questions/54057291/how-to-setup-scss-with-hugo" target="_blank" rel="noopener noreffer">How to setup SCSS with Hugo</a></li>
+<li><a href="https://github.com/gohugoio/hugo/releases/tag/v0.74.0" target="_blank" rel="noopener noreffer">Hugo Release - 0.74.0</a></li>
+<li><a href="https://github.com/dillonzq/LoveIt/issues/311?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener noreffer">lightgallery启用时，图片会显示得很小，是设计如此还是bug#311</a></li>
+<li><a href="https://hugoloveit.com/zh-cn/theme-documentation-basics" target="_blank" rel="noopener noreffer">主题文档 - 基本概念</a></li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-30&nbsp;<a class="git-hash" href="https://github.com/cajunlei/cajunlei.github.io/commit/4266fa592f44e7669062e9f840d18584129168ac" target="_blank" title="commit by Cajun(cajun_ray@qq.com) 4266fa592f44e7669062e9f840d18584129168ac: “发布文章、CSS优化”">
+                                    <i class="fas fa-hashtag fa-fw"></i>4266fa5</a></span>
+            </div>
+            <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></div>            
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/lewky/hugo-4/" data-title="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录" data-ralateuid="cajunray"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/lewky/hugo-4/" data-title="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/lewky/hugo-4/" data-title="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/lewky-hugo/">Lewky-Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/lewky/hugo-1/" class="prev" rel="prev" title="Hugo系列(1) - 简单搭建教程与远程部署"><i class="fas fa-angle-left fa-fw"></i>Hugo系列(1) - 简单搭建教程与远程部署</a>
+            <a href="/lewky/hugo-3.2/" class="next" rel="next" title="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章">Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021</span><span class="author" itemprop="copyrightHolder">
+                        <a href="/love/" target="_blank" one-link-mark="yes">&nbsp;💝&nbsp;</a>
+                        <a href="https://ll.sc.cn" target="_blank">雷相君</a>
+                    </span></div>
+           
+            <div class="footer-line"><span id="busuanzi_container_site_pv">
+                    <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;次
+                </span> | 
+                <span id="busuanzi_container_site_uv">
+                    <i class="fas fa-user"></i>&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人
+                </span>
+            </div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
+                <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank">20218899</a><span>号</span></div>
+
+            <div class="footer-line"><div class="footer-line">
+                    <i class="fas fa-cog fa-spin"></i>
+                <span id="runtime_span"></span>
+                <script type="text/javascript">
+                    function show_runtime(){window.setTimeout("show_runtime()",1000);
+                    X=new Date("9/25/2021 00:00:00");
+                    Y=new Date();T=(Y.getTime()-X.getTime());
+                    M=24*60*60*1000;a=T/M;
+                    A=Math.floor(a);b=(a-A)*24;
+                    B=Math.floor(b);c=(b-B)*60;
+                    C=Math.floor((b-B)*60);
+                    D=Math.floor((c-C)*60);
+                    runtime_span.innerHTML="本站已运行："+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
+                </script>
+                </div>
+            </div>
+
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"GQDBYZDWLG","algoliaIndex":"index","algoliaSearchKey":"31f3b432d4c23d621a13f434db81e49c","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script src="/js/webfont.js"></script>
+<script> WebFont.load({
+  custom: {
+    families: ['LXGWFont'],
+  },
+  classes: false,
+  active() {
+    document.body.style.fontFamily = 'LXGWFont';
+  },
+}); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_81el3b1gti3.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
+	 
+	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed";
+</script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?37eb9d4da1f3a0120c43a02428b8f5cf";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script></body>
+</html>

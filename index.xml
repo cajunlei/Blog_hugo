@@ -1,0 +1,84 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>雷雷的个人博客</title>
+        <link>https://ll.sc.cn/</link>
+        <description>爱生活，爱工作，爱折腾</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 08 Dec 2021 16:35:59 &#43;0800</lastBuildDate>
+            <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
+        <item>
+    <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
+    <link>https://ll.sc.cn/posts/cad-skills-problem/</link>
+    <pubDate>Thu, 21 Oct 2021 23:53:40 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Work/AutoCAD/01_Skill_cover.jpg" referrerpolicy="no-referrer">
+            </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>二级建造师 - 注册相关</title>
+    <link>https://ll.sc.cn/posts/associate-constructor-register/</link>
+    <pubDate>Wed, 08 Dec 2021 16:35:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/associate-constructor-register/</guid>
+    <description><![CDATA[<p>在通过二级建造师考试并取得相应证书后，需要对自己的证书进行注册，证书方可使用;</p>]]></description>
+</item><item>
+    <title>Markdown - 进阶知识</title>
+    <link>https://ll.sc.cn/posts/markdown-high-level/</link>
+    <pubDate>Tue, 07 Dec 2021 11:35:43 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/markdown-high-level/</guid>
+    <description><![CDATA[<p>Mermaid的功能介绍及使用方法；</p>]]></description>
+</item><item>
+    <title>Markdown - 基础知识</title>
+    <link>https://ll.sc.cn/posts/markdown-basics/</link>
+    <pubDate>Mon, 06 Dec 2021 21:35:33 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/markdown-basics/</guid>
+    <description><![CDATA[<p>Markdown是一种纯文本格式的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>]]></description>
+</item><item>
+    <title>CSS - 学习笔记</title>
+    <link>https://ll.sc.cn/posts/css-study-notes/</link>
+    <pubDate>Sun, 05 Dec 2021 09:24:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/css-study-notes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>颜色中英文对照表</title>
+    <link>https://ll.sc.cn/posts/color-chinese-and-english/</link>
+    <pubDate>Sat, 04 Dec 2021 11:45:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/color-chinese-and-english/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Auto CAD - 基础知识介绍</title>
+    <link>https://ll.sc.cn/posts/cad-basics/</link>
+    <pubDate>Wed, 01 Dec 2021 20:15:26 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/cad-basics/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Work/AutoCAD/06_CAD_basics_Cover.jpg" referrerpolicy="no-referrer">
+            </div><p>本文为<code>Auto CAD</code>的入门知识，包括快捷命令的使用，以及需要注意的一些准则；</p>]]></description>
+</item><item>
+    <title>博客字体精简笔记</title>
+    <link>https://ll.sc.cn/posts/blog-font-cut/</link>
+    <pubDate>Mon, 29 Nov 2021 22:10:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/blog-font-cut/</guid>
+    <description><![CDATA[<p>为博客更换了字体，为了提升加载速度，将字体作精简处理……</p>]]></description>
+</item><item>
+    <title>Win11 - 资源管理器卡顿的解决办法</title>
+    <link>https://ll.sc.cn/posts/win11-explorer-lag/</link>
+    <pubDate>Sat, 27 Nov 2021 09:42:50 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/win11-explorer-lag/</guid>
+    <description><![CDATA[<p>大多数<code>Win11</code>用户都会遇到这样的问题，新版资源管理器打开文件夹巨慢，甚至有时候点两下还打不开，而且框选文件时很卡，<code>CPU</code>占用飙升；</p>]]></description>
+</item><item>
+    <title>Win10 - 自定义添加右键菜单</title>
+    <link>https://ll.sc.cn/posts/win10-customize-right-click-menu/</link>
+    <pubDate>Fri, 19 Nov 2021 16:48:47 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/win10-customize-right-click-menu/</guid>
+    <description><![CDATA[]]></description>
+</item></channel>
+</rss>

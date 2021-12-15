@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SVG - 标签 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/tags/svg/</link>
+        <description>SVG - 标签 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 25 Oct 2021 19:58:36 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/svg/" rel="self" type="application/rss+xml" /><item>
+    <title>SVG - 学习笔记</title>
+    <link>https://ll.sc.cn/posts/svg-study-notes/</link>
+    <pubDate>Mon, 25 Oct 2021 19:58:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/svg-study-notes/</guid>
+    <description><![CDATA[<p>在学习 SVG 过程中的一些笔记分享……</p>]]></description>
+</item></channel>
+</rss>

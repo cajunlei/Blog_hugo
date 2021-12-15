@@ -1,0 +1,22 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Excel - 标签 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/tags/excel/</link>
+        <description>Excel - 标签 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 28 Oct 2021 09:18:37 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/excel/" rel="self" type="application/rss+xml" /><item>
+    <title>Excel - 开发工具基础知识</title>
+    <link>https://ll.sc.cn/posts/excel-enable-development-tools/</link>
+    <pubDate>Thu, 28 Oct 2021 09:18:37 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/excel-enable-development-tools/</guid>
+    <description><![CDATA[<p>进行 Excel VBA 开发，需要使用「开发工具」选项卡包含的各项命令。</p>]]></description>
+</item><item>
+    <title>Excel - 包含文字的单元格计算</title>
+    <link>https://ll.sc.cn/posts/excel-calculatewithtext/</link>
+    <pubDate>Tue, 26 Oct 2021 17:11:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/excel-calculatewithtext/</guid>
+    <description><![CDATA[<p>Excel 的单元格中如果包含中文字符，则计算的时候会出错，接下来我们将解决此问题……</p>]]></description>
+</item></channel>
+</rss>
