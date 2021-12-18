@@ -3,7 +3,7 @@
     font-size: 1.5em;
     margin: 1rem .5rem .5rem 0;
 }
-#content #fas-fa-clock-博客时间轴+h3 a::before {
+#content #fas-fa-clock-博客事件轴+h3 a:before {
     font-family: iconfont;
     content: "\e623";
 }
