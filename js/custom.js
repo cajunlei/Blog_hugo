@@ -53,7 +53,7 @@ $(function () {
 		  $cdnPrefix + "/images/Background/102.jpg",
 		  $cdnPrefix + "/images/Background/103.jpg",
 		  $cdnPrefix + "/images/Background/201.jpg",
-	], { duration: 30000, fade: 1000 });
+	], { duration: 40000, fade: 1000 });
 });
 
 
