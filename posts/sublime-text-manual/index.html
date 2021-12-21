@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ll.sc.cn\/posts\/sublime-text-manual\/"
-        },"genre": "posts","keywords": "Sublime Text","wordcount":  1969 ,
+        },"genre": "posts","keywords": "Sublime Text","wordcount":  1945 ,
         "url": "https:\/\/ll.sc.cn\/posts\/sublime-text-manual\/","datePublished": "2021-10-16T22:29:24+08:00","dateModified": "2021-10-19T22:29:24+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "雷相君","logo": "https:\/\/ll.sc.cn\/images\/avatar.png"},"author": {
@@ -130,15 +130,15 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Sublime Text3 - 使用手册</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://ll.sc.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>守正</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/z-turn/"><i class="far fa-folder fa-fw"></i>爱折腾</a></span></div>
-            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-10-16">2021-10-16</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-10-19">2021-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1969 字&nbsp;
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-10-16">2021-10-16</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-10-19">2021-10-19</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1945 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 4 分钟&nbsp;<span id="/posts/sublime-text-manual/" class="leancloud_visitors" data-flag-title="Sublime Text3 - 使用手册">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/sublime_text_01/Cover.jpg"
-        data-srcset=", https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/sublime_text_01/Cover.jpg 1.5x,  2x"
+        data-src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/Cover.jpg"
+        data-srcset=", https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/Cover.jpg 1.5x,  2x"
         data-sizes="auto"
         alt=""
         title="" /></div><div class="details toc" id="toc-static"  kept="">
@@ -148,34 +148,34 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ol>
-    <li><a href="#一安装插件卸载插件">一、安装插件、卸载插件</a>
+    <li><a href="#安装插件卸载插件">安装插件、卸载插件</a>
       <ol>
-        <li><a href="#1安装-package-control">1.安装 Package Control</a></li>
-        <li><a href="#2安装插件">2.安装插件</a></li>
-        <li><a href="#3卸载插件">3.卸载插件</a></li>
+        <li><a href="#安装-package-control">安装 Package Control</a></li>
+        <li><a href="#安装插件">安装插件</a></li>
+        <li><a href="#卸载插件">卸载插件</a></li>
       </ol>
     </li>
-    <li><a href="#二失去焦点自动保存">二、失去焦点自动保存</a></li>
-    <li><a href="#三实现-markdown-编辑和实时预览">三、实现 Markdown 编辑和实时预览</a>
+    <li><a href="#失去焦点自动保存">失去焦点自动保存</a></li>
+    <li><a href="#实现-markdown-编辑和实时预览">实现 Markdown 编辑和实时预览</a>
       <ol>
-        <li><a href="#1安装所需的插件">1.安装所需的插件</a></li>
-        <li><a href="#2实现实时预览">2.实现实时预览</a>
+        <li><a href="#安装所需的插件">安装所需的插件</a></li>
+        <li><a href="#实现实时预览">实现实时预览</a>
           <ol>
             <li><a href="#方法一">方法一</a></li>
             <li><a href="#方法二">方法二</a></li>
           </ol>
         </li>
-        <li><a href="#3如何打开预览">3.如何打开预览</a></li>
-        <li><a href="#4自定义快捷键">4.自定义快捷键</a></li>
-        <li><a href="#5实现浏览器自动刷新">5.实现浏览器自动刷新</a></li>
-        <li><a href="#6md文档到html文件的自动更新">6.md文档到html文件的自动更新</a></li>
+        <li><a href="#如何打开预览">如何打开预览</a></li>
+        <li><a href="#自定义快捷键">自定义快捷键</a></li>
+        <li><a href="#实现浏览器自动刷新">实现浏览器自动刷新</a></li>
+        <li><a href="#md文档到html文件的自动更新">md文档到html文件的自动更新</a></li>
       </ol>
     </li>
   </ol>
 </nav></div>
             </div><div class="content" id="content"><p>个人使用 Sublime Text3 过程中收集整理的一些技巧和方法。</p>
-<h2 id="一安装插件卸载插件">一、安装插件、卸载插件</h2>
-<h3 id="1安装-package-control">1.安装 Package Control</h3>
+<h2 id="安装插件卸载插件">安装插件、卸载插件</h2>
+<h3 id="安装-package-control">安装 Package Control</h3>
 <p>打开 <code>Package Control</code> 的网页 <a href="https://packagecontrol.io" target="_blank" rel="noopener noreffer">https://packagecontrol.io</a> ，点击右侧的 <code>Install Now</code> 按钮;</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-15_22-37-30.png" alt="Package Control 官网"  width="95%" >
@@ -196,7 +196,7 @@
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 安装成功</span>
 </div>
 
-<h3 id="2安装插件">2.安装插件</h3>
+<h3 id="安装插件">安装插件</h3>
 <p>同时按<code>Ctrl + Shift + P</code>打开命令板，输入<code>PCIP</code>, 然后下选点击 <code>Package Control: Install Package</code>。</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-15_22-45-20.png" alt="安装插件"  width="80%" >
@@ -204,7 +204,7 @@
 </div>
 
 <p>会出现一个输入框，输入你想要安装的插件，然后选择它，即可进行安装。</p>
-<h3 id="3卸载插件">3.卸载插件</h3>
+<h3 id="卸载插件">卸载插件</h3>
 <p>卸载比较容易，同时按<code>Ctrl + Shift + P</code>打开命令板，输入<code>PCRP</code>然后然后下选点击 <code>Package Control: Remove Package</code> ;</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-15_22-47-25.png" alt="卸载插件"  width="80%" >
@@ -217,7 +217,7 @@
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 已安装插件</span>
 </div>
 
-<h2 id="二失去焦点自动保存">二、失去焦点自动保存</h2>
+<h2 id="失去焦点自动保存">失去焦点自动保存</h2>
 <p><strong>第一步</strong> <code>Preference</code>（首选项）-&gt; <code>Settings</code>（设置）；</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-15_23-35-03.png" alt="打开设置文件"  width="50%" >
@@ -252,8 +252,8 @@
 <pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">&#34;save_on_focus_lost&#34;: true,
 </code></pre></td></tr></table>
 </div>
-</div><h2 id="三实现-markdown-编辑和实时预览">三、实现 Markdown 编辑和实时预览</h2>
-<h3 id="1安装所需的插件">1.安装所需的插件</h3>
+</div><h2 id="实现-markdown-编辑和实时预览">实现 Markdown 编辑和实时预览</h2>
+<h3 id="安装所需的插件">安装所需的插件</h3>
 <p>按下<code>Ctrl + Shift + P</code>打开快速菜单，输入 <code>pcip</code>：</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-15_22-45-20.png" alt="安装插件"  width="80%" >
@@ -283,7 +283,7 @@ auto-save             // 可自定义的自动保存功能
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 安装好的 Markdown 插件</span>
 </div>
 
-<h3 id="2实现实时预览">2.实现实时预览</h3>
+<h3 id="实现实时预览">实现实时预览</h3>
 <h4 id="方法一">方法一</h4>
 <p>安装 <code>OmniMarkupPreviewer</code> 插件;</p>
 <blockquote>
@@ -332,7 +332,7 @@ auto-save             // 可自定义的自动保存功能
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 输入代码</span>
 </div>
 
-<h3 id="3如何打开预览">3.如何打开预览</h3>
+<h3 id="如何打开预览">如何打开预览</h3>
 <p>我们使用 <code>Markdown Preview</code> 插件来打开浏览器进行预览：</p>
 <p>按下<code>Ctrl + Shift + P</code>打开快速菜单，键入 <code>mp</code>；</p>
 <div class="caption-wrapper">
@@ -346,7 +346,7 @@ auto-save             // 可自定义的自动保存功能
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 选择 Markdown</span>
 </div>
 
-<h3 id="4自定义快捷键">4.自定义快捷键</h3>
+<h3 id="自定义快捷键">自定义快捷键</h3>
 <p>直接在浏览器中预览效果的话，可以自定义快捷键：点击 <code>Preferences</code>（首选项）&ndash;&gt; 选择 <code>Key Bindings User</code>（快捷键设置）：</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/2021-10-16_17-04-43.png" alt="打开快捷键设置"  width="40%" >
@@ -369,7 +369,7 @@ auto-save             // 可自定义的自动保存功能
 </div>
 
 <p>保存后，直接输入快捷键：<code>Alt + M</code>就可以直接在浏览器中预览生成的<code>HTML</code>文件了。</p>
-<h3 id="5实现浏览器自动刷新">5.实现浏览器自动刷新</h3>
+<h3 id="实现浏览器自动刷新">实现浏览器自动刷新</h3>
 <p>对于浏览器而言，我们让它自动刷新只需在<code>md</code>文件最下面加入一行：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -383,7 +383,7 @@ auto-save             // 可自定义的自动保存功能
 <p>太快的话我们难以滚动页面，太慢的话有可能体验很差。</p>
 <p>为了不让滚动时编辑的新文字触底，可以在最后一行的刷新代码之上打好几个占空间的行即可。</p>
 <p>由于空行不会被解析，在每一行之前放一个字符<code>#</code>或者打三个以上的减号表示分割线。</p>
-<h3 id="6md文档到html文件的自动更新">6.md文档到html文件的自动更新</h3>
+<h3 id="md文档到html文件的自动更新">md文档到html文件的自动更新</h3>
 <p>这里我们用到了一个叫做 <code>Auto-Save</code> 的插件，它可以针对一个文档实现空闲 x 秒后自动保存。</p>
 <p>我们打开 <code>Auto-Save</code> 的默认设置和用户设置文件：</p>
 <p>依次点击<code> Preference</code>（首选项）&ndash;&gt; <code>Package Settings</code> &ndash;&gt; <code>Auto-save</code> &ndash;&gt;打开 <code>Settings-Defualt</code> 和 <code>Settings-User</code>;</p>
@@ -463,7 +463,7 @@ auto-save             // 可自定义的自动保存功能
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册" data-image="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/sublime_text_01/Cover.jpg" data-ralateuid="cajunray"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册" data-image="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/Cover.jpg" data-ralateuid="cajunray"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/sublime-text-manual/" data-title="Sublime Text3 - 使用手册"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>

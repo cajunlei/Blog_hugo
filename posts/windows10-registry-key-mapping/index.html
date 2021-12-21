@@ -31,7 +31,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ll.sc.cn\/posts\/windows10-registry-key-mapping\/"
-        },"genre": "posts","keywords": "注册表, 键盘","wordcount":  1241 ,
+        },"genre": "posts","keywords": "注册表, 键盘","wordcount":  1201 ,
         "url": "https:\/\/ll.sc.cn\/posts\/windows10-registry-key-mapping\/","datePublished": "2021-09-29T14:08:12+00:00","dateModified": "2021-10-14T12:57:41+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "雷相君","logo": "https:\/\/ll.sc.cn\/images\/avatar.png"},"author": {
@@ -130,7 +130,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Win10 - 用注册表修改键位映射</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://ll.sc.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>守正</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/windows/"><i class="far fa-folder fa-fw"></i>Windows</a></span></div>
-            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-09-29">2021-09-29</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-10-14">2021-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1241 字&nbsp;
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-09-29">2021-09-29</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-10-14">2021-10-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 1201 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/posts/windows10-registry-key-mapping/" class="leancloud_visitors" data-flag-title="Win10 - 用注册表修改键位映射">
                         <i class="far fa-eye fa-fw"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;</div>
@@ -148,51 +148,51 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ol>
-    <li><a href="#一-修改键位映射">一、 修改键位映射</a>
+    <li><a href="#修改键位映射">修改键位映射</a>
       <ol>
-        <li><a href="#1打开注册表编辑器">1、打开注册表编辑器</a></li>
-        <li><a href="#2创建映射文件">2、创建映射文件</a></li>
-        <li><a href="#3修改注册表键值">3、修改注册表键值</a></li>
+        <li><a href="#打开注册表编辑器">打开注册表编辑器</a></li>
+        <li><a href="#创建映射文件">创建映射文件</a></li>
+        <li><a href="#修改注册表键值">修改注册表键值</a></li>
       </ol>
     </li>
-    <li><a href="#二-开始修改">二、 开始修改</a>
+    <li><a href="#开始修改">开始修改</a>
       <ol>
-        <li><a href="#1-制定方案">1、 制定方案</a></li>
-        <li><a href="#2-查阅键码">2、 查阅键码</a></li>
-        <li><a href="#3-输入键值">3、 输入键值</a></li>
-        <li><a href="#4-完成">4、 完成</a></li>
+        <li><a href="#制定方案">制定方案</a></li>
+        <li><a href="#查阅键码">查阅键码</a></li>
+        <li><a href="#输入键值">输入键值</a></li>
+        <li><a href="#完成">完成</a></li>
       </ol>
     </li>
-    <li><a href="#三-常见问题">三、 常见问题</a>
+    <li><a href="#常见问题">常见问题</a>
       <ol>
-        <li><a href="#1如何让某个键失效">1、如何让某个键失效？</a></li>
-        <li><a href="#2如何撤销更改">2、如何撤销更改？</a></li>
+        <li><a href="#如何让某个键失效">如何让某个键失效？</a></li>
+        <li><a href="#如何撤销更改">如何撤销更改？</a></li>
       </ol>
     </li>
-    <li><a href="#四-附录键位表">四、 附录:《键位表》</a>
+    <li><a href="#附录键位表">附录:《键位表》</a>
       <ol>
-        <li><a href="#1功能区">1、功能区</a></li>
-        <li><a href="#2第一排数字键盘">2、第一排数字键盘</a></li>
-        <li><a href="#3字母">3、字母</a></li>
-        <li><a href="#4符号">4、符号</a></li>
-        <li><a href="#5小键盘区">5、小键盘区</a></li>
-        <li><a href="#6操作按键">6、操作按键</a></li>
-        <li><a href="#7附加按键">7、附加按键</a></li>
+        <li><a href="#功能区">功能区</a></li>
+        <li><a href="#第一排数字键盘">第一排数字键盘</a></li>
+        <li><a href="#字母">字母</a></li>
+        <li><a href="#符号">符号</a></li>
+        <li><a href="#小键盘区">小键盘区</a></li>
+        <li><a href="#操作按键">操作按键</a></li>
+        <li><a href="#附加按键">附加按键</a></li>
       </ol>
     </li>
   </ol>
 </nav></div>
             </div><div class="content" id="content"><p>因键盘布局不符合个人使用习惯，键盘某个按键失灵等等情况，我们可以通过修改键位映射来很好的解决这些问题。</p>
-<h2 id="一-修改键位映射">一、 修改键位映射</h2>
+<h2 id="修改键位映射">修改键位映射</h2>
 <p>操作步骤如下：</p>
-<h3 id="1打开注册表编辑器">1、打开注册表编辑器</h3>
+<h3 id="打开注册表编辑器">打开注册表编辑器</h3>
 <p>按下 <code>Win+R</code> 打开运行，输入 <code>regedit</code> ，点击确定。</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/01_keyboard/2021-09-29_001.png" alt="运行窗口"  width="75%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 运行窗口</span>
 </div>
 
-<h3 id="2创建映射文件">2、创建映射文件</h3>
+<h3 id="创建映射文件">创建映射文件</h3>
 <p>打开后我们看到的界面是这样的。</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/01_keyboard/2021-09-29_002.png" alt="注册表界面"  width="95%" >
@@ -219,7 +219,7 @@
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 创建成功</span>
 </div>
 
-<h3 id="3修改注册表键值">3、修改注册表键值</h3>
+<h3 id="修改注册表键值">修改注册表键值</h3>
 <p>打开 <code>Scancode Map</code> 文件;</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/01_keyboard/2021-09-29_006.png" alt="编辑 Scancode Map"  width="95%" >
@@ -241,8 +241,8 @@
 <p>若要映射多组，只需增加相应的值即可，如映射 3 组填写为 04 ，映射 5 组填写为 06 ，其最小值为 02 ，表示只映射 1 组。</p>
 <p>接下来每 4 组数值代表一个映射，每一个映射格式如下：【 A 】 【 B 】</p>
 <p>【 B 】映射为【 A 】，即按下【 B 】键时，则按下原来的 【 A 】键。</p>
-<h2 id="二-开始修改">二、 开始修改</h2>
-<h3 id="1-制定方案">1、 制定方案</h3>
+<h2 id="开始修改">开始修改</h2>
+<h3 id="制定方案">制定方案</h3>
 <p>因为使用<code>Mac</code>习惯用用大拇指按 <code>Command</code> 键；</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/01_keyboard/2021-09-29_009.jpg" alt="Mac键盘布局"  width="95%" >
@@ -268,7 +268,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="2-查阅键码">2、 查阅键码</h3>
+<h3 id="查阅键码">查阅键码</h3>
 <p>接下来，只要把对应键位码代入进去就好了！</p>
 <p>每个按键的修改占 4 个字节：右边 2 字节为<strong>原</strong>扫描码，左边 2 字节为<strong>修改后</strong>的扫描码。</p>
 <p>通过查阅键位表得知：</p>
@@ -320,22 +320,22 @@
 </tr>
 </tbody>
 </table>
-<h3 id="3-输入键值">3、 输入键值</h3>
+<h3 id="输入键值">输入键值</h3>
 <p>输入数值后，最后 4 个 0 字节为固定结束符，以 <code>00 00 00 00</code> 结尾，就完成了。</p>
 <div class="caption-wrapper">
   <img class="caption" src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/01_keyboard/2021-09-29_010.png" alt="映射完成"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 映射完成</span>
 </div>
 
-<h3 id="4-完成">4、 完成</h3>
+<h3 id="完成">完成</h3>
 <p>最后，<strong>重启</strong>电脑即可生效。<del>需重启，注销无用。</del></p>
-<h2 id="三-常见问题">三、 常见问题</h2>
-<h3 id="1如何让某个键失效">1、如何让某个键失效？</h3>
+<h2 id="常见问题">常见问题</h2>
+<h3 id="如何让某个键失效">如何让某个键失效？</h3>
 <p>如果想要某个键失效，将它的扫描码映射为 <code>00 00</code> 即可。</p>
-<h3 id="2如何撤销更改">2、如何撤销更改？</h3>
+<h3 id="如何撤销更改">如何撤销更改？</h3>
 <p>若需要恢复键盘键位为默认布局，只需删除我们新建的 <code>Scancode Map</code> 键值就可以了。</p>
-<h2 id="四-附录键位表">四、 附录:《键位表》</h2>
-<h3 id="1功能区">1、功能区</h3>
+<h2 id="附录键位表">附录:《键位表》</h2>
+<h3 id="功能区">功能区</h3>
 <table>
 <thead>
 <tr>
@@ -398,7 +398,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="2第一排数字键盘">2、第一排数字键盘</h3>
+<h3 id="第一排数字键盘">第一排数字键盘</h3>
 <table>
 <thead>
 <tr>
@@ -461,7 +461,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="3字母">3、字母</h3>
+<h3 id="字母">字母</h3>
 <table>
 <thead>
 <tr>
@@ -576,7 +576,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="4符号">4、符号</h3>
+<h3 id="符号">符号</h3>
 <table>
 <thead>
 <tr>
@@ -619,7 +619,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="5小键盘区">5、小键盘区</h3>
+<h3 id="小键盘区">小键盘区</h3>
 <table>
 <thead>
 <tr>
@@ -694,7 +694,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="6操作按键">6、操作按键</h3>
+<h3 id="操作按键">操作按键</h3>
 <table>
 <thead>
 <tr>
@@ -773,7 +773,7 @@
 </tr>
 </tbody>
 </table>
-<h3 id="7附加按键">7、附加按键</h3>
+<h3 id="附加按键">附加按键</h3>
 <table>
 <thead>
 <tr>
