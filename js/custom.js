@@ -45,14 +45,14 @@ jQuery(document).ready(function($) {
 /* 轮播背景图片 */
 $(function () {
 	$.backstretch([
-		  $cdnPrefix + "/images/Background/saber1.jpg",
-		  $cdnPrefix + "/images/Background/001.jpg",
-		  $cdnPrefix + "/images/Background/002.jpg",
-		  $cdnPrefix + "/images/Background/003.jpg",
-		  $cdnPrefix + "/images/Background/101.jpg",
-		  $cdnPrefix + "/images/Background/102.jpg",
-		  $cdnPrefix + "/images/Background/103.jpg",
-		  $cdnPrefix + "/images/Background/201.jpg",
+		  $cdnPrefix + "/images/Background/saber1.webp",
+		  $cdnPrefix + "/images/Background/001.webp",
+		  $cdnPrefix + "/images/Background/002.webp",
+		  $cdnPrefix + "/images/Background/003.webp",
+		  $cdnPrefix + "/images/Background/101.webp",
+		  $cdnPrefix + "/images/Background/102.webp",
+		  $cdnPrefix + "/images/Background/103.webp",
+		  $cdnPrefix + "/images/Background/201.webp",
 	], { duration: 40000, fade: 1000 });
 });
 
