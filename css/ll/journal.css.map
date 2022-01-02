@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "journal.css",
+	"sourceRoot": "D:/Cajun.Lei/Blog",
+	"sources": [
+		"stdin"
+	],
+	"sourcesContent": [
+		".content#journal {\r\n    h2 {\r\n      color: #555555;\r\n      font-size: 1rem;\r\n      text-align: center;\r\n      font-weight: 600;\r\n      letter-spacing: 1px;\r\n      margin: 1rem 0 0 0;\r\n      .header-mark:before {\r\n        content: none;\r\n      }\r\n    };\r\n    .box {\r\n      margin: .5rem 1rem;\r\n      display: flex;\r\n      &>img {\r\n        height: 40px;\r\n        margin-right: 1rem;\r\n      }\r\n      &>.text {\r\n        text-align: justify;\r\n        background-color: #9eea6a;\r\n        padding: .5rem 1rem;\r\n        display: inline-block;\r\n        border-radius: 4px;\r\n        position: relative;\r\n        &:after{\r\n          content: '';\r\n          border: 6px solid #ffffff00;\r\n          border-right: 6px solid #9eea6a;\r\n          position: absolute;\r\n          top: 6px;\r\n          left: -12px;\r\n        }\r\n      \r\n    }\r\n  }\r\n}\r\n[theme=dark] .content#journal {\r\n  h2 {\r\n    color: #a9a9b3;\r\n  }\r\n  .box>.text {\r\n    color: #000;\r\n  }\r\n}\r\n"
+	],
+	"names": [],
+	"mappings": "AAAA,AACI,QADI,AAAA,QAAQ,CACZ,EAAE,AAAC,CACD,KAAK,CAAE,OAAO,CACd,SAAS,CAAE,IAAI,CACf,UAAU,CAAE,MAAM,CAClB,WAAW,CAAE,GAAG,CAChB,cAAc,CAAE,GAAG,CACnB,MAAM,CAAE,UAAU,CAInB,AAXL,AAQM,QARE,AAAA,QAAQ,CACZ,EAAE,CAOA,YAAY,CAAC,MAAM,AAAC,CAClB,OAAO,CAAE,IAAI,CACd,AAVP,AAYI,QAZI,AAAA,QAAQ,CAYZ,IAAI,AAAC,CACH,MAAM,CAAE,UAAU,CAClB,OAAO,CAAE,IAAI,CAsBhB,AApCH,AAeM,QAfE,AAAA,QAAQ,CAYZ,IAAI,CAGA,GAAG,AAAC,CACJ,MAAM,CAAE,IAAI,CACZ,YAAY,CAAE,IAAI,CACnB,AAlBP,AAmBM,QAnBE,AAAA,QAAQ,CAYZ,IAAI,CAOA,KAAK,AAAC,CACN,UAAU,CAAE,OAAO,CACnB,gBAAgB,CAAE,OAAO,CACzB,OAAO,CAAE,UAAU,CACnB,OAAO,CAAE,YAAY,CACrB,aAAa,CAAE,GAAG,CAClB,QAAQ,CAAE,QAAQ,CAUrB,AAnCL,AA0BQ,QA1BA,AAAA,QAAQ,CAYZ,IAAI,CAOA,KAAK,CAOH,KAAK,AAAA,CACL,OAAO,CAAE,EAAE,CACX,MAAM,CAAE,mBAAmB,CAC3B,YAAY,CAAE,iBAAiB,CAC/B,QAAQ,CAAE,QAAQ,CAClB,GAAG,CAAE,GAAG,CACR,IAAI,CAAE,KAAK,CACZ,CAKT,AAAA,AACE,KADD,CAAD,IAAC,AAAA,EAAY,QAAQ,AAAA,QAAQ,CAC3B,EAAE,AAAC,CACD,KAAK,CAAE,OAAO,CACf,CAHH,AAAA,AAIE,KAJD,CAAD,IAAC,AAAA,EAAY,QAAQ,AAAA,QAAQ,CAI3B,IAAI,CAAC,KAAK,AAAC,CACT,KAAK,CAAE,IAAI,CACZ"
+}
