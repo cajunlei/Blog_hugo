@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/posts/</link>
         <description>所有文章 | 雷雷的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
-            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 26 Dec 2021 12:13:40 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 03 Jan 2022 18:41:33 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
     <link>https://ll.sc.cn/posts/cad-skills-problem/</link>
     <pubDate>Thu, 21 Oct 2021 23:53:40 &#43;0800</pubDate>
@@ -13,6 +13,13 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>半白嫖电信卡（50元用一年）</title>
+    <link>https://ll.sc.cn/posts/20220103184133/</link>
+    <pubDate>Mon, 03 Jan 2022 18:41:33 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/20220103184133/</guid>
+    <description><![CDATA[<p>5G的到来，数据流量发飞逝，让我这本不富裕的套餐雪上加霜。</p>]]></description>
 </item><item>
     <title>CAD出电子版蓝图使用方法</title>
     <link>https://ll.sc.cn/posts/cad-electronic-blueprint/</link>
@@ -77,12 +84,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>本文为<code>Auto CAD</code>的入门知识，包括快捷命令的使用，以及需要注意的一些准则；</p>]]></description>
-</item><item>
-    <title>博客字体精简笔记</title>
-    <link>https://ll.sc.cn/posts/blog-font-cut/</link>
-    <pubDate>Mon, 29 Nov 2021 22:10:49 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/blog-font-cut/</guid>
-    <description><![CDATA[<p>为博客更换了字体，为了提升加载速度，将字体作精简处理……</p>]]></description>
 </item></channel>
 </rss>
