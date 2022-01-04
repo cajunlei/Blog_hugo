@@ -11,7 +11,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
 </item><item>
     <title>CAD出电子版蓝图使用方法</title>
@@ -27,7 +27,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-basics/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>本文为<code>Auto CAD</code>的入门知识，包括快捷命令的使用，以及需要注意的一些准则；</p>]]></description>
 </item><item>
     <title>Auto CAD - 自定义快捷命令</title>
@@ -57,7 +57,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-drawings-instructions/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/02_Drawings/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/images/Work/AutoCAD/02_Drawings/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>图纸集是一个图纸管理功能，可以用于管理个人图纸或是项目图纸，也就是说图纸集是来自多个图形文件的图纸的有组织的集合。</p>]]></description>
 </item></channel>
 </rss>
