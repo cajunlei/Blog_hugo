@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Sublime Text3 - 使用手册 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building]">
+        <title>Sublime Text3 - 使用手册 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
 
 <meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Sublime Text3 - 使用手册" />
 <meta property="og:description" content="个人使用 Sublime Text3 过程中收集整理的一些技巧和方法。" />
@@ -49,23 +49,31 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                        </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                        </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                         </a>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                     
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                    <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                        </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                        </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                        </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                         </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                         </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
@@ -111,23 +119,28 @@
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                    </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                    </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                     </a>
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
                     </div>
                 
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
                     </div>
-                <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                    </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                    </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                    </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                     </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                     </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>

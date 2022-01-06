@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>Hugo &amp; Algolia 实现站内搜索 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building]">
+        <title>Hugo &amp; Algolia 实现站内搜索 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
 
 <meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Hugo &amp; Algolia 实现站内搜索" />
 <meta property="og:description" content="很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。" />
@@ -49,23 +49,31 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                        </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                        </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                         </a>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                     
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                    <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                        </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                        </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                        </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                         </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                         </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
@@ -111,23 +119,28 @@
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                    </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                    </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                     </a>
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
                     </div>
                 
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
                     </div>
-                <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                    </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                    </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                    </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                     </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                     </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
@@ -268,7 +281,7 @@
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="生成索引文件">生成索引文件</h3>
-<p>导航到<strong>Hugo项目根目录</strong>下使用 <code>Git Bash</code> 执行 <code>Hugo</code> 命令；</p>
+<p>导航到<strong>Hugo项目根目录</strong>下使用 <code>Git bat```batch</code> 执行 <code>Hugo</code> 命令；</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -283,23 +296,23 @@
 <p>不过这样操作太过于繁琐了，每次更新博客都要手动上传一次，我们可以通过一个插件 <code>atomic-algolia</code> 来一键同步数据；</p>
 <p><strong>第一步</strong> 安装 <code>atomic-aligolia</code> ；</p>
 <p>我们需要先确保我们已经安装了 <code>npm</code> 或者 <code>yarn</code> 包管理工具。</p>
-<p>导航到<strong>Hugo项目根目录</strong>下右键使用 <code>Git Bash</code> 执行以下命令；</p>
+<p>导航到<strong>Hugo项目根目录</strong>下右键使用 <code>Git bat```batch</code> 执行以下命令；</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">npm install atomic-algolia --save
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">npm install atomic-algolia --save
 </code></pre></td></tr></table>
 </div>
 </div><p>这会将 <code>atomic-algolia</code> 软件包安装到本地 <code>node_modules</code> 文件夹，并使其可用于您的 <code>Hugo</code> 项目。</p>
-<p><strong>第二步</strong> 配置完成以后，在<strong>Hugo项目根目录</strong>下右键使用 <code>Git Bash</code> 执行以下命令：</p>
+<p><strong>第二步</strong> 配置完成以后，在<strong>Hugo项目根目录</strong>下右键使用 <code>Git bat```batch</code> 执行以下命令：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash"><span class="nv">ALGOLIA_APP_ID</span><span class="o">={{</span> YOUR_APP_ID <span class="o">}}</span> <span class="nv">ALGOLIA_ADMIN_KEY</span><span class="o">={{</span> YOUR_ADMIN_KEY <span class="o">}}</span> <span class="nv">ALGOLIA_INDEX_NAME</span><span class="o">={{</span> YOUR_INDEX NAME <span class="o">}}</span> <span class="nv">ALGOLIA_INDEX_FILE</span><span class="o">={{</span> PATH/TO/algolia.json <span class="o">}}</span> npm run algolia
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">ALGOLIA_APP_ID={{ YOUR_APP_ID }} ALGOLIA_ADMIN_KEY={{ YOUR_ADMIN_KEY }} ALGOLIA_INDEX_NAME={{ YOUR_INDEX NAME }} ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }} npm run algolia
 </code></pre></td></tr></table>
 </div>
 </div><p>这个时候我们在 <code>dashboard</code> 中打开 <code>Indices</code> ，可以看到已经有几十条数据了。</p>
@@ -324,7 +337,7 @@ ALGOLIA_INDEX_NAME={{ YOUR_INDEX_NAME }}
 ALGOLIA_INDEX_FILE={{ PATH/TO/algolia.json }}
 </code></pre></td></tr></table>
 </div>
-</div><p><strong>第四步</strong> 现在，您可以通过在<strong>Hugo项目根目录</strong>下右键使用 <code>Git Bash</code> 执行更简单的一条命令来更新索引：</p>
+</div><p><strong>第四步</strong> 现在，您可以通过在<strong>Hugo项目根目录</strong>下右键使用 <code>Git bat```batch</code> 执行更简单的一条命令来更新索引：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1

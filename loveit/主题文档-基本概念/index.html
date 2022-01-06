@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
-        <title>主题文档 - 基本概念 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building]">
+        <title>主题文档 - 基本概念 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
 
 <meta name="Description" content="探索 Hugo - LoveIt 主题的全部内容和背后的核心概念."><meta property="og:title" content="主题文档 - 基本概念" />
 <meta property="og:description" content="探索 Hugo - LoveIt 主题的全部内容和背后的核心概念." />
@@ -49,23 +49,31 @@
         </div>
         <div class="menu">
             <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                        </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                        </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                         </a>
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
                     
                         <div class="dropdown">
                             <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                             </a>
-                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                            <i class="fas fa-chevron-down"></i>
                         </div>
-                    <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                        </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                        </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                        </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                         </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                         </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
                         <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
@@ -111,23 +119,28 @@
                         取消
                     </a>
                 </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
-                    </a><a class="menu-item" href="/categories/"><i class='far fa-folder-open'></i> 分类 
-                    </a><a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
                     </a>
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-link'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
                     </div>
                 
                     <div class="dropdown">
                         <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
                         </a>
-                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-git-square'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-up'></i> Vercel站 </a></div>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
                     </div>
-                <a class="menu-item" href="/about/"><i class='far fa-user'></i> 关于 
-                    </a><a class="menu-item" href="/journal/"><i class='far fa-comment'></i> 日志 
-                    </a><a class="menu-item" href="/board/"><i class='far fa-clipboard'></i> 留言板 
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="/journal/"><i class='fas fa-comment'></i> 日志 
+                    </a><a class="menu-item" href="/board/"><i class='fas fa-clipboard'></i> 留言板 
                     </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
                     </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
                 <i class="fas fa-adjust fa-fw"></i>
@@ -225,8 +238,8 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new site my_website
-<span class="nb">cd</span> my_website
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">hugo new site my_website
+<span class="k">cd</span> my_website
 </code></pre></td></tr></table>
 </div>
 </div><h3 id="安装主题">安装主题</h3>
@@ -238,7 +251,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">git clone https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre></td></tr></table>
 </div>
 </div><p>或者, 初始化你的项目目录为 git 仓库, 并且把主题仓库作为你的网站目录的子模块:</p>
@@ -248,7 +261,7 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">git init
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">git init
 git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 </code></pre></td></tr></table>
 </div>
@@ -379,7 +392,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo new posts/first_post.md
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">hugo new posts/first_post.md
 </code></pre></td></tr></table>
 </div>
 </div><p>通过添加一些示例内容并替换文件开头的标题, 你可以随意编辑文章.</p>
@@ -398,7 +411,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo serve
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">hugo serve
 </code></pre></td></tr></table>
 </div>
 </div><p>去查看 <code>http://localhost:1313</code>.</p>
@@ -427,7 +440,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo serve --disableFastRender
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">hugo serve --disableFastRender
 </code></pre></td></tr></table>
 </div>
 </div></div>
@@ -440,7 +453,7 @@ git submodule add https://github.com/dillonzq/LoveIt.git themes/LoveIt
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-bash" data-lang="bash">hugo
+<pre tabindex="0" class="chroma"><code class="language-batch" data-lang="batch">hugo
 </code></pre></td></tr></table>
 </div>
 </div><p>会生成一个 <code>public</code> 目录, 其中包含你网站的所有静态内容和资源. 现在可以将其部署在任何 Web 服务器上.</p>
