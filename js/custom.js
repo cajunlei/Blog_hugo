@@ -49,6 +49,7 @@ $(function () {
 		  $cdnPrefix + "/images/Background/001.webp",
 		  $cdnPrefix + "/images/Background/002.webp",
 		  $cdnPrefix + "/images/Background/003.webp",
+			$cdnPrefix + "/images/Background/saber2.webp",
 		  $cdnPrefix + "/images/Background/101.webp",
 		  $cdnPrefix + "/images/Background/102.webp",
 		  $cdnPrefix + "/images/Background/103.webp",
