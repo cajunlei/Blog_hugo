@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/</link>
         <description>爱生活，爱工作，爱折腾</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
-            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 Jan 2022 09:56:40 &#43;0800</lastBuildDate>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</lastBuildDate>
             <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
@@ -15,6 +15,13 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>Excel - 使用技巧</title>
+    <link>https://ll.sc.cn/posts/skills/</link>
+    <pubDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/skills/</guid>
+    <description><![CDATA[]]></description>
 </item><item>
     <title>打新债（捡钱）之路</title>
     <link>https://ll.sc.cn/posts/34352642331522/</link>
@@ -30,7 +37,7 @@
     <guid>https://ll.sc.cn/posts/20220103184133/</guid>
     <description><![CDATA[<p>5G的到来，数据流量发飞逝，让我这本不富裕的套餐雪上加霜。</p>]]></description>
 </item><item>
-    <title>CAD出电子版蓝图使用方法</title>
+    <title>Auto CAD - 出电子版蓝图使用方法</title>
     <link>https://ll.sc.cn/posts/cad-electronic-blueprint/</link>
     <pubDate>Sun, 26 Dec 2021 12:13:40 &#43;0800</pubDate>
     <author>作者</author>
@@ -76,13 +83,6 @@
     <pubDate>Sun, 05 Dec 2021 09:24:36 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/css-study-notes/</guid>
-    <description><![CDATA[]]></description>
-</item><item>
-    <title>颜色中英文对照表</title>
-    <link>https://ll.sc.cn/posts/color-chinese-and-english/</link>
-    <pubDate>Sat, 04 Dec 2021 11:45:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/color-chinese-and-english/</guid>
     <description><![CDATA[]]></description>
 </item></channel>
 </rss>
