@@ -4,6 +4,7 @@
         <link>https://ll.sc.cn/tags/excel/</link>
         <description>Excel - 标签 - 雷雷的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+<<<<<<< HEAD
             <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/excel/" rel="self" type="application/rss+xml" /><item>
     <title>Excel - 使用技巧</title>
     <link>https://ll.sc.cn/posts/excel-skills/</link>
@@ -12,6 +13,9 @@
     <guid>https://ll.sc.cn/posts/excel-skills/</guid>
     <description><![CDATA[]]></description>
 </item><item>
+=======
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 28 Oct 2021 09:18:37 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/excel/" rel="self" type="application/rss+xml" /><item>
+>>>>>>> e50386edbda14561d347cba45f6cc5e938b60089
     <title>Excel - 开发工具基础知识</title>
     <link>https://ll.sc.cn/posts/excel-enable-development-tools/</link>
     <pubDate>Thu, 28 Oct 2021 09:18:37 &#43;0800</pubDate>
