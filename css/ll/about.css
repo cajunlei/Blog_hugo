@@ -1,0 +1,18 @@
+.single .content>h2>.header-mark::before {
+    content: none;
+}
+
+#content h3 {
+    padding-left: .5rem;
+    font-size: 1.5rem;
+    margin: 1rem .5rem .5rem 0;
+}
+#content h2#fas-fa-clock-博客事件轴~h3 a:before {
+    font-family: iconfont;
+    content: "\e623";
+}
+@media screen and (max-device-width:960px){
+    #content h3 {
+        padding-left: .3rem;
+    }
+}

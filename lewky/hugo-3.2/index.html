@@ -1,0 +1,2520 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
+
+<meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章" />
+<meta property="og:description" content="前言
+本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：
+
+
+1
+2
+3
+4
+5
+
+
+hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+
+
+请注意，本文的所有功能都离不开两个新增加的文件：_custom.scss和custom.js，部分功能还需要jquery，在第一章中会提及如何引入。
+另外本文篇幅太长，阅读体验不好，将其进行分章如下：
+
+Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章
+Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章
+Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章
+Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ll.sc.cn/lewky/hugo-3.2/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.webp"/><meta property="article:section" content="lewky" />
+<meta property="article:published_time" content="2021-05-29T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-11-30T23:07:05+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ll.sc.cn/images/logo.webp"/>
+
+<meta name="twitter:title" content="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章"/>
+<meta name="twitter:description" content="前言
+本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：
+
+
+1
+2
+3
+4
+5
+
+
+hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+
+
+请注意，本文的所有功能都离不开两个新增加的文件：_custom.scss和custom.js，部分功能还需要jquery，在第一章中会提及如何引入。
+另外本文篇幅太长，阅读体验不好，将其进行分章如下：
+
+Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章
+Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章
+Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章
+Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章
+"/>
+<meta name="application-name" content="雷雷屋头">
+<meta name="apple-mobile-web-app-title" content="雷雷屋头"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ec5c6d"><link rel="manifest" href="/images/site.webmanifest"><link rel="canonical" href="https://ll.sc.cn/lewky/hugo-3.2/" /><link rel="prev" href="https://ll.sc.cn/lewky/hugo-4/" /><link rel="next" href="https://ll.sc.cn/lewky/hugo-3.1/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><meta name="google-site-verification" content="google699009ae438f1e4d" /><meta name="msvalidate.01" content="0AA62D35A93C9239B95F5187EC12FAF1" /><meta name="baidu-site-verification" content="3f7de7fba11a61559c21d907904d0a1b" /><meta name="sogou_site_verification" content="VgMMts5sWb"/><meta name="360-site-verification" content="8eda9335dc386f7c204d42bfe6c012da" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ll.sc.cn\/lewky\/hugo-3.2\/"
+        },"genre": "lewky","keywords": "Lewky-Hugo","wordcount":  7843 ,
+        "url": "https:\/\/ll.sc.cn\/lewky\/hugo-3.2\/","datePublished": "2021-05-29T00:00:00+00:00","dateModified": "2021-11-30T23:07:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "雷相君","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
+                "@type": "Person",
+                "name": "Lewky"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 
+                                            <div>爱工作</div>
+                                        </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 
+                                            <div>爱学习</div>
+                                        </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 
+                                            <div>爱折腾</div>
+                                        </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> 
+                                            <div>Windows</div>
+                                        </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 
+                                            <div>软件类</div>
+                                        </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 
+                                            <div>杂　记</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 
+                                            <div>日　志</div>
+                                        </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 
+                                            <div>时　刻</div>
+                                        </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 
+                                            <div>留　言</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 
+                                            <div>友情链接</div>
+                                        </a><a href="/book/" title="" ><i class='fas fa-book'></i> 
+                                            <div>我的书单</div>
+                                        </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 
+                                            <div>常用站点</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> 
+                                            <div>Gitee站</div>
+                                        </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> 
+                                            <div>Github站</div>
+                                        </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> 
+                                            <div>Vercel站</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 日　志 </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 时　刻 </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 留　言 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                    </div>
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://lewky.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Lewky</a></span></div>
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-05-29">2021-05-29</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-11-30">2021-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 7843 字&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 16 分钟&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#前言">前言</a></li>
+    <li><a href="#添加归档分类页面里的文章数量统计">添加归档、分类页面里的文章数量统计</a>
+      <ol>
+        <li><a href="#在listhtml里添加sup标签">在list.html里添加<code>sup</code>标签</a></li>
+        <li><a href="#在termshtml里添加sup标签">在terms.html里添加<code>sup</code>标签</a></li>
+        <li><a href="#在sectionhtml里添加sup标签">在section.html里添加<code>sup</code>标签</a></li>
+      </ol>
+    </li>
+    <li><a href="#修改侧边栏目录样式">修改侧边栏目录样式</a></li>
+    <li><a href="#添加文章过期提醒">添加文章过期提醒</a>
+      <ol>
+        <li><a href="#配置文件添加相关变量">配置文件添加相关变量</a></li>
+        <li><a href="#添加变量到国际化文件">添加变量到国际化文件</a></li>
+        <li><a href="#添加模板文件outdated-info-warninghtml">添加模板文件<code>outdated-info-warning.html</code></a></li>
+        <li><a href="#修改模板文件singlehtml">修改模板文件<code>single.html</code></a></li>
+      </ol>
+    </li>
+    <li><a href="#菜单栏支持子菜单">菜单栏支持子菜单</a>
+      <ol>
+        <li><a href="#修改模板代码">修改模板代码</a></li>
+        <li><a href="#添加css样式">添加css样式</a></li>
+        <li><a href="#配置子菜单">配置子菜单</a></li>
+      </ol>
+    </li>
+    <li><a href="#添加文章打赏">添加文章打赏</a>
+      <ol>
+        <li><a href="#配置文件添加相关变量-1">配置文件添加相关变量</a></li>
+        <li><a href="#添加变量到国际化文件-1">添加变量到国际化文件</a></li>
+        <li><a href="#添加模板文件rewardhtml">添加模板文件<code>reward.html</code></a></li>
+        <li><a href="#修改模板文件singlehtml-1">修改模板文件<code>single.html</code></a></li>
+        <li><a href="#添加css代码">添加css代码</a></li>
+      </ol>
+    </li>
+    <li><a href="#添加打赏榜">添加打赏榜</a>
+      <ol>
+        <li><a href="#配置文件添加子菜单">配置文件添加子菜单</a></li>
+        <li><a href="#添加模板文件donationhtml">添加模板文件<code>donation.html</code></a></li>
+        <li><a href="#新增css样式文件和图片">新增css样式文件和图片</a></li>
+        <li><a href="#新建donation页面">新建donation页面</a></li>
+      </ol>
+    </li>
+    <li><a href="#添加站点运行时间">添加站点运行时间</a></li>
+    <li><a href="#添加文章热度排行榜">添加文章热度排行榜</a></li>
+    <li><a href="#添加plantuml支持">添加PlantUML支持</a></li>
+    <li><a href="#参考链接">参考链接</a></li>
+  </ol>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="前言">前言</h2>
+<p>本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+</code></pre></td></tr></table>
+</div>
+</div><p><strong>请注意，本文的所有功能都离不开两个新增加的文件：<code>_custom.scss</code>和<code>custom.js</code>，部分功能还需要<code>jquery</code>，在第一章中会提及如何引入。</strong></p>
+<p>另外本文篇幅太长，阅读体验不好，将其进行分章如下：</p>
+<ul>
+<li><a href="/lewky/hugo-3/" rel="">Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章</a></li>
+<li><a href="/lewky/hugo-3.1/" rel="">Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章</a></li>
+<li><a href="/lewky/hugo-3.2/" rel="">Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章</a></li>
+<li><a href="/lewky/hugo-3.3/" rel="">Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章</a></li>
+</ul>
+<h2 id="添加归档分类页面里的文章数量统计">添加归档、分类页面里的文章数量统计</h2>
+<h3 id="在listhtml里添加sup标签">在list.html里添加<code>sup</code>标签</h3>
+<p>文章数量统计实际上就是添加html里的<code>sup</code>标签，借助hugo提供的变量来获取对应的文章数量，即可实现该功能。</p>
+<p>拷贝<code>\themes\LoveIt\layouts\taxonomy\list.html</code>到<code>\layouts\taxonomy\list.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- if eq $taxonomy &#34;category&#34; -}}
+    &lt;i class=&#34;far fa-folder-open fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Title }}
+{{- else if eq $taxonomy &#34;tag&#34; -}}
+    &lt;i class=&#34;fas fa-tag fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Title }}
+{{- else -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- if eq $taxonomy &#34;category&#34; -}}
+    &lt;i class=&#34;far fa-folder-open fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Title }}&lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;
+{{- else if eq $taxonomy &#34;tag&#34; -}}
+    &lt;i class=&#34;fas fa-tag fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Title }}&lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;
+{{- else -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>继续找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- range $pages.PageGroups -}}
+    &lt;h3 class=&#34;group-title&#34;&gt;{{ .Key }}&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- range $pages.PageGroups -}}
+    &lt;h3 class=&#34;group-title&#34;&gt;{{ .Key }} &lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>原本主题的文章是按照年份来分组的，如果想按照月份来分组，找到下面的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Paginate */ -}}
+{{- if .Pages -}}
+    {{- $pages := .Pages.GroupByDate &#34;2006&#34; -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Paginate */ -}}
+{{- if .Pages -}}
+    {{- $pages := .Pages.GroupByDate &#34;2006-01&#34; -}}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="在termshtml里添加sup标签">在terms.html里添加<code>sup</code>标签</h3>
+<p>拷贝<code>\themes\LoveIt\layouts\taxonomy\terms.html</code>到<code>\layouts\taxonomy\terms.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;page archive&#34;&gt;
+    {{- /* Title */ -}}
+    &lt;h2 class=&#34;single-title animated pulse faster&#34;&gt;
+        {{- .Params.Title | default (T $taxonomies) | default $taxonomies | dict &#34;Some&#34; | T &#34;allSome&#34; -}}
+    &lt;/h2&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;page archive&#34;&gt;
+    {{- /* Title */ -}}
+    &lt;h2 class=&#34;single-title animated pulse faster&#34;&gt;
+        {{- .Params.Title | default (T $taxonomies) | default $taxonomies | dict &#34;Some&#34; | T &#34;allSome&#34; -}}&lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;
+    &lt;/h2&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;h3 class=&#34;card-item-title&#34;&gt;
+    &lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;
+        &lt;i class=&#34;far fa-folder fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Page.Title }}
+    &lt;/a&gt;
+&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;h3 class=&#34;card-item-title&#34;&gt;
+    &lt;a href=&#34;{{ .RelPermalink }}&#34;&gt;
+        &lt;i class=&#34;far fa-folder fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;{{ .Page.Title }} &lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;
+    &lt;/a&gt;
+&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="在sectionhtml里添加sup标签">在section.html里添加<code>sup</code>标签</h3>
+<p>拷贝<code>\themes\LoveIt\layouts\_default\section.html</code>到<code>\layouts\_default\section.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;page archive&#34;&gt;
+    {{- /* Title */ -}}
+    &lt;h2 class=&#34;single-title animated pulse faster&#34;&gt;
+        {{- .Params.Title | default (T .Section) | default .Section | dict &#34;Some&#34; | T &#34;allSome&#34; -}}
+    &lt;/h2&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;page archive&#34;&gt;
+    {{- /* Title */ -}}
+    &lt;h2 class=&#34;single-title animated pulse faster&#34;&gt;
+        {{- .Params.Title | default (T .Section) | default .Section | dict &#34;Some&#34; | T &#34;allSome&#34; -}}&lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;
+    &lt;/h2&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- range $pages.PageGroups -}}
+            &lt;h3 class=&#34;group-title&#34;&gt;{{ .Key }}&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- range $pages.PageGroups -}}
+    &lt;h3 class=&#34;group-title&#34;&gt;{{ .Key }} &lt;sup&gt;{{ len .Pages }}&lt;/sup&gt;&lt;/h3&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>这里同样是按照年份来分组的，如果想按照月份来分组，找到下面的内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Paginate */ -}}
+{{- if .Pages -}}
+    {{- $pages := .Pages.GroupByDate &#34;2006&#34; -}}
+</code></pre></td></tr></table>
+</div>
+</div><p>改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Paginate */ -}}
+{{- if .Pages -}}
+    {{- $pages := .Pages.GroupByDate &#34;2006-01&#34; -}}
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="修改侧边栏目录样式">修改侧边栏目录样式</h2>
+<p>默认侧边栏的目录是全展开的，如果文章太长，小标题太多，就会导致目录非常长，看起来不方便。可以改成只展开当前正在查看的小标题对应的目录，在<code>_custom.scss</code>里添加如下样式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 目录 */</span>
+<span class="nt">nav</span><span class="p">#</span><span class="nn">TableOfContents</span> <span class="nt">ol</span> <span class="p">{</span>
+    <span class="n">padding-inline-start</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
+
+    <span class="err">&amp;</span> <span class="err">ol</span> <span class="err">{</span>
+        <span class="n">padding-inline-start</span><span class="p">:</span> <span class="mi">25</span><span class="kt">px</span><span class="p">;</span>
+        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="o">&amp;</span> <span class="nt">li</span><span class="p">.</span><span class="nc">has-active</span> <span class="nt">ol</span> <span class="p">{</span>
+        <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+    <span class="p">}</span>
+<span class="err">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="添加文章过期提醒">添加文章过期提醒</h2>
+<h3 id="配置文件添加相关变量">配置文件添加相关变量</h3>
+<p>在<code>config.toml</code>添加如下变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  # Display a message at the beginning of an article to warn the readers that it&#39;s content may be outdated.
+  # 在文章末尾显示提示信息，提醒读者文章内容可能过时。
+  [params.outdatedInfoWarning]
+    enable = true
+    hint = 90     # Display hint if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示提醒
+    warn = 180    # Display warning if the last modified time is more than these days ago.    # 如果文章最后更新于这天数之前，显示警告
+</code></pre></td></tr></table>
+</div>
+</div><p>这里是对全局文章生效，也可以在每篇文章的文件头里添加如下变量来控制是否启用该功能：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">outdatedInfoWarning: false
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="添加变量到国际化文件">添加变量到国际化文件</h3>
+<p>将<code>\themes\LoveIt\i18n\zh-CN.toml</code>拷贝到<code>\i18n\zh-CN.toml</code>，然后将该文件重命名为<code>zh-cn.toml</code>。因为站点配置文件里的中文语言代码应该是全小写的<code>zh-cn</code>，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">defaultContentLanguage = &#34;zh-cn&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>打开拷贝后的文件，添加如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[outdatedInfoWarningBefore]
+  other = &#34;本文最后更新于 &#34;
+
+[outdatedInfoWarningAfter]
+  other = &#34;，文中内容可能已过时，请谨慎使用。&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你的国际化文件是用的<code>yaml</code>格式，则如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">outdatedInfoWarningBefore:
+  other: &#34;本文最后更新于 &#34;
+
+outdatedInfoWarningAfter:
+  other: &#34;，文中内容可能已过时，请谨慎使用。&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果有配置了其他语言，可以添加上面两个变量到对应的国际化文件里，自行修改<code>other</code>所对应的值即可。</p>
+<h3 id="添加模板文件outdated-info-warninghtml">添加模板文件<code>outdated-info-warning.html</code></h3>
+<p>新建模板文件<code>/layouts/partials/single/outdated-info-warning.html</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- if or .Params.outdatedInfoWarning (and .Site.Params.outdatedInfoWarning.enable (ne .Params.outdatedInfoWarning false)) }}
+  {{- $daysAgo := div (sub now.Unix .Lastmod.Unix) 86400 }}
+  {{- $hintThreshold := .Site.Params.outdatedInfoWarning.hint | default 30 }}
+  {{- $warnThreshold := .Site.Params.outdatedInfoWarning.warn | default 180 }}
+
+  {{- $updateTime := .Lastmod }}
+  {{- if .GitInfo }}
+    {{- if lt .GitInfo.AuthorDate.Unix .Lastmod.Unix }}
+      {{- $updateTime := .GitInfo.AuthorDate }}
+    {{- end }}
+  {{- end -}}
+
+  {{- if gt $daysAgo $hintThreshold }}
+	{{- $iconDetails := &#34;fas fa-angle-right fa-fw&#34; -}}
+    {{- if gt $daysAgo $warnThreshold }}
+		{{- $type := &#34;warning&#34; -}}
+		{{- $icon := &#34;fas fa-exclamation-triangle fa-fw&#34; -}}
+		&lt;div class=&#34;details admonition {{ $type }} open&#34;&gt;
+			&lt;div class=&#34;details-summary admonition-title&#34;&gt;
+				&lt;i class=&#34;icon {{ $icon }}{{ $type }}&#34;&gt;&lt;/i&gt;{{ T $type }}&lt;i class=&#34;details-icon {{ $iconDetails }}&#34;&gt;&lt;/i&gt;
+	{{- else }}
+		{{- $type := &#34;note&#34; -}}
+		{{- $icon := &#34;fas fa-pencil-alt fa-fw&#34; -}}
+		&lt;div class=&#34;details admonition {{ $type }} open&#34;&gt;
+			&lt;div class=&#34;details-summary admonition-title&#34;&gt;
+				&lt;i class=&#34;icon {{ $icon }}{{ $type }}&#34;&gt;&lt;/i&gt;{{ T $type }}&lt;i class=&#34;details-icon {{ $iconDetails }}&#34;&gt;&lt;/i&gt;
+    {{- end }}
+		    &lt;/div&gt;
+			&lt;div class=&#34;details-content&#34;&gt;
+				&lt;div class=&#34;admonition-content&#34;&gt;
+					{{ T &#34;outdatedInfoWarningBefore&#34; -}}
+					&lt;span class=&#34;timeago&#34; datetime=&#34;{{ dateFormat &#34;2006-01-02T15:04:05&#34; $updateTime }}&#34; title=&#34;{{ dateFormat &#34;January 2, 2006&#34; $updateTime }}&#34;&gt;
+					{{- dateFormat &#34;January 2, 2006&#34; $updateTime -}}
+					&lt;/span&gt;{{ T &#34;outdatedInfoWarningAfter&#34; -}}
+				&lt;/div&gt;
+			&lt;/div&gt;
+		 &lt;/div&gt;
+  {{- end -}}
+{{- end -}}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="修改模板文件singlehtml">修改模板文件<code>single.html</code></h3>
+<p>将<code>/themes/LoveIt/layouts/posts/single.html</code>拷贝到<code>/layouts/posts/single.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Content */ -}}
+&lt;div class=&#34;content&#34; id=&#34;content&#34;&gt;
+    {{- dict &#34;Content&#34; .Content &#34;Ruby&#34; $params.ruby &#34;Fraction&#34; $params.fraction &#34;Fontawesome&#34; $params.fontawesome | partial &#34;function/content.html&#34; | safeHTML -}}
+&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>修改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;content&#34; id=&#34;content&#34;&gt;
+    {{- dict &#34;Content&#34; .Content &#34;Ruby&#34; $params.ruby &#34;Fraction&#34; $params.fraction &#34;Fontawesome&#34; $params.fontawesome | partial &#34;function/content.html&#34; | safeHTML -}}
+	
+	{{- /* Outdated Info Warning */ -}}
+	{{- partial &#34;single/outdated-info-warning.html&#34; . -}}
+&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="菜单栏支持子菜单">菜单栏支持子菜单</h2>
+<h3 id="修改模板代码">修改模板代码</h3>
+<p>将主题的<code>/themes/LoveIt/layouts/partials/header.html</code>拷贝一份到<code>layouts/partials/header.html</code>，找到如下代码，一共有两个地方，分别对应网页端和手机端：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="p">.</span><span class="n">Site</span><span class="p">.</span><span class="n">Menus</span><span class="p">.</span><span class="n">main</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">    </span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">URL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">relLangURL</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">    </span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">.</span><span class="n">Page</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">        </span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">RelPermalink</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">    </span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">    </span><span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s2">&#34;menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}&#34;</span><span class="w"> </span><span class="n">href</span><span class="o">=</span><span class="s2">&#34;{{ $url }}&#34;</span><span class="err">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">.</span><span class="n">Title</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&#34;{{ . }}&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">urls</span><span class="p">.</span><span class="n">Parse</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="p">).</span><span class="n">Host</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">rel</span><span class="o">=</span><span class="s2">&#34;noopener noreffer&#34;</span><span class="w"> </span><span class="n">target</span><span class="o">=</span><span class="s2">&#34;_blank&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">        </span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="p">.</span><span class="n">Pre</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">    </span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="w">
+</span><span class="w"></span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><p>将上述代码改为如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="p">.</span><span class="n">Site</span><span class="p">.</span><span class="n">Menus</span><span class="p">.</span><span class="n">main</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">	</span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">.</span><span class="n">HasChildren</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="o">&lt;</span><span class="k">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s2">&#34;dropdown&#34;</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">			</span><span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">.</span><span class="n">URL</span><span class="w"> </span><span class="err">}}</span><span class="n">href</span><span class="o">=</span><span class="s2">&#34;{{ .URL }}&#34;</span><span class="err">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">}}</span><span class="n">href</span><span class="o">=</span><span class="s2">&#34;javascript:void(0);&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s2">&#34;menu-item menu-more dropbtn&#34;</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&#34;{{ .Title }}&#34;</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">eq</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="err">}}</span><span class="n">target</span><span class="o">=</span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="n">rel</span><span class="o">=</span><span class="s2">&#34;noopener&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">				</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="p">.</span><span class="n">Pre</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="err">}}{{</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="o">-</span><span class="err">}}{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span><span class="w">			</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">			</span><span class="o">&lt;</span><span class="k">div</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s2">&#34;menu-more-content dropdown-content&#34;</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">				</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">range</span><span class="w"> </span><span class="p">.</span><span class="n">Children</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">					</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">URL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">relLangURL</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">					</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">.</span><span class="n">Page</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">						</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">RelPermalink</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">					</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">						</span><span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">href</span><span class="o">=</span><span class="s2">&#34;{{ $url }}&#34;</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&#34;{{ .Title }}&#34;</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">eq</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="err">}}</span><span class="n">target</span><span class="o">=</span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="n">rel</span><span class="o">=</span><span class="s2">&#34;noopener&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="o">&gt;</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="p">.</span><span class="n">Pre</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="err">}}{{</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="o">-</span><span class="err">}}{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">				</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">			</span><span class="o">&lt;/</span><span class="k">div</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">		</span><span class="o">&lt;/</span><span class="k">div</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">	</span><span class="err">{{</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="p">:</span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">URL</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">relLangURL</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">.</span><span class="n">Page</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">			</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">.</span><span class="n">RelPermalink</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="o">&lt;</span><span class="n">a</span><span class="w"> </span><span class="n">class</span><span class="o">=</span><span class="s2">&#34;menu-item{{ if $.IsMenuCurrent `main` . | or ($.HasMenuCurrent `main` .) | or (eq $.RelPermalink $url) }} active{{ end }}&#34;</span><span class="w"> </span><span class="n">href</span><span class="o">=</span><span class="s2">&#34;{{ $url }}&#34;</span><span class="err">{{</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="p">.</span><span class="n">Title</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">title</span><span class="o">=</span><span class="s2">&#34;{{ . }}&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">urls</span><span class="p">.</span><span class="n">Parse</span><span class="w"> </span><span class="err">$</span><span class="n">url</span><span class="p">).</span><span class="n">Host</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="n">rel</span><span class="o">=</span><span class="s2">&#34;noopener noreffer&#34;</span><span class="w"> </span><span class="n">target</span><span class="o">=</span><span class="s2">&#34;_blank&#34;</span><span class="err">{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">			</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="p">.</span><span class="n">Pre</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="p">.</span><span class="n">Name</span><span class="w"> </span><span class="err">}}</span><span class="w"> </span><span class="err">{{</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">ne</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="s2">&#34;_blank&#34;</span><span class="w"> </span><span class="err">}}{{</span><span class="w"> </span><span class="p">.</span><span class="n">Post</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="n">safeHTML</span><span class="w"> </span><span class="o">-</span><span class="err">}}{{</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="err">}}</span><span class="w">
+</span><span class="w">		</span><span class="o">&lt;/</span><span class="n">a</span><span class="o">&gt;</span><span class="w">
+</span><span class="w">	</span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span><span class="w"></span><span class="err">{{</span><span class="o">-</span><span class="w"> </span><span class="n">end</span><span class="w"> </span><span class="o">-</span><span class="err">}}</span><span class="w">
+</span></code></pre></td></tr></table>
+</div>
+</div><h3 id="添加css样式">添加css样式</h3>
+<p>在<code>_custom.scss</code>中添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/* 子菜单栏 */
+.dropdown {
+  display: inline-block;
+}
+
+/* 子菜单的内容 (默认隐藏) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  line-height: 1.3rem;
+}
+
+/* 子菜单的链接 */
+.dropdown-content a {
+  padding: 10px 18px 10px 14px;
+  text-decoration: none;
+  display: block;
+  &amp; i {
+    margin-right: 3px;
+  }
+}
+
+/* 鼠标移上去后修改子菜单链接颜色 */
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+  border-radius: 4px;
+}
+
+/* 在鼠标移上去后显示子菜单 */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+@media screen and (max-width: 680px) {
+    .dropdown {
+      display: inline;
+    }
+  .dropdown:hover .dropdown-content {
+    display: inline;
+    z-index: 1;
+    margin-top: -2em;
+    margin-left: 3em;
+  }
+  .dropdown-content a:hover {
+    background-color: transparent;
+  }
+}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="配置子菜单">配置子菜单</h3>
+<p>打开站点配置文件<code>config.toml</code>，添加子菜单到菜单栏里。子菜单其实和原本的菜单一样写法，只是多了一个<code>parent</code>属性，用来定位到对应的父菜单的<code>identifier</code>。下面是一个简单的子菜单定义方式（没有使用多语言功能）：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 菜单配置
+[menu]
+  [[menu.main]]
+    identifier = &#34;posts&#34;
+    # 你可以在名称 (允许 HTML 格式) 之前添加其他信息, 例如图标
+    pre = &#34;&lt;i class=&#39;fas fa-fw fa-archive&#39;&gt;&lt;/i&gt;&#34;
+    # 你可以在名称 (允许 HTML 格式) 之后添加其他信息, 例如图标
+    post = &#34;&#34;
+    name = &#34;归档&#34;
+    url = &#34;/posts/&#34;
+    title = &#34;&#34;
+    weight = 1
+  [[menu.main]]
+    pre = &#34;&lt;i class=&#39;fas fa-fw fa-link&#39;&gt;&lt;/i&gt;&#34;
+    name = &#34;友链&#34;
+    identifier = &#34;friends&#34;
+    url = &#34;/friends/&#34;
+    weight = 2
+
+  # 二级菜单
+  [[menu.main]]
+    parent = &#34;posts&#34;
+    pre = &#34;&lt;i class=&#39;fas fa-fw fa-th&#39;&gt;&lt;/i&gt;&#34;
+    name = &#34;分类&#34;
+    identifier = &#34;categories&#34;
+    url = &#34;/categories/&#34;
+    weight = 1
+  [[menu.main]]
+    parent = &#34;posts&#34;
+	identifier = &#34;tags&#34;
+    pre = &#34;&lt;i class=&#39;fas fa-fw fa-tag&#39;&gt;&lt;/i&gt;&#34;
+    post = &#34;_blank&#34;
+	name = &#34;标签&#34;
+	url = &#34;/tags/&#34;
+	title = &#34;&#34;
+	weight = 2
+</code></pre></td></tr></table>
+</div>
+</div><p>菜单栏还允许以下配置：</p>
+<ul>
+<li>通过给菜单配置一个<code>post = &quot;_blank&quot;</code>属性来将该菜单设置为在新窗口打开该链接，如果<code>post</code>属性填其他值则依然作为原本的功能使用：即给<code>name</code>添加后缀。</li>
+<li>通过设置<code>title</code>来添加超链的提示文本。</li>
+<li>父菜单可以通过将<code>url</code>设置为空来将其渲染为不跳转的超链：<code>url = &quot;&quot;</code>。</li>
+</ul>
+<h2 id="添加文章打赏">添加文章打赏</h2>
+<h3 id="配置文件添加相关变量-1">配置文件添加相关变量</h3>
+<p>在<code>config.toml</code>添加如下变量：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  [params.reward]                                  # 文章打赏
+    enable = true
+    wechat = &#34;/images/wechat.png&#34;           # 微信二维码
+    alipay = &#34;/images/alipay.png&#34;           # 支付宝二维码
+
+</code></pre></td></tr></table>
+</div>
+</div><p>这里是对全局文章生效，也可以在每篇文章的文件头里添加如下变量来控制是否启用该功能：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">reward: false
+</code></pre></td></tr></table>
+</div>
+</div><p>至于微信和支付宝的收款码，如果不想用官方提供的样式，可以参考这篇文章：<a href="http://blog.sina.com.cn/s/blog_76f1a1430102yxff.html" target="_blank" rel="noopener noreffer">微信支付宝收款码制作和美化如何做？</a></p>
+<h3 id="添加变量到国际化文件-1">添加变量到国际化文件</h3>
+<p>将<code>\themes\LoveIt\i18n\zh-CN.toml</code>拷贝到<code>\i18n\zh-CN.toml</code>，然后将该文件重命名为<code>zh-cn.toml</code>。因为站点配置文件里的中文语言代码应该是全小写的<code>zh-cn</code>，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">defaultContentLanguage = &#34;zh-cn&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>打开拷贝后的文件，添加如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[reward]
+  other = &#34;赞赏支持&#34;
+
+[rewardAlipay]
+  other = &#34;支付宝打赏&#34;
+
+[rewardWechat]
+  other = &#34;微信打赏&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果你的国际化文件是用的<code>yaml</code>格式，则如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">reward:
+  other: &#34;赞赏支持&#34;
+
+rewardAlipay:
+  other: &#34;支付宝打赏&#34;
+
+rewardWechat:
+  other: &#34;微信打赏&#34;
+</code></pre></td></tr></table>
+</div>
+</div><p>如果有配置了其他语言，可以添加上面两个变量到对应的国际化文件里，自行修改<code>other</code>所对应的值即可。</p>
+<h3 id="添加模板文件rewardhtml">添加模板文件<code>reward.html</code></h3>
+<p>新建模板文件<code>/layouts/partials/single/reward.html</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{ if or .Params.reward (and .Site.Params.reward.enable (ne .Params.reward false)) -}}
+&lt;div class=&#34;post-reward&#34;&gt;
+  &lt;input type=&#34;checkbox&#34; name=&#34;reward&#34; id=&#34;reward&#34; hidden /&gt;
+  &lt;label class=&#34;reward-button&#34; for=&#34;reward&#34;&gt;{{ T &#34;reward&#34; }}&lt;/label&gt;
+  &lt;div class=&#34;qr-code&#34;&gt;
+    {{ $qrCode := .Site.Params.reward }}
+	{{- $cdnPrefix := .Site.Params.cdnPrefix -}}
+    {{ with $qrCode.wechat -}}
+      &lt;label class=&#34;qr-code-image&#34; for=&#34;reward&#34;&gt;
+        &lt;img class=&#34;image&#34; src=&#34;{{ $cdnPrefix }}{{ . }}&#34;&gt;
+        &lt;span&gt;{{ T &#34;rewardWechat&#34; }}&lt;/span&gt;
+      &lt;/label&gt;
+    {{- end }}
+    {{ with $qrCode.alipay -}}
+      &lt;label class=&#34;qr-code-image&#34; for=&#34;reward&#34;&gt;
+        &lt;img class=&#34;image&#34; src=&#34;{{ $cdnPrefix }}{{ . }}&#34;&gt;
+        &lt;span&gt;{{ T &#34;rewardAlipay&#34; }}&lt;/span&gt;
+      &lt;/label&gt;
+    {{- end }}
+  &lt;/div&gt;
+&lt;/div&gt;
+{{- end }}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="修改模板文件singlehtml-1">修改模板文件<code>single.html</code></h3>
+<p>将<code>/themes/LoveIt/layouts/posts/single.html</code>拷贝到<code>/layouts/posts/single.html</code>，打开拷贝后的文件，找到如下内容：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Content */ -}}
+&lt;div class=&#34;content&#34; id=&#34;content&#34;&gt;
+    {{- dict &#34;Content&#34; .Content &#34;Ruby&#34; $params.ruby &#34;Fraction&#34; $params.fraction &#34;Fontawesome&#34; $params.fontawesome | partial &#34;function/content.html&#34; | safeHTML -}}
+&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>修改成如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Content */ -}}
+&lt;div class=&#34;content&#34; id=&#34;content&#34;&gt;
+    {{- dict &#34;Content&#34; .Content &#34;Ruby&#34; $params.ruby &#34;Fraction&#34; $params.fraction &#34;Fontawesome&#34; $params.fontawesome | partial &#34;function/content.html&#34; | safeHTML -}}
+
+	{{- /* Reward */ -}}
+	{{- partial &#34;single/reward.html&#34; . -}}
+&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="添加css代码">添加css代码</h3>
+<p>在自定义的<code>_custom.scss</code>里添加如下样式：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 打赏 */</span>
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">padding-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+    <span class="k">border-top</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">dashed</span> <span class="mh">#e6e6e6</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">reward-button</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">7</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#c05b4d</span><span class="p">;</span>
+    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#c05b4d</span><span class="p">;</span>
+    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">reward-button</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+    <span class="k">color</span><span class="p">:</span> <span class="mh">#fefefe</span><span class="p">;</span>
+    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#c05b4d</span><span class="p">;</span>
+    <span class="k">transition</span><span class="p">:</span> <span class="mf">.5</span><span class="kt">s</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">#</span><span class="nn">reward</span><span class="p">:</span><span class="nd">checked</span><span class="o">~</span><span class="p">.</span><span class="nc">qr-code</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">#</span><span class="nn">reward</span><span class="p">:</span><span class="nd">checked</span><span class="o">~</span><span class="p">.</span><span class="nc">reward-button</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">qr-code</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">qr-code</span> <span class="p">.</span><span class="nc">qr-code-image</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">min-width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">40</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">qr-code</span> <span class="p">.</span><span class="nc">qr-code-image</span> <span class="nt">span</span> <span class="p">{</span>
+    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span> <span class="mi">0</span>
+<span class="p">}</span>
+
+<span class="nt">article</span> <span class="p">.</span><span class="nc">post-reward</span> <span class="p">.</span><span class="nc">qr-code</span> <span class="p">.</span><span class="nc">image</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">200</span><span class="kt">px</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="添加打赏榜">添加打赏榜</h2>
+<p>全文新增了<a href="/lewky/hugo-3.2/#%e6%b7%bb%e5%8a%a0%e6%96%87%e7%ab%a0%e6%89%93%e8%b5%8f" rel="">文章打赏的功能</a>，这里添加一个新的页面来记录老板们的打赏和红包，用的是响应式垂直时间轴。</p>
+<h3 id="配置文件添加子菜单">配置文件添加子菜单</h3>
+<p>这里使用了菜单栏的子菜单配置，子菜单的做法请参考<a href="/lewky/hugo-3.2/#%e8%8f%9c%e5%8d%95%e6%a0%8f%e6%94%af%e6%8c%81%e5%ad%90%e8%8f%9c%e5%8d%95" rel="">前文</a>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  [[menu.main]]
+    parent = &#34;posts&#34;
+    pre = &#34;&lt;i class=&#39;fas fa-fw fa-donate&#39;&gt;&lt;/i&gt;&#34;
+    name = &#34;打赏&#34;
+    title = &#34;感谢打赏，老板大气~&#34;
+    identifier = &#34;donation&#34;
+    url = &#34;/donation/&#34;
+    weight = 4
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="添加模板文件donationhtml">添加模板文件<code>donation.html</code></h3>
+<p>新建模板文件<code>/layouts/shortcodes/donation.html</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{ if .IsNamedParams }}
+{{- $cdn := .Site.Params.cdnPrefix -}}
+{{- $name := .Get &#34;name&#34; -}}
+	&lt;div class=&#34;cd-timeline-block&#34;&gt;
+	{{- if eq $name &#34;wechat&#34; -}}
+		&lt;div class=&#34;cd-timeline-img cd-wechat&#34;&gt;
+		  &lt;img src=&#34;/images/common/wechat.svg&#34; alt=&#34;微信&#34;&gt;
+		&lt;/div&gt;
+	{{- else if eq $name &#34;alipay&#34; -}}
+		&lt;div class=&#34;cd-timeline-img cd-alipay&#34;&gt;
+		  &lt;img src=&#34;{{- $cdn -}}/images/common/alipay.svg&#34; alt=&#34;支付宝&#34;&gt;
+		&lt;/div&gt;
+	{{- end -}}
+	&lt;div class=&#34;cd-timeline-content {{ .Get &#34;name&#34; }}&#34;&gt;
+	  &lt;p&gt;&lt;b&gt;{{ .Get &#34;title&#34; }}&lt;/b&gt;&lt;/p&gt;
+	  &lt;p&gt;{{ .Get &#34;description&#34; }}&lt;/p&gt;
+	  &lt;a href={{ .Get &#34;url&#34; }} class=&#34;cd-read-more&#34; target=&#34;_blank&#34;&gt;阅读被打赏文章&lt;/a&gt;
+	  &lt;span class=&#34;cd-date&#34;&gt;{{ .Get &#34;date&#34; }}&lt;/span&gt;
+	&lt;/div&gt;
+	&lt;/div&gt;
+{{ end }}
+</code></pre></td></tr></table>
+</div>
+</div><h3 id="新增css样式文件和图片">新增css样式文件和图片</h3>
+<p>新建<code>/static/css/timeline.style.css</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">  1
+</span><span class="lnt">  2
+</span><span class="lnt">  3
+</span><span class="lnt">  4
+</span><span class="lnt">  5
+</span><span class="lnt">  6
+</span><span class="lnt">  7
+</span><span class="lnt">  8
+</span><span class="lnt">  9
+</span><span class="lnt"> 10
+</span><span class="lnt"> 11
+</span><span class="lnt"> 12
+</span><span class="lnt"> 13
+</span><span class="lnt"> 14
+</span><span class="lnt"> 15
+</span><span class="lnt"> 16
+</span><span class="lnt"> 17
+</span><span class="lnt"> 18
+</span><span class="lnt"> 19
+</span><span class="lnt"> 20
+</span><span class="lnt"> 21
+</span><span class="lnt"> 22
+</span><span class="lnt"> 23
+</span><span class="lnt"> 24
+</span><span class="lnt"> 25
+</span><span class="lnt"> 26
+</span><span class="lnt"> 27
+</span><span class="lnt"> 28
+</span><span class="lnt"> 29
+</span><span class="lnt"> 30
+</span><span class="lnt"> 31
+</span><span class="lnt"> 32
+</span><span class="lnt"> 33
+</span><span class="lnt"> 34
+</span><span class="lnt"> 35
+</span><span class="lnt"> 36
+</span><span class="lnt"> 37
+</span><span class="lnt"> 38
+</span><span class="lnt"> 39
+</span><span class="lnt"> 40
+</span><span class="lnt"> 41
+</span><span class="lnt"> 42
+</span><span class="lnt"> 43
+</span><span class="lnt"> 44
+</span><span class="lnt"> 45
+</span><span class="lnt"> 46
+</span><span class="lnt"> 47
+</span><span class="lnt"> 48
+</span><span class="lnt"> 49
+</span><span class="lnt"> 50
+</span><span class="lnt"> 51
+</span><span class="lnt"> 52
+</span><span class="lnt"> 53
+</span><span class="lnt"> 54
+</span><span class="lnt"> 55
+</span><span class="lnt"> 56
+</span><span class="lnt"> 57
+</span><span class="lnt"> 58
+</span><span class="lnt"> 59
+</span><span class="lnt"> 60
+</span><span class="lnt"> 61
+</span><span class="lnt"> 62
+</span><span class="lnt"> 63
+</span><span class="lnt"> 64
+</span><span class="lnt"> 65
+</span><span class="lnt"> 66
+</span><span class="lnt"> 67
+</span><span class="lnt"> 68
+</span><span class="lnt"> 69
+</span><span class="lnt"> 70
+</span><span class="lnt"> 71
+</span><span class="lnt"> 72
+</span><span class="lnt"> 73
+</span><span class="lnt"> 74
+</span><span class="lnt"> 75
+</span><span class="lnt"> 76
+</span><span class="lnt"> 77
+</span><span class="lnt"> 78
+</span><span class="lnt"> 79
+</span><span class="lnt"> 80
+</span><span class="lnt"> 81
+</span><span class="lnt"> 82
+</span><span class="lnt"> 83
+</span><span class="lnt"> 84
+</span><span class="lnt"> 85
+</span><span class="lnt"> 86
+</span><span class="lnt"> 87
+</span><span class="lnt"> 88
+</span><span class="lnt"> 89
+</span><span class="lnt"> 90
+</span><span class="lnt"> 91
+</span><span class="lnt"> 92
+</span><span class="lnt"> 93
+</span><span class="lnt"> 94
+</span><span class="lnt"> 95
+</span><span class="lnt"> 96
+</span><span class="lnt"> 97
+</span><span class="lnt"> 98
+</span><span class="lnt"> 99
+</span><span class="lnt">100
+</span><span class="lnt">101
+</span><span class="lnt">102
+</span><span class="lnt">103
+</span><span class="lnt">104
+</span><span class="lnt">105
+</span><span class="lnt">106
+</span><span class="lnt">107
+</span><span class="lnt">108
+</span><span class="lnt">109
+</span><span class="lnt">110
+</span><span class="lnt">111
+</span><span class="lnt">112
+</span><span class="lnt">113
+</span><span class="lnt">114
+</span><span class="lnt">115
+</span><span class="lnt">116
+</span><span class="lnt">117
+</span><span class="lnt">118
+</span><span class="lnt">119
+</span><span class="lnt">120
+</span><span class="lnt">121
+</span><span class="lnt">122
+</span><span class="lnt">123
+</span><span class="lnt">124
+</span><span class="lnt">125
+</span><span class="lnt">126
+</span><span class="lnt">127
+</span><span class="lnt">128
+</span><span class="lnt">129
+</span><span class="lnt">130
+</span><span class="lnt">131
+</span><span class="lnt">132
+</span><span class="lnt">133
+</span><span class="lnt">134
+</span><span class="lnt">135
+</span><span class="lnt">136
+</span><span class="lnt">137
+</span><span class="lnt">138
+</span><span class="lnt">139
+</span><span class="lnt">140
+</span><span class="lnt">141
+</span><span class="lnt">142
+</span><span class="lnt">143
+</span><span class="lnt">144
+</span><span class="lnt">145
+</span><span class="lnt">146
+</span><span class="lnt">147
+</span><span class="lnt">148
+</span><span class="lnt">149
+</span><span class="lnt">150
+</span><span class="lnt">151
+</span><span class="lnt">152
+</span><span class="lnt">153
+</span><span class="lnt">154
+</span><span class="lnt">155
+</span><span class="lnt">156
+</span><span class="lnt">157
+</span><span class="lnt">158
+</span><span class="lnt">159
+</span><span class="lnt">160
+</span><span class="lnt">161
+</span><span class="lnt">162
+</span><span class="lnt">163
+</span><span class="lnt">164
+</span><span class="lnt">165
+</span><span class="lnt">166
+</span><span class="lnt">167
+</span><span class="lnt">168
+</span><span class="lnt">169
+</span><span class="lnt">170
+</span><span class="lnt">171
+</span><span class="lnt">172
+</span><span class="lnt">173
+</span><span class="lnt">174
+</span><span class="lnt">175
+</span><span class="lnt">176
+</span><span class="lnt">177
+</span><span class="lnt">178
+</span><span class="lnt">179
+</span><span class="lnt">180
+</span><span class="lnt">181
+</span><span class="lnt">182
+</span><span class="lnt">183
+</span><span class="lnt">184
+</span><span class="lnt">185
+</span><span class="lnt">186
+</span><span class="lnt">187
+</span><span class="lnt">188
+</span><span class="lnt">189
+</span><span class="lnt">190
+</span><span class="lnt">191
+</span><span class="lnt">192
+</span><span class="lnt">193
+</span><span class="lnt">194
+</span><span class="lnt">195
+</span><span class="lnt">196
+</span><span class="lnt">197
+</span><span class="lnt">198
+</span><span class="lnt">199
+</span><span class="lnt">200
+</span><span class="lnt">201
+</span><span class="lnt">202
+</span><span class="lnt">203
+</span><span class="lnt">204
+</span><span class="lnt">205
+</span><span class="lnt">206
+</span><span class="lnt">207
+</span><span class="lnt">208
+</span><span class="lnt">209
+</span><span class="lnt">210
+</span><span class="lnt">211
+</span><span class="lnt">212
+</span><span class="lnt">213
+</span><span class="lnt">214
+</span><span class="lnt">215
+</span><span class="lnt">216
+</span><span class="lnt">217
+</span><span class="lnt">218
+</span><span class="lnt">219
+</span><span class="lnt">220
+</span><span class="lnt">221
+</span><span class="lnt">222
+</span><span class="lnt">223
+</span><span class="lnt">224
+</span><span class="lnt">225
+</span><span class="lnt">226
+</span><span class="lnt">227
+</span><span class="lnt">228
+</span><span class="lnt">229
+</span><span class="lnt">230
+</span><span class="lnt">231
+</span><span class="lnt">232
+</span><span class="lnt">233
+</span><span class="lnt">234
+</span><span class="lnt">235
+</span><span class="lnt">236
+</span><span class="lnt">237
+</span><span class="lnt">238
+</span><span class="lnt">239
+</span><span class="lnt">240
+</span><span class="lnt">241
+</span><span class="lnt">242
+</span><span class="lnt">243
+</span><span class="lnt">244
+</span><span class="lnt">245
+</span><span class="lnt">246
+</span><span class="lnt">247
+</span><span class="lnt">248
+</span><span class="lnt">249
+</span><span class="lnt">250
+</span><span class="lnt">251
+</span><span class="lnt">252
+</span><span class="lnt">253
+</span><span class="lnt">254
+</span><span class="lnt">255
+</span><span class="lnt">256
+</span><span class="lnt">257
+</span><span class="lnt">258
+</span><span class="lnt">259
+</span><span class="lnt">260
+</span><span class="lnt">261
+</span><span class="lnt">262
+</span><span class="lnt">263
+</span><span class="lnt">264
+</span><span class="lnt">265
+</span><span class="lnt">266
+</span><span class="lnt">267
+</span><span class="lnt">268
+</span><span class="lnt">269
+</span><span class="lnt">270
+</span><span class="lnt">271
+</span><span class="lnt">272
+</span><span class="lnt">273
+</span><span class="lnt">274
+</span><span class="lnt">275
+</span><span class="lnt">276
+</span><span class="lnt">277
+</span><span class="lnt">278
+</span><span class="lnt">279
+</span><span class="lnt">280
+</span><span class="lnt">281
+</span><span class="lnt">282
+</span><span class="lnt">283
+</span><span class="lnt">284
+</span><span class="lnt">285
+</span><span class="lnt">286
+</span><span class="lnt">287
+</span><span class="lnt">288
+</span><span class="lnt">289
+</span><span class="lnt">290
+</span><span class="lnt">291
+</span><span class="lnt">292
+</span><span class="lnt">293
+</span><span class="lnt">294
+</span><span class="lnt">295
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* -------------------------------- 
+</span><span class="c">
+</span><span class="c">Primary style
+</span><span class="c">
+</span><span class="c">-------------------------------- */</span>
+<span class="nt">html</span> <span class="o">*</span> <span class="p">{</span>
+  <span class="kp">-webkit-</span><span class="n">font-smoothing</span><span class="p">:</span> <span class="n">antialiased</span><span class="p">;</span>
+  <span class="kp">-moz-</span><span class="n">osx-font-smoothing</span><span class="p">:</span> <span class="n">grayscale</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="o">*,</span> <span class="o">*</span><span class="p">:</span><span class="nd">after</span><span class="o">,</span> <span class="o">*</span><span class="p">:</span><span class="nd">before</span> <span class="p">{</span>
+  <span class="kp">-webkit-</span><span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+  <span class="kp">-moz-</span><span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">body</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#e9f0f5</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">footer</span> <span class="p">{</span>
+  <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">3</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="nt">img</span> <span class="p">{</span>
+  <span class="k">max-width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -------------------------------- 
+</span><span class="c">
+</span><span class="c">Modules - reusable parts of our design
+</span><span class="c">
+</span><span class="c">-------------------------------- */</span>
+<span class="p">.</span><span class="nc">cd-container</span> <span class="p">{</span>
+  <span class="c">/* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">90</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">max-width</span><span class="p">:</span> <span class="mi">1170</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-container</span><span class="p">::</span><span class="nd">after</span> <span class="p">{</span>
+  <span class="c">/* clearfix */</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">table</span><span class="p">;</span>
+  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c">/* -------------------------------- 
+</span><span class="c">
+</span><span class="c">Main components 
+</span><span class="c">
+</span><span class="c">-------------------------------- */</span>
+
+<span class="p">#</span><span class="nn">cd-timeline</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">#</span><span class="nn">cd-timeline</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+  <span class="c">/* this is the vertical line */</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#d7e4ed</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1170px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">#</span><span class="nn">cd-timeline</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">#</span><span class="nn">cd-timeline</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-2</span><span class="kt">px</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">2</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">table</span><span class="p">;</span>
+  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
+  <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1170px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">{</span>
+    <span class="k">margin</span><span class="p">:</span> <span class="mi">4</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">first-child</span> <span class="p">{</span>
+    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">last-child</span> <span class="p">{</span>
+    <span class="k">margin-bottom</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">cd-timeline-img</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">40</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#e9f0f5</span><span class="p">,</span> <span class="kc">inset</span> <span class="mi">0</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">0</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.08</span><span class="p">),</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mf">0.05</span><span class="p">);</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-img</span> <span class="nt">img</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-12</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">-12</span><span class="kt">px</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-img</span><span class="p">.</span><span class="nc">cd-wechat</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#75ce66</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-img</span><span class="p">.</span><span class="nc">cd-alipay</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#3e8af4</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-img</span><span class="p">.</span><span class="nc">cd-location</span> <span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#f0ca45</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1170px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">cd-timeline-img</span> <span class="p">{</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">height</span><span class="p">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">-30</span><span class="kt">px</span><span class="p">;</span>
+    <span class="c">/* Force Hardware Acceleration in WebKit */</span>
+    <span class="kp">-webkit-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">translateZ</span><span class="p">(</span><span class="mi">0</span><span class="p">);</span>
+    <span class="kp">-webkit-</span><span class="k">backface-visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cssanimations</span> <span class="p">.</span><span class="nc">cd-timeline-img</span><span class="p">.</span><span class="nc">is-hidden</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cssanimations</span> <span class="p">.</span><span class="nc">cd-timeline-img</span><span class="p">.</span><span class="nc">bounce-in</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">visible</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-1</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="kp">-moz-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-1</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-1</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">{</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+  <span class="k">margin-left</span><span class="p">:</span> <span class="mi">60</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">3</span><span class="kt">px</span> <span class="mi">0</span> <span class="mh">#d7e4ed</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">:</span><span class="nd">after</span> <span class="p">{</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s2">&#34;&#34;</span><span class="p">;</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">table</span><span class="p">;</span>
+  <span class="k">clear</span><span class="p">:</span> <span class="kc">both</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">{</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#303e49</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">.</span><span class="nc">wechat</span><span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#75ce66</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">.</span><span class="nc">alipay</span><span class="p">{</span>
+  <span class="k">background</span><span class="p">:</span> <span class="mh">#3e8af4</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="nt">p</span><span class="o">,</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span><span class="o">,</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mi">13</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8125</span><span class="kt">rem</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span><span class="o">,</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+  <span class="k">display</span><span class="p">:</span> <span class="kc">inline-block</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="nt">p</span> <span class="p">{</span>
+  <span class="k">margin</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">line-height</span><span class="p">:</span> <span class="mf">1.6</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mf">.8</span><span class="kt">em</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+  <span class="k">background</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="mh">#999</span> <span class="cp">!important</span><span class="p">;</span>
+  <span class="k">border-radius</span><span class="p">:</span> <span class="mf">0.25</span><span class="kt">em</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">no-touch</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#bac4cb</span><span class="p">;</span>  
+<span class="p">}</span>
+<span class="nt">a</span><span class="p">.</span><span class="nc">cd-read-more</span><span class="p">:</span><span class="nd">hover</span><span class="p">{</span><span class="k">text-decoration</span><span class="p">:</span><span class="kc">none</span><span class="p">;</span> <span class="k">background-color</span><span class="p">:</span> <span class="mh">#424242</span><span class="p">;</span>  <span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+  <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="k">padding</span><span class="p">:</span> <span class="mf">.8</span><span class="kt">em</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">opacity</span><span class="p">:</span> <span class="mf">.7</span><span class="p">;</span>
+  <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+  <span class="k">content</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">;</span>
+  <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+  <span class="k">top</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+  <span class="k">right</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+  <span class="k">height</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">width</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+  <span class="k">border</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">transparent</span><span class="p">;</span>
+  <span class="k">border-right</span><span class="p">:</span> <span class="mi">7</span><span class="kt">px</span> <span class="kc">solid</span> <span class="kc">white</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">768px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">20</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">1.25</span><span class="kt">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="nt">p</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span><span class="o">,</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.875</span><span class="kt">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1170px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">{</span>
+    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">padding</span><span class="p">:</span> <span class="mi">1</span><span class="kt">em</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">45</span><span class="kt">%</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+    <span class="k">top</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">border-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">border-left-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+    <span class="k">position</span><span class="p">:</span> <span class="kc">absolute</span><span class="p">;</span>
+    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="mi">122</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">top</span><span class="p">:</span> <span class="mi">6</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">font-size</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">.</span><span class="nc">wechat</span><span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="mh">#75ce66</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span> <span class="p">.</span><span class="nc">alipay</span><span class="p">{</span>
+    <span class="k">background</span><span class="p">:</span> <span class="mh">#3e8af4</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">::</span><span class="nd">before</span> <span class="p">{</span>
+    <span class="k">top</span><span class="p">:</span> <span class="mi">24</span><span class="kt">px</span><span class="p">;</span>
+    <span class="k">left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">right</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">border-color</span><span class="p">:</span> <span class="kc">transparent</span><span class="p">;</span>
+    <span class="k">border-right-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-read-more</span> <span class="p">{</span>
+    <span class="k">float</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">.</span><span class="nc">cd-timeline-content</span> <span class="p">.</span><span class="nc">cd-date</span> <span class="p">{</span>
+    <span class="k">left</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+    <span class="k">right</span><span class="p">:</span> <span class="mi">122</span><span class="kt">%</span><span class="p">;</span>
+    <span class="k">text-align</span><span class="p">:</span> <span class="kc">right</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cssanimations</span> <span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">.</span><span class="nc">is-hidden</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+  <span class="p">}</span>
+  <span class="p">.</span><span class="nc">cssanimations</span> <span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">.</span><span class="nc">bounce-in</span> <span class="p">{</span>
+    <span class="k">visibility</span><span class="p">:</span> <span class="kc">visible</span><span class="p">;</span>
+    <span class="kp">-webkit-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="kp">-moz-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="p">@</span><span class="k">media</span> <span class="nt">only</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">min-width</span><span class="o">:</span> <span class="nt">1170px</span><span class="o">)</span> <span class="p">{</span>
+  <span class="c">/* inverse bounce effect on even content blocks */</span>
+  <span class="p">.</span><span class="nc">cssanimations</span> <span class="p">.</span><span class="nc">cd-timeline-block</span><span class="p">:</span><span class="nd">nth-child</span><span class="o">(</span><span class="nt">even</span><span class="o">)</span> <span class="p">.</span><span class="nc">cd-timeline-content</span><span class="p">.</span><span class="nc">bounce-in</span> <span class="p">{</span>
+    <span class="kp">-webkit-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2-inverse</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="kp">-moz-</span><span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2-inverse</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+    <span class="k">animation</span><span class="p">:</span> <span class="n">cd-bounce-2-inverse</span> <span class="mf">0.6</span><span class="kt">s</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>此外还需要新增两个图片：</p>
+<p><code>/static/images/common/alipay.svg</code>和<code>/static/images/common/wechat.svg</code>，这两个图片可以从下面的路径里获取到，请自行下载。</p>
+<ul>
+<li><a href="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/common/" target="_blank" rel="noopener noreffer">https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/common/</a></li>
+</ul>
+<h3 id="新建donation页面">新建donation页面</h3>
+<p>新建<code>/content/donation/index.md</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
+title: &#34;打赏榜&#34;
+date: 2021-08-23T22:01:44+08:00
+lastmod: 2021-08-23T22:01:44+08:00
+---
+&lt;link rel=&#34;stylesheet&#34; href=&#34;/css/timeline.style.css&#34; /&gt;
+
+&lt;section id=&#34;cd-timeline&#34; class=&#34;cd-container&#34;&gt;
+
+{{&lt; donation
+name=&#34;wechat&#34;
+title=&#34;感谢*A打赏5元！&#34;
+description=&#34;打赏文章为Hexo系列(2.1) - NexT主题美化与博客功能增强 · 第二章#对文章进行加密&#34;
+url=&#34;https://lewky.cn/posts/hexo-2.1.html/#对文章进行加密&#34;
+date=&#34;2021-08-23&#34;
+&gt;}}
+
+{{&lt; donation
+name=&#34;alipay&#34;
+title=&#34;感谢*B打赏5元！&#34;
+description=&#34;打赏文章为Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章#使用Waline替代Valine评论系统&#34;
+url=&#34;/lewky/hugo-3.1/#使用waline替代valine评论系统&#34;
+date=&#34;2021-08-11&#34;
+&gt;}}
+
+&lt;/section&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>该页面首先需要引入css样式文件，然后是添加一个<code>section</code>标签，我们的打赏片段需要在<code>section</code>标签里通过一个个的<code>donation</code>短代码来引入。</p>
+<p>上文中的<code>donation</code>短代码有五个属性。</p>
+<p><code>name</code>有两种值：<code>wechat</code>和<code>alipay</code>，分别对应微信和支付宝。</p>
+<p><code>title</code>是标题，<code>description</code>是描述，<code>url</code>是被打赏文章的链接，<code>date</code>是打赏日期。</p>
+<p>具体效果可以去我的<a href="https://lewky.cn/donation/" target="_blank" rel="noopener noreffer">打赏页面</a>看看。</p>
+<h2 id="添加站点运行时间">添加站点运行时间</h2>
+<p>将<code>\themes\LoveIt\layouts\partials\footer.html</code>拷贝到<code>\layouts\partials\footer.html</code>，打开拷贝后的文件，在<code>&lt;div class=&quot;footer-container&quot;&gt;</code>的下方添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;div class=&#34;footer-line&#34;&gt;
+	&lt;span id=&#34;run-time&#34;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>然后在<code>custom.js</code>中添加如下代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/* 站点运行时间 */</span>
+<span class="kd">function</span> <span class="nx">runtime</span><span class="p">()</span> <span class="p">{</span>
+	<span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&#34;runtime()&#34;</span><span class="p">,</span> <span class="mi">1000</span><span class="p">);</span>
+	<span class="cm">/* 请修改这里的起始时间 */</span>
+    <span class="kd">let</span> <span class="nx">startTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="s1">&#39;04/24/2018 15:00:00&#39;</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">endTime</span> <span class="o">=</span> <span class="k">new</span> <span class="nb">Date</span><span class="p">();</span>
+    <span class="kd">let</span> <span class="nx">usedTime</span> <span class="o">=</span> <span class="nx">endTime</span> <span class="o">-</span> <span class="nx">startTime</span><span class="p">;</span>
+    <span class="kd">let</span> <span class="nx">days</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">usedTime</span> <span class="o">/</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
+    <span class="kd">let</span> <span class="nx">leavel</span> <span class="o">=</span> <span class="nx">usedTime</span> <span class="o">%</span> <span class="p">(</span><span class="mi">24</span> <span class="o">*</span> <span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">hours</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">leavel</span> <span class="o">/</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
+    <span class="kd">let</span> <span class="nx">leavel2</span> <span class="o">=</span> <span class="nx">leavel</span> <span class="o">%</span> <span class="p">(</span><span class="mi">3600</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">minutes</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">leavel2</span> <span class="o">/</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">));</span>
+    <span class="kd">let</span> <span class="nx">leavel3</span> <span class="o">=</span> <span class="nx">leavel2</span> <span class="o">%</span> <span class="p">(</span><span class="mi">60</span> <span class="o">*</span> <span class="mi">1000</span><span class="p">);</span>
+    <span class="kd">let</span> <span class="nx">seconds</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">leavel3</span> <span class="o">/</span> <span class="p">(</span><span class="mi">1000</span><span class="p">));</span>
+    <span class="kd">let</span> <span class="nx">runbox</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;run-time&#39;</span><span class="p">);</span>
+    <span class="nx">runbox</span><span class="p">.</span><span class="nx">innerHTML</span> <span class="o">=</span> <span class="s1">&#39;本站已运行&lt;i class=&#34;far fa-clock fa-fw&#34;&gt;&lt;/i&gt; &#39;</span>
+        <span class="o">+</span> <span class="p">((</span><span class="nx">days</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">days</span> <span class="o">+</span> <span class="s1">&#39; 天 &#39;</span>
+        <span class="o">+</span> <span class="p">((</span><span class="nx">hours</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">hours</span> <span class="o">+</span> <span class="s1">&#39; 时 &#39;</span>
+        <span class="o">+</span> <span class="p">((</span><span class="nx">minutes</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">minutes</span> <span class="o">+</span> <span class="s1">&#39; 分 &#39;</span>
+        <span class="o">+</span> <span class="p">((</span><span class="nx">seconds</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">)</span> <span class="o">?</span> <span class="s1">&#39;0&#39;</span> <span class="o">:</span> <span class="s1">&#39;&#39;</span><span class="p">)</span> <span class="o">+</span> <span class="nx">seconds</span> <span class="o">+</span> <span class="s1">&#39; 秒 &#39;</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="nx">runtime</span><span class="p">();</span>
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="添加文章热度排行榜">添加文章热度排行榜</h2>
+<p>在<code>content</code>目录下新建<code>hot</code>目录，添加一个<code>index.md</code>文件，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span><span class="lnt">83
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
+title: &#34;热度排行榜&#34;
+---
+&lt;style&gt;
+ul#hot {
+    list-style: none;
+}
+ul#hot li {
+    position: relative;
+    padding-left: 30px;
+    height: 36px;
+    line-height: 36px;
+}
+ul#hot li:after {
+    content: &#34;&#34;;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    color: #FFF;
+    background: #999999;
+    text-align: center;
+    position: absolute;
+    left: 0;
+    top: 8px;
+}
+ul#hot li:first-child:after {content: &#34;1&#34;;background: #FD8C84;}
+ul#hot li:nth-child(2):after {content: &#34;2&#34;;background: #FFCC99;}
+ul#hot li:nth-child(3):after {content: &#34;3&#34;;background: #7FD75A;}
+ul#hot li:nth-child(4):after {content: &#34;4&#34;;background: #CCCCFF;}
+ul#hot li:nth-child(5):after {content: &#34;5&#34;;background: #60C4FD;}
+ul#hot li:nth-child(6):after {content: &#34;6&#34;;}
+ul#hot li:nth-child(7):after {content: &#34;7&#34;;}
+ul#hot li:nth-child(8):after {content: &#34;8&#34;;}
+ul#hot li:nth-child(9):after {content: &#34;9&#34;;}
+ul#hot li:nth-child(10):after {content: &#34;10&#34;;}
+ul#hot li:nth-child(11):after {content: &#34;11&#34;;}
+ul#hot li:nth-child(12):after {content: &#34;12&#34;;}
+ul#hot li:nth-child(13):after {content: &#34;13&#34;;}
+ul#hot li:nth-child(14):after {content: &#34;14&#34;;}
+ul#hot li:nth-child(15):after {content: &#34;15&#34;;}
+
+li font {color: grey;}
+li#hot1 font, li#hot2 font, li#hot3 font {color: red;}
+li#hot4 font, li#hot5 font {color: #bd5d67;}
+
+ul#hot li {
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+&lt;/style&gt;
+
+&lt;div&gt;&lt;ul id=&#34;hot&#34;&gt;&lt;/ul&gt;&lt;/div&gt;
+&lt;script src=&#34;https://cdn1.lncld.net/static/js/av-core-mini-0.6.4.js&#34;&gt;&lt;/script&gt;
+&lt;script&gt;AV.initialize(&#34;appId&#34;, &#34;appKey&#34;);&lt;/script&gt;
+&lt;script type=&#34;text/javascript&#34;&gt;
+  var time=0
+  var title=&#34;&#34;
+  var url=&#34;&#34;
+  var query = new AV.Query(&#39;Counter&#39;);
+  query.notEqualTo(&#39;id&#39;,0);
+  query.descending(&#39;time&#39;);
+  query.limit(15);
+  query.find().then(function (todo) {
+    for (var i=0;i&lt;1000;i++){
+      var result=todo[i].attributes;
+      time=result.time;
+      title=result.title;
+      url=result.url;
+      if (i&lt;5) {
+        var content=&#34;&lt;li id=&#39;hot&#34;+(i+1)+&#34;&#39;&gt;&#34;+&#34;&lt;a href=&#39;&#34;+url+&#34;&#39;&gt;&#34;+title+&#34;&lt;font&gt;&#34;+&#34;&amp;nbsp;&amp;nbsp;&lt;i class=&#39;fas fa-fire fa-fw&#39;&gt;&lt;/i&gt; &#34;+time+&#34; ℃&#34;+&#34;&lt;/font&gt;&#34;+&#34;&lt;/a&gt;&#34;+&#34;&lt;/li&gt;&#34;;
+	  } else {
+		var content=&#34;&lt;li id=&#39;hot&#34;+(i+1)+&#34;&#39;&gt;&#34;+&#34;&lt;a href=&#39;&#34;+url+&#34;&#39;&gt;&#34;+title+&#34;&lt;font&gt;&#34;+&#34;&amp;nbsp;&amp;nbsp;&lt;i class=&#39;fas fa-eye fa-fw&#39;&gt;&lt;/i&gt; &#34;+time+&#34; ℃&#34;+&#34;&lt;/font&gt;&#34;+&#34;&lt;/a&gt;&#34;+&#34;&lt;/li&gt;&#34;;
+      }
+      document.getElementById(&#34;hot&#34;).innerHTML+=content
+    }
+  }, function (error) {
+    console.log(&#34;error&#34;);
+  });
+&lt;/script&gt;
+</code></pre></td></tr></table>
+</div>
+</div><p>需要把上面代码中的<code>appId</code>和<code>appKey</code>改成LeanCloud应用对应的值。</p>
+<h2 id="添加plantuml支持">添加PlantUML支持</h2>
+<p>新增<code>/themes/LoveIt/layouts/shortcodes/uml.html</code>，内容如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ $title := &#34;Diagram&#34; }}
+{{ if .IsNamedParams }}
+  {{ with .Get &#34;title&#34; }}
+    {{ $title = . }}
+  {{ end }}
+{{ else }}
+  {{ with .Get 0 }}
+    {{ $title = . }}
+  {{ end }}
+{{ end }}
+
+{{ $inner := .Inner }}
+
+<span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">img</span>
+    <span class="na">src</span><span class="o">=</span><span class="s">&#39;https://g.gravizo.com/svg?{{ $inner }}&#39;</span>
+    <span class="na">alt</span><span class="o">=</span><span class="s">&#39;{{ $title  }}&#39;</span>
+    <span class="p">/&gt;</span>
+    <span class="p">&lt;</span><span class="nt">figcaption</span><span class="p">&gt;</span>{{ $title  }}<span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</code></pre></td></tr></table>
+</div>
+</div><p>之后即可在正文中通过在<code>{{&lt; uml &gt;}}</code>和<code>{{&lt; /uml &gt;}}</code>之间使用PlantUML的语法来自动渲染出对应的PlantUML图，不过需要注意的是，该功能是借助的<code>gravizo</code>来实现。而gravizo并不能支持所有的PlantUML语法，部分语法会失效导致渲染失败。这时候只能手动去PlantUML官网提供的在线工具生成对应的图片了。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{&lt; uml &gt;}}
+@startuml
+class Animal
+class Cat
+Animal &lt;-- Cat
+@enduml
+{{&lt; /uml &gt;}}
+</code></pre></td></tr></table>
+</div>
+</div><h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://wangc1993.github.io/2019/01/12/10/" target="_blank" rel="noopener noreffer">Hexo-NexT添加热度、阅读量排行</a></li>
+<li><a href="https://cloud.tencent.com/developer/article/1537969" target="_blank" rel="noopener noreffer">分享一个纯CSS样式，显示不同颜色数字的排行榜列表</a></li>
+<li><a href="https://it.knightnet.org.uk/kb/hugo/embed-diagram/" target="_blank" rel="noopener noreffer">Embed a diagram in a Hugo page</a></li>
+<li><a href="https://www.daimabiji.com/datetimes/1393.html" target="_blank" rel="noopener noreffer">HTML5+CSS3实现的响应式垂直时间轴</a></li>
+</ul></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-11-30&nbsp;<a class="git-hash" href="https://github.com/cajunlei/cajunlei.github.io/commit/4266fa592f44e7669062e9f840d18584129168ac" target="_blank" title="commit by Cajun(cajun_ray@qq.com) 4266fa592f44e7669062e9f840d18584129168ac: “发布文章、CSS优化”">
+                                    <i class="fas fa-hashtag fa-fw"></i>4266fa5</a></span>
+            </div>
+            <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></div>            
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/lewky/hugo-3.2/" data-title="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章" data-ralateuid="cajunray"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/lewky/hugo-3.2/" data-title="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/lewky/hugo-3.2/" data-title="Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/lewky-hugo/">Lewky-Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/lewky/hugo-4/" class="prev" rel="prev" title="Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录"><i class="fas fa-angle-left fa-fw"></i>Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录</a>
+            <a href="/lewky/hugo-3.1/" class="next" rel="next" title="Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章">Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span id="busuanzi_container_site_pv">
+                    <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;次
+                </span> | 
+                <span id="busuanzi_container_site_uv">
+                    <i class="fas fa-user"></i>&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人
+                </span>
+            </div>
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">
+                        <a href="/love/" target="_blank" one-link-mark="yes">&nbsp;💝&nbsp;</a>
+                        <a href="https://ll.sc.cn" target="_blank">雷相君</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
+                <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div>
+
+            <div class="footer-line"><div class="footer-line">
+                    <i class="fas fa-cog fa-spin"></i>
+                <span id="runtime_span"></span>
+                <script type="text/javascript">
+                    function show_runtime(){window.setTimeout("show_runtime()",1000);
+                    X=new Date("9/25/2021 00:00:00");
+                    Y=new Date();T=(Y.getTime()-X.getTime());
+                    M=24*60*60*1000;a=T/M;
+                    A=Math.floor(a);b=(a-A)*24;
+                    B=Math.floor(b);c=(b-B)*60;
+                    C=Math.floor((b-B)*60);
+                    D=Math.floor((c-C)*60);
+                    runtime_span.innerHTML="本站已运行："+A+"天"+B+"小时"+C+"分"+D+"秒"}show_runtime();
+                </script>
+                </div>
+            </div>
+
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"GQDBYZDWLG","algoliaIndex":"index","algoliaSearchKey":"31f3b432d4c23d621a13f434db81e49c","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script src="/js/webfont.js"></script>
+<script> WebFont.load({
+  custom: {
+    families: ['LXGWFont'],
+  },
+  classes: false,
+  active() {
+    document.body.style.fontFamily = 'LXGWFont';
+  },
+}); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_81el3b1gti3.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
+	 
+	var $cdnPrefix = "/ImageBed";
+</script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?37eb9d4da1f3a0120c43a02428b8f5cf";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script></body>
+</html>

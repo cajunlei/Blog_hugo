@@ -1,0 +1,92 @@
+@font-face {
+    font-family:Italic;
+    src: url(https://cdn.jsdelivr.net/gh/cajunlei/ImageBed/fonts/Italic.woff2) format('woff2')
+}
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0; 
+    padding: 0;
+}
+.typeit #id-1 {
+    font-family: Nunito;
+    font-size: 1.5rem;
+    font-weight:bold;
+}
+.typeit #id-1 strong {
+    color:#e64ba1
+}
+.typeit #id-2 {
+    font-family: Source Code Pro,Menlo,Consolas,Monaco,monospace,system-ui,-apple-system,BlinkMacSystemFont,PingFang SC,Microsoft YaHei UI,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,Helvetica,Arial,sans-serif;
+    font-size: 1rem;
+    line-height:1.5em;
+}
+[data-typeit-id]:before {
+    content: '.';
+    display: inline-block;
+    width: 0;
+    visibility: hidden;
+}
+.single .content a,
+.single .content a::before,
+.single .content a::after {
+    overflow-wrap: break-word;
+    color: #2d96bd;
+}
+[theme=dark] .single .content a,
+[theme=dark] .single .content a::before,
+[theme=dark] .single .content a::after {
+    color: #55bde2;
+}
+.bp {
+    color: #f74840;
+}
+[theme=dark] .bp {
+    color: #ecbf6f;
+}
+.k {
+    font-family: Italic !important;
+    font-weight: bold;
+    letter-spacing: .1rem;
+    color: #b501a9;
+}
+[theme=dark] .k {
+    color: #d371e3;
+}
+.nn {
+    color: #2b77fa;
+}
+[theme=dark] .nn {
+    color: #41b0f5;
+}
+.o {
+    color: #f19b04;
+}
+[theme=dark] .o {
+    color: #ecbf6f;
+}
+.ow {
+    color: #d371e3;
+}
+[theme=dark] .ow {
+    color: #d371e3;
+}
+.s2 {
+    color: #24a443;
+}
+[theme=dark] .s2 {
+    color: #8cc570;
+}
+.n {
+    color: #333;
+}
+[theme=dark] .n {
+    color: #a9b2c0;
+}
+.p {
+    color: #a9a9b3;
+}
+[theme=dark] .p {
+    color: #a9a9b3;
+}

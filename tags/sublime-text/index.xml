@@ -1,0 +1,26 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sublime Text - 标签 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/tags/sublime-text/</link>
+        <description>Sublime Text - 标签 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 17 Oct 2021 19:12:06 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/sublime-text/" rel="self" type="application/rss+xml" /><item>
+    <title>Sublime Text3 - 常见问题</title>
+    <link>https://ll.sc.cn/posts/sublime-text-common-problem/</link>
+    <pubDate>Sun, 17 Oct 2021 19:12:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/sublime-text-common-problem/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
+            </div><p>关于在使用 <code>Sublime Text3</code> 所遇到的一系列报错等问题的解决办法。</p>]]></description>
+</item><item>
+    <title>Sublime Text3 - 使用手册</title>
+    <link>https://ll.sc.cn/posts/sublime-text-manual/</link>
+    <pubDate>Sat, 16 Oct 2021 22:29:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/sublime-text-manual/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/Cover.webp" referrerpolicy="no-referrer">
+            </div><p>个人使用 Sublime Text3 过程中收集整理的一些技巧和方法。</p>]]></description>
+</item></channel>
+</rss>

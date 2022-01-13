@@ -1,0 +1,90 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>爱折腾 - 分类 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/categories/z-turn/</link>
+        <description>爱折腾 - 分类 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://ll.sc.cn/categories/z-turn/" rel="self" type="application/rss+xml" /><item>
+    <title>博客字体精简笔记</title>
+    <link>https://ll.sc.cn/posts/blog-font-cut/</link>
+    <pubDate>Mon, 29 Nov 2021 22:10:49 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/blog-font-cut/</guid>
+    <description><![CDATA[<p>为博客更换了字体，为了提升加载速度，将字体作精简处理……</p>]]></description>
+</item><item>
+    <title>VSCode - 使用笔记</title>
+    <link>https://ll.sc.cn/posts/vscode-use-notes/</link>
+    <pubDate>Sun, 31 Oct 2021 15:22:05 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/vscode-use-notes/</guid>
+    <description><![CDATA[<p>在使用 VSCode 过程中学习的一些笔记分享……</p>]]></description>
+</item><item>
+    <title>Github - 使用笔记</title>
+    <link>https://ll.sc.cn/posts/github-use-notes/</link>
+    <pubDate>Sun, 24 Oct 2021 12:27:12 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/github-use-notes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Vercel &amp; Github 搭建个人博客</title>
+    <link>https://ll.sc.cn/posts/vercel-github-building-blog/</link>
+    <pubDate>Sat, 23 Oct 2021 20:39:56 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/vercel-github-building-blog/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
+            </div><p>解决 Github pages 访问速度慢的问题……</p>]]></description>
+</item><item>
+    <title>v2rayN - 使用笔记</title>
+    <link>https://ll.sc.cn/posts/v2rayn-use-notes/</link>
+    <pubDate>Fri, 22 Oct 2021 16:39:13 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/v2rayn-use-notes/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/02_v2rayN/Cover.jpg" referrerpolicy="no-referrer">
+            </div><p>在使用 v2rayN 过程中学习的一些笔记分享……</p>]]></description>
+</item><item>
+    <title>Git - 使用手册</title>
+    <link>https://ll.sc.cn/posts/git-manual/</link>
+    <pubDate>Wed, 20 Oct 2021 13:24:51 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/git-manual/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/01_Git/Cover.jpg" referrerpolicy="no-referrer">
+            </div><p>在使用 Git 过程中学习的一些笔记分享……</p>]]></description>
+</item><item>
+    <title>Blog 搭建笔记</title>
+    <link>https://ll.sc.cn/posts/blog-building-notes/</link>
+    <pubDate>Mon, 18 Oct 2021 22:02:45 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/blog-building-notes/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>Sublime Text3 - 常见问题</title>
+    <link>https://ll.sc.cn/posts/sublime-text-common-problem/</link>
+    <pubDate>Sun, 17 Oct 2021 19:12:06 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/sublime-text-common-problem/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
+            </div><p>关于在使用 <code>Sublime Text3</code> 所遇到的一系列报错等问题的解决办法。</p>]]></description>
+</item><item>
+    <title>Sublime Text3 - 使用手册</title>
+    <link>https://ll.sc.cn/posts/sublime-text-manual/</link>
+    <pubDate>Sat, 16 Oct 2021 22:29:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/sublime-text-manual/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/Sublime_Text_01/Cover.webp" referrerpolicy="no-referrer">
+            </div><p>个人使用 Sublime Text3 过程中收集整理的一些技巧和方法。</p>]]></description>
+</item><item>
+    <title>Hugo &amp; Algolia 实现站内搜索</title>
+    <link>https://ll.sc.cn/posts/hugo-algolia-site-search/</link>
+    <pubDate>Fri, 15 Oct 2021 13:05:36 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/hugo-algolia-site-search/</guid>
+    <description><![CDATA[<div class="featured-image">
+                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Z-Turn/00_01_Hugo_Algolia/Cover.jpg" referrerpolicy="no-referrer">
+            </div><p>很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。</p>]]></description>
+</item></channel>
+</rss>

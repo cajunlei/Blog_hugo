@@ -1,0 +1,8 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>规范 - 分类 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/categories/standard/</link>
+        <description>规范 - 分类 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://ll.sc.cn/categories/standard/" rel="self" type="application/rss+xml" /></channel>
+</rss>

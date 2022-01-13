@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Lewkies on 雷雷的个人博客</title>
+    <link>https://ll.sc.cn/lewky/</link>
+    <description>Recent content in Lewkies on 雷雷的个人博客</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
+    <webMaster>cajun_ray@qq.com (雷相君)</webMaster>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Tue, 24 Aug 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://ll.sc.cn/lewky/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章</title>
+      <link>https://ll.sc.cn/lewky/hugo-3.3/</link>
+      <pubDate>Tue, 24 Aug 2021 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-3.3/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;请注意，本文的所有功能都离不开两个新增加的文件：&lt;code&gt;_custom.scss&lt;/code&gt;和&lt;code&gt;custom.js&lt;/code&gt;，部分功能还需要&lt;code&gt;jquery&lt;/code&gt;，在第一章中会提及如何引入。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外本文篇幅太长，阅读体验不好，将其进行分章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.1/&#34; rel=&#34;&#34;&gt;Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.2/&#34; rel=&#34;&#34;&gt;Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章</title>
+      <link>https://ll.sc.cn/lewky/hugo-3.1/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-3.1/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;请注意，本文的所有功能都离不开两个新增加的文件：&lt;code&gt;_custom.scss&lt;/code&gt;和&lt;code&gt;custom.js&lt;/code&gt;，部分功能还需要&lt;code&gt;jquery&lt;/code&gt;，在第一章中会提及如何引入。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外本文篇幅太长，阅读体验不好，将其进行分章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.1/&#34; rel=&#34;&#34;&gt;Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.2/&#34; rel=&#34;&#34;&gt;Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章</title>
+      <link>https://ll.sc.cn/lewky/hugo-3.2/</link>
+      <pubDate>Sat, 29 May 2021 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-3.2/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;请注意，本文的所有功能都离不开两个新增加的文件：&lt;code&gt;_custom.scss&lt;/code&gt;和&lt;code&gt;custom.js&lt;/code&gt;，部分功能还需要&lt;code&gt;jquery&lt;/code&gt;，在第一章中会提及如何引入。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外本文篇幅太长，阅读体验不好，将其进行分章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.1/&#34; rel=&#34;&#34;&gt;Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.2/&#34; rel=&#34;&#34;&gt;Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录</title>
+      <link>https://ll.sc.cn/lewky/hugo-4/</link>
+      <pubDate>Mon, 12 Oct 2020 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-4/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本文主要记录从Hexo迁移至Hugo所遇到的一些坑，以及Hugo的LoveIt主题的一些bug之类的应对方案。下面是涉及到的Hexo、Hugo以及LoveIt各自的版本：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(1) - 简单搭建教程与远程部署</title>
+      <link>https://ll.sc.cn/lewky/hugo-1/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-1/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;使用Hexo搭建个人博客也有两年多时间了，当文章数量达到上百篇之后，开始发现Hexo生成文章的效率越来越慢，直到每次生成都需要至少五分钟的时间。我发现生成效率和文章涉及到的分类和标签有很大关系，由于文章数量多，每篇文章又都关联了若干个分类和标签，再加上我使用了压缩样式的插件，最终导致极其低下的生成效率。&lt;/p&gt;
+&lt;p&gt;在经过一段时间的考量后，决定将Hexo博客迁移到Hugo。Hugo是用go语言开发的，在用法上和Hexo类似，可以简单地把Hugo当成go语言版的Hexo，但是它拥有更快的生成效率。下面是官网的原话：&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章</title>
+      <link>https://ll.sc.cn/lewky/hugo-3/</link>
+      <pubDate>Sun, 11 Oct 2020 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-3/</guid>
+      <description>&lt;link rel=&#34;stylesheet&#34; href=&#34;https://ll.sc.cn/css/ll/link.css&#34;&gt;
+
+&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;本博客使用的是Hugo的LoveIt主题，本文也是基于该主题而写的，不过Hugo的美化步骤应该大同小异，版本如下：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;3
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;4
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;5
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-fallback&#34; data-lang=&#34;fallback&#34;&gt;hexo: 3.8.0
+
+hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+
+LoveIt: v0.2.10
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;请注意，本文的所有功能都离不开两个新增加的文件：&lt;code&gt;_custom.scss&lt;/code&gt;和&lt;code&gt;custom.js&lt;/code&gt;，部分功能还需要&lt;code&gt;jquery&lt;/code&gt;，在第一章中会提及如何引入。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;另外本文篇幅太长，阅读体验不好，将其进行分章如下：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.0) - LoveIt主题美化与博客功能增强 · 第一章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.1/&#34; rel=&#34;&#34;&gt;Hugo系列(3.1) - LoveIt主题美化与博客功能增强 · 第二章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.2/&#34; rel=&#34;&#34;&gt;Hugo系列(3.2) - LoveIt主题美化与博客功能增强 · 第三章&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://ll.sc.cn/lewky/hugo-3.3/&#34; rel=&#34;&#34;&gt;Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+    <item>
+      <title>Hugo系列(2) - 通过配置文件来定制个人站点</title>
+      <link>https://ll.sc.cn/lewky/hugo-2/</link>
+      <pubDate>Sat, 10 Oct 2020 00:00:00 +0000</pubDate>
+      <author>cajun_ray@qq.com (雷相君)</author>
+      <guid>https://ll.sc.cn/lewky/hugo-2/</guid>
+      <description>&lt;h2 id=&#34;前言&#34;&gt;前言&lt;/h2&gt;
+&lt;p&gt;Hugo本身可以通过修改站点配置文件来完成页面的部分定制，如按钮、多语言等功能。本文基于&lt;code&gt;LoveIt&lt;/code&gt;主题【v0.2.10】，且所使用的Hugo版本如下，不同版本且不同主题可能无法适用某些属性：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
+&lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
+&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;
+&lt;td class=&#34;lntd&#34;&gt;
+&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-cmd&#34; data-lang=&#34;cmd&#34;&gt;&lt;span class=&#34;p&#34;&gt;&amp;gt;&lt;/span&gt;hugo version
+Hugo Static Site Generator v0.74.2/extended windows/amd64 BuildDate: unknown
+&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;/div&gt;
+&lt;/div&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
