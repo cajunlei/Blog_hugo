@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/</link>
         <description>爱生活，爱工作，爱折腾</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>cajun_ray@qq.com (雷相君)</managingEditor>
-            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</lastBuildDate>
+            <webMaster>cajun_ray@qq.com (雷相君)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 17 Jan 2022 15:13:57 &#43;0800</lastBuildDate>
             <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
@@ -15,6 +15,14 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>2022年职业资格考试安排</title>
+    <link>https://ll.sc.cn/posts/20220117151357/</link>
+    <pubDate>Mon, 17 Jan 2022 15:13:57 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/20220117151357/</guid>
+    <description><![CDATA[<p>坚持始终，终见彩虹；</p>
+<p>2022逢考必过！</p>]]></description>
 </item><item>
     <title>Excel - 使用技巧</title>
     <link>https://ll.sc.cn/posts/excel-skills/</link>
@@ -45,10 +53,10 @@
     <description><![CDATA[<p>仅作为项目内部使用，勿作他用，否则后果自负……</p>]]></description>
 </item><item>
     <title>浏览器扩展分享</title>
-    <link>https://ll.sc.cn/posts/browser-plug-in/</link>
+    <link>https://ll.sc.cn/posts/browser-plugin/</link>
     <pubDate>Sat, 18 Dec 2021 14:47:27 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/browser-plug-in/</guid>
+    <guid>https://ll.sc.cn/posts/browser-plugin/</guid>
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Windows/08_Browser-Plug-in/Cover.webp" referrerpolicy="no-referrer">
             </div><p>在我们都已经离不开互联网的今天，而浏览器作为互联网的入口，为了有一个良好的网上冲浪体验，强烈推荐先手小白阅读这篇文章。</p>]]></description>
@@ -77,12 +85,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/images/Study/05_Markdown_Basics/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>Markdown是一种纯文本格式的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>]]></description>
-</item><item>
-    <title>CSS - 学习笔记</title>
-    <link>https://ll.sc.cn/posts/css-study-notes/</link>
-    <pubDate>Sun, 05 Dec 2021 09:24:36 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/css-study-notes/</guid>
-    <description><![CDATA[]]></description>
 </item></channel>
 </rss>
