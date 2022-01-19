@@ -45,15 +45,15 @@ jQuery(document).ready(function($) {
 /* 轮播背景图片 */
 $(function () {
 	$.backstretch([
-		  $cdnPrefix + "/images/Background/saber1.webp",
-		  $cdnPrefix + "/images/Background/001.webp",
-		  $cdnPrefix + "/images/Background/002.webp",
-		  $cdnPrefix + "/images/Background/003.webp",
-			$cdnPrefix + "/images/Background/saber2.webp",
-		  $cdnPrefix + "/images/Background/101.webp",
-		  $cdnPrefix + "/images/Background/102.webp",
-		  $cdnPrefix + "/images/Background/103.webp",
-		  $cdnPrefix + "/images/Background/201.webp",
+		  $cdnPrefix + "/Background/saber1.webp",
+		  $cdnPrefix + "/Background/001.webp",
+		  $cdnPrefix + "/Background/002.webp",
+		  $cdnPrefix + "/Background/003.webp",
+			$cdnPrefix + "/Background/saber2.webp",
+		  $cdnPrefix + "/Background/101.webp",
+		  $cdnPrefix + "/Background/102.webp",
+		  $cdnPrefix + "/Background/103.webp",
+		  $cdnPrefix + "/Background/201.webp",
 	], { duration: 40000, fade: 1000 });
 });
 
