@@ -1,8 +1,3 @@
-/* 返回随机颜色 */
-function randomColor() {
-	return "rgb("+~~(255*Math.random())+","+~~(255*Math.random())+","+~~(255*Math.random())+")";
-}
-
 /* 鼠标点击文字特效 */
 var a_idx = 0;
 var a_click = 1;
@@ -42,22 +37,31 @@ jQuery(document).ready(function($) {
     });
 });
 
-/* 轮播背景图片 */
 $(function () {
+	/* 轮播背景图片 */
 	$.backstretch([
 		  $cdnPrefix + "/Background/saber1.webp",
 		  $cdnPrefix + "/Background/001.webp",
-		  $cdnPrefix + "/Background/002.webp",
-		  $cdnPrefix + "/Background/003.webp",
 			$cdnPrefix + "/Background/saber2.webp",
 		  $cdnPrefix + "/Background/101.webp",
-		  $cdnPrefix + "/Background/102.webp",
-		  $cdnPrefix + "/Background/103.webp",
+		  $cdnPrefix + "/Background/saber3.webp",
 		  $cdnPrefix + "/Background/201.webp",
-	], { duration: 40000, fade: 1000 });
+	], { duration: 60000, fade: 1000 });
+	/*  点击滚动到顶部 */
+	$('#back-to-top').click(function () {
+		$('html,body').animate({
+			scrollTop: '0px'
+		}, 500);
+			return false;
+		});
+	/*  点击滚动到底部 */
+	$('#back-to-bottom').click(function () {
+		$('html,body').animate({
+			scrollTop: document.getElementsByTagName('BODY')[0].scrollHeight
+		}, 500);
+		return false;
+	});
 });
-
-
 
 /* 离开当前页面时修改网页标题，回到当前页面时恢复原来标题 */
 window.onload = function() {
@@ -79,26 +83,3 @@ window.onload = function() {
 	}
   });
 }
-
-/* 站点运行时间 */
-function runtime() {
-	window.setTimeout("runtime()", 1000);
-	/* 请修改这里的起始时间 */
-    let startTime = new Date('09/24/2021 22:52:00');
-    let endTime = new Date();
-    let usedTime = endTime - startTime;
-    let days = Math.floor(usedTime / (24 * 3600 * 1000));
-    let leavel = usedTime % (24 * 3600 * 1000);
-    let hours = Math.floor(leavel / (3600 * 1000));
-    let leavel2 = leavel % (3600 * 1000);
-    let minutes = Math.floor(leavel2 / (60 * 1000));
-    let leavel3 = leavel2 % (60 * 1000);
-    let seconds = Math.floor(leavel3 / (1000));
-    let runbox = document.getElementById('run-time');
-    runbox.innerHTML = '本站已运行<i class="far fa-clock fa-fw"></i> '
-        + ((days < 10) ? '0' : '') + days + ' 天 '
-        + ((hours < 10) ? '0' : '') + hours + ' 时 '
-        + ((minutes < 10) ? '0' : '') + minutes + ' 分 '
-        + ((seconds < 10) ? '0' : '') + seconds + ' 秒 ';
-}
-runtime();

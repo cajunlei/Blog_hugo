@@ -5,15 +5,15 @@
     <link>https://ll.sc.cn/loveit/</link>
     <description>Recent content in LoveIts on 雷雷的个人博客</description>
     <generator>Hugo -- gohugo.io</generator>
-    <managingEditor>cajun_ray@qq.com (守 正)</managingEditor>
-    <webMaster>cajun_ray@qq.com (守 正)</webMaster>
+    <managingEditor>i@ll.sc.cn (守 正)</managingEditor>
+    <webMaster>i@ll.sc.cn (守 正)</webMaster>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
     <lastBuildDate>Fri, 06 Mar 2020 21:40:32 +0800</lastBuildDate><atom:link href="https://ll.sc.cn/loveit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>主题文档 - 基本概念</title>
       <link>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Fri, 06 Mar 2020 21:40:32 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>&lt;p&gt;探索 Hugo - &lt;strong&gt;LoveIt&lt;/strong&gt; 主题的全部内容和背后的核心概念.&lt;/p&gt;</description>
     </item>
@@ -22,7 +22,7 @@
       <title>主题文档 - 内容</title>
       <link>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E5%AE%B9/</link>
       <pubDate>Thu, 05 Mar 2020 16:30:05 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E5%AE%B9/</guid>
       <description>&lt;p&gt;了解如何在 &lt;strong&gt;LoveIt&lt;/strong&gt; 主题中快速, 直观地创建和组织内容.&lt;/p&gt;</description>
     </item>
@@ -31,7 +31,7 @@
       <title>主题文档 - 内置 Shortcodes</title>
       <link>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E7%BD%AE-shortcodes/</link>
       <pubDate>Wed, 04 Mar 2020 16:29:59 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E7%BD%AE-shortcodes/</guid>
       <description>&lt;p&gt;&lt;strong&gt;Hugo&lt;/strong&gt; 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁.&lt;/p&gt;</description>
     </item>
@@ -40,7 +40,7 @@
       <title>主题文档 - 扩展 Shortcodes</title>
       <link>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E6%89%A9%E5%B1%95-shortcodes/</link>
       <pubDate>Tue, 03 Mar 2020 16:29:59 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E6%89%A9%E5%B1%95-shortcodes/</guid>
       <description>&lt;p&gt;&lt;strong&gt;LoveIt&lt;/strong&gt; 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.&lt;/p&gt;</description>
     </item>
@@ -49,7 +49,7 @@
       <title>Markdown 基本语法</title>
       <link>https://ll.sc.cn/loveit/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</link>
       <pubDate>Sun, 01 Dec 2019 21:57:40 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
       <description>&lt;p&gt;这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.&lt;/p&gt;</description>
     </item>
@@ -58,7 +58,7 @@
       <title>Emoji 支持</title>
       <link>https://ll.sc.cn/loveit/emoji-%E6%94%AF%E6%8C%81/</link>
       <pubDate>Tue, 01 Oct 2019 17:55:28 +0800</pubDate>
-      <author>cajun_ray@qq.com (守 正)</author>
+      <author>i@ll.sc.cn (守 正)</author>
       <guid>https://ll.sc.cn/loveit/emoji-%E6%94%AF%E6%8C%81/</guid>
       <description>&lt;p&gt;Emoji 可以通过多种方式在 Hugo 项目中启用.&lt;/p&gt;</description>
     </item>

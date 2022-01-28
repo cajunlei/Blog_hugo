@@ -1,0 +1,254 @@
+$color1:#93214d;
+$color2:#595757;
+
+@media print {
+	html {
+		font-size: 12px;
+	}
+	.header {
+    margin-top: 0 !important;
+	}
+	.printer {
+		display:none;
+	}
+	a::after,
+	a::before {
+		content:" (" attr(href) ") ";
+	}
+	p {
+		page-break-inside: avoid;
+	}
+}
+@page {
+	size: A4 portrait;
+}
+.body {
+	font-size: 16px;
+	text-align: center;
+	margin: 0px;
+	padding: 0px;
+}
+p {
+	color: #262626;
+}
+.page {
+	margin: 0 auto;
+	max-width: 1000px;
+}
+p.text {
+	line-height: 1.5;
+}
+.header {
+	margin-top: 100px;
+	height: 150px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	.avatar {
+		.avatar-box {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			overflow: hidden;
+			position:relative;
+			border: 3px solid $color1;
+			img {
+				width: 150px;
+				height: 150px*1;
+				position:absolute;
+			}
+		}
+	}
+	.name {
+		width: 40%;
+		text-align: center;
+		h1 {
+			font-size: 2.5rem;
+			color: $color1;
+			margin: 0;
+		}
+		p {
+			margin: 0;
+			font-size: 1.2rem;
+		}
+	}
+	.info {
+		width: 30%;
+		text-align: center;
+		background-color: $color2;
+		padding: 1rem .5rem;
+		position: relative;
+		#triangle {
+			position: absolute;  
+			width: 0px;  
+			height: 0px;  
+			line-height: 0px;
+			border-top: 12px solid $color2;  
+			border-left: 12px solid #fff;  
+			border-right: 12px solid #fff;  
+			left: 45%;  
+			bottom: -12px;  
+		}
+		p {
+			color: #fff;
+			margin: .5rem auto;
+		}
+		.line1 {
+			background-color: #fff;
+			height: 2px;
+			margin: 0 .5rem;
+		}
+	}
+}
+.content {
+	margin-top: 20px;
+	display: flex;
+	.top {
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+		i {
+			color: $color1;
+		}
+		.top-right {
+			padding-left: 10px;
+			p {
+				margin-top: .2rem;
+				margin-bottom: 2px;
+			}
+			.line1 {
+				background-color: $color2;
+				height: 2px;
+			}
+		}
+	}
+	.content-left {
+		width: 70%;
+		.work-page {
+			display: flex;
+			.work-page-left {
+				width: 25%;
+				text-align: right;
+				ul {
+					padding: 0;
+					li {
+						list-style: none;
+						p {
+							&.data {
+								margin: .2rem auto;
+							}
+							&.position {
+								color: $color1;
+								margin-top: .2rem;
+							}
+						}
+					}
+				}
+			}
+			.work-page-right {
+				width: 75%;
+				ul {
+					margin-top: -12px;
+					li {
+						list-style: none;
+						position: relative;
+						&:before {
+							content: '';
+							width: 15px;
+							height: 15px;
+							background: $color1;
+							display: inline-block;
+							vertical-align: middle;
+							border-radius: 100%;
+							border: 5px solid #fff;
+							z-index: 100;
+							position: relative;
+							left: -30px;
+							top: 30px;
+						}
+						&:after {
+							content: '';
+							height: 100%;
+							width: 3px;
+							background: $color1;
+							position: absolute;
+							left: -19px;
+							top: 35px;
+						}
+						&:last-child:after {
+							display: none;
+						}
+						p {
+							margin: .2rem 3rem .2rem 0;
+							&.company {
+								color: $color1;
+								font-size: 1.2rem;
+								font-weight: 800;
+							}
+						}
+					}
+				}
+			}
+		}
+		ul {
+			li:nth-of-type(1) {
+				height: 15rem;
+			}
+			li:nth-of-type(2) {
+				height: 13rem;
+			}
+			li:nth-of-type(3) {
+				height: 16rem;
+			}
+			li:nth-of-type(4) {
+				height: 14rem;
+			}
+		}
+	}
+	.content-right{
+		width: 30%;
+		ul {
+			padding-left: 1.5rem;
+			li {
+				&::marker {
+					font-family: iconfont;
+					content: "\e623";
+					color: $color1;
+					font-weight: bold;
+				}
+				p {
+					margin: 5px auto;
+					padding-left: .5rem;
+				}
+				.Parallelogram {
+					display: inline-block;
+				}
+			}
+		}
+	}
+	p.text {
+		padding: 0 1rem;
+		text-indent: 2rem;
+		text-align: justify;
+	}
+	.Parallelogram {   
+		display: inline-block;
+		transform:skew(-30deg); /*设置倾斜度为-30*/   
+		-webkit-transform: skew(-30deg);   
+		-moz-transform: skew(-30deg);   
+		-o-transform:skew(-30deg);   
+		-ms-transform:skew(-30deg);   
+		margin: 5px auto; 
+		&.one {
+			width: 22px;   
+			height: 18px; 
+			background-color: $color1;
+		}
+		&.two {
+			width: 18px;   
+			height: 14px; 
+			background-color: none;
+			border: 2px solid $color1;
+		}
+	}
+}
