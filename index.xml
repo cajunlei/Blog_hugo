@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/</link>
         <description>爱生活，爱工作，爱折腾</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 17 Jan 2022 15:13:57 &#43;0800</lastBuildDate>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Jan 2022 13:26:34 &#43;0800</lastBuildDate>
             <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
@@ -15,6 +15,17 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>雷雷的人格测试</title>
+    <link>https://ll.sc.cn/posts/20220129132634/</link>
+    <pubDate>Sat, 29 Jan 2022 13:26:34 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/20220129132634/</guid>
+    <description><![CDATA[<p>16型人格测试；</p>
+<p style="color: #734d60"><strong>分析家：</strong> 建筑师、逻辑学家、指挥官、辩论家</p>
+<p style="color: #738d57"><strong>外交家：</strong> 提倡者、调停者、主人公、竞选者</p>
+<p style="color: #50a9aa"><strong>守护者：</strong> 物流师、守卫者、总经理、执政官</p>
+<p style="color: #bf8f00"><strong>探险家：</strong> 鉴赏家、探险家、企业家、表演者</p>]]></description>
 </item><item>
     <title>2022年职业资格考试安排</title>
     <link>https://ll.sc.cn/posts/20220117151357/</link>
@@ -76,14 +87,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Study/06_markdown_high_level/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>Mermaid的功能介绍及使用方法；</p>]]></description>
-</item><item>
-    <title>Markdown - 基础知识</title>
-    <link>https://ll.sc.cn/posts/markdown-basics/</link>
-    <pubDate>Mon, 06 Dec 2021 21:35:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/markdown-basics/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Study/05_Markdown_Basics/Cover.jpg" referrerpolicy="no-referrer">
-            </div><p>Markdown是一种纯文本格式的标记语言，通过简单的标记语法，它可以使普通文本内容具有一定的格式。</p>]]></description>
 </item></channel>
 </rss>

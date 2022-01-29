@@ -8,17 +8,17 @@
         <title>我　们 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
 
 <meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="我　们" />
-<meta property="og:description" content="我们已经在一起 var countDownDate1 = new Date(&#39;2020-11-12T00:00:00&#39;).getTime(); window.setInterval(function() { var distance1 = new Date().getTime() - countDownDate1; var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24)); var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60)); var seconds1 = Math.floor((distance1 %" />
+<meta property="og:description" content="我们已经在一起 Years Days Hours Minutes Seconds Hold your hands till the end of my life var countDownDate1 = new Date(&#39;2020-11-12T00:00:00&#39;).getTime(); window.setInterval(function() { var distance1 = new Date().getTime() - countDownDate1; var year1 = Math.floor(distance1 / (1000 * 60 * 60 * 24 * 365)); var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24) - 365); var hours1 = Math.floor((distance1 % (1000 *" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ll.sc.cn/since/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.webp"/><meta property="article:section" content="" />
 
-
+<meta property="article:modified_time" content="2022-01-29T01:13:31+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ll.sc.cn/images/logo.webp"/>
 
 <meta name="twitter:title" content="我　们"/>
-<meta name="twitter:description" content="我们已经在一起 var countDownDate1 = new Date(&#39;2020-11-12T00:00:00&#39;).getTime(); window.setInterval(function() { var distance1 = new Date().getTime() - countDownDate1; var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24)); var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)); var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60)); var seconds1 = Math.floor((distance1 %"/>
+<meta name="twitter:description" content="我们已经在一起 Years Days Hours Minutes Seconds Hold your hands till the end of my life var countDownDate1 = new Date(&#39;2020-11-12T00:00:00&#39;).getTime(); window.setInterval(function() { var distance1 = new Date().getTime() - countDownDate1; var year1 = Math.floor(distance1 / (1000 * 60 * 60 * 24 * 365)); var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24) - 365); var hours1 = Math.floor((distance1 % (1000 *"/>
 <meta name="application-name" content="雷雷屋头">
 <meta name="apple-mobile-web-app-title" content="雷雷屋头"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
@@ -31,8 +31,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ll.sc.cn\/since\/"
-        },"genre": "page","wordcount":  103 ,
-        "url": "https:\/\/ll.sc.cn\/since\/","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"genre": "page","wordcount":  122 ,
+        "url": "https:\/\/ll.sc.cn\/since\/","dateModified": "2022-01-29T01:13:31+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "守正","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
                 "@type": "Person",
@@ -193,17 +193,52 @@
     <div id="search-dropdown-mobile"></div>
 </div>
 <main class="main">
-                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">我　们</h1><div class="content" id="content"><h3 id="我们已经在一起">我们已经在一起</h3>
-<div id=since style=padding:2rem;text-align:center;font-size:1.6rem;line-height:3rem></div>
+                <div class="container"><div class="page single special"><h1 class="single-title animated pulse faster">我　们</h1><div class="content" id="content">
+
+
+<link rel="stylesheet" href="/css/ll/since.css">
+
+<h3 id="我们已经在一起">我们已经在一起</h3>
+<div id="clockdiv">
+  <div>
+    <p id="y2"></p>
+    <div class="smalltext">Years</div>
+  </div>
+  <div>
+    <p id="d2"></p>
+    <div class="smalltext">Days</div>
+  </div>
+  <div>
+    <p id="h2"></p>
+    <div class="smalltext">Hours</div>
+  </div>
+  <div>
+    <p id="i2"></p>
+    <div class="smalltext">Minutes</div>
+  </div>
+  <div>
+    <p id="s2"></p>
+    <div class="smalltext">Seconds</div>
+  </div>
+</div>
+<h6 id="hold-your-hands-till-the-end-of-my-life">Hold your hands till the end of my life</h6>
+<br>
+<hr>
+<br>
 <script>
   var countDownDate1 = new Date('2020-11-12T00:00:00').getTime();
   window.setInterval(function() {
     var distance1 = new Date().getTime() - countDownDate1;
-    var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+    var year1 = Math.floor(distance1 / (1000 * 60 * 60 * 24 * 365));
+    var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24) - 365);
     var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
     var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
     var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
-    document.getElementById("since").innerHTML = days1 + ' 天 ' + hours1 + ' 时 ' + minutes1 + ' 分 ' + seconds1 + ' 秒';
+    document.getElementById("y2").innerHTML = year1;
+    document.getElementById("d2").innerHTML = days1;
+    document.getElementById("h2").innerHTML = hours1;
+    document.getElementById("i2").innerHTML = minutes1;
+    document.getElementById("s2").innerHTML = seconds1;
   }, 1000);
 </script>
 </div><div id="comments"><div id="tcomment"></div>
