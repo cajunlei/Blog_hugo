@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/</link>
         <description>爱生活，爱工作，爱折腾</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 29 Jan 2022 13:26:34 &#43;0800</lastBuildDate>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 31 Jan 2022 23:59:59 &#43;0800</lastBuildDate>
             <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
@@ -15,6 +15,13 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>2021 - 简短总结</title>
+    <link>https://ll.sc.cn/posts/2021-summarize/</link>
+    <pubDate>Mon, 31 Jan 2022 23:59:59 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/2021-summarize/</guid>
+    <description><![CDATA[<p>这份总结拖到除夕才写完发出来，是因为在交完公司的总结过后，才疏学浅 <del>因为同事们都太卷了🤣</del> ，实在写不出来，拖到最后时刻，草率简单总结一下。</p>]]></description>
 </item><item>
     <title>雷雷的人格测试</title>
     <link>https://ll.sc.cn/posts/20220129132634/</link>
@@ -78,14 +85,5 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/associate-constructor-register/</guid>
     <description><![CDATA[<p>在通过二级建造师考试并取得相应证书后，需要对自己的证书进行注册，证书方可使用;</p>]]></description>
-</item><item>
-    <title>Markdown - 进阶知识</title>
-    <link>https://ll.sc.cn/posts/markdown-high-level/</link>
-    <pubDate>Tue, 07 Dec 2021 11:35:43 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/markdown-high-level/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Study/06_markdown_high_level/Cover.jpg" referrerpolicy="no-referrer">
-            </div><p>Mermaid的功能介绍及使用方法；</p>]]></description>
 </item></channel>
 </rss>
