@@ -83,3 +83,11 @@ window.onload = function() {
 	}
   });
 }
+
+/* goto top */
+jQuery(document).ready(function() {
+    jQuery("body").append('<div id="backtoTop" data-action="gototop"><canvas id="backtoTopCanvas" width="48" height="48"></canvas><div class="per"></div></div>');
+    var T = bigfa_scroll;
+    T.backToTop(jQuery("#backtoTop"));
+    T.scrollHook(jQuery(window), "#0599E3");
+});
