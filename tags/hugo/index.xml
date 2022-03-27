@@ -11,7 +11,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/hugo-algolia-site-search/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://gitee.com/cajunlei/ImageBed/raw/main/Posts/Z-Turn/00_01_Hugo_Algolia/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_01_Hugo_Algolia/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。</p>]]></description>
 </item></channel>
 </rss>
