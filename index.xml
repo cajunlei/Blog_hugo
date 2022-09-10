@@ -4,7 +4,7 @@
         <link>https://ll.sc.cn/</link>
         <description>爱生活，爱工作，爱折腾</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 31 Jan 2022 23:59:59 &#43;0800</lastBuildDate>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</lastBuildDate>
             <atom:link href="https://ll.sc.cn/index.xml" rel="self" type="application/rss+xml" />
         <item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
@@ -15,6 +15,14 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>软件 - Keepass使用说明</title>
+    <link>https://ll.sc.cn/posts/keepass_guidebook/</link>
+    <pubDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/keepass_guidebook/</guid>
+    <description><![CDATA[<p><strong>KeePass是一款免费、小巧、绿色且开源的密码管理工具</strong>；</p>
+<p>由于<code>KeePass</code>自身不带同步功能，所以如果有多设备使用需求的人，可以搭配坚果云进行使用；</p>]]></description>
 </item><item>
     <title>2021 - 简短总结</title>
     <link>https://ll.sc.cn/posts/2021-summarize/</link>
@@ -78,12 +86,5 @@
     <description><![CDATA[<div class="featured-image">
                 <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/08_Browser-Plug-in/Cover.webp" referrerpolicy="no-referrer">
             </div><p>在我们都已经离不开互联网的今天，而浏览器作为互联网的入口，为了有一个良好的网上冲浪体验，强烈推荐先手小白阅读这篇文章。</p>]]></description>
-</item><item>
-    <title>二级建造师 - 注册相关</title>
-    <link>https://ll.sc.cn/posts/associate-constructor-register/</link>
-    <pubDate>Wed, 08 Dec 2021 16:35:59 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/associate-constructor-register/</guid>
-    <description><![CDATA[<p>在通过二级建造师考试并取得相应证书后，需要对自己的证书进行注册，证书方可使用;</p>]]></description>
 </item></channel>
 </rss>
