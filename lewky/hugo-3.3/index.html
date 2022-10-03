@@ -273,12 +273,12 @@ Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hexo: 3.8.0
-
-hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
-
-LoveIt: v0.2.10
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hexo: 3.8.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LoveIt: v0.2.10
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>请注意，本文的所有功能都离不开两个新增加的文件：<code>_custom.scss</code>和<code>custom.js</code>，部分功能还需要<code>jquery</code>，在第一章中会提及如何引入。</strong></p>
 <p>另外本文篇幅太长，阅读体验不好，将其进行分章如下：</p>
@@ -298,10 +298,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  [params.section]
-    # 显示最近更新文章的数量
-    lastUpdatedSize = 15
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  [params.section]
+</span></span><span class="line"><span class="cl">    # 显示最近更新文章的数量
+</span></span><span class="line"><span class="cl">    lastUpdatedSize = 15
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>接着将<code>/themes/LoveIt/layouts/_default/section.html</code>拷贝到<code>/layouts/_default/section.html</code>，打开拷贝后的文件，找到如下：</p>
 <div class="highlight"><div class="chroma">
@@ -309,8 +309,8 @@ LoveIt: v0.2.10
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Paginate */ -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- /* Paginate */ -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在这行代码的上方位置插入下面的代码：</p>
 <div class="highlight"><div class="chroma">
@@ -335,25 +335,25 @@ LoveIt: v0.2.10
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- /* Last Modified */ -}}
-{{- $lastUpdatedSize := .Site.Params.section.lastUpdatedSize -}}
-{{- if $lastUpdatedSize -}}
-	{{- if .Pages -}}
-		{{- $pages := .Pages.ByLastmod.Reverse -}}
-		&lt;h3 class=&#34;group-title&#34;&gt;最近更新 &lt;sup&gt;{{- $lastUpdatedSize -}}&lt;/sup&gt;&lt;/h3&gt;
-		{{- range first $lastUpdatedSize $pages -}}
-			&lt;article class=&#34;archive-item&#34;&gt;
-				&lt;a href=&#34;{{ .RelPermalink }}&#34; class=&#34;archive-item-link&#34;&gt;
-					{{- .Title -}}
-				&lt;/a&gt;
-				&lt;span class=&#34;archive-item-date2&#34;&gt;
-					{{- &#34;2006-01-02&#34; | .Lastmod.Format -}}
-				&lt;/span&gt;
-			&lt;/article&gt;
-		{{- end -}}
-	{{- end -}}
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- /* Last Modified */ -}}
+</span></span><span class="line"><span class="cl">{{- $lastUpdatedSize := .Site.Params.section.lastUpdatedSize -}}
+</span></span><span class="line"><span class="cl">{{- if $lastUpdatedSize -}}
+</span></span><span class="line"><span class="cl">	{{- if .Pages -}}
+</span></span><span class="line"><span class="cl">		{{- $pages := .Pages.ByLastmod.Reverse -}}
+</span></span><span class="line"><span class="cl">		&lt;h3 class=&#34;group-title&#34;&gt;最近更新 &lt;sup&gt;{{- $lastUpdatedSize -}}&lt;/sup&gt;&lt;/h3&gt;
+</span></span><span class="line"><span class="cl">		{{- range first $lastUpdatedSize $pages -}}
+</span></span><span class="line"><span class="cl">			&lt;article class=&#34;archive-item&#34;&gt;
+</span></span><span class="line"><span class="cl">				&lt;a href=&#34;{{ .RelPermalink }}&#34; class=&#34;archive-item-link&#34;&gt;
+</span></span><span class="line"><span class="cl">					{{- .Title -}}
+</span></span><span class="line"><span class="cl">				&lt;/a&gt;
+</span></span><span class="line"><span class="cl">				&lt;span class=&#34;archive-item-date2&#34;&gt;
+</span></span><span class="line"><span class="cl">					{{- &#34;2006-01-02&#34; | .Lastmod.Format -}}
+</span></span><span class="line"><span class="cl">				&lt;/span&gt;
+</span></span><span class="line"><span class="cl">			&lt;/article&gt;
+</span></span><span class="line"><span class="cl">		{{- end -}}
+</span></span><span class="line"><span class="cl">	{{- end -}}
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后在<code>/assets/css/_custom.scss</code>中添加如下样式代码：</p>
 <div class="highlight"><div class="chroma">
@@ -363,10 +363,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">archive-item-date2</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#a9a9b3</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">archive-item-date2</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="mh">#a9a9b3</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>同时为了方便区分开创建时间和最近更新时间，在每篇文章中也新增了最近更新时间这个meta。将<code>/themes/LoveIt/layouts/posts/single.html</code>拷贝到<code>/layouts/posts/single.html</code>，打开拷贝后的文件，找到如下：</p>
 <div class="highlight"><div class="chroma">
@@ -376,10 +376,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .PublishDate.Format -}}
-    &lt;i class=&#34;far fa-calendar-alt fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .PublishDate.Format -}}
+</span></span><span class="line"><span class="cl">    &lt;i class=&#34;far fa-calendar-alt fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>将上面的代码改为如下：</p>
 <div class="highlight"><div class="chroma">
@@ -392,13 +392,13 @@ LoveIt: v0.2.10
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .PublishDate.Format -}}
-    &lt;i class=&#34;far fa-calendar fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
-{{- end -}}
-{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .Lastmod.Format -}}
-    &lt;i class=&#34;far fa-calendar-plus fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .PublishDate.Format -}}
+</span></span><span class="line"><span class="cl">    &lt;i class=&#34;far fa-calendar fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span><span class="line"><span class="cl">{{- with .Site.Params.dateformat | default &#34;2006-01-02&#34; | .Lastmod.Format -}}
+</span></span><span class="line"><span class="cl">    &lt;i class=&#34;far fa-calendar-plus fa-fw&#34;&gt;&lt;/i&gt;&amp;nbsp;&lt;time datetime=&#34;{{ . }}&#34;&gt;{{ . }}&lt;/time&gt;&amp;nbsp;
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考链接">参考链接</h2>
 <ul>
@@ -446,7 +446,7 @@ LoveIt: v0.2.10
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -486,7 +486,7 @@ LoveIt: v0.2.10
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];

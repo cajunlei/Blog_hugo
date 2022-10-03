@@ -205,8 +205,8 @@
         </div><div class="featured-image"><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/Cover.jpg"
-        data-srcset=", https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/Cover.jpg 1.5x,  2x"
+        data-src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/Cover.jpg"
+        data-srcset=", https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/Cover.jpg 1.5x,  2x"
         data-sizes="auto"
         alt=""
         title="" /></div><div class="details toc" id="toc-static"  kept="">
@@ -294,8 +294,8 @@ b. 一个 <code>github</code> ，用于自己进行一些开发活动；</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh-keygen -t rsa -C &#39;xxxxx@company.com&#39; -f ~/.ssh/gitee_id_rsa
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t rsa -C &#39;xxxxx@company.com&#39; -f ~/.ssh/gitee_id_rsa
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>第二步</strong> 生成一个 <code>github</code> 用的 <code>SSH-Key</code></p>
 <div class="highlight"><div class="chroma">
@@ -303,8 +303,8 @@ b. 一个 <code>github</code> ，用于自己进行一些开发活动；</p>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh-keygen -t rsa -C &#39;xxxxx@qq.com&#39; -f ~/.ssh/github_id_rsa
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh-keygen -t rsa -C &#39;xxxxx@qq.com&#39; -f ~/.ssh/github_id_rsa
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>第三步</strong> 在 <code>~/.ssh</code> 目录下新建一个 <code>config</code> 文件（没有后缀）；</p>
 <p>添加如下内容（其中 <code>Host</code> 和 <code>HostName</code> 填写 <code>git</code> 服务器的域名，<code>IdentityFile</code> 指定私钥的路径）</p>
@@ -323,18 +323,18 @@ b. 一个 <code>github</code> ，用于自己进行一些开发活动；</p>
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># gitee
-Host gitee.com
-HostName gitee.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/gitee_id_rsa
-
-# github
-Host github.com
-HostName github.com
-PreferredAuthentications publickey
-IdentityFile ~/.ssh/github_id_rsa
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># gitee
+</span></span><span class="line"><span class="cl">Host gitee.com
+</span></span><span class="line"><span class="cl">HostName gitee.com
+</span></span><span class="line"><span class="cl">PreferredAuthentications publickey
+</span></span><span class="line"><span class="cl">IdentityFile ~/.ssh/gitee_id_rsa
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># github
+</span></span><span class="line"><span class="cl">Host github.com
+</span></span><span class="line"><span class="cl">HostName github.com
+</span></span><span class="line"><span class="cl">PreferredAuthentications publickey
+</span></span><span class="line"><span class="cl">IdentityFile ~/.ssh/github_id_rsa
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><div class="details admonition info open">
         <div class="details-summary admonition-title">
@@ -351,9 +351,9 @@ IdentityFile ~/.ssh/github_id_rsa
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">ssh -T git@gitee.com
-ssh -T git@github.com
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">ssh -T git@gitee.com
+</span></span><span class="line"><span class="cl">ssh -T git@github.com
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="同步代码至github和gitee">同步代码至github和gitee</h3>
 <p>我们有时候开发代码需要把代码同步到多个远程库中，该如何操作呢？</p>
@@ -366,8 +366,8 @@ ssh -T git@github.com
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git remote rm origin
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote rm origin
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>第二步</strong> 再关联 <code>github</code> 的远程库：</p>
 <div class="highlight"><div class="chroma">
@@ -375,8 +375,8 @@ ssh -T git@github.com
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git remote add github git@github.com:chloneda/demo.git
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote add github git@github.com:chloneda/demo.git
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>第三步</strong> 再关联 <code>gitee</code> 的远程库：</p>
 <div class="highlight"><div class="chroma">
@@ -384,8 +384,8 @@ ssh -T git@github.com
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git remote add gitee git@gitee.com:chloneda/demo.git
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote add gitee git@gitee.com:chloneda/demo.git
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h5 id="二配置方式同步">二、配置方式同步</h5>
 <p>修改 <code>.git</code> 文件夹内的 <code>config</code> 文件：</p>
@@ -404,18 +404,18 @@ ssh -T git@github.com
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">[core]
-    repositoryformatversion = 0
-    filemode = true
-    bare = false
-    logallrefupdates = true
-[remote &#34;origin&#34;]
-    url = git@github.com:chloneda/demo.git
-    fetch = +refs/heads/*:refs/remotes/github/*
-[branch &#34;master&#34;]
-    remote = origin
-    merge = refs/heads/master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">[core]
+</span></span><span class="line"><span class="cl">    repositoryformatversion = 0
+</span></span><span class="line"><span class="cl">    filemode = true
+</span></span><span class="line"><span class="cl">    bare = false
+</span></span><span class="line"><span class="cl">    logallrefupdates = true
+</span></span><span class="line"><span class="cl">[remote &#34;origin&#34;]
+</span></span><span class="line"><span class="cl">    url = git@github.com:chloneda/demo.git
+</span></span><span class="line"><span class="cl">    fetch = +refs/heads/*:refs/remotes/github/*
+</span></span><span class="line"><span class="cl">[branch &#34;master&#34;]
+</span></span><span class="line"><span class="cl">    remote = origin
+</span></span><span class="line"><span class="cl">    merge = refs/heads/master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>将上述文件内容 <code>[remote &quot;origin&quot;]</code> 内容复制，修改 <code>origin</code> 名称，内容如下：</p>
 <div class="highlight"><div class="chroma">
@@ -436,21 +436,21 @@ ssh -T git@github.com
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">[core]
-    repositoryformatversion = 0
-    filemode = true
-    bare = false
-    logallrefupdates = true
-[remote &#34;github&#34;]
-    url = git@github.com:chloneda/demo.git
-    fetch = +refs/heads/*:refs/remotes/github/*
-[remote &#34;gitee&#34;]
-    url = git@gitee.com:chloneda/demo.git
-    fetch = +refs/heads/*:refs/remotes/gitee/*
-[branch &#34;master&#34;]
-    remote = origin
-    merge = refs/heads/master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">[core]
+</span></span><span class="line"><span class="cl">    repositoryformatversion = 0
+</span></span><span class="line"><span class="cl">    filemode = true
+</span></span><span class="line"><span class="cl">    bare = false
+</span></span><span class="line"><span class="cl">    logallrefupdates = true
+</span></span><span class="line"><span class="cl">[remote &#34;github&#34;]
+</span></span><span class="line"><span class="cl">    url = git@github.com:chloneda/demo.git
+</span></span><span class="line"><span class="cl">    fetch = +refs/heads/*:refs/remotes/github/*
+</span></span><span class="line"><span class="cl">[remote &#34;gitee&#34;]
+</span></span><span class="line"><span class="cl">    url = git@gitee.com:chloneda/demo.git
+</span></span><span class="line"><span class="cl">    fetch = +refs/heads/*:refs/remotes/gitee/*
+</span></span><span class="line"><span class="cl">[branch &#34;master&#34;]
+</span></span><span class="line"><span class="cl">    remote = origin
+</span></span><span class="line"><span class="cl">    merge = refs/heads/master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="查看远程库">查看远程库</h4>
 <p>通过以上两种方式的任一种方式配置完成后，我们查看以下远程库信息：</p>
@@ -459,8 +459,8 @@ ssh -T git@github.com
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git remote -v
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git remote -v
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以看到两个远程库，说明配置生效了。</p>
 <blockquote>
@@ -476,9 +476,9 @@ github <a href="mailto:git@github.com" rel="">git@github.com</a>:chloneda/demo.g
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git add .
-git commit -m &#34;update&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m &#34;update&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="提交到github">提交到github</h4>
 <div class="highlight"><div class="chroma">
@@ -486,8 +486,8 @@ git commit -m &#34;update&#34;
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git push github master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git push github master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="提交到gitee">提交到gitee</h4>
 <div class="highlight"><div class="chroma">
@@ -495,8 +495,8 @@ git commit -m &#34;update&#34;
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git push gitee master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git push gitee master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="更新代码">更新代码</h4>
 <div class="highlight"><div class="chroma">
@@ -508,12 +508,12 @@ git commit -m &#34;update&#34;
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 从github拉取更新
-git pull github
-
-# 从gitee拉取更新
-git pull gitee
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 从github拉取更新
+</span></span><span class="line"><span class="cl">git pull github
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 从gitee拉取更新
+</span></span><span class="line"><span class="cl">git pull gitee
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h4 id="踩到的坑">踩到的坑</h4>
 <p>上述过程中，更新或提交代码时可能会遇到 <code>fatal:refusing to merge unrelated histories</code> (拒绝合并无关的历史) 错误，解决办法：</p>
@@ -523,8 +523,8 @@ git pull gitee
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git branch --set-upstream-to=origin/remote_branch  your_branch
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git branch --set-upstream-to=origin/remote_branch  your_branch
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>其中，<code>origin/remote_branch</code> 是你本地分支对应的远程分支，<code>your_branch</code> 是你当前的本地分支。</p>
 <p>然后使用 <code>git pull</code> 整合远程仓库和本地仓库。</p>
@@ -533,8 +533,8 @@ git pull gitee
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">git pull --allow-unrelated-histories  # (忽略版本不同造成的影响)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git pull --allow-unrelated-histories  # (忽略版本不同造成的影响)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>重新更新、提交即可。</p>
 <h4 id="强制提交">强制提交</h4>
@@ -547,12 +547,12 @@ git pull gitee
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 强制推送到gitee
-git push -f gitee master
-
-# 强制推送到github
-git push -f github master
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 强制推送到gitee
+</span></span><span class="line"><span class="cl">git push -f gitee master
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># 强制推送到github
+</span></span><span class="line"><span class="cl">git push -f github master
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition danger open">
         <div class="details-summary admonition-title">
@@ -565,30 +565,30 @@ git push -f github master
 <h3 id="git-bash-设置中文">Git Bash 设置中文</h3>
 <p><code>Git Bash</code> 本身就支持中文，只需要在打开 <code>Git bash</code> 后命令窗口右键「Options」 &ndash;&gt; 「Windows」 &ndash;&gt; 「UI languages」下拉选择 <code>zh_CN</code> 保存即可！！</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_23-13-53.png" alt="右键菜单"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_23-13-53.png" alt="右键菜单"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 右键菜单</span>
 </div>
 
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_23-14-37.png" alt="设置界面"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_23-14-37.png" alt="设置界面"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 设置界面</span>
 </div>
 
 <p>我为了使用方便，设置了「选中」 &ndash;&gt; 「选中后立即复制」 ，「鼠标」 &ndash;&gt; 「右键（粘贴）」、「中键（回车）」；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_22-47-28.png" alt="选中后立即复制"  width="80%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_22-47-28.png" alt="选中后立即复制"  width="80%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 选中后立即复制</span>
 </div>
 
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_22-47-23.png" alt="快速粘贴、回车"  width="80%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_22-47-23.png" alt="快速粘贴、回车"  width="80%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 快速粘贴、回车</span>
 </div>
 
 <p>这时候就无法右键弹出菜单 -&gt; 「设置」选项了；</p>
 <p>可以用鼠标单击窗口左上角的图标 -&gt; 「选项」进行设置；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_22-47-53.png" alt="弹出菜单"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_22-47-53.png" alt="弹出菜单"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 弹出菜单</span>
 </div>
 
@@ -596,19 +596,19 @@ git push -f github master
 <p><strong>第一步</strong> 下载汉化文件 <a href="https://files.cnblogs.com/files/chenghu/git-gui-zh-master.zip" target="_blank" rel="noopener noreffer"><strong>zh_cn.msg</strong></a></p>
 <p><strong>第二步</strong> 解压缩后得到 <code>zh_cn.msg</code> 文件。</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_23-08-18.webp" alt="下载解压后的文件"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_23-08-18.webp" alt="下载解压后的文件"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 下载解压后的文件</span>
 </div>
 
 <p>将其放到 <code>/mingw64/share/git-gui/lib/msgs/zh_cn.msg</code> 路径下；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_23-09-35.webp" alt="将其放入此文件夹"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_23-09-35.webp" alt="将其放入此文件夹"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 将其放入此文件夹</span>
 </div>
 
 <p>如果没有 <code>msgs</code> 这个文件夹就自己创建之后再将这个汉化文件放进去；</p>
 <p>重新打开 <code>Git GUI</code> ，你就会发现界面已经变成了中文了。</p>
-<p><img class=l-img src=https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-21_23-12-03.png alt=img width=95% ></p>
+<img class=l-img src=https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-21_23-12-03.png alt=img width=95% >
 <h2 id="git-疑难杂症">Git 疑难杂症</h2>
 <h3 id="ssh-key-突然失效">SSH Key 突然失效</h3>
 <h4 id="出现的问题">出现的问题</h4>
@@ -629,10 +629,10 @@ git push -f github master
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">Host gitee.com 
-HostkeyAlgorithms +ssh-rsa 
-PubkeyAcceptedAlgorithms +ssh-rsa
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">Host gitee.com 
+</span></span><span class="line"><span class="cl">HostkeyAlgorithms +ssh-rsa 
+</span></span><span class="line"><span class="cl">PubkeyAcceptedAlgorithms +ssh-rsa
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition info open">
         <div class="details-summary admonition-title">
@@ -648,8 +648,8 @@ PubkeyAcceptedAlgorithms +ssh-rsa
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">ssh-keygen -t ed25519 -C &#34;your@example.email&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">ssh-keygen -t ed25519 -C &#34;your@example.email&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>之后到 <code>Gitee</code> 重新添加公钥即可</p>
 <div class="details admonition info open">
@@ -663,7 +663,7 @@ PubkeyAcceptedAlgorithms +ssh-rsa
 <p><strong>第三种</strong> 暂时不要使用 <code>OpenSSH 8.8</code> 及以上版本</p>
 <h3 id="hugo-server-报错">Hugo Server 报错</h3>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-24_13-19-12.png" alt="命令执行失败"  width="75%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-24_13-19-12.png" alt="命令执行失败"  width="75%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 命令执行失败</span>
 </div>
 
@@ -681,17 +681,17 @@ PubkeyAcceptedAlgorithms +ssh-rsa
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">$ hugo server
-Start building sites … 
-hugo v0.88.1-5BC54738+extended windows/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio
-ERROR 2021/10/24 13:14:34 Failed to read Git log: fatal: your current branch &#39;master&#39; does not have any commits yet
-WARN 2021/10/24 13:14:34 
-
-Current environment is &#34;development&#34;. The &#34;comment system&#34;, &#34;CDN&#34; and &#34;fingerprint&#34; will be disabled.
-当前运行环境是 &#34;development&#34;. &#34;评论系统&#34;, &#34;CDN&#34; 和 &#34;fingerprint&#34; 不会启用.
-Error: Error building site: logged 1 error(s)
-Built in 306 ms
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">$ hugo server
+</span></span><span class="line"><span class="cl">Start building sites … 
+</span></span><span class="line"><span class="cl">hugo v0.88.1-5BC54738+extended windows/amd64 BuildDate=2021-09-04T09:39:19Z VendorInfo=gohugoio
+</span></span><span class="line"><span class="cl">ERROR 2021/10/24 13:14:34 Failed to read Git log: fatal: your current branch &#39;master&#39; does not have any commits yet
+</span></span><span class="line"><span class="cl">WARN 2021/10/24 13:14:34 
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Current environment is &#34;development&#34;. The &#34;comment system&#34;, &#34;CDN&#34; and &#34;fingerprint&#34; will be disabled.
+</span></span><span class="line"><span class="cl">当前运行环境是 &#34;development&#34;. &#34;评论系统&#34;, &#34;CDN&#34; 和 &#34;fingerprint&#34; 不会启用.
+</span></span><span class="line"><span class="cl">Error: Error building site: logged 1 error(s)
+</span></span><span class="line"><span class="cl">Built in 306 ms
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="details admonition abstract open">
         <div class="details-summary admonition-title">
@@ -704,8 +704,8 @@ Built in 306 ms
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">git init 
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">git init 
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>接着尝试在 <code>git</code> 中执行命令；</p>
 <div class="highlight"><div class="chroma">
@@ -713,8 +713,8 @@ Built in 306 ms
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">hugo server
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果依然报错，请将 <code>Public</code> 中的 <code>.git</code> 文件夹中的内容复制 <code>Blog</code> 文件夹下面的 <code>.git</code> 文件夹中，选择「不覆盖」粘贴；</p>
 <p>再次执行命令；</p>
@@ -723,15 +723,15 @@ Built in 306 ms
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">hugo server -D -e production
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">hugo server -D -e production
+</span></span></code></pre></td></tr></table>
 </div>
 </div></div>
         </div>
     </div>
 <p>成功执行，问题解决。</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/2021-10-24_13-35-31.png" alt="成功执行"  width="75%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/2021-10-24_13-35-31.png" alt="成功执行"  width="75%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 成功执行</span>
 </div>
 
@@ -747,13 +747,13 @@ Built in 306 ms
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">&lt;localBranch&gt;    指本地分支
-&lt;originBranch&gt;   指远程分支
-&lt;branchName&gt;     指分支名称
-&lt;repoAddress&gt;    指仓库地址
-&lt;commit&gt;         指某个commit记录
-&lt;tagName&gt;        指标签名
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">&lt;localBranch&gt;    指本地分支
+</span></span><span class="line"><span class="cl">&lt;originBranch&gt;   指远程分支
+</span></span><span class="line"><span class="cl">&lt;branchName&gt;     指分支名称
+</span></span><span class="line"><span class="cl">&lt;repoAddress&gt;    指仓库地址
+</span></span><span class="line"><span class="cl">&lt;commit&gt;         指某个commit记录
+</span></span><span class="line"><span class="cl">&lt;tagName&gt;        指标签名
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="设置命令别名">设置命令别名</h3>
 <div class="highlight"><div class="chroma">
@@ -766,13 +766,13 @@ Built in 306 ms
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">git config --global alias.st status         // git status ==&gt; git st
-git config --global alias.ci commit         // git commit ==&gt; git ci
-git config --global alias.co checkout       // git checkout ==&gt; git co
-git config --global alias.br branch         // git barnch ==&gt; git br
-git config --global alias.sh stash          // git stash ==&gt; git sh
-git config --global alias.pop &#34;stash pop&#34;   // git stash pop ==&gt; git pop
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">git config --global alias.st status         // git status ==&gt; git st
+</span></span><span class="line"><span class="cl">git config --global alias.ci commit         // git commit ==&gt; git ci
+</span></span><span class="line"><span class="cl">git config --global alias.co checkout       // git checkout ==&gt; git co
+</span></span><span class="line"><span class="cl">git config --global alias.br branch         // git barnch ==&gt; git br
+</span></span><span class="line"><span class="cl">git config --global alias.sh stash          // git stash ==&gt; git sh
+</span></span><span class="line"><span class="cl">git config --global alias.pop &#34;stash pop&#34;   // git stash pop ==&gt; git pop
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="查看">查看</h3>
 <div class="highlight"><div class="chroma">
@@ -801,29 +801,29 @@ git config --global alias.pop &#34;stash pop&#34;   // git stash pop ==&gt; git
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 查看git版本
-git --version
-# 查看用户配置
-git config --global  --list
-# 查看当前分支信息
-git status
-# 查看本地提交历史
-git log
-# 查看本地最后n次提交
-git log -n
-# 查看本地分支
-git branch
-# 查看远程分支
-git branch -r
-# 查看所有分支
-git branch -a
-# 查看本地分支与的远程分支的关联情况
-git branch -vv
-# 查看标签
-git tag
-# 查看标签与之对应的提交信息
-git show &lt;tagName&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 查看git版本
+</span></span><span class="line"><span class="cl">git --version
+</span></span><span class="line"><span class="cl"># 查看用户配置
+</span></span><span class="line"><span class="cl">git config --global  --list
+</span></span><span class="line"><span class="cl"># 查看当前分支信息
+</span></span><span class="line"><span class="cl">git status
+</span></span><span class="line"><span class="cl"># 查看本地提交历史
+</span></span><span class="line"><span class="cl">git log
+</span></span><span class="line"><span class="cl"># 查看本地最后n次提交
+</span></span><span class="line"><span class="cl">git log -n
+</span></span><span class="line"><span class="cl"># 查看本地分支
+</span></span><span class="line"><span class="cl">git branch
+</span></span><span class="line"><span class="cl"># 查看远程分支
+</span></span><span class="line"><span class="cl">git branch -r
+</span></span><span class="line"><span class="cl"># 查看所有分支
+</span></span><span class="line"><span class="cl">git branch -a
+</span></span><span class="line"><span class="cl"># 查看本地分支与的远程分支的关联情况
+</span></span><span class="line"><span class="cl">git branch -vv
+</span></span><span class="line"><span class="cl"># 查看标签
+</span></span><span class="line"><span class="cl">git tag
+</span></span><span class="line"><span class="cl"># 查看标签与之对应的提交信息
+</span></span><span class="line"><span class="cl">git show &lt;tagName&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="新建">新建</h3>
 <div class="highlight"><div class="chroma">
@@ -848,25 +848,25 @@ git show &lt;tagName&gt;
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 新建一个本地分支，但不会切换到该分支上
-git branch &lt;localBranch&gt;
-# 为某个commit记录创建一个分支
-git branch &lt;brancName&gt; &lt;commit&gt;
-# 从某个分支新建一个分支
-git branch &lt;brancName&gt; &lt;localBranch&gt;
-# 新建一个本地分支，并切到该分支
-git checkout -b &lt;brancName&gt;
-# 新建一个本地分支，同时切换到该分支，并且关联该远程分支
-git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
-# 新建一个和远程同名的分支，同时切换到该分支，并且关联该远程分支
-git checkout --track origin/&lt;originBranch&gt;
-# 新建一个附注标签，并添加标签信息
-git tag -a &lt;tagName&gt; -m &#34;some message&#34;
-# 新建一个轻量标签
-git tag &lt;tagName&gt;
-# 给某一个commit他标签
-git tag &lt;tagName&gt; &lt;commit&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 新建一个本地分支，但不会切换到该分支上
+</span></span><span class="line"><span class="cl">git branch &lt;localBranch&gt;
+</span></span><span class="line"><span class="cl"># 为某个commit记录创建一个分支
+</span></span><span class="line"><span class="cl">git branch &lt;brancName&gt; &lt;commit&gt;
+</span></span><span class="line"><span class="cl"># 从某个分支新建一个分支
+</span></span><span class="line"><span class="cl">git branch &lt;brancName&gt; &lt;localBranch&gt;
+</span></span><span class="line"><span class="cl"># 新建一个本地分支，并切到该分支
+</span></span><span class="line"><span class="cl">git checkout -b &lt;brancName&gt;
+</span></span><span class="line"><span class="cl"># 新建一个本地分支，同时切换到该分支，并且关联该远程分支
+</span></span><span class="line"><span class="cl">git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 新建一个和远程同名的分支，同时切换到该分支，并且关联该远程分支
+</span></span><span class="line"><span class="cl">git checkout --track origin/&lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 新建一个附注标签，并添加标签信息
+</span></span><span class="line"><span class="cl">git tag -a &lt;tagName&gt; -m &#34;some message&#34;
+</span></span><span class="line"><span class="cl"># 新建一个轻量标签
+</span></span><span class="line"><span class="cl">git tag &lt;tagName&gt;
+</span></span><span class="line"><span class="cl"># 给某一个commit他标签
+</span></span><span class="line"><span class="cl">git tag &lt;tagName&gt; &lt;commit&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="切换">切换</h3>
 <div class="highlight"><div class="chroma">
@@ -883,17 +883,17 @@ git tag &lt;tagName&gt; &lt;commit&gt;
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 切换到本地的另一个分支
-git checkout &lt;localBranch&gt;
-# 强制切换到本地的另一个分支，该操作会丢失在当前分支所做的修改，慎用
-git checkout &lt;localBranch&gt; -f
-# 新建一个本地分支，并切到该分支
-git checkout -b &lt;localBranch&gt;
-# 新建一个本地分支，同时切换到该分支，并且关联该远程分支
-git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
-# 切换到某个tag
-git checkout &lt;tagName&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 切换到本地的另一个分支
+</span></span><span class="line"><span class="cl">git checkout &lt;localBranch&gt;
+</span></span><span class="line"><span class="cl"># 强制切换到本地的另一个分支，该操作会丢失在当前分支所做的修改，慎用
+</span></span><span class="line"><span class="cl">git checkout &lt;localBranch&gt; -f
+</span></span><span class="line"><span class="cl"># 新建一个本地分支，并切到该分支
+</span></span><span class="line"><span class="cl">git checkout -b &lt;localBranch&gt;
+</span></span><span class="line"><span class="cl"># 新建一个本地分支，同时切换到该分支，并且关联该远程分支
+</span></span><span class="line"><span class="cl">git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 切换到某个tag
+</span></span><span class="line"><span class="cl">git checkout &lt;tagName&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="删除">删除</h3>
 <div class="highlight"><div class="chroma">
@@ -914,21 +914,21 @@ git checkout &lt;tagName&gt;
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 删除(一个或多个)本地该分支（不能删除当前所在的分支，不能删除没有合并到master上的分支）
-git branch -d &lt;localBranch&gt; ...
-# 删除(一个或多个)本地该分支（不能删除当前所在的分支，可以删除没有合并到master上的分支）
-git branch -D &lt;localBranch&gt; ...
-# 删除远程分支
-git push -d origin &lt;originBranch&gt;
-# 删除远程分支
-git push origin -d &lt;originBranch&gt;
-# 删除最新提交，只能删除本地的提交记录
-git reset --hard HEAD^
-# 删除本地tag
-git tag -d &lt;tagName&gt;
-# 删除远程tag
-git push origin --delete &lt;tagName&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 删除(一个或多个)本地该分支（不能删除当前所在的分支，不能删除没有合并到master上的分支）
+</span></span><span class="line"><span class="cl">git branch -d &lt;localBranch&gt; ...
+</span></span><span class="line"><span class="cl"># 删除(一个或多个)本地该分支（不能删除当前所在的分支，可以删除没有合并到master上的分支）
+</span></span><span class="line"><span class="cl">git branch -D &lt;localBranch&gt; ...
+</span></span><span class="line"><span class="cl"># 删除远程分支
+</span></span><span class="line"><span class="cl">git push -d origin &lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 删除远程分支
+</span></span><span class="line"><span class="cl">git push origin -d &lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 删除最新提交，只能删除本地的提交记录
+</span></span><span class="line"><span class="cl">git reset --hard HEAD^
+</span></span><span class="line"><span class="cl"># 删除本地tag
+</span></span><span class="line"><span class="cl">git tag -d &lt;tagName&gt;
+</span></span><span class="line"><span class="cl"># 删除远程tag
+</span></span><span class="line"><span class="cl">git push origin --delete &lt;tagName&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="拉取">拉取</h3>
 <div class="highlight"><div class="chroma">
@@ -943,15 +943,15 @@ git push origin --delete &lt;tagName&gt;
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 拉取与当前分支关联的远程分支代码并进行合并
-git pull
-# 拉取与当前分支关联的远程分支代码并通过变基进行合并
-git pull --rebase
-# 拉取远程某个分支的代码并与当前分支进行合并
-git pull origin &lt;originBranch&gt;
-# 拉取远程某个分支的代码并与本地分支进行合并
-git pull origin &lt;originBranch&gt;:&lt;localBranch&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 拉取与当前分支关联的远程分支代码并进行合并
+</span></span><span class="line"><span class="cl">git pull
+</span></span><span class="line"><span class="cl"># 拉取与当前分支关联的远程分支代码并通过变基进行合并
+</span></span><span class="line"><span class="cl">git pull --rebase
+</span></span><span class="line"><span class="cl"># 拉取远程某个分支的代码并与当前分支进行合并
+</span></span><span class="line"><span class="cl">git pull origin &lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 拉取远程某个分支的代码并与本地分支进行合并
+</span></span><span class="line"><span class="cl">git pull origin &lt;originBranch&gt;:&lt;localBranch&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="推送">推送</h3>
 <div class="highlight"><div class="chroma">
@@ -968,17 +968,17 @@ git pull origin &lt;originBranch&gt;:&lt;localBranch&gt;
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 推送到已关联的远程分支
-git push
-# 推送当前分支到指定远程分支
-git push origin &lt;originBranch&gt;
-# 推送某个本地分支到某个远程分支
-git push origin &lt;localBranch&gt;:&lt;originBranch&gt;
-# 推送指定tag到远程
-git push origin &lt;tagName&gt;
-# 推送所有不在远程的tag到远程
-git push --tags
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 推送到已关联的远程分支
+</span></span><span class="line"><span class="cl">git push
+</span></span><span class="line"><span class="cl"># 推送当前分支到指定远程分支
+</span></span><span class="line"><span class="cl">git push origin &lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 推送某个本地分支到某个远程分支
+</span></span><span class="line"><span class="cl">git push origin &lt;localBranch&gt;:&lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 推送指定tag到远程
+</span></span><span class="line"><span class="cl">git push origin &lt;tagName&gt;
+</span></span><span class="line"><span class="cl"># 推送所有不在远程的tag到远程
+</span></span><span class="line"><span class="cl">git push --tags
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="关联">关联</h3>
 <div class="highlight"><div class="chroma">
@@ -995,17 +995,17 @@ git push --tags
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 推送并与远程分支建立联系，若远程不存在该分支则自动创建
-git push --set-upstream origin &lt;originBranch&gt;
-# 与远程分支建立关系，远程必须存在该分支
-git branch --set-upstream-to=origin/&lt;originBranch&gt; &lt;localBranch&gt;
-# 被废弃的方式 与远程分支建立关系
-git branch --set-upstream &lt;localBranch&gt; origin/&lt;originBranch&gt;
-# 将本地仓库与远程仓库关联
-git remote add origin &lt;repoAddress&gt;
-# 新建一个本地分支，同时切换到该分支，并且关联该远程分支
-git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 推送并与远程分支建立联系，若远程不存在该分支则自动创建
+</span></span><span class="line"><span class="cl">git push --set-upstream origin &lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 与远程分支建立关系，远程必须存在该分支
+</span></span><span class="line"><span class="cl">git branch --set-upstream-to=origin/&lt;originBranch&gt; &lt;localBranch&gt;
+</span></span><span class="line"><span class="cl"># 被废弃的方式 与远程分支建立关系
+</span></span><span class="line"><span class="cl">git branch --set-upstream &lt;localBranch&gt; origin/&lt;originBranch&gt;
+</span></span><span class="line"><span class="cl"># 将本地仓库与远程仓库关联
+</span></span><span class="line"><span class="cl">git remote add origin &lt;repoAddress&gt;
+</span></span><span class="line"><span class="cl"># 新建一个本地分支，同时切换到该分支，并且关联该远程分支
+</span></span><span class="line"><span class="cl">git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="暂存">暂存</h3>
 <div class="highlight"><div class="chroma">
@@ -1030,25 +1030,25 @@ git checkout -b &lt;branchName&gt; origin/&lt;originBranch&gt;
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 贮存当前改动
-git stash
-# 查看贮存列表
-git stash list
-# 应用某个贮存（默认第一个），即git stash pop stash@{0} 
-# 可修改最后的数字，来指定应用某个贮存，该命令同时会将应用的贮存删除
-git stash pop
-# 应用某个贮存（默认第一个），即 git stash apply stash@{0}
-# 可修改最后的数字，来指定应用某个贮存，该不会删除贮存
-git stash apply
-# 删除某个贮存（默认第一个），即git stash drop stash@{0} 
-# 可修改最后的数字，来指定删除某个贮存
-git stash drop
-# 查看某个贮存（默认第一个）做了那些改动，即 git stash show stash@{0} 
-# 可修改最后的数字，来指定查看某个贮存
-git stash show
-# 删除所有贮存
-git stash clear
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 贮存当前改动
+</span></span><span class="line"><span class="cl">git stash
+</span></span><span class="line"><span class="cl"># 查看贮存列表
+</span></span><span class="line"><span class="cl">git stash list
+</span></span><span class="line"><span class="cl"># 应用某个贮存（默认第一个），即git stash pop stash@{0} 
+</span></span><span class="line"><span class="cl"># 可修改最后的数字，来指定应用某个贮存，该命令同时会将应用的贮存删除
+</span></span><span class="line"><span class="cl">git stash pop
+</span></span><span class="line"><span class="cl"># 应用某个贮存（默认第一个），即 git stash apply stash@{0}
+</span></span><span class="line"><span class="cl"># 可修改最后的数字，来指定应用某个贮存，该不会删除贮存
+</span></span><span class="line"><span class="cl">git stash apply
+</span></span><span class="line"><span class="cl"># 删除某个贮存（默认第一个），即git stash drop stash@{0} 
+</span></span><span class="line"><span class="cl"># 可修改最后的数字，来指定删除某个贮存
+</span></span><span class="line"><span class="cl">git stash drop
+</span></span><span class="line"><span class="cl"># 查看某个贮存（默认第一个）做了那些改动，即 git stash show stash@{0} 
+</span></span><span class="line"><span class="cl"># 可修改最后的数字，来指定查看某个贮存
+</span></span><span class="line"><span class="cl">git stash show
+</span></span><span class="line"><span class="cl"># 删除所有贮存
+</span></span><span class="line"><span class="cl">git stash clear
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="克隆">克隆</h3>
 <div class="highlight"><div class="chroma">
@@ -1059,11 +1059,11 @@ git stash clear
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 克隆master分支代码
-git clone &lt;repoAddress&gt;   
-# 克隆某个分支的代码
-git clone -b &lt;originBranch&gt; &lt;repoAddress&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 克隆master分支代码
+</span></span><span class="line"><span class="cl">git clone &lt;repoAddress&gt;   
+</span></span><span class="line"><span class="cl"># 克隆某个分支的代码
+</span></span><span class="line"><span class="cl">git clone -b &lt;originBranch&gt; &lt;repoAddress&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="修改">修改</h3>
 <div class="highlight"><div class="chroma">
@@ -1072,9 +1072,9 @@ git clone -b &lt;originBranch&gt; &lt;repoAddress&gt;
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 修改分支名称 &lt;oldBranch&gt;原始分支名称 &lt;newBranch&gt;新分支名称
-git branch -m &lt;oldBranch&gt; &lt;newBranch&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 修改分支名称 &lt;oldBranch&gt;原始分支名称 &lt;newBranch&gt;新分支名称
+</span></span><span class="line"><span class="cl">git branch -m &lt;oldBranch&gt; &lt;newBranch&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="合并">合并</h3>
 <div class="highlight"><div class="chroma">
@@ -1085,11 +1085,11 @@ git branch -m &lt;oldBranch&gt; &lt;newBranch&gt;
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"># 将某个分支合并到当前分支
-git merge &lt;branchName&gt;
-# 将当前分支变基到某分支
-git rebase &lt;branchName&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl"># 将某个分支合并到当前分支
+</span></span><span class="line"><span class="cl">git merge &lt;branchName&gt;
+</span></span><span class="line"><span class="cl"># 将当前分支变基到某分支
+</span></span><span class="line"><span class="cl">git rebase &lt;branchName&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考链接">参考链接</h2>
 <ul>
@@ -1114,9 +1114,9 @@ git rebase &lt;branchName&gt;
     </ul>
     <h2 id="fab-fa-weixin-分享到朋友圈" class="headerLink" tabindex="-1" style="outline: none;"><i class="fab fa-weixin"></i>&nbsp;分享到朋友圈</h2>
     <div class="images">
-        <img class="slogan" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/scan-share.jpg">
+        <img class="slogan" src="https://f004.backblazeb2.com/file/ll-blog/images/scan-share.jpg">
         <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3a%2f%2fll.sc.cn%2fposts%2fgit-manual%2f&amp;size=300x300" alt="微信扫一扫 分享朋友圈" title="" />
-        <img class="avatar" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/avatar.webp" alt="avatar">
+        <img class="avatar" src="https://f004.backblazeb2.com/file/ll-blog/images/avatar.webp" alt="avatar">
     </div>
 </div>
 <div class="post-reward">
@@ -1124,11 +1124,11 @@ git rebase &lt;branchName&gt;
   <label class="reward-button" for="reward">赞赏支持</label>
   <div class="qr-code">
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/wechat.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/wechat.webp">
         <span style="color: #22ab39;">微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/alipay.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/alipay.webp">
         <span style="color: #1678ff;">支付宝打赏</span>
       </label>
   </div>
@@ -1144,7 +1144,7 @@ git rebase &lt;branchName&gt;
         <div class="post-info-line">
             <div class="post-info-md"></div>
             <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册" data-image="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/Cover.jpg"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册"><i class="fab fa-evernote fa-fw"></i></a></span>
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册" data-image="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/Cover.jpg"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/git-manual/" data-title="Git - 使用手册"><i class="fab fa-evernote fa-fw"></i></a></span>
             </div>
         </div>
     </div>
@@ -1160,7 +1160,8 @@ git rebase &lt;branchName&gt;
             <a href="/posts/v2rayn-use-notes/" class="next" rel="next" title="v2rayN - 使用笔记">v2rayN - 使用笔记<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="tcomment"></div>
-            <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.15/dist/twikoo.all.min.js"></script>
+            <script src="https://f004.backblazeb2.com/file/ll-blog/static/js/twikoo@1.6.7/twikoo.all.min.js"></script>
+            
             <script>
                 twikoo.init({
                     envId: 'https:\/\/blog-twikoo-alpha.vercel.app\/',
@@ -1186,7 +1187,7 @@ git rebase &lt;branchName&gt;
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -1226,7 +1227,7 @@ git rebase &lt;branchName&gt;
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];

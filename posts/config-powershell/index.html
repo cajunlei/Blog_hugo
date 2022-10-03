@@ -259,8 +259,8 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="n">winget</span> <span class="n">search</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">PowerShell</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">search</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">PowerShell</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>提示是否同意条款，输入 <code>Y</code> 回车确认；</p>
 <div class="highlight"><div class="chroma">
@@ -271,11 +271,11 @@
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">Name               Id                           Version  Source
-----------------------------------------------------------------
-PowerShell         Microsoft.PowerShell         7.1.5.0  winget
-Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Name               Id                           Version  Source
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">PowerShell         Microsoft.PowerShell         7.1.5.0  winget
+</span></span><span class="line"><span class="cl">Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>使用 <code>--exact</code> 参数选择安装 <code>PowerShell</code> 版本；</p>
 <div class="highlight"><div class="chroma">
@@ -284,12 +284,12 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="n">PowerShell</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
-<span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="nb">PowerShell-Preview</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="n">PowerShell</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
+</span></span><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="nb">PowerShell-Preview</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_21-38-55.png" alt="安装成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_21-38-55.png" alt="安装成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 安装成功</span>
 </div>
 
@@ -301,8 +301,8 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Install-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-SkipPublisherCheck</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-SkipPublisherCheck</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>遇到提示不信任的存储库，我们输入 <code>Y</code> ，确认；</p>
 <div class="details admonition warning open">
@@ -316,7 +316,7 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
         </div>
     </div>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_21-57-58.png" alt="Oh-My-Posh安装成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_21-57-58.png" alt="Oh-My-Posh安装成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ Oh-My-Posh安装成功</span>
 </div>
 
@@ -326,12 +326,12 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Install-Module</span> <span class="nb">posh-git</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="nb">posh-git</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>同样的提示，重复上一步的操作，输入 <code>Y</code> ，确认即可；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_22-21-03.png" alt="Posh-Git安装成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_22-21-03.png" alt="Posh-Git安装成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ Posh-Git安装成功</span>
 </div>
 
@@ -341,11 +341,11 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSReadLine</span> <span class="n">-AllowPrerelease</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span> <span class="n">-SkipPublisherCheck</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSReadLine</span> <span class="n">-AllowPrerelease</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span> <span class="n">-SkipPublisherCheck</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_22-21-51.png" alt="PSReadLine安装成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_22-21-51.png" alt="PSReadLine安装成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ PSReadLine安装成功</span>
 </div>
 
@@ -357,12 +357,12 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="n">notepad</span><span class="p">.</span><span class="n">exe</span> <span class="nv">$PROFILE</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">notepad</span><span class="p">.</span><span class="n">exe</span> <span class="nv">$PROFILE</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>第一次执行提示没有这个文件，点击「是」进行创建；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_22-45-38.png" alt="创建文件"  width="65%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_22-45-38.png" alt="创建文件"  width="65%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 创建文件</span>
 </div>
 
@@ -374,13 +374,13 @@ Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
-<span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
-<span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">robbyrussel</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">robbyrussel</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_22-46-17.png" alt="编辑文档内容"  width="65%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_22-46-17.png" alt="编辑文档内容"  width="65%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 编辑文档内容</span>
 </div>
 
@@ -402,11 +402,11 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_23-07-06.png" alt="符号未正常显示"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_23-07-06.png" alt="符号未正常显示"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 符号未正常显示</span>
 </div>
 
@@ -438,12 +438,12 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
     </div>
 <p>然后打开设置 &ndash;&gt; PowerShell &ndash;&gt; 外观 &ndash;&gt; 字体选择带 <code>Nerd Font</code> 的 &ndash;&gt; 保存即可。</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_23-25-59.png" alt="设置字体"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_23-25-59.png" alt="设置字体"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 设置字体</span>
 </div>
 
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_23-26-20.png" alt="图标符号已正常显示"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_23-26-20.png" alt="图标符号已正常显示"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标符号已正常显示</span>
 </div>
 
@@ -453,12 +453,12 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span> <span class="n">-Repository</span> <span class="n">PSGallery</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span> <span class="n">-Repository</span> <span class="n">PSGallery</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>同样的提示，输入 <code>Y</code> ，确认即可；</p>
 <div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_23-40-21.png" alt="图标库安装成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_23-40-21.png" alt="图标库安装成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标库安装成功</span>
 </div>
 
@@ -468,11 +468,11 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><div class="caption-wrapper">
-  <img class="caption" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/04_PowerShell/2021-10-28_23-40-50.png" alt="图标显示成功"  width="95%" >
+  <img class="caption" src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/04_PowerShell/2021-10-28_23-40-50.png" alt="图标显示成功"  width="95%" >
   <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标显示成功</span>
 </div>
 
@@ -482,8 +482,8 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>输入命令其实字符，按 <code>tab</code> 键，跳出候选命令；</p>
 <p>最后可以将这些代码都放到配置文件中；</p>
@@ -496,30 +496,20 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
-<span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
-<span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
-<span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
-<span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考链接">参考链接</h2>
 <ul>
-<li>
-<p><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.1#winget" target="_blank" rel="noopener noreffer">在 Windows 上安装 PowerShell</a></p>
-</li>
-<li>
-<p><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.1" target="_blank" rel="noopener noreffer">从 Windows PowerShell 5.1 迁移到 PowerShell 7</a></p>
-</li>
-<li>
-<p><a href="https://ohmyposh.dev/docs" target="_blank" rel="noopener noreffer">Oh-My-Posh 文档</a></p>
-</li>
-<li>
-<p><a href="https://ohmyposh.dev/docs/themes" target="_blank" rel="noopener noreffer">更多 Oh-My-Posh 主题</a></p>
-</li>
-<li>
-<p><a href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/" target="_blank" rel="noopener noreffer">winget文档</a></p>
-</li>
+<li><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.1#winget" target="_blank" rel="noopener noreffer">在 Windows 上安装 PowerShell</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.1" target="_blank" rel="noopener noreffer">从 Windows PowerShell 5.1 迁移到 PowerShell 7</a></li>
+<li><a href="https://ohmyposh.dev/docs" target="_blank" rel="noopener noreffer">Oh-My-Posh 文档</a></li>
+<li><a href="https://ohmyposh.dev/docs/themes" target="_blank" rel="noopener noreffer">更多 Oh-My-Posh 主题</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/" target="_blank" rel="noopener noreffer">winget文档</a></li>
 </ul>
 <h3 id="视频教程">视频教程</h3>
 <div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV12u411Z7Zo&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div><div class="weixin">
@@ -534,9 +524,9 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
     </ul>
     <h2 id="fab-fa-weixin-分享到朋友圈" class="headerLink" tabindex="-1" style="outline: none;"><i class="fab fa-weixin"></i>&nbsp;分享到朋友圈</h2>
     <div class="images">
-        <img class="slogan" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/scan-share.jpg">
+        <img class="slogan" src="https://f004.backblazeb2.com/file/ll-blog/images/scan-share.jpg">
         <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3a%2f%2fll.sc.cn%2fposts%2fconfig-powershell%2f&amp;size=300x300" alt="微信扫一扫 分享朋友圈" title="" />
-        <img class="avatar" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/avatar.webp" alt="avatar">
+        <img class="avatar" src="https://f004.backblazeb2.com/file/ll-blog/images/avatar.webp" alt="avatar">
     </div>
 </div>
 <div class="post-reward">
@@ -544,11 +534,11 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
   <label class="reward-button" for="reward">赞赏支持</label>
   <div class="qr-code">
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/wechat.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/wechat.webp">
         <span style="color: #22ab39;">微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/alipay.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/alipay.webp">
         <span style="color: #1678ff;">支付宝打赏</span>
       </label>
   </div>
@@ -580,7 +570,8 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
             <a href="/posts/windows-refresh-ico/" class="next" rel="next" title="Win10 - 强制刷新图标缓存">Win10 - 强制刷新图标缓存<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="tcomment"></div>
-            <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.15/dist/twikoo.all.min.js"></script>
+            <script src="https://f004.backblazeb2.com/file/ll-blog/static/js/twikoo@1.6.7/twikoo.all.min.js"></script>
+            
             <script>
                 twikoo.init({
                     envId: 'https:\/\/blog-twikoo-alpha.vercel.app\/',
@@ -606,7 +597,7 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -646,7 +637,7 @@ Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];

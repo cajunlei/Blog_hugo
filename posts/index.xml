@@ -4,22 +4,29 @@
         <link>https://ll.sc.cn/posts/</link>
         <description>所有文章 | 雷雷的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Sep 2022 21:14:18 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
     <link>https://ll.sc.cn/posts/cad-skills-problem/</link>
     <pubDate>Thu, 21 Oct 2021 23:53:40 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>国家标准免费下载整理</title>
+    <link>https://ll.sc.cn/posts/gb_free_download/</link>
+    <pubDate>Sun, 18 Sep 2022 21:14:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/gb_free_download/</guid>
+    <description><![CDATA[<p>国家标准免费了，在哪里可以下载？</p>]]></description>
 </item><item>
     <title>软件 - Keepass使用说明</title>
     <link>https://ll.sc.cn/posts/keepass_guidebook/</link>
     <pubDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/keepass_guidebook/</guid>
-    <description><![CDATA[<p><strong>KeePass是一款免费、小巧、绿色且开源的密码管理工具</strong>；</p>
+    <description><![CDATA[<p><code>KeePass</code>是一款免费、小巧、绿色且开源的密码管理工具；</p>
 <p>由于<code>KeePass</code>自身不带同步功能，所以如果有多设备使用需求的人，可以搭配坚果云进行使用；</p>]]></description>
 </item><item>
     <title>2021 - 简短总结</title>
@@ -75,14 +82,5 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-electronic-blueprint/</guid>
     <description><![CDATA[<p>仅作为项目内部使用，勿作他用，否则后果自负……</p>]]></description>
-</item><item>
-    <title>浏览器扩展分享</title>
-    <link>https://ll.sc.cn/posts/browser-plugin/</link>
-    <pubDate>Sat, 18 Dec 2021 14:47:27 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/browser-plugin/</guid>
-    <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Windows/08_Browser-Plug-in/Cover.webp" referrerpolicy="no-referrer">
-            </div><p>在我们都已经离不开互联网的今天，而浏览器作为互联网的入口，为了有一个良好的网上冲浪体验，强烈推荐先手小白阅读这篇文章。</p>]]></description>
 </item></channel>
 </rss>

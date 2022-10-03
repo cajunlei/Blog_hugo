@@ -32,7 +32,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/vercel-github-building-blog/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>解决 Github pages 访问速度慢的问题……</p>]]></description>
 </item><item>
     <title>v2rayN - 使用笔记</title>
@@ -41,7 +41,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/v2rayn-use-notes/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/02_v2rayN/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/02_v2rayN/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>在使用 v2rayN 过程中学习的一些笔记分享……</p>]]></description>
 </item><item>
     <title>Git - 使用手册</title>
@@ -50,7 +50,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/git-manual/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/01_Git/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/01_Git/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>在使用 Git 过程中学习的一些笔记分享……</p>]]></description>
 </item><item>
     <title>Blog 搭建笔记</title>
@@ -66,7 +66,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/sublime-text-common-problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
             </div><p>关于在使用 <code>Sublime Text3</code> 所遇到的一系列报错等问题的解决办法。</p>]]></description>
 </item><item>
     <title>Sublime Text3 - 使用手册</title>
@@ -75,7 +75,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/sublime-text-manual/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/Sublime_Text_01/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/Sublime_Text_01/Cover.webp" referrerpolicy="no-referrer">
             </div><p>个人使用 Sublime Text3 过程中收集整理的一些技巧和方法。</p>]]></description>
 </item><item>
     <title>Hugo &amp; Algolia 实现站内搜索</title>
@@ -84,7 +84,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/hugo-algolia-site-search/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_01_Hugo_Algolia/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_01_Hugo_Algolia/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>很多的 Hugo 主题是没有自带搜索功能的，但是们为了方便用户浏览和查找内容是需要在网站上提供搜索功能。</p>]]></description>
 </item></channel>
 </rss>

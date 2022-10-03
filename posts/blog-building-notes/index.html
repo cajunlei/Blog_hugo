@@ -12,7 +12,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://ll.sc.cn/posts/blog-building-notes/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.webp"/><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2021-10-18T22:02:45+08:00" />
-<meta property="article:modified_time" content="2021-12-05T11:02:45+08:00" />
+<meta property="article:modified_time" content="2022-09-20T22:35:45+08:00" />
 
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:image" content="https://ll.sc.cn/images/logo.webp"/>
@@ -31,8 +31,8 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ll.sc.cn\/posts\/blog-building-notes\/"
-        },"genre": "posts","keywords": "Blog","wordcount":  2045 ,
-        "url": "https:\/\/ll.sc.cn\/posts\/blog-building-notes\/","datePublished": "2021-10-18T22:02:45+08:00","dateModified": "2021-12-05T11:02:45+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+        },"genre": "posts","keywords": "Blog","wordcount":  2898 ,
+        "url": "https:\/\/ll.sc.cn\/posts\/blog-building-notes\/","datePublished": "2021-10-18T22:02:45+08:00","dateModified": "2022-09-20T22:35:45+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "守正","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
                 "@type": "Person",
@@ -198,8 +198,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Blog 搭建笔记</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://ll.sc.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>守正</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/z-turn/"><i class="far fa-folder fa-fw"></i>爱折腾</a></span></div>
-            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-10-18">2021-10-18</time>&nbsp;&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-12-05">2021-12-05</time>&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2045 字&nbsp;&nbsp;
-                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 5 分钟&nbsp;&nbsp;<span id="/posts/blog-building-notes/" class="leancloud_visitors" data-flag-title="Blog 搭建笔记">
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-10-18">2021-10-18</time>&nbsp;&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2022-09-20">2022-09-20</time>&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2898 字&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;&nbsp;<span id="/posts/blog-building-notes/" class="leancloud_visitors" data-flag-title="Blog 搭建笔记">
                     <i class="far fa-eye fa-fw"></i>&nbsp;<span id="twikoo_visitors">0</span>&nbsp;次阅读
                 </span>&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
@@ -209,7 +209,22 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ol>
+    <li><a href="#hugo优点">hugo优点</a></li>
     <li><a href="#hugo安装">hugo安装</a></li>
+    <li><a href="#开始使用">开始使用</a>
+      <ol>
+        <li><a href="#创建本地站点根目录">创建本地站点根目录</a></li>
+        <li><a href="#下载hugo主题">下载hugo主题</a></li>
+        <li><a href="#创建第一个测试文件">创建第一个测试文件</a></li>
+        <li><a href="#本地预览">本地预览</a></li>
+      </ol>
+    </li>
+    <li><a href="#推送到github仓库">推送到github仓库</a>
+      <ol>
+        <li><a href="#github上创建仓库">github上创建仓库</a></li>
+        <li><a href="#将本地文件推送到远程仓库">将本地文件推送到远程仓库</a></li>
+      </ol>
+    </li>
     <li><a href="#nodejs安装">Node.js安装</a></li>
     <li><a href="#picgo-配置gitee">PicGo 配置(Gitee)</a>
       <ol>
@@ -238,6 +253,7 @@
       </ol>
     </li>
     <li><a href="#自定义模板">自定义模板</a></li>
+    <li><a href="#twikoo-版本升级vercel">Twikoo 版本升级（Vercel）</a></li>
     <li><a href="#一些问题">一些问题</a>
       <ol>
         <li><a href="#背景设置透明度后文章图片也被透明化的解决方法">背景设置透明度后文章图片也被透明化的解决方法</a></li>
@@ -246,18 +262,20 @@
     <li><a href="#参考链接">参考链接</a></li>
   </ol>
 </nav></div>
-            </div><div class="content" id="content"><div class="details admonition warning open">
-			<div class="details-summary admonition-title">
-				<i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
-		    </div>
-			<div class="details-content">
-				<div class="admonition-content">
-					本文最后更新于 <span class="timeago" datetime="2021-12-05T11:02:45" title="2021-12-05">2021年12月05日</span>，若内容或图片失效，请留言反馈。</div>
-			</div>
-		 </div><h2 id="hugo安装">hugo安装</h2>
-<p>Hugo的安装有很多方式 <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener noreffer">Install Hugo</a> 根据个人喜好可以自行安装。</p>
-<p>使用 <code>Hugo</code> 前需要安装 <a href="https://git-scm.com/" target="_blank" rel="noopener noreffer">Git</a> 和 <a href="https://golang.org/" target="_blank" rel="noopener noreffer">Go</a> 语言开发环境。</p>
-<p><strong>第一步</strong> 下载 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">hugo</a>，选择符合自己环境的版本下载；</p>
+            </div><div class="content" id="content"><h2 id="hugo优点">hugo优点</h2>
+<p>常见的静态网站生成工具对环境依赖过多，性能较差，于是使用<code>Go</code>语言写了一个静态网站生成器<code>Hugo</code>。</p>
+<p>不仅解决了环境依赖、性能较差的问题，还有使用简单、部署方便等诸多优点，通过<code>LiveReload</code>实时刷新，极大的优化文章的写作体验。</p>
+<h2 id="hugo安装">hugo安装</h2>
+<p><code>Hugo</code>的安装有很多方式 <a href="https://gohugo.io/getting-started/installing/" target="_blank" rel="noopener noreffer">Install Hugo</a> 根据个人喜好可以自行安装。</p>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">使用 <code>Hugo</code> 前需要安装 <a href="https://git-scm.com/" target="_blank" rel="noopener noreffer">Git</a> 和 <a href="https://golang.org/" target="_blank" rel="noopener noreffer">Go</a> 语言开发环境。</div>
+        </div>
+    </div>
+<p><strong>第一步</strong> 打开 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer">hugo官网</a> → <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer">下载hugo</a>，选择符合自己环境的版本下载；</p>
 <p><strong>第二步</strong> 解压<code>hugo</code>安装文件，比如到 <code>C:\hugo</code></p>
 <p>管理员身份打开<code>cmd</code>，切换到 <code>C:\hugo\</code> 目录下，输入：</p>
 <div class="highlight"><div class="chroma">
@@ -265,25 +283,110 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text">hugo version
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-Text" data-lang="Text"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>显示 <code>hugo</code> 版本号，说明安装成功了；</p>
 <p>将<code>Hugo</code>添加到<code>Windows</code>的环境变量 <code>PATH</code> 中；</p>
 <p><strong>步骤</strong> 计算机 &ndash;&gt; 属性 &ndash;&gt; 高级系统设置 &ndash;&gt; 环境变量 &ndash;&gt; 系统变量 &ndash;&gt; <code>Path</code>。</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw"></i>技巧<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">按快捷键<code>win + R</code>，输入：<code>sysdm.cpl</code>快速打开环境变量配置;</div>
+        </div>
+    </div>
 <p>现在在任意位置，右键打开 <code>git bash</code> 输入 <code>hugo version</code> 同样也会得到 <code>hugo</code> 版本号；</p>
+<h2 id="开始使用">开始使用</h2>
+<h3 id="创建本地站点根目录">创建本地站点根目录</h3>
+<p>在任意目录下，然后输入如下命令，进行创建本地站点根目录</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site hugoblog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="下载hugo主题">下载hugo主题</h3>
+<p>因为<code>hugo</code>没有内置主题，所以你需要去下载一个</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/reuixiy/hugo-theme-meme.git themes/meme
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="创建第一个测试文件">创建第一个测试文件</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new post/first.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="本地预览">本地预览</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo serve -e production
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>在浏览器打开如下链接，http://localhost:1313/ 查看效果</p>
+<h2 id="推送到github仓库">推送到github仓库</h2>
+<h3 id="github上创建仓库">github上创建仓库</h3>
+<p>登录 <a href="https://github.com/" target="_blank" rel="noopener noreffer">Github</a></p>
+<p>点击<code>Your repositories</code> → 点击<code>new</code> → 填写仓库名，选择<code>Public</code>，添加一个<code>Readme</code>文件 → 点击<code>Create respository</code></p>
+<p>完成仓库创建。</p>
+<h3 id="将本地文件推送到远程仓库">将本地文件推送到远程仓库</h3>
+<ol>
+<li>
+<p>在博客根目录，执行<code>hugo -D</code>生成下网站所需数据；</p>
+</li>
+<li>
+<p>可以看到<code>public</code>目录下，生成可很多文件，这个就是后续生成网站所需要的数据；</p>
+</li>
+<li>
+<p>来到<code>public</code>目录下，执行如下命令；</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git add .
+</span></span><span class="line"><span class="cl">git commit -m &#34;first commit&#34;
+</span></span><span class="line"><span class="cl">git remote add origin git@github.com:cajunlei/test.git
+</span></span><span class="line"><span class="cl">git push -u origin
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>此时来到<code>github</code>仓库下，数据已经被推送上来了</p>
+<p>最后在<code>github</code>上设置下<code>gitpages</code>功能</p>
 <h2 id="nodejs安装">Node.js安装</h2>
 <p>打开<a href="https://nodejs.org/zh-cn/" target="_blank" rel="noopener noreffer">Node.js</a>，选择合适的版本下载安装即可；</p>
-<p><img class=l-img src=https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_03_Blog_Building/2021-11-15_21-22-11.png alt=img width=75% ></p>
+<img class=l-img src=https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_03_Blog_Building/2021-11-15_21-22-11.png alt=img width=75% >
 <p>我安装的<strong>长期维护版</strong>，安装过程一路点击下一步即可；</p>
 <h2 id="picgo-配置gitee">PicGo 配置(Gitee)</h2>
 <h3 id="安装插件">安装插件</h3>
 <p>在左侧 <strong>插件设置</strong> 选项中，搜索 <code>Gitee</code> 即可出现对应的插件，点击安装即可；</p>
-<p><img class=l-img src=https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_03_Blog_Building/2021-11-15_21-24-44.png alt=img width=95% ></p>
+<img class=l-img src=https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_03_Blog_Building/2021-11-15_21-24-44.png alt=img width=95% >
 <p>我选择的是 <code>gitee-uploader 1.1.2</code> ；</p>
 <h3 id="配置gitee">配置gitee</h3>
 <p>点击左侧 <strong>图床设置</strong> &ndash;&gt; <code>gitee</code> ；</p>
-<p><img class=l-img src=https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Z-Turn/00_03_Blog_Building/2021-11-17_19-45-36.png alt=img width=95% ></p>
+<img class=l-img src=https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_03_Blog_Building/2021-11-17_19-45-36.png alt=img width=95% >
 <div class="details admonition abstract open">
         <div class="details-summary admonition-title">
             <i class="icon fas fa-list-ul fa-fw"></i>填写说明<i class="details-icon fas fa-angle-right fa-fw"></i>
@@ -310,9 +413,9 @@
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="c">&lt;!-- 修改此行日期及时间 --&gt;</span>
-new Date(&#34;9/24/2021 22:52:50&#34;);
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="c">&lt;!-- 修改此行日期及时间 --&gt;</span>
+</span></span><span class="line"><span class="cl">new Date(&#34;9/24/2021 22:52:50&#34;);
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>第二步</strong> 将修改过后的代码，放到你网站喜欢的位置就好啦。</p>
 <div class="highlight"><div class="chroma">
@@ -331,19 +434,19 @@ new Date(&#34;9/24/2021 22:52:50&#34;);
 </span><span class="lnt">12
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;runtime_span&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
-    <span class="kd">function</span> <span class="nx">show_runtime</span><span class="p">(){</span><span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&#34;show_runtime()&#34;</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
-    <span class="nx">X</span><span class="o">=</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="s2">&#34;9/24/2021 22:52:50&#34;</span><span class="p">);</span>
-    <span class="nx">Y</span><span class="o">=</span><span class="k">new</span> <span class="nb">Date</span><span class="p">();</span><span class="nx">T</span><span class="o">=</span><span class="p">(</span><span class="nx">Y</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span><span class="o">-</span><span class="nx">X</span><span class="p">.</span><span class="nx">getTime</span><span class="p">());</span>
-    <span class="nx">M</span><span class="o">=</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">1000</span><span class="p">;</span><span class="nx">a</span><span class="o">=</span><span class="nx">T</span><span class="o">/</span><span class="nx">M</span><span class="p">;</span>
-    <span class="nx">A</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="nx">b</span><span class="o">=</span><span class="p">(</span><span class="nx">a</span><span class="o">-</span><span class="nx">A</span><span class="p">)</span><span class="o">*</span><span class="mi">24</span><span class="p">;</span>
-    <span class="nx">B</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="nx">c</span><span class="o">=</span><span class="p">(</span><span class="nx">b</span><span class="o">-</span><span class="nx">B</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">;</span>
-    <span class="nx">C</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">b</span><span class="o">-</span><span class="nx">B</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">);</span>
-    <span class="nx">D</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">c</span><span class="o">-</span><span class="nx">C</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">);</span>
-    <span class="nx">runtime_span</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&#34;本站已运行:&#34;</span><span class="o">+</span><span class="nx">A</span><span class="o">+</span><span class="s2">&#34;天&#34;</span><span class="o">+</span><span class="nx">B</span><span class="o">+</span><span class="s2">&#34;小时&#34;</span><span class="o">+</span><span class="nx">C</span><span class="o">+</span><span class="s2">&#34;分&#34;</span><span class="o">+</span><span class="nx">D</span><span class="o">+</span><span class="s2">&#34;秒&#34;</span><span class="p">}</span><span class="nx">show_runtime</span><span class="p">();</span>
-<span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;runtime_span&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">show_runtime</span><span class="p">(){</span><span class="nb">window</span><span class="p">.</span><span class="nx">setTimeout</span><span class="p">(</span><span class="s2">&#34;show_runtime()&#34;</span><span class="p">,</span><span class="mi">1000</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">X</span><span class="o">=</span><span class="k">new</span> <span class="nb">Date</span><span class="p">(</span><span class="s2">&#34;9/24/2021 22:52:50&#34;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Y</span><span class="o">=</span><span class="k">new</span> <span class="nb">Date</span><span class="p">();</span><span class="nx">T</span><span class="o">=</span><span class="p">(</span><span class="nx">Y</span><span class="p">.</span><span class="nx">getTime</span><span class="p">()</span><span class="o">-</span><span class="nx">X</span><span class="p">.</span><span class="nx">getTime</span><span class="p">());</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">M</span><span class="o">=</span><span class="mi">24</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">60</span><span class="o">*</span><span class="mi">1000</span><span class="p">;</span><span class="nx">a</span><span class="o">=</span><span class="nx">T</span><span class="o">/</span><span class="nx">M</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">A</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span><span class="nx">b</span><span class="o">=</span><span class="p">(</span><span class="nx">a</span><span class="o">-</span><span class="nx">A</span><span class="p">)</span><span class="o">*</span><span class="mi">24</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">B</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nx">b</span><span class="p">);</span><span class="nx">c</span><span class="o">=</span><span class="p">(</span><span class="nx">b</span><span class="o">-</span><span class="nx">B</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">C</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">b</span><span class="o">-</span><span class="nx">B</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">D</span><span class="o">=</span><span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">((</span><span class="nx">c</span><span class="o">-</span><span class="nx">C</span><span class="p">)</span><span class="o">*</span><span class="mi">60</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">runtime_span</span><span class="p">.</span><span class="nx">innerHTML</span><span class="o">=</span><span class="s2">&#34;本站已运行:&#34;</span><span class="o">+</span><span class="nx">A</span><span class="o">+</span><span class="s2">&#34;天&#34;</span><span class="o">+</span><span class="nx">B</span><span class="o">+</span><span class="s2">&#34;小时&#34;</span><span class="o">+</span><span class="nx">C</span><span class="o">+</span><span class="s2">&#34;分&#34;</span><span class="o">+</span><span class="nx">D</span><span class="o">+</span><span class="s2">&#34;秒&#34;</span><span class="p">}</span><span class="nx">show_runtime</span><span class="p">();</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>我的放在 <code>/layouts/pratials/footer.html</code> 文件中：</p>
 <h3 id="加入不蒜子统计">加入不蒜子统计</h3>
@@ -358,13 +461,13 @@ new Date(&#34;9/24/2021 22:52:50&#34;);
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
-<span class="p">...</span>
-<span class="c"># 以下为需添加内容 #</span>
-<span class="c"># busuanzi</span>
-<span class="nx">busuanzi</span> <span class="p">=</span> <span class="kc">true</span>
-<span class="nx">busuanzi_site_offset</span> <span class="p">=</span> <span class="mi">100000</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl"><span class="p">...</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 以下为需添加内容 #</span>
+</span></span><span class="line"><span class="cl"><span class="c"># busuanzi</span>
+</span></span><span class="line"><span class="cl"><span class="nx">busuanzi</span> <span class="p">=</span> <span class="kc">true</span>
+</span></span><span class="line"><span class="cl"><span class="nx">busuanzi_site_offset</span> <span class="p">=</span> <span class="mi">100000</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在 <code>/layouts/pratials/footer.html</code> 文件中加入以下代码：</p>
 <div class="highlight"><div class="chroma">
@@ -386,22 +489,22 @@ new Date(&#34;9/24/2021 22:52:50&#34;);
 </span><span class="lnt">15
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{- if ne .Site.Params.footer.enable false -}}
-    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footer&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footer-container&#34;</span><span class="p">&gt;</span>
-            ...
-            <span class="c">&lt;!-- 以下为需添加内容 --&gt;</span>
-            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_container_site_pv&#34;</span><span class="p">&gt;</span>
-                本站访问量：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_pv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>次
-            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> | 
-            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_container_site_uv&#34;</span><span class="p">&gt;</span>
-                您是本站第 <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_uv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> 位访问者
-            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-            <span class="c">&lt;!-- 以上为需添加内容 --&gt;</span>
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- if ne .Site.Params.footer.enable false -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">footer</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footer&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;footer-container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            ...
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 以下为需添加内容 --&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_container_site_pv&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                本站访问量：<span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_pv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>次
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> | 
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_container_site_uv&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">                您是本站第 <span class="p">&lt;</span><span class="nt">span</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;busuanzi_value_site_uv&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">span</span><span class="p">&gt;</span> 位访问者
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c">&lt;!-- 以上为需添加内容 --&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">footer</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="用于站长seo">用于站长SEO</h3>
 <p>无需上传验证文件到根目录，直接修改配置文件；</p>
@@ -418,15 +521,15 @@ new Date(&#34;9/24/2021 22:52:50&#34;);
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="c"># Site verification code for Google/Bing/Yandex/Pinterest/Baidu</span>
-<span class="c"># 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu</span>
-<span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">verification</span><span class="p">]</span>
-  <span class="nx">google</span> <span class="p">=</span> <span class="s2">&#34;google699009ae438f1e4d&#34;</span>
-  <span class="nx">bing</span> <span class="p">=</span> <span class="s2">&#34;0AA62D35A93C9239B95F5187EC12FAF1&#34;</span>
-  <span class="nx">yandex</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-  <span class="nx">pinterest</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
-  <span class="nx">baidu</span> <span class="p">=</span> <span class="s2">&#34;3f7de7fba11a61559c21d907904d0a1b&#34;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="c"># Site verification code for Google/Bing/Yandex/Pinterest/Baidu</span>
+</span></span><span class="line"><span class="cl"><span class="c"># 网站验证代码，用于 Google/Bing/Yandex/Pinterest/Baidu</span>
+</span></span><span class="line"><span class="cl"><span class="p">[</span><span class="nx">params</span><span class="p">.</span><span class="nx">verification</span><span class="p">]</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">google</span> <span class="p">=</span> <span class="s2">&#34;google699009ae438f1e4d&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">bing</span> <span class="p">=</span> <span class="s2">&#34;0AA62D35A93C9239B95F5187EC12FAF1&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">yandex</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">pinterest</span> <span class="p">=</span> <span class="s2">&#34;&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">baidu</span> <span class="p">=</span> <span class="s2">&#34;3f7de7fba11a61559c21d907904d0a1b&#34;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="jsdelivr-加速">jsDelivr 加速</h2>
 <h3 id="操作步骤">操作步骤</h3>
@@ -441,10 +544,10 @@ new Date(&#34;9/24/2021 22:52:50&#34;);
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">https://cdn.jsdelivr.net/gh/user/repo@version/file
-
-https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://cdn.jsdelivr.net/gh/user/repo@version/file
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/文件路径
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>以我的为例，访问仓库目录下的<code>logo.jpg</code>文件，为以下链接：</p>
 <p><a href="https://cdn.jsdelivr.net/gh/AyagawaSeirin/BlogAssets@1.3/logo.jpg" target="_blank" rel="noopener noreffer">https://cdn.jsdelivr.net/gh/AyagawaSeirin/BlogAssets@1.3/logo.jpg</a></p>
@@ -466,8 +569,8 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">https://cdn.jsdelivr.net/...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://cdn.jsdelivr.net/...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>替换成</p>
 <div class="highlight"><div class="chroma">
@@ -475,8 +578,8 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">https://purge.jsdelivr.net/...
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://purge.jsdelivr.net/...
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>即可实时刷新。刷新成功后，浏览器会返回缓存刷新成功的信息，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -499,23 +602,23 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{
-  &#34;id&#34;: &#34;I2ZhNWYqdXev0Dmh&#34;,
-  &#34;status&#34;: &#34;finished&#34;,
-  &#34;timestamp&#34;: &#34;2021-12-05T01:54:57.948Z&#34;,
-  &#34;paths&#34;: {
-    &#34;/gh/cajunlei/ImageBed/Posts/1.jpg&#34;: {
-      &#34;throttled&#34;: false,
-      &#34;providers&#34;: {
-        &#34;fastly&#34;: true,
-        &#34;bunny&#34;: true,
-        &#34;cloudflare&#34;: true,
-        &#34;quantil&#34;: false
-      }
-    }
-  }
-}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{
+</span></span><span class="line"><span class="cl">  &#34;id&#34;: &#34;I2ZhNWYqdXev0Dmh&#34;,
+</span></span><span class="line"><span class="cl">  &#34;status&#34;: &#34;finished&#34;,
+</span></span><span class="line"><span class="cl">  &#34;timestamp&#34;: &#34;2021-12-05T01:54:57.948Z&#34;,
+</span></span><span class="line"><span class="cl">  &#34;paths&#34;: {
+</span></span><span class="line"><span class="cl">    &#34;/gh/cajunlei/ImageBed/Posts/1.jpg&#34;: {
+</span></span><span class="line"><span class="cl">      &#34;throttled&#34;: false,
+</span></span><span class="line"><span class="cl">      &#34;providers&#34;: {
+</span></span><span class="line"><span class="cl">        &#34;fastly&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;bunny&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;cloudflare&#34;: true,
+</span></span><span class="line"><span class="cl">        &#34;quantil&#34;: false
+</span></span><span class="line"><span class="cl">      }
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="为图标添加动画效果">为图标添加动画效果</h2>
 <h3 id="示例代码">示例代码</h3>
@@ -531,15 +634,15 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-3x&#34;</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-circle-notch fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-sync fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-cog fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-pulse&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-stroopwafel fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fa-3x&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-circle-notch fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-sync fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-cog fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-spinner fa-pulse&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;fas fa-stroopwafel fa-spin&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="显示效果">显示效果</h3>
 <div class="fa-3x" style="text-align: center;">
@@ -562,27 +665,38 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="nx">---</span>
-  <span class="nx">title</span><span class="err">:</span> <span class="s2">&#34;XX&#34;</span>
-  <span class="nx">layout</span><span class="err">:</span> <span class="s2">&#34;journal&#34;</span>
-<span class="nx">---</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-toml" data-lang="toml"><span class="line"><span class="cl"><span class="nx">---</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">title</span><span class="err">:</span> <span class="s2">&#34;XX&#34;</span>
+</span></span><span class="line"><span class="cl">  <span class="nx">layout</span><span class="err">:</span> <span class="s2">&#34;journal&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="nx">---</span>
+</span></span></code></pre></td></tr></table>
 </div>
-</div><h2 id="一些问题">一些问题</h2>
+</div><h2 id="twikoo-版本升级vercel">Twikoo 版本升级（Vercel）</h2>
+<ol>
+<li>进入<code>Vercel</code>仪表板 →<code>twikoo</code>→<code>Settings</code>→<code>Git</code>；</li>
+<li>点击<code>Connected Git Repository</code>下方的仓库地址；</li>
+<li>打开<code>package.json</code>，点击编辑；</li>
+<li>将&quot;<code>twikoo-vercel</code>&quot;:&quot;<code>x.x.x</code>&ldquo;其中的版本号修改为最新版本号。点击<code>Commit changes</code>；</li>
+<li>部署会自动触发，可以回到<code>Vercel</code>仪表板，查看部署状态；</li>
+</ol>
+<div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>提示<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><code>Vercel</code>更新部署成功后，请不要忘记同时更新前端的<code>Twikoo CDN</code>地址中的<code>x.x.x</code>数字版本号，使之与云函数版本号相同，然后部署网站。</div>
+        </div>
+    </div>
+<h2 id="一些问题">一些问题</h2>
 <h3 id="背景设置透明度后文章图片也被透明化的解决方法">背景设置透明度后文章图片也被透明化的解决方法</h3>
 <p>因为增加了背景图片，故正文部分填充颜色设置了透明度，但是发现文章的「图片」也被透明了；</p>
 <p><strong>解决办法：</strong> 在设置透明度的时候改用<code>rgba</code>形式就可以了，只需要在设置颜色的透明度的时候可以先找到<code>16</code>进制颜色对应的<code>rgb</code>值，如：<code>255,255,255</code>然后通过<code>rgba(255,255,255,0.9)</code>来实现透明度；</p>
 <h2 id="参考链接">参考链接</h2>
 <ul>
-<li>
-<p><a href="https://github.com/jsdelivr/jsdelivr" target="_blank" rel="noopener noreffer">jsDelivr - Open Source CDN</a></p>
-</li>
-<li>
-<p><a href="https://www.cnblogs.com/xieqk/p/jsdelivr-cache-refresh.html" target="_blank" rel="noopener noreffer">jsdelivr 缓存刷新</a></p>
-</li>
-<li>
-<p><a href="https://zhuanlan.zhihu.com/p/346643522" target="_blank" rel="noopener noreffer">如何使用jsDelivr+Github 实现免费CDN加速?</a></p>
-</li>
+<li><a href="https://github.com/jsdelivr/jsdelivr" target="_blank" rel="noopener noreffer">jsDelivr - Open Source CDN</a></li>
+<li><a href="https://www.cnblogs.com/xieqk/p/jsdelivr-cache-refresh.html" target="_blank" rel="noopener noreffer">jsdelivr 缓存刷新</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/346643522" target="_blank" rel="noopener noreffer">如何使用jsDelivr+Github 实现免费CDN加速?</a></li>
+<li><a href="https://blog.csdn.net/weixin_39246554/article/details/124573538" target="_blank" rel="noopener noreffer">实战：手把手带你从0到1搭建自己的hugo博客站点</a></li>
 </ul><div class="weixin">
     <div class="shears">
         <hr class="end"></hr>
@@ -595,9 +709,9 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
     </ul>
     <h2 id="fab-fa-weixin-分享到朋友圈" class="headerLink" tabindex="-1" style="outline: none;"><i class="fab fa-weixin"></i>&nbsp;分享到朋友圈</h2>
     <div class="images">
-        <img class="slogan" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/scan-share.jpg">
+        <img class="slogan" src="https://f004.backblazeb2.com/file/ll-blog/images/scan-share.jpg">
         <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3a%2f%2fll.sc.cn%2fposts%2fblog-building-notes%2f&amp;size=300x300" alt="微信扫一扫 分享朋友圈" title="" />
-        <img class="avatar" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/images/avatar.webp" alt="avatar">
+        <img class="avatar" src="https://f004.backblazeb2.com/file/ll-blog/images/avatar.webp" alt="avatar">
     </div>
 </div>
 <div class="post-reward">
@@ -605,11 +719,11 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
   <label class="reward-button" for="reward">赞赏支持</label>
   <div class="qr-code">
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/wechat.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/wechat.webp">
         <span style="color: #22ab39;">微信打赏</span>
       </label>
     <label class="qr-code-image" for="reward">
-        <img class="image" src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/reward/alipay.webp">
+        <img class="image" src="https://f004.backblazeb2.com/file/ll-blog/reward/alipay.webp">
         <span style="color: #1678ff;">支付宝打赏</span>
       </label>
   </div>
@@ -618,7 +732,7 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2021-12-05</span>
+                <span>更新于 2022-09-20</span>
             </div>
             <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></div>            
         </div>
@@ -641,7 +755,8 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
             <a href="/posts/git-manual/" class="next" rel="next" title="Git - 使用手册">Git - 使用手册<i class="fas fa-angle-right fa-fw"></i></a></div>
 </div>
 <div id="comments"><div id="tcomment"></div>
-            <script src="https://cdn.jsdelivr.net/npm/twikoo@1.4.15/dist/twikoo.all.min.js"></script>
+            <script src="https://f004.backblazeb2.com/file/ll-blog/static/js/twikoo@1.6.7/twikoo.all.min.js"></script>
+            
             <script>
                 twikoo.init({
                     envId: 'https:\/\/blog-twikoo-alpha.vercel.app\/',
@@ -667,7 +782,7 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -707,7 +822,7 @@ https://cdn.jsdelivr.net/gh/你的用户名/你的仓库名@发布的版本号/�
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];

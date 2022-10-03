@@ -10,7 +10,7 @@
     <pubDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</pubDate>
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/keepass_guidebook/</guid>
-    <description><![CDATA[<p><strong>KeePass是一款免费、小巧、绿色且开源的密码管理工具</strong>；</p>
+    <description><![CDATA[<p><code>KeePass</code>是一款免费、小巧、绿色且开源的密码管理工具；</p>
 <p>由于<code>KeePass</code>自身不带同步功能，所以如果有多设备使用需求的人，可以搭配坚果云进行使用；</p>]]></description>
 </item></channel>
 </rss>

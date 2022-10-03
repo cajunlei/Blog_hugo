@@ -11,8 +11,15 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>国家标准免费下载整理</title>
+    <link>https://ll.sc.cn/posts/gb_free_download/</link>
+    <pubDate>Sun, 18 Sep 2022 21:14:18 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/gb_free_download/</guid>
+    <description><![CDATA[<p>国家标准免费了，在哪里可以下载？</p>]]></description>
 </item><item>
     <title>2022年职业资格考试安排</title>
     <link>https://ll.sc.cn/posts/20220117151357/</link>
@@ -49,7 +56,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-basics/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main/Posts/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>本文为<code>Auto CAD</code>的入门知识，包括快捷命令的使用，以及需要注意的一些准则；</p>]]></description>
 </item><item>
     <title>Auto CAD - 自定义快捷命令</title>
@@ -72,12 +79,5 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/cad-plugin-yqarch-sidebar/</guid>
     <description><![CDATA[<p>源泉非官方侧边栏基于速腾CAD菜单工具</p>]]></description>
-</item><item>
-    <title>Excel - 开发工具基础知识</title>
-    <link>https://ll.sc.cn/posts/excel-enable-development-tools/</link>
-    <pubDate>Thu, 28 Oct 2021 09:18:37 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/excel-enable-development-tools/</guid>
-    <description><![CDATA[<p>进行 Excel VBA 开发，需要使用「开发工具」选项卡包含的各项命令。</p>]]></description>
 </item></channel>
 </rss>

@@ -67,7 +67,7 @@ LoveIt: v0.2.10
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/ll.sc.cn\/lewky\/hugo-4\/"
-        },"genre": "lewky","keywords": "Lewky-Hugo","wordcount":  5159 ,
+        },"genre": "lewky","keywords": "Lewky-Hugo","wordcount":  5201 ,
         "url": "https:\/\/ll.sc.cn\/lewky\/hugo-4\/","datePublished": "2020-10-12T00:00:00+00:00","dateModified": "2021-11-30T23:07:05+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "守正","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
@@ -234,7 +234,7 @@ LoveIt: v0.2.10
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animated flipInX">Hugo系列(4) - 从Hexo迁移至Hugo以及使用LoveIt主题的踩坑记录</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="https://lewky.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>Lewky</a></span></div>
-            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2020-10-12">2020-10-12</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-11-30">2021-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5159 字&nbsp;
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2020-10-12">2020-10-12</time>&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-11-30">2021-11-30</time>&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 5201 字&nbsp;
                 <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 11 分钟&nbsp;</div>
         </div><div class="details toc" id="toc-static"  kept="">
                 <div class="details-summary toc-title">
@@ -277,12 +277,12 @@ LoveIt: v0.2.10
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hexo: 3.8.0
-
-hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
-
-LoveIt: v0.2.10
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hexo: 3.8.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LoveIt: v0.2.10
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="hugo无法使用abbrlink导致的url与原本hexo的url不同步">Hugo无法使用<code>abbrlink</code>导致的URL与原本Hexo的URL不同步</h2>
 <p>原本的Hexo博客使用了<code>hexo-abbrlink</code>插件，目的是为每篇文章生成由字母和数字组成的随机URL，这样有利于SEO。迁移到Hugo后没找到类似的插件，只能用自带的<code>slug</code>功能来代替。</p>
@@ -294,10 +294,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
-abbrlink: 71bd19d3
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">abbrlink: 71bd19d3
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>为了让旧的文章url和以前保存一致，于是全部加上一个slug属性，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -308,11 +308,11 @@ abbrlink: 71bd19d3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
-abbrlink: 71bd19d3
-slug: 71bd19d3
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">abbrlink: 71bd19d3
+</span></span><span class="line"><span class="cl">slug: 71bd19d3
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后在站点配置文件里这样配置：</p>
 <div class="highlight"><div class="chroma">
@@ -321,9 +321,9 @@ slug: 71bd19d3
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[permalinks]
-  posts = &#34;/posts/:slug.html&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[permalinks]
+</span></span><span class="line"><span class="cl">  posts = &#34;/posts/:slug.html&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就可以避免旧文章的URL在迁移后不一致的问题，但是这也引入了另一个问题，那就是每一篇新文章都要手动添加<code>slug</code>属性，否则就还是会直接拿文章标题来作为URL的一部分。</p>
 <p>不过这点还是可以接受的，每篇文章额外配置slug也不算麻烦，毕竟博客园同样有提供这种给URL起别名的功能，可以把一系列的文章起一些比较接近的URL，更有利于访问。</p>
@@ -334,8 +334,8 @@ slug: 71bd19d3
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hugo server -e production
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server -e production
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就可以在本地调试时使用&quot;评论系统&quot;, &ldquo;CDN&rdquo; 和 &ldquo;fingerprint&rdquo;。</p>
 <p>但是对于<code>v0.2.10</code>版本的LoveIt主题，只是加入启动参数依然无法使用Valine评论功能，原因是评论功能的模板文件有问题，需要我们自己修改才能正常使用，如下：</p>
@@ -365,25 +365,25 @@ slug: 71bd19d3
 </span><span class="lnt">18
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- if $valine.enable -}}
-    &lt;div id=&#34;valine&#34; class=&#34;comment&#34;&gt;&lt;/div&gt;
-    &lt;script src=&#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&#34;&gt;&lt;/script&gt;
-	&lt;script src=&#39;{{ $cdn.valineJS }}&#39;&gt;&lt;/script&gt;
-
-	&lt;script type=&#34;text/javascript&#34;&gt;
-		new Valine({
-			el: &#39;#valine&#39; ,
-			appId: &#39;{{ $valine.appId }}&#39;,
-			appKey: &#39;{{ $valine.appKey }}&#39;,
-			notify: &#39;{{ $valine.notify }}&#39;, 
-			verify: &#39;{{ $valine.verify }}&#39;, 
-			avatar:&#39;{{ $valine.avatar }}&#39;, 
-			placeholder: &#39;{{ $valine.placeholder }}&#39;,
-			visitor: &#39;{{ $valine.visitor }}&#39;
-		});
-	&lt;/script&gt;
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- if $valine.enable -}}
+</span></span><span class="line"><span class="cl">    &lt;div id=&#34;valine&#34; class=&#34;comment&#34;&gt;&lt;/div&gt;
+</span></span><span class="line"><span class="cl">    &lt;script src=&#34;//cdn1.lncld.net/static/js/3.0.4/av-min.js&#34;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">	&lt;script src=&#39;{{ $cdn.valineJS }}&#39;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	&lt;script type=&#34;text/javascript&#34;&gt;
+</span></span><span class="line"><span class="cl">		new Valine({
+</span></span><span class="line"><span class="cl">			el: &#39;#valine&#39; ,
+</span></span><span class="line"><span class="cl">			appId: &#39;{{ $valine.appId }}&#39;,
+</span></span><span class="line"><span class="cl">			appKey: &#39;{{ $valine.appKey }}&#39;,
+</span></span><span class="line"><span class="cl">			notify: &#39;{{ $valine.notify }}&#39;, 
+</span></span><span class="line"><span class="cl">			verify: &#39;{{ $valine.verify }}&#39;, 
+</span></span><span class="line"><span class="cl">			avatar:&#39;{{ $valine.avatar }}&#39;, 
+</span></span><span class="line"><span class="cl">			placeholder: &#39;{{ $valine.placeholder }}&#39;,
+</span></span><span class="line"><span class="cl">			visitor: &#39;{{ $valine.visitor }}&#39;
+</span></span><span class="line"><span class="cl">		});
+</span></span><span class="line"><span class="cl">	&lt;/script&gt;
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>之后在站点配置文件里启用<code>valine</code>，然后填上从<code>LeanCloud</code>的应用中得到的<code>appId</code>和<code>appKey</code>就可以用了。并且在使用了<code>valine</code>的同时，还可以顺带启用阅读次数的统计功能。以前用Hexo的时候，就是用的<code>LeanCloud</code>来帮忙统计阅读次数的。</p>
 <p><code>LeanCloud</code>的使用也很简单，去官网注册个账号，然后创建一个应用，然后进入该应用的配置，选择<code>设置</code> -&gt; <code>应用Keys</code>，然后复制该应用的<code>appId</code>和<code>appKey</code>到站点配置文件里就行了。</p>
@@ -394,8 +394,8 @@ slug: 71bd19d3
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">![Alt Text](/url/to/your/image &#34;Title&#34;)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">![Alt Text](/url/to/your/image &#34;Title&#34;)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>但是一般情况下在引入图片时都不会再特地起一个标题，尤其是原本就已经有大量文章里使用了不带标题的图片，想全部改过来是不可能的。</p>
 <p>接着发现已经有人发起了PR修复了该issue，只是作者还没merge，所以只能把这段代码自行合并到自己的博客项目了。做法也很简单：</p>
@@ -423,23 +423,23 @@ slug: 71bd19d3
 </span><span class="lnt">16
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ $figcap := or .Title .Text }}
-{{ $caption := or .Text &#34; &#34; }}
-{{- if eq $figcap $caption -}}
-    {{ $caption = &#34; &#34; }}
-{{- end -}}
-
-{{- if $figcap -}}
-    <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
-        {{- dict &#34;Src&#34; .Destination &#34;Title&#34; $figcap &#34;Caption&#34; $caption &#34;Linked&#34; true &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
-        <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;image-caption&#34;</span><span class="p">&gt;</span>
-            {{- $figcap | safeHTML -}}
-        <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
-{{- else -}}
-    {{- dict &#34;Src&#34; .Destination &#34;Title&#34; (path.Base .Destination) &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $figcap := or .Title .Text }}
+</span></span><span class="line"><span class="cl">{{ $caption := or .Text &#34; &#34; }}
+</span></span><span class="line"><span class="cl">{{- if eq $figcap $caption -}}
+</span></span><span class="line"><span class="cl">    {{ $caption = &#34; &#34; }}
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- if $figcap -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        {{- dict &#34;Src&#34; .Destination &#34;Title&#34; $figcap &#34;Caption&#34; $caption &#34;Linked&#34; true &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">figcaption</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;image-caption&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- $figcap | safeHTML -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">figcaption</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">figure</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{- else -}}
+</span></span><span class="line"><span class="cl">    {{- dict &#34;Src&#34; .Destination &#34;Title&#34; (path.Base .Destination) &#34;Resources&#34; .Page.Resources | partial &#34;plugin/image.html&#34; -}}
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>另外，该做法会导致生成的图片下方多出一个<code>figcaption</code>标签，觉得这个图片名字标签太碍眼的，可以用下面的样式隐藏掉：</p>
 <div class="highlight"><div class="chroma">
@@ -450,11 +450,11 @@ slug: 71bd19d3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 图片 */</span>
-<span class="nt">figcaption</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 图片 */</span>
+</span></span><span class="line"><span class="cl"><span class="nt">figcaption</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="lightgallery启用时第二次加载页面时图片会变小">lightgallery启用时，第二次加载页面时图片会变小</h2>
 <p>该issue可见于<a href="https://github.com/dillonzq/LoveIt/issues/311?tdsourcetag=s_pctim_aiomsg" target="_blank" rel="noopener noreffer">lightgallery启用时，图片会显示得很小，是设计如此还是bug#311</a></p>
@@ -467,11 +467,11 @@ slug: 71bd19d3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="nt">img</span><span class="o">[</span><span class="nt">data-sizes</span><span class="o">=</span><span class="s2">&#34;auto&#34;</span><span class="o">]</span> <span class="p">{</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="nt">img</span><span class="o">[</span><span class="nt">data-sizes</span><span class="o">=</span><span class="s2">&#34;auto&#34;</span><span class="o">]</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果觉得100%太大可以改成别的比例，我用的是<code>width: 50%;</code>。</p>
 <h2 id="翻页后首页的图片显示不了">翻页后首页的图片显示不了</h2>
@@ -484,8 +484,8 @@ slug: 71bd19d3
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">avatar</span>](<span class="na">/images/avatar.jpg</span>)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">avatar</span>](<span class="na">/images/avatar.jpg</span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>当然了，如果你有图床之类的，直接写完整的地址也不会出现这个问题，如：</p>
 <div class="highlight"><div class="chroma">
@@ -493,8 +493,8 @@ slug: 71bd19d3
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md">![<span class="nt">avatar</span>](<span class="na">https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg</span>)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl">![<span class="nt">avatar</span>](<span class="na">https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg</span>)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="自定义样式文件_customscss无法生效">自定义样式文件<code>_custom.scss</code>无法生效</h2>
 <p>LoveIt主题有提供<code>\themes\LoveIt\assets\css\_custom.scss</code>，可以在该文件内自定义页面的样式，但是经过测试并无法生效。不过最终还是在stackoverflow上找到了答案：</p>
@@ -516,11 +516,11 @@ slug: 71bd19d3
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">## Title
-
-Content.
-&lt;!--more--&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">## Title
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">Content.
+</span></span><span class="line"><span class="cl">&lt;!--more--&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="文章标题里的特殊符号不需要使用字符实体">文章标题里的特殊符号不需要使用字符实体</h2>
 <p>在Hexo里，如果文章的标题里存在英文的双引号、冒号等特定的符号，必须使用字符实体来替代，否则就会报错。而在Hugo里，则没有这个需要，直接使用原本的符号就行。如果在标题里使用字符实体，并不会被自动解析成对应的字符。</p>
@@ -565,16 +565,16 @@ Content.
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="n">The</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">master</span><span class="o">`</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="n">Page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="p">.</span><span class="w"> </span><span class="k">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">working</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">errors</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">-</span><span class="n">sites</span><span class="c1">#troubleshooting-build-errors.
-</span><span class="c1"></span><span class="w">
-</span><span class="w"></span><span class="k">For</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">troubleshooting</span><span class="w"> </span><span class="n">Jekyll</span><span class="w"> </span><span class="n">see</span><span class="p">:</span><span class="w">
-</span><span class="w">
-</span><span class="w">  </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">articles</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">builds</span><span class="w">
-</span><span class="w">
-</span><span class="w"></span><span class="k">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">questions</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">submit</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Contact</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">contact</span><span class="o">?</span><span class="n">repo_id</span><span class="o">=</span><span class="mi">130235157</span><span class="o">&amp;</span><span class="n">page_build_id</span><span class="o">=</span><span class="mi">208464262</span><span class="w">
-</span></code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="n">The</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="o">`</span><span class="n">master</span><span class="o">`</span><span class="w"> </span><span class="n">branch</span><span class="w"> </span><span class="k">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">error</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Page</span><span class="w"> </span><span class="n">build</span><span class="w"> </span><span class="n">failed</span><span class="p">.</span><span class="w"> </span><span class="k">For</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">information</span><span class="p">,</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">github</span><span class="o">/</span><span class="n">working</span><span class="o">-</span><span class="k">with</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">build</span><span class="o">-</span><span class="n">errors</span><span class="o">-</span><span class="k">for</span><span class="o">-</span><span class="n">github</span><span class="o">-</span><span class="n">pages</span><span class="o">-</span><span class="n">sites</span><span class="c1">#troubleshooting-build-errors.
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">For</span><span class="w"> </span><span class="n">information</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">troubleshooting</span><span class="w"> </span><span class="n">Jekyll</span><span class="w"> </span><span class="n">see</span><span class="p">:</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">  </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">docs</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">articles</span><span class="o">/</span><span class="n">troubleshooting</span><span class="o">-</span><span class="n">jekyll</span><span class="o">-</span><span class="n">builds</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">If</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">any</span><span class="w"> </span><span class="n">questions</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">submit</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">request</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Contact</span><span class="w"> </span><span class="n">GitHub</span><span class="w"> </span><span class="n">page</span><span class="w"> </span><span class="n">at</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">support</span><span class="p">.</span><span class="n">github</span><span class="p">.</span><span class="n">com</span><span class="o">/</span><span class="n">contact</span><span class="o">?</span><span class="n">repo_id</span><span class="o">=</span><span class="mi">130235157</span><span class="o">&amp;</span><span class="n">page_build_id</span><span class="o">=</span><span class="mi">208464262</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以看到报错说是<code>Page build failed.</code>，描述太过模糊不清，我只能一篇篇文章的排查测试。最终发现，问题出在了某篇文章里的代码块，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -587,13 +587,13 @@ Content.
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-  ....
-
-  {% include &#39;_custom/custom-foot.swig&#39; %}
-<span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
-<span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">  ....
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  {% include &#39;_custom/custom-foot.swig&#39; %}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>问题就出在了这个<code>{%  %}</code>上，经过几番测试，发现一旦启用了<code>LoveIt</code>主题的Markdown输出功能（即将每篇文章link到原本的Markdown文件），就会造成GitHub Pages服务build失败。</p>
 <h3 id="全局禁用markdown输出功能">全局禁用Markdown输出功能</h3>
@@ -630,35 +630,35 @@ Content.
 </span><span class="lnt">28
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[params]
-  [params.page]
-    # whether to show link to Raw Markdown content of the content
-    # 是否显示原始 Markdown 文档内容的链接
-    linkToMarkdown = false
-
-# Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
-#[mediaTypes]
-#  [mediaTypes.&#34;text/plain&#34;]
-#    suffixes = [&#34;md&#34;]
-
-# Options to make output .md files
-# 用于输出 Markdown 格式文档的设置
-#[outputFormats.MarkDown]
-#  mediaType = &#34;text/plain&#34;
-#  isPlainText = true
-#  isHTML = false
-
-# Options to make hugo output files
-# 用于 Hugo 输出文档的设置
-[outputs]
-  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
-#  page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
-  page = [&#34;HTML&#34;]
-  section = [&#34;HTML&#34;, &#34;RSS&#34;]
-  taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
-  taxonomyTerm = [&#34;HTML&#34;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[params]
+</span></span><span class="line"><span class="cl">  [params.page]
+</span></span><span class="line"><span class="cl">    # whether to show link to Raw Markdown content of the content
+</span></span><span class="line"><span class="cl">    # 是否显示原始 Markdown 文档内容的链接
+</span></span><span class="line"><span class="cl">    linkToMarkdown = false
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Options to make output .md files
+</span></span><span class="line"><span class="cl"># 用于输出 Markdown 格式文档的设置
+</span></span><span class="line"><span class="cl">#[mediaTypes]
+</span></span><span class="line"><span class="cl">#  [mediaTypes.&#34;text/plain&#34;]
+</span></span><span class="line"><span class="cl">#    suffixes = [&#34;md&#34;]
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Options to make output .md files
+</span></span><span class="line"><span class="cl"># 用于输出 Markdown 格式文档的设置
+</span></span><span class="line"><span class="cl">#[outputFormats.MarkDown]
+</span></span><span class="line"><span class="cl">#  mediaType = &#34;text/plain&#34;
+</span></span><span class="line"><span class="cl">#  isPlainText = true
+</span></span><span class="line"><span class="cl">#  isHTML = false
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"># Options to make hugo output files
+</span></span><span class="line"><span class="cl"># 用于 Hugo 输出文档的设置
+</span></span><span class="line"><span class="cl">[outputs]
+</span></span><span class="line"><span class="cl">  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+</span></span><span class="line"><span class="cl">#  page = [&#34;HTML&#34;, &#34;MarkDown&#34;]
+</span></span><span class="line"><span class="cl">  page = [&#34;HTML&#34;]
+</span></span><span class="line"><span class="cl">  section = [&#34;HTML&#34;, &#34;RSS&#34;]
+</span></span><span class="line"><span class="cl">  taxonomy = [&#34;HTML&#34;, &#34;RSS&#34;]
+</span></span><span class="line"><span class="cl">  taxonomyTerm = [&#34;HTML&#34;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在站点配置文件了将<code>linkToMarkdown</code>配置为<code>false</code>，并将对应的三项Markdown输出的属性注释掉，终于解决了GitHub Pages编译失败的问题。</p>
 <p>这个做法属于一刀切，后面考虑到依然需要输出md文件，于是想到了另一个解决方法，那就是把某些在GitHub Pages解析有问题的md文件给干掉，让这些引入了“问题”代码块的md文件不生成即可。</p>
@@ -674,13 +674,13 @@ Content.
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- $params := .Scratch.Get &#34;params&#34; -}}
-{{- if $params.linkToMarkdown -}}
-# {{ .Title }}
-
-{{ .RawContent }}
-{{- end -}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- $params := .Scratch.Get &#34;params&#34; -}}
+</span></span><span class="line"><span class="cl">{{- if $params.linkToMarkdown -}}
+</span></span><span class="line"><span class="cl"># {{ .Title }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{ .RawContent }}
+</span></span><span class="line"><span class="cl">{{- end -}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后在不想生成md文件的文章头里加上<code>linkToMarkdown: false</code>，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -700,20 +700,20 @@ Content.
 </span><span class="lnt">13
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
-title: Hexo系列(3) - NexT主题和Markdown的写作技巧
-tags:
-  - Hexo
-  - NexT主题
-  - 写作技巧
-categories:
-  - Hexo系列
-abbrlink: 576ee548
-slug: hexo-3
-date: 2018-07-19T23:00:36+08:00
-linkToMarkdown: false
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: Hexo系列(3) - NexT主题和Markdown的写作技巧
+</span></span><span class="line"><span class="cl">tags:
+</span></span><span class="line"><span class="cl">  - Hexo
+</span></span><span class="line"><span class="cl">  - NexT主题
+</span></span><span class="line"><span class="cl">  - 写作技巧
+</span></span><span class="line"><span class="cl">categories:
+</span></span><span class="line"><span class="cl">  - Hexo系列
+</span></span><span class="line"><span class="cl">abbrlink: 576ee548
+</span></span><span class="line"><span class="cl">slug: hexo-3
+</span></span><span class="line"><span class="cl">date: 2018-07-19T23:00:36+08:00
+</span></span><span class="line"><span class="cl">linkToMarkdown: false
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就不会生成对应的md文件，也不会在页面尾部有<code>阅读原始文档</code>这个链接。</p>
 <h3 id="终极方案新增nojekyll文件">终极方案：新增<code>.nojekyll</code>文件</h3>
@@ -727,9 +727,9 @@ linkToMarkdown: false
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  # 网站关键词
-  keywords = &#34;雨临Lewis,Java,hugo,hexo,博客&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  # 网站关键词
+</span></span><span class="line"><span class="cl">  keywords = &#34;雨临Lewis,Java,hugo,hexo,博客&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>F12查看网站源码后发现缺少keywords这个meta标签，检查了模板文件后发现是LoveIt没有引入该标签，需要修改模板才行。</p>
 <p>将<code>\themes\LoveIt\layouts\partials\head\meta.html</code>拷贝到<code>\layouts\partials\head\meta.html</code>，打开该文件并在<code>&lt;meta name=&quot;Description&quot; content=&quot;{{ $params.description | default .Site.Params.description }}&quot;&gt;</code>上方加上如下代码：</p>
@@ -738,8 +738,8 @@ linkToMarkdown: false
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;meta name=&#34;keywords&#34; content=&#34;{{ $params.keywords | default .Site.Params.keywords }}&#34;&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;meta name=&#34;keywords&#34; content=&#34;{{ $params.keywords | default .Site.Params.keywords }}&#34;&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="配置文件里的license不生效">配置文件里的<code>license</code>不生效</h2>
 <p>这个是模板文件有问题，拷贝<code>\themes\LoveIt\layouts\partials\single\footer.html</code>到<code>\layouts\partials\single\footer.html</code>，打开拷贝后的文件，找到如下内容：</p>
@@ -754,14 +754,14 @@ linkToMarkdown: false
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
-    {{- with $params.license | string -}}
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
-            {{- . | safeHTML -}}
-        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    {{- end -}}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- with $params.license | string -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- . | safeHTML -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>改成如下：</p>
 <div class="highlight"><div class="chroma">
@@ -775,14 +775,14 @@ linkToMarkdown: false
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
-    {{- with $params.license | default .Site.Params.footer.license | string -}}
-        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
-            {{- . | safeHTML -}}
-        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
-    {{- end -}}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-md" data-lang="md"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;post-info-license&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- with $params.license | default .Site.Params.footer.license | string -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            {{- . | safeHTML -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- end -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="参考链接">参考链接</h2>
 <ul>
@@ -836,7 +836,7 @@ linkToMarkdown: false
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -876,7 +876,7 @@ linkToMarkdown: false
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];

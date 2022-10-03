@@ -315,12 +315,12 @@ Hugo系列(3.3) - LoveIt主题美化与博客功能增强 · 第四章
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">hexo: 3.8.0
-
-hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
-
-LoveIt: v0.2.10
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hexo: 3.8.0
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">hugo: v0.74.2/extended windows/amd64 BuildDate: unknown
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">LoveIt: v0.2.10
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>请注意，本文的所有功能都离不开两个新增加的文件：<code>_custom.scss</code>和<code>custom.js</code>，部分功能还需要<code>jquery</code>，在第一章中会提及如何引入。</strong></p>
 <p>另外本文篇幅太长，阅读体验不好，将其进行分章如下：</p>
@@ -351,9 +351,9 @@ LoveIt: v0.2.10
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{- /* 自定义的js文件 */ -}}
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/custom.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{- /* 自定义的js文件 */ -}}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;/js/custom.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>由于本文提及的部分功能会用到jQuery，建议一起引入，最终如下：</p>
 <div class="highlight"><div class="chroma">
@@ -364,11 +364,11 @@ LoveIt: v0.2.10
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js&#34;&gt;&lt;/script&gt;
-
-{{- /* 自定义的js文件 */ -}}
-&lt;script type=&#34;text/javascript&#34; src=&#34;/js/custom.js&#34;&gt;&lt;/script&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&lt;script type=&#34;text/javascript&#34; src=&#34;https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js&#34;&gt;&lt;/script&gt;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{- /* 自定义的js文件 */ -}}
+</span></span><span class="line"><span class="cl">&lt;script type=&#34;text/javascript&#34; src=&#34;/js/custom.js&#34;&gt;&lt;/script&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果有其他的JavaScript文件要引入，加在一样的地方就行，但是要放在自定义的<code>custom.js</code>之前。这是我的<a href="https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/js/custom.js" target="_blank" rel="noopener noreffer">custom.js文件</a>，有兴趣的可以看看。</p>
 <h2 id="添加全局cdn变量">添加全局cdn变量</h2>
@@ -380,10 +380,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[params]
-  # cdn变量，末尾不需要加/
-  cdnPrefix = &#34;http://xxxx&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[params]
+</span></span><span class="line"><span class="cl">  # cdn变量，末尾不需要加/
+</span></span><span class="line"><span class="cl">  cdnPrefix = &#34;http://xxxx&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>接下来就可以在你需要的地方使用该变量，大概有如下3种用法。</p>
 <h3 id="在md文件中使用">在md文件中使用</h3>
@@ -395,10 +395,10 @@ LoveIt: v0.2.10
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{&lt; param cdnPrefix &gt;}}
-
-![avatar.jpg]({{&lt; param cdnPrefix &gt;}}/images/avatar.jpg)
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{&lt; param cdnPrefix &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">![avatar.jpg]({{&lt; param cdnPrefix &gt;}}/images/avatar.jpg)
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="在模板文件中使用">在模板文件中使用</h3>
 <p>在<code>layouts</code>目录下有很多html文件，这些是用来渲染站点的模板文件，可以用Hugo的语法来引入该变量：</p>
@@ -407,8 +407,8 @@ LoveIt: v0.2.10
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{ .Site.Params.cdnPrefix }}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{ .Site.Params.cdnPrefix }}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果在一个模板文件里有多个地方使用到该变量，可以定义一个局部变量来使用：</p>
 <div class="highlight"><div class="chroma">
@@ -419,11 +419,11 @@ LoveIt: v0.2.10
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{- $cdn := .Site.Params.cdnPrefix -}}
-
-/* 使用局部变量 */
-{{ $cdn }}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{- $cdn := .Site.Params.cdnPrefix -}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">/* 使用局部变量 */
+</span></span><span class="line"><span class="cl">{{ $cdn }}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="在javascript文件中使用">在JavaScript文件中使用</h3>
 <p>由于JavaScript文件中不能使用上述的shortcodes或Hugo语法来引用变量，只能通过在<code>\layouts\partials\assets.html</code>中用JavaScript语法来引入该变量，如下：</p>
@@ -436,12 +436,12 @@ LoveIt: v0.2.10
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">/* 这是可以应用于JavaScript文件的全局变量 */
-&lt;script&gt;
-	/* cdn for some static resources */
-	var $cdnPrefix = {{ .Site.Params.cdnPrefix }};
-&lt;/script&gt;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">/* 这是可以应用于JavaScript文件的全局变量 */
+</span></span><span class="line"><span class="cl">&lt;script&gt;
+</span></span><span class="line"><span class="cl">	/* cdn for some static resources */
+</span></span><span class="line"><span class="cl">	var $cdnPrefix = {{ .Site.Params.cdnPrefix }};
+</span></span><span class="line"><span class="cl">&lt;/script&gt;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就可以在其他被引入的JavaScript文件中使用这个<code>$cdnPrefix</code>变量：</p>
 <div class="highlight"><div class="chroma">
@@ -453,12 +453,12 @@ LoveIt: v0.2.10
 </span><span class="lnt">5
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-	<span class="nx">$</span><span class="p">.</span><span class="nx">backstretch</span><span class="p">([</span>
-		  <span class="nx">$cdnPrefix</span> <span class="o">+</span> <span class="s2">&#34;/images/background/saber1.jpg&#34;</span>
-	<span class="p">],</span> <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="mi">60000</span><span class="p">,</span> <span class="nx">fade</span><span class="o">:</span> <span class="mi">1500</span> <span class="p">});</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">$</span><span class="p">.</span><span class="nx">backstretch</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">		  <span class="nx">$cdnPrefix</span> <span class="o">+</span> <span class="s2">&#34;/images/background/saber1.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">],</span> <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="mi">60000</span><span class="p">,</span> <span class="nx">fade</span><span class="o">:</span> <span class="mi">1500</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果是想在模板文件里引入某个自定义的JavaScript文件，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -467,9 +467,9 @@ LoveIt: v0.2.10
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="p">{{</span><span class="o">-</span> <span class="cm">/* 自定义的js文件 */</span> <span class="o">-</span><span class="p">}}</span>
-<span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text/javascript&#34;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;{{ .Site.Params.cdnPrefix }}/js/custom.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="p">{{</span><span class="o">-</span> <span class="cm">/* 自定义的js文件 */</span> <span class="o">-</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&#34;text/javascript&#34;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&#34;{{ .Site.Params.cdnPrefix }}/js/custom.js&#34;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="主题自带的admonition样式">主题自带的admonition样式</h2>
 <p>LoveIt提供了<code>admonition</code> shortcode，支持 <strong>12</strong> 种样式，可以在页面中插入提示的横幅。代码如下：</p>
@@ -524,54 +524,54 @@ LoveIt: v0.2.10
 </span><span class="lnt">47
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{&lt; admonition &gt;}}
-一个 **注意** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition abstract &gt;}}
-一个 **摘要** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition info &gt;}}
-一个 **信息** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition tip &gt;}}
-一个 **技巧** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition success &gt;}}
-一个 **成功** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition question &gt;}}
-一个 **问题** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition warning &gt;}}
-一个 **警告** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition failure &gt;}}
-一个 **失败** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition danger &gt;}}
-一个 **危险** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition bug &gt;}}
-一个 **Bug** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition example &gt;}}
-一个 **示例** 横幅
-{{&lt; /admonition &gt;}}
-
-{{&lt; admonition quote &gt;}}
-一个 **引用** 横幅
-{{&lt; /admonition &gt;}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{&lt; admonition &gt;}}
+</span></span><span class="line"><span class="cl">一个 **注意** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition abstract &gt;}}
+</span></span><span class="line"><span class="cl">一个 **摘要** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition info &gt;}}
+</span></span><span class="line"><span class="cl">一个 **信息** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition tip &gt;}}
+</span></span><span class="line"><span class="cl">一个 **技巧** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition success &gt;}}
+</span></span><span class="line"><span class="cl">一个 **成功** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition question &gt;}}
+</span></span><span class="line"><span class="cl">一个 **问题** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition warning &gt;}}
+</span></span><span class="line"><span class="cl">一个 **警告** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition failure &gt;}}
+</span></span><span class="line"><span class="cl">一个 **失败** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition danger &gt;}}
+</span></span><span class="line"><span class="cl">一个 **危险** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition bug &gt;}}
+</span></span><span class="line"><span class="cl">一个 **Bug** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition example &gt;}}
+</span></span><span class="line"><span class="cl">一个 **示例** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">{{&lt; admonition quote &gt;}}
+</span></span><span class="line"><span class="cl">一个 **引用** 横幅
+</span></span><span class="line"><span class="cl">{{&lt; /admonition &gt;}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>效果如下：
 <div class="details admonition note open">
@@ -681,9 +681,9 @@ LoveIt: v0.2.10
 </span><span class="lnt">2
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-<span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>然后在<code>custom.js</code>里添加如下代码，具体想要轮播哪些图片可以自行修改，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -698,15 +698,15 @@ LoveIt: v0.2.10
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="cm">/* 轮播背景图片 */</span>
-<span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
-	<span class="nx">$</span><span class="p">.</span><span class="nx">backstretch</span><span class="p">([</span>
-		  <span class="s2">&#34;/images/background/saber1.jpg&#34;</span><span class="p">,</span>
-		  <span class="s2">&#34;/images/background/saber2.jpg&#34;</span><span class="p">,</span>
-		  <span class="s2">&#34;/images/background/wlop.jpg&#34;</span>
-	<span class="p">],</span> <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="mi">60000</span><span class="p">,</span> <span class="nx">fade</span><span class="o">:</span> <span class="mi">1500</span> <span class="p">});</span>
-<span class="p">});</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-javascript" data-lang="javascript"><span class="line"><span class="cl"><span class="cm">/* 轮播背景图片 */</span>
+</span></span><span class="line"><span class="cl"><span class="nx">$</span><span class="p">(</span><span class="kd">function</span> <span class="p">()</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">$</span><span class="p">.</span><span class="nx">backstretch</span><span class="p">([</span>
+</span></span><span class="line"><span class="cl">		  <span class="s2">&#34;/images/background/saber1.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		  <span class="s2">&#34;/images/background/saber2.jpg&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">		  <span class="s2">&#34;/images/background/wlop.jpg&#34;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">],</span> <span class="p">{</span> <span class="nx">duration</span><span class="o">:</span> <span class="mi">60000</span><span class="p">,</span> <span class="nx">fade</span><span class="o">:</span> <span class="mi">1500</span> <span class="p">});</span>
+</span></span><span class="line"><span class="cl"><span class="p">});</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h2 id="添加搜索功能">添加搜索功能</h2>
 <p><code>LoveIt</code>主题自带的搜索插件是<code>lunr</code>和<code>algolia</code>，这两个的使用都比较麻烦，后者甚至还想要去注册账号，虽然可以免费使用搜索服务，但是抓取收录时间好像是一小时一次，并且还有每月使用量的限制，太不便利了。</p>
@@ -722,8 +722,8 @@ LoveIt: v0.2.10
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">theme = [&#34;hugo-search-fuse-js&#34;, &#34;my-theme&#34;]
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">theme = [&#34;hugo-search-fuse-js&#34;, &#34;my-theme&#34;]
+</span></span></code></pre></td></tr></table>
 </div>
 </div><ol start="3">
 <li>新建一个<code>content/search.md</code>文件，内容如下：</li>
@@ -739,14 +739,14 @@ LoveIt: v0.2.10
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">+++
-title = &#34;Search&#34;
-layout = &#34;search&#34;
-outputs = [&#34;html&#34;, &#34;json&#34;]
-[sitemap]
-  priority = 0.1
-+++
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">+++
+</span></span><span class="line"><span class="cl">title = &#34;Search&#34;
+</span></span><span class="line"><span class="cl">layout = &#34;search&#34;
+</span></span><span class="line"><span class="cl">outputs = [&#34;html&#34;, &#34;json&#34;]
+</span></span><span class="line"><span class="cl">[sitemap]
+</span></span><span class="line"><span class="cl">  priority = 0.1
+</span></span><span class="line"><span class="cl">+++
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="修改页面模板文件baseofhtml">修改页面模板文件baseof.html</h3>
 <ol>
@@ -768,18 +768,18 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">11
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrapper&#34;</span><span class="p">&gt;</span>
-    {{- partial &#34;header.html&#34; . -}}
-    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
-        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
-			{{ block &#34;main&#34; . }}{{ end }}
-            {{- block &#34;content&#34; . }}{{ end -}}
-        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
-    {{- partial &#34;footer.html&#34; . -}}
-	{{ block &#34;footer&#34; . }}{{ end }}
-<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;wrapper&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;header.html&#34; . -}}
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">main</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;main&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;container&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">			{{ block &#34;main&#34; . }}{{ end }}
+</span></span><span class="line"><span class="cl">            {{- block &#34;content&#34; . }}{{ end -}}
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">main</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    {{- partial &#34;footer.html&#34; . -}}
+</span></span><span class="line"><span class="cl">	{{ block &#34;footer&#34; . }}{{ end }}
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="添加搜索按钮">添加搜索按钮</h3>
 <p>在站点配置文件里添加一个新的按钮给搜索功能使用，如下：</p>
@@ -794,14 +794,14 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">7
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[menu]
-  [[menu.main]]
-    pre = &#34;&lt;i class=&#39;fas fa-fw fa-search&#39;&gt;&lt;/i&gt;&#34;
-    name = &#34;搜索&#34;
-    weight = 7
-    identifier = &#34;search&#34;
-    url = &#34;/search/&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[menu]
+</span></span><span class="line"><span class="cl">  [[menu.main]]
+</span></span><span class="line"><span class="cl">    pre = &#34;&lt;i class=&#39;fas fa-fw fa-search&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class="line"><span class="cl">    name = &#34;搜索&#34;
+</span></span><span class="line"><span class="cl">    weight = 7
+</span></span><span class="line"><span class="cl">    identifier = &#34;search&#34;
+</span></span><span class="line"><span class="cl">    url = &#34;/search/&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果你的配置文件里的菜单属性是多语言的，样例如下：</p>
 <div class="highlight"><div class="chroma">
@@ -817,16 +817,16 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[languages]
-  [languages.en]
-    [languages.en.menu]
-      [[languages.en.menu.main]]
-	    pre = &#34;&lt;i class=&#39;fas fa-fw fa-search&#39;&gt;&lt;/i&gt;&#34;
-	    name = &#34;Search&#34;
-	    weight = 7
-	    identifier = &#34;search&#34;
-	    url = &#34;/search/&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[languages]
+</span></span><span class="line"><span class="cl">  [languages.en]
+</span></span><span class="line"><span class="cl">    [languages.en.menu]
+</span></span><span class="line"><span class="cl">      [[languages.en.menu.main]]
+</span></span><span class="line"><span class="cl">	    pre = &#34;&lt;i class=&#39;fas fa-fw fa-search&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class="line"><span class="cl">	    name = &#34;Search&#34;
+</span></span><span class="line"><span class="cl">	    weight = 7
+</span></span><span class="line"><span class="cl">	    identifier = &#34;search&#34;
+</span></span><span class="line"><span class="cl">	    url = &#34;/search/&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="关闭loveit主题默认的搜索插件">关闭LoveIt主题默认的搜索插件</h3>
 <p>在站点配置文件里把默认的搜索插件关闭，如下：</p>
@@ -838,11 +838,11 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[params]
-  [params.app]
-    [params.search]
-      enable = false
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[params]
+</span></span><span class="line"><span class="cl">  [params.app]
+</span></span><span class="line"><span class="cl">    [params.search]
+</span></span><span class="line"><span class="cl">      enable = false
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>如果你使用的是多语言的配置，则应该把每个语言的搜索插件都关闭，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -859,17 +859,17 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">10
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">[languages]
-  [languages.en]
-    [languages.en.params]
-      [languages.en.params.search]
-        enable = false
-
-  [languages.zh-cn]
-    [languages.zh-cn.params]
-      [languages.zh-cn.params.search]
-        enable = false
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">[languages]
+</span></span><span class="line"><span class="cl">  [languages.en]
+</span></span><span class="line"><span class="cl">    [languages.en.params]
+</span></span><span class="line"><span class="cl">      [languages.en.params.search]
+</span></span><span class="line"><span class="cl">        enable = false
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  [languages.zh-cn]
+</span></span><span class="line"><span class="cl">    [languages.zh-cn.params]
+</span></span><span class="line"><span class="cl">      [languages.zh-cn.params.search]
+</span></span><span class="line"><span class="cl">        enable = false
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="修改搜索页面的样式">修改搜索页面的样式</h3>
 <p>如果对该插件生成的搜索页面样式不满意，可以自行修改，下面是我的样式代码：</p>
@@ -939,69 +939,69 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">62
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="c">/* 搜索页面 */</span>
-<span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
-    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
-    <span class="k">padding-top</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mf">57.5</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
-    <span class="k">background</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-    <span class="k">opacity</span><span class="p">:</span> <span class="mf">.95</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
-    <span class="k">background</span><span class="p">:</span> <span class="mh">#3a3535</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="o">,</span>
-<span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="p">{</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="p">:</span><span class="nd">hover</span><span class="o">,</span>
-<span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-    <span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">background</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-<span class="p">}</span>
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
-    <span class="k">background</span><span class="p">:</span> <span class="mh">#3a3535</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">input</span><span class="o">,</span>
-<span class="p">.</span><span class="nc">search</span> <span class="nt">input</span> <span class="p">{</span>
-	<span class="k">height</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
-	<span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-	<span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-	<span class="k">border-width</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">border-style</span><span class="p">:</span> <span class="kc">inset</span><span class="p">;</span>
-    <span class="k">border-color</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
-    <span class="k">border-image</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
-	<span class="kp">-webkit-</span><span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="kp">-moz-</span><span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">search</span> <span class="p">#</span><span class="nn">search-results</span> <span class="p">{</span>
-    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">padding-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="nt">a</span><span class="p">:</span><span class="nd">active</span><span class="o">,</span> <span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#2d96bd</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">search</span> <span class="nt">hr</span> <span class="p">{</span>
-    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="c">/* 搜索页面 */</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">position</span><span class="p">:</span> <span class="kc">relative</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-top</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-bottom</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mf">57.5</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">opacity</span><span class="p">:</span> <span class="mf">.95</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="mh">#3a3535</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#f8f8f8</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="p">:</span><span class="nd">hover</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="nt">header</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">box-shadow</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">header</span> <span class="nt">h1</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="mh">#3a3535</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="p">.</span><span class="nc">search</span> <span class="nt">input</span><span class="o">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="nt">input</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="k">height</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">background-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">margin</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="k">border-width</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-style</span><span class="p">:</span> <span class="kc">inset</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-color</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-image</span><span class="p">:</span> <span class="kc">initial</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="kp">-webkit-</span><span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-moz-</span><span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">0</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="p">#</span><span class="nn">search-results</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="nt">a</span><span class="p">:</span><span class="nd">active</span><span class="o">,</span> <span class="o">[</span><span class="nt">theme</span><span class="o">=</span><span class="nt">dark</span><span class="o">]</span> <span class="nt">a</span><span class="p">:</span><span class="nd">hover</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="mh">#2d96bd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">search</span> <span class="nt">hr</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">1</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="优化中文搜索效果">优化中文搜索效果</h3>
 <p>这个搜索功能借助了Fuse.js模糊搜索引擎，为了更好的适配中文搜索结果，需要修改模糊搜索的相关参数，相对的会导致英文搜索结果变多，不过这个可以接受。因为搜索结果变多了，总好过搜索不出来想要的中文结果。而且可以通过设置搜索结果的权重来改变结果的排序，这样越前面的搜索结果就越是我们想要的。</p>
@@ -1032,29 +1032,29 @@ outputs = [&#34;html&#34;, &#34;json&#34;]
 </span><span class="lnt">22
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">// Options for fuse.js
-let fuseOptions = {
-  shouldSort: true, // 是否按分数对结果列表排序
-  includeMatches: true, //  是否应将分数包含在结果集中。0分表示完全匹配，1分表示完全不匹配。
-  tokenize: true,
-  matchAllTokens: true,
-  threshold: 0.2, // 匹配算法阈值。阈值为0.0需要完全匹配（字母和位置），阈值为1.0将匹配任何内容。
-  location: 0, // 确定文本中预期找到的模式的大致位置。
-  /**
-   * 确定匹配与模糊位置（由位置指定）的距离。一个精确的字母匹配，即距离模糊位置很远的字符将被视为完全不匹配。
-   *  距离为0要求匹配位于指定的准确位置，距离为100则要求完全匹配位于使用阈值0.2找到的位置的20个字符以内。
-   */
-  distance: 100,
-  maxPatternLength: 64, // 模式的最大长度
-  minMatchCharLength: 2, // 模式的最小字符长度
-  keys: [
-    {name:&#34;title&#34;,weight:0.8},
-    {name:&#34;tags&#34;,weight:0.5},
-    {name:&#34;categories&#34;,weight:0.5},
-    {name:&#34;contents&#34;,weight:0.4}
-  ]
-};
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">// Options for fuse.js
+</span></span><span class="line"><span class="cl">let fuseOptions = {
+</span></span><span class="line"><span class="cl">  shouldSort: true, // 是否按分数对结果列表排序
+</span></span><span class="line"><span class="cl">  includeMatches: true, //  是否应将分数包含在结果集中。0分表示完全匹配，1分表示完全不匹配。
+</span></span><span class="line"><span class="cl">  tokenize: true,
+</span></span><span class="line"><span class="cl">  matchAllTokens: true,
+</span></span><span class="line"><span class="cl">  threshold: 0.2, // 匹配算法阈值。阈值为0.0需要完全匹配（字母和位置），阈值为1.0将匹配任何内容。
+</span></span><span class="line"><span class="cl">  location: 0, // 确定文本中预期找到的模式的大致位置。
+</span></span><span class="line"><span class="cl">  /**
+</span></span><span class="line"><span class="cl">   * 确定匹配与模糊位置（由位置指定）的距离。一个精确的字母匹配，即距离模糊位置很远的字符将被视为完全不匹配。
+</span></span><span class="line"><span class="cl">   *  距离为0要求匹配位于指定的准确位置，距离为100则要求完全匹配位于使用阈值0.2找到的位置的20个字符以内。
+</span></span><span class="line"><span class="cl">   */
+</span></span><span class="line"><span class="cl">  distance: 100,
+</span></span><span class="line"><span class="cl">  maxPatternLength: 64, // 模式的最大长度
+</span></span><span class="line"><span class="cl">  minMatchCharLength: 2, // 模式的最小字符长度
+</span></span><span class="line"><span class="cl">  keys: [
+</span></span><span class="line"><span class="cl">    {name:&#34;title&#34;,weight:0.8},
+</span></span><span class="line"><span class="cl">    {name:&#34;tags&#34;,weight:0.5},
+</span></span><span class="line"><span class="cl">    {name:&#34;categories&#34;,weight:0.5},
+</span></span><span class="line"><span class="cl">    {name:&#34;contents&#34;,weight:0.4}
+</span></span><span class="line"><span class="cl">  ]
+</span></span><span class="line"><span class="cl">};
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这里和中文搜索有关的主要就3个选项：<code>threshold</code>，<code>location</code>，<code>distance</code>。</p>
 <p><code>threshold</code>是阈值，这个参数搭配<code>distance</code>使用。如果阈值填了<code>0.0</code>，相当于<code>distance</code>没有意义。<code>location</code>填0就行，<code>distance</code>填100就足够了，太大了会导致搜索到过多的结果。上面根据我个人的中文搜索测试结果，选择了这样的配置：</p>
@@ -1065,10 +1065,10 @@ let fuseOptions = {
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">  threshold: 0.2,
-  location: 0,
-  distance: 100
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">  threshold: 0.2,
+</span></span><span class="line"><span class="cl">  location: 0,
+</span></span><span class="line"><span class="cl">  distance: 100
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>可以根据个人情况来修改这几个参数的值，另外我还将<code>minMatchCharLength</code>的值改成了2，不过经过测试，和之前默认的<code>3</code>并没有什么差别。</p>
 <h2 id="如何添加自定义的页面">如何添加自定义的页面</h2>
@@ -1085,14 +1085,13 @@ let fuseOptions = {
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">---
-title: &#34;关于&#34;
-date: 2018-04-24T22:01:44+08:00
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;关于&#34;
+</span></span><span class="line"><span class="cl">date: 2018-04-24T22:01:44+08:00
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
-</div><p>`</p>
-</li>
+</div>`</li>
 <li>接下来你就可以像写普通文章一样，在这个<code>index.md</code>文件里随便写你想要展示的内容就行了。</li>
 </ol>
 <h2 id="添加友链页面">添加友链页面</h2>
@@ -1105,10 +1104,10 @@ date: 2018-04-24T22:01:44+08:00
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">---
-title: &#34;友链墙&#34;
----
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">---
+</span></span><span class="line"><span class="cl">title: &#34;友链墙&#34;
+</span></span><span class="line"><span class="cl">---
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>由于博主想要将友链分类，并能使用上目录，所以不使用这种page形式的友链页面，而是直接创建一篇文章作为友链使用，文件头如下：</p>
 <div class="highlight"><div class="chroma">
@@ -1118,10 +1117,10 @@ title: &#34;友链墙&#34;
 </span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">title: &#34;友链墙&#34;
-url: friends
-hiddenFromHomePage: true
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">title: &#34;友链墙&#34;
+</span></span><span class="line"><span class="cl">url: friends
+</span></span><span class="line"><span class="cl">hiddenFromHomePage: true
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="添加friendhtml">添加<code>friend.html</code></h3>
 <p>我们通过自定义一个<code>shortcode</code>来实现该功能，以后就可以方便地通过这个<code>shortcode</code>快速新增友链到页面上。</p>
@@ -1144,21 +1143,21 @@ hiddenFromHomePage: true
 </span><span class="lnt">14
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ if .IsNamedParams }}
-{{ $defaultImg := &#34;https://sdn.geekzu.org/avatar/d41d8cd98f00b204e9800998ecf8427e?d=retro&#34; }}
-	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">url</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">name</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">---</span><span class="err">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">word</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend url&#34;</span><span class="p">&gt;</span>
-	  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block whole {{ .Get &#34;</span><span class="na">primary-color</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">default</span><span class="err">&#34;}}</span> <span class="err">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">border-animation</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">shadow</span><span class="err">&#34;}}&#34;</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block left&#34;</span><span class="p">&gt;</span>
-		  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend logo {{ .Get &#34;</span><span class="na">img-animation</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">rotate</span><span class="err">&#34;}}&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">logo</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">onerror</span><span class="o">=</span><span class="s">&#34;this.src=&#39;{{ $defaultImg }}&#39;&#34;</span> <span class="p">/&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block right&#34;</span><span class="p">&gt;</span>
-		  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend name&#34;</span><span class="p">&gt;</span>{{ .Get &#34;name&#34; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-		  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend info&#34;</span><span class="p">&gt;</span>&#34;{{ .Get &#34;word&#34; }}&#34;<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-	  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-	<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
-{{ end }}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ if .IsNamedParams }}
+</span></span><span class="line"><span class="cl">{{ $defaultImg := &#34;https://sdn.geekzu.org/avatar/d41d8cd98f00b204e9800998ecf8427e?d=retro&#34; }}
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">target</span><span class="o">=</span><span class="s">&#34;_blank&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">url</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">title</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">name</span><span class="err">&#34;</span> <span class="err">}}</span><span class="na">---</span><span class="err">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">word</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend url&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block whole {{ .Get &#34;</span><span class="na">primary-color</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">default</span><span class="err">&#34;}}</span> <span class="err">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">border-animation</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">shadow</span><span class="err">&#34;}}&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block left&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		  <span class="p">&lt;</span><span class="nt">img</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend logo {{ .Get &#34;</span><span class="na">img-animation</span><span class="err">&#34;</span> <span class="err">|</span> <span class="na">default</span> <span class="err">&#34;</span><span class="na">rotate</span><span class="err">&#34;}}&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">{{</span> <span class="err">.</span><span class="na">Get</span> <span class="err">&#34;</span><span class="na">logo</span><span class="err">&#34;</span> <span class="err">}}</span> <span class="na">onerror</span><span class="o">=</span><span class="s">&#34;this.src=&#39;{{ $defaultImg }}&#39;&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend block right&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend name&#34;</span><span class="p">&gt;</span>{{ .Get &#34;name&#34; }}<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;friend info&#34;</span><span class="p">&gt;</span>&#34;{{ .Get &#34;word&#34; }}&#34;<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">{{ end }}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="添加样式文件并引入">添加样式文件并引入</h3>
 <p>在站点根目录下新增一个文件：<code>/assets/css/_partial/_single/_friend.scss</code>，内容如下：</p>
@@ -1410,251 +1409,251 @@ hiddenFromHomePage: true
 </span><span class="lnt">244
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">url</span> <span class="p">{</span>
-    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">height</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
-    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
-    <span class="k">height</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">31</span><span class="kt">%</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-flex</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">);</span>
-
-    <span class="err">&amp;.shadow</span> <span class="err">{</span>
-        <span class="k">margin-right</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
-    <span class="p">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">borderFlash</span> <span class="p">{</span>
-        <span class="k">border-width</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">border-style</span><span class="p">:</span> <span class="kc">solid</span><span class="p">;</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">borderFlash</span> <span class="mi">2</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">led</span> <span class="p">{</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">led</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">bln</span> <span class="p">{</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">bln</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="err">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
-    <span class="err">&amp;:hover</span> <span class="err">{</span>
-        <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-        <span class="err">&amp;</span> <span class="err">.friend.info</span> <span class="err">{</span>
-            <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">default</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#215bb3</span><span class="n">bf</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">red</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#e72638</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">green</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2ec58d</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">blue</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2575fc</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-red</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#e72638</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#f9cdcd</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#e72638</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-green</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2ec58d</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#1d7544</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#2ec58d</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-blue</span> <span class="p">{</span>
-        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2575fc</span><span class="p">;</span>
-        <span class="err">&amp;:hover</span> <span class="err">{</span>
-            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#6a11cb</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#2575fc</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
-        <span class="p">}</span>
-    <span class="err">}</span>
-<span class="err">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="err">&amp;.auto_rotate_left</span> <span class="err">{</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">auto_rotate_left</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">linear</span> <span class="kc">infinite</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="o">&amp;</span><span class="p">.</span><span class="nc">auto_rotate_right</span> <span class="p">{</span>
-        <span class="k">animation</span><span class="p">:</span> <span class="n">auto_rotate_right</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">linear</span> <span class="kc">infinite</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="err">}</span>
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span><span class="p">:</span><span class="nd">hover</span> <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="nt">img</span> <span class="p">{</span>
-    <span class="err">&amp;.rotate</span> <span class="err">{</span>
-        <span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-webkit-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-moz-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-o-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-ms-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-webkit-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-moz-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-o-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-        <span class="kp">-ms-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="err">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
-    <span class="k">width</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">min-width</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
-    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bolder</span><span class="p">;</span>
-    <span class="k">word-wrap</span><span class="p">:</span><span class="kc">break-word</span><span class="p">;</span>
-    <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
-    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
-    <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
-    <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">info</span> <span class="p">{</span>
-    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
-    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
-    <span class="k">word-wrap</span><span class="p">:</span><span class="kc">break-word</span><span class="p">;</span>
-    <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
-    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
-    <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
-    <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
-    <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
-    <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
-    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
-    <span class="k">color</span><span class="p">:</span> <span class="mh">#7a7a7a</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">900px</span><span class="o">)</span> <span class="p">{</span>
-    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">info</span> <span class="p">{</span>
-        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
-        <span class="k">width</span><span class="p">:</span> <span class="mi">45</span><span class="kt">%</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
-        <span class="k">width</span><span class="p">:</span> <span class="mi">84</span><span class="kt">px</span><span class="p">;</span>
-        <span class="k">margin-left</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
-        <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
-        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
-        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
-        <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-        <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
-    <span class="p">}</span>
-    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
-        <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">keyframes</span> <span class="nt">bln</span> <span class="p">{</span>
-	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="kc">grey</span><span class="p">;</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nt">to</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="kc">grey</span><span class="p">;</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">keyframes</span> <span class="nt">led</span> <span class="p">{</span>
-	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#ca00ff</span>
-	<span class="p">}</span>
-
-	<span class="nt">25</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="mh">#00b5e5</span>
-	<span class="p">}</span>
-
-	<span class="nt">50</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#00f</span>
-	<span class="p">}</span>
-
-	<span class="nt">75</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="mh">#b1da21</span>
-	<span class="p">}</span>
-
-	<span class="nt">to</span> <span class="p">{</span>
-		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">red</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">keyframes</span> <span class="nt">borderFlash</span> <span class="p">{</span>
-	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">border-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
-	<span class="p">}</span>
-
-	<span class="nt">to</span> <span class="p">{</span>
-		<span class="k">border-color</span><span class="p">:</span> <span class="kc">grey</span><span class="p">;</span>
-		<span class="k">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">keyframes</span> <span class="nt">auto_rotate_left</span> <span class="p">{</span>
-	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nt">to</span> <span class="p">{</span>
-		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">-1</span><span class="kt">turn</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-
-<span class="p">@</span><span class="k">keyframes</span> <span class="nt">auto_rotate_right</span> <span class="p">{</span>
-	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
-		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-	<span class="p">}</span>
-
-	<span class="nt">to</span> <span class="p">{</span>
-		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">1</span><span class="kt">turn</span><span class="p">)</span>
-	<span class="p">}</span>
-<span class="p">}</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">url</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">text-decoration</span><span class="p">:</span> <span class="kc">none</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="kc">black</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">logo</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">56</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">padding</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background-color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">height</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">8</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-left</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">31</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kc">inline-flex</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">border-radius</span><span class="p">:</span> <span class="mi">5</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mi">220</span><span class="p">,</span> <span class="mf">0.15</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="err">&amp;.shadow</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin-right</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">box-shadow</span><span class="p">:</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">4</span><span class="kt">px</span> <span class="mi">2</span><span class="kt">px</span> <span class="mi">1</span><span class="kt">px</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">255</span><span class="p">,</span> <span class="mf">0.2</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">borderFlash</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-width</span><span class="p">:</span> <span class="mf">3.5</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">border-style</span><span class="p">:</span> <span class="kc">solid</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">borderFlash</span> <span class="mi">2</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">led</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">led</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">bln</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">bln</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">infinite</span> <span class="kc">alternate</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;</span> <span class="err">.friend.info</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">default</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#215bb3</span><span class="n">bf</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">33</span><span class="p">,</span> <span class="mi">91</span><span class="p">,</span> <span class="mi">179</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">red</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#e72638</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">231</span><span class="p">,</span> <span class="mi">38</span><span class="p">,</span> <span class="mi">56</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">green</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2ec58d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">21</span><span class="p">,</span> <span class="mi">167</span><span class="p">,</span> <span class="mi">33</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">blue</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2575fc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">rgba</span><span class="p">(</span><span class="mi">37</span><span class="p">,</span> <span class="mi">117</span><span class="p">,</span> <span class="mi">252</span><span class="p">,</span> <span class="mf">0.75</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-red</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#e72638</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#f9cdcd</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#e72638</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-green</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2ec58d</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#1d7544</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#2ec58d</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">linear-blue</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nv">--primary-color</span><span class="p">:</span> <span class="mh">#2575fc</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&amp;:hover</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">            <span class="k">background</span><span class="p">:</span> <span class="nb">linear-gradient</span><span class="p">(</span><span class="kc">to</span> <span class="kc">right</span><span class="p">,</span> <span class="mh">#6a11cb</span> <span class="mi">0</span><span class="p">,</span> <span class="mh">#2575fc</span> <span class="mi">35</span><span class="kt">%</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="err">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">&amp;.auto_rotate_left</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">auto_rotate_left</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">linear</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="o">&amp;</span><span class="p">.</span><span class="nc">auto_rotate_right</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">animation</span><span class="p">:</span> <span class="n">auto_rotate_right</span> <span class="mi">3</span><span class="kt">s</span> <span class="kc">linear</span> <span class="kc">infinite</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span><span class="p">:</span><span class="nd">hover</span> <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="nt">img</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="err">&amp;.rotate</span> <span class="err">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-webkit-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-moz-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-o-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-ms-</span><span class="k">transition</span><span class="p">:</span> <span class="mf">0.9</span><span class="kt">s</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-webkit-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-moz-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-o-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="kp">-ms-</span><span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">360</span><span class="kt">deg</span><span class="p">)</span> <span class="cp">!important</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="err">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">width</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">min-width</span><span class="p">:</span> <span class="mi">92</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">float</span><span class="p">:</span> <span class="kc">left</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">2</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-right</span><span class="p">:</span> <span class="mi">18</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-weight</span><span class="p">:</span> <span class="kc">bolder</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">word-wrap</span><span class="p">:</span><span class="kc">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">1</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">info</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="k">margin-top</span><span class="p">:</span> <span class="mi">3</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">overflow</span><span class="p">:</span> <span class="kc">hidden</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">word-wrap</span><span class="p">:</span><span class="kc">break-word</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">word-break</span><span class="p">:</span> <span class="n">break-all</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">text-overflow</span><span class="p">:</span> <span class="kc">ellipsis</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">display</span><span class="p">:</span> <span class="kp">-webkit-</span><span class="n">box</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="n">line-clamp</span><span class="p">:</span> <span class="mi">2</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="kp">-webkit-</span><span class="n">box-orient</span><span class="p">:</span> <span class="kc">vertical</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">line-height</span><span class="p">:</span> <span class="kc">normal</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">font-size</span><span class="p">:</span> <span class="mf">0.8</span><span class="kt">rem</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">color</span><span class="p">:</span> <span class="mh">#7a7a7a</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">media</span> <span class="nt">screen</span> <span class="nt">and</span> <span class="o">(</span><span class="nt">max-width</span><span class="o">:</span> <span class="nt">900px</span><span class="o">)</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">info</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">none</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">whole</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">45</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">left</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">width</span><span class="p">:</span> <span class="mi">84</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin-left</span><span class="p">:</span> <span class="mi">15</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">block</span><span class="p">.</span><span class="nc">right</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">height</span><span class="p">:</span> <span class="mi">100</span><span class="kt">%</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">margin</span><span class="p">:</span> <span class="kc">auto</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">display</span><span class="p">:</span> <span class="kc">flex</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">align-items</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">justify-content</span><span class="p">:</span> <span class="kc">center</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nc">friend</span><span class="p">.</span><span class="nc">name</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="k">font-size</span><span class="p">:</span> <span class="mi">14</span><span class="kt">px</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">bln</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="kc">grey</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">5</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="kc">grey</span><span class="p">,</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="kc">grey</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="kc">inset</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">8</span><span class="kt">px</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">),</span><span class="mi">0</span> <span class="mi">1</span><span class="kt">px</span> <span class="mi">0</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">led</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#ca00ff</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">25</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="mh">#00b5e5</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">50</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="mh">#00f</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">75</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">16</span><span class="kt">px</span> <span class="mh">#b1da21</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">box-shadow</span><span class="p">:</span> <span class="mi">0</span> <span class="mi">0</span> <span class="mi">4</span><span class="kt">px</span> <span class="kc">red</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">borderFlash</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">border-color</span><span class="p">:</span> <span class="kc">white</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">border-color</span><span class="p">:</span> <span class="kc">grey</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">		<span class="k">border-color</span><span class="p">:</span> <span class="nf">var</span><span class="p">(</span><span class="o">--</span><span class="n">primary</span><span class="o">-</span><span class="kc">color</span><span class="p">,</span><span class="kc">grey</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">auto_rotate_left</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">-1</span><span class="kt">turn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">@</span><span class="k">keyframes</span> <span class="nt">auto_rotate_right</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nt">0</span><span class="o">%</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="nt">to</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">		<span class="k">transform</span><span class="p">:</span> <span class="nb">rotate</span><span class="p">(</span><span class="mi">1</span><span class="kt">turn</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>请注意，该文件是<code>.scss</code>文件，只有你使用的是扩展版本的Hugo时才能生效。</p>
 <p>然后把<code>\themes\LoveIt\assets\css\_page\_single.scss</code>这个文件拷贝到<code>\assets\css\_page\_single.scss</code>，然后修改我们新增的<code>_single.scss</code>，在第一行加一行新代码：</p>
@@ -1663,8 +1662,8 @@ hiddenFromHomePage: true
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="p">@</span><span class="k">import</span> <span class="s2">&#34;../_partial/_single/friend&#34;</span><span class="p">;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-css" data-lang="css"><span class="line"><span class="cl"><span class="p">@</span><span class="k">import</span> <span class="s2">&#34;../_partial/_single/friend&#34;</span><span class="p">;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样Hugo就会用我们新增的这个文件来渲染友链页面了。</p>
 <h3 id="另一种添加样式文件并引入的方案">另一种添加样式文件并引入的方案</h3>
@@ -1678,11 +1677,11 @@ hiddenFromHomePage: true
 </span><span class="lnt">4
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html">{{ $options := (dict &#34;targetPath&#34; &#34;/css/friend.css&#34; &#34;outputStyle&#34; &#34;compressed&#34; &#34;enableSourceMap&#34; true) }}
-{{ $style := resources.Get &#34;css/friend.scss&#34; | resources.ToCSS $options }}
-
-<span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.RelPermalink }}&#34;</span><span class="p">&gt;</span>
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl">{{ $options := (dict &#34;targetPath&#34; &#34;/css/friend.css&#34; &#34;outputStyle&#34; &#34;compressed&#34; &#34;enableSourceMap&#34; true) }}
+</span></span><span class="line"><span class="cl">{{ $style := resources.Get &#34;css/friend.scss&#34; | resources.ToCSS $options }}
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">link</span> <span class="na">rel</span><span class="o">=</span><span class="s">&#34;stylesheet&#34;</span> <span class="na">href</span><span class="o">=</span><span class="s">&#34;{{ $style.RelPermalink }}&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>在需要使用友链的页面、文章中添加如下shortcode来引入友链样式即可：</p>
 <div class="highlight"><div class="chroma">
@@ -1690,8 +1689,8 @@ hiddenFromHomePage: true
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{&lt; link-css &gt;}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{&lt; link-css &gt;}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="在菜单栏里新增一个友链按钮">在菜单栏里新增一个友链按钮</h3>
 <p>打开站点配置文件<code>config.toml</code>，添加友链按钮：</p>
@@ -1707,15 +1706,15 @@ hiddenFromHomePage: true
 </span><span class="lnt">8
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"># 菜单配置
-[menu]
-  [[menu.main]]
-    pre = &#34;&lt;i class=&#39;fas fa-fw fa-fan fa-spin&#39;&gt;&lt;/i&gt;&#34;
-    name = &#34;友链&#34;
-    identifier = &#34;friends&#34;
-    url = &#34;/friends/&#34;
-    weight = 6
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl"># 菜单配置
+</span></span><span class="line"><span class="cl">[menu]
+</span></span><span class="line"><span class="cl">  [[menu.main]]
+</span></span><span class="line"><span class="cl">    pre = &#34;&lt;i class=&#39;fas fa-fw fa-fan fa-spin&#39;&gt;&lt;/i&gt;&#34;
+</span></span><span class="line"><span class="cl">    name = &#34;友链&#34;
+</span></span><span class="line"><span class="cl">    identifier = &#34;friends&#34;
+</span></span><span class="line"><span class="cl">    url = &#34;/friends/&#34;
+</span></span><span class="line"><span class="cl">    weight = 6
+</span></span></code></pre></td></tr></table>
 </div>
 </div><h3 id="使用示例和效果展示">使用示例和效果展示</h3>
 <p>在你想要引入友链的文章里使用下面的代码即可自动渲染成对应的友链：</p>
@@ -1729,13 +1728,13 @@ hiddenFromHomePage: true
 </span><span class="lnt">6
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">{{&lt; link
-name=&#34;雨临Lewis的博客&#34;
-url=&#34;https://lewky.cn&#34;
-logo=&#34;https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg&#34;
-word=&#34;不想当写手的码农不是好咸鱼_(xз」∠)_&#34;
-&gt;}}
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{{&lt; link
+</span></span><span class="line"><span class="cl">name=&#34;雨临Lewis的博客&#34;
+</span></span><span class="line"><span class="cl">url=&#34;https://lewky.cn&#34;
+</span></span><span class="line"><span class="cl">logo=&#34;https://cdn.jsdelivr.net/gh/lewky/lewky.github.io@master/images/avatar.jpg&#34;
+</span></span><span class="line"><span class="cl">word=&#34;不想当写手的码农不是好咸鱼_(xз」∠)_&#34;
+</span></span><span class="line"><span class="cl">&gt;}}
+</span></span></code></pre></td></tr></table>
 </div>
 </div><p>上面代码里的四个属性为必填项，还可以额外指定三个不同的属性来选择友链内置的多种样式，如下：</p>
 <div class="highlight"><div class="chroma">
@@ -1751,16 +1750,16 @@ word=&#34;不想当写手的码农不是好咸鱼_(xз」∠)_&#34;
 </span><span class="lnt">9
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback">//边框及鼠标悬停的背景颜色，允许设置渐变色
-//支持7种：default、red、green、blue、linear-red、linear-green、linear-blue
-primary-color=&#34;default&#34;
-
-//头像动画：rotate(鼠标悬停时旋转，此为默认效果)、auto_rotate_left(左旋转)、auto_rotate_right(右旋转)
-img-animation=&#34;rotate&#34;
-
-//边框动画：shadow(阴影，此为默认效果)、borderFlash(边框闪现)、led(跑马灯)、bln(主颜色呼吸灯)
-border-animation=&#34;shadow&#34;
-</code></pre></td></tr></table>
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">//边框及鼠标悬停的背景颜色，允许设置渐变色
+</span></span><span class="line"><span class="cl">//支持7种：default、red、green、blue、linear-red、linear-green、linear-blue
+</span></span><span class="line"><span class="cl">primary-color=&#34;default&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//头像动画：rotate(鼠标悬停时旋转，此为默认效果)、auto_rotate_left(左旋转)、auto_rotate_right(右旋转)
+</span></span><span class="line"><span class="cl">img-animation=&#34;rotate&#34;
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//边框动画：shadow(阴影，此为默认效果)、borderFlash(边框闪现)、led(跑马灯)、bln(主颜色呼吸灯)
+</span></span><span class="line"><span class="cl">border-animation=&#34;shadow&#34;
+</span></span></code></pre></td></tr></table>
 </div>
 </div>
 <a target="_blank" href=https://lewky.cn title=雨临Lewis的博客 class="link">
@@ -1857,7 +1856,7 @@ border-animation=&#34;shadow&#34;
                             &nbsp;
                         </a>
                         <a href="https://ll.sc.cn" target="_blank">守 正</a>
-                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.88.1">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
                 </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
                 <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
                 <span id="runtime_span"></span>
@@ -1897,7 +1896,7 @@ border-animation=&#34;shadow&#34;
 }); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
 	 
-	var $cdnPrefix = "https://cdn.jsdelivr.net/gh/cajunlei/ImageBed@main";
+	var $cdnPrefix = "https://f004.backblazeb2.com/file/ll-blog";
 </script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
             var _hmt = _hmt || [];
