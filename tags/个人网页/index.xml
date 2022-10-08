@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>个人网页 - 标签 - 雷雷的个人博客</title>
+        <link>https://ll.sc.cn/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5/</link>
+        <description>个人网页 - 标签 - 雷雷的个人博客</description>
+        <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 Oct 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/%E4%B8%AA%E4%BA%BA%E7%BD%91%E9%A1%B5/" rel="self" type="application/rss+xml" /><item>
+    <title>GitHub &#43; Vercel 展示个人网页</title>
+    <link>https://ll.sc.cn/posts/hugo_github_vercel/</link>
+    <pubDate>Tue, 04 Oct 2022 18:22:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/hugo_github_vercel/</guid>
+    <description><![CDATA[<p>不管是搭建静态博客，还是展示个人网页，我们都可以这个方法达到网络访问的目的。</p>]]></description>
+</item></channel>
+</rss>

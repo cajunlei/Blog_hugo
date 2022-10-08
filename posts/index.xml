@@ -4,15 +4,36 @@
         <link>https://ll.sc.cn/posts/</link>
         <description>所有文章 | 雷雷的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 18 Sep 2022 21:14:18 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 08 Oct 2022 15:54:14 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/posts/" rel="self" type="application/rss+xml" /><item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
-    <link>https://ll.sc.cn/posts/cad-skills-problem/</link>
+    <link>https://ll.sc.cn/posts/cad_skills_problem/</link>
     <pubDate>Thu, 21 Oct 2021 23:53:40 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
+    <guid>https://ll.sc.cn/posts/cad_skills_problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
+</item><item>
+    <title>Backblaze B2 &#43; Cloudflare 搭建免费图床</title>
+    <link>https://ll.sc.cn/posts/20221008155414/</link>
+    <pubDate>Sat, 08 Oct 2022 15:54:14 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/20221008155414/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>第三方邮箱设置</title>
+    <link>https://ll.sc.cn/posts/email_settings/</link>
+    <pubDate>Wed, 05 Oct 2022 09:49:24 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/email_settings/</guid>
+    <description><![CDATA[]]></description>
+</item><item>
+    <title>GitHub &#43; Vercel 展示个人网页</title>
+    <link>https://ll.sc.cn/posts/hugo_github_vercel/</link>
+    <pubDate>Tue, 04 Oct 2022 18:22:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/hugo_github_vercel/</guid>
+    <description><![CDATA[<p>不管是搭建静态博客，还是展示个人网页，我们都可以这个方法达到网络访问的目的。</p>]]></description>
 </item><item>
     <title>国家标准免费下载整理</title>
     <link>https://ll.sc.cn/posts/gb_free_download/</link>
@@ -21,7 +42,7 @@
     <guid>https://ll.sc.cn/posts/gb_free_download/</guid>
     <description><![CDATA[<p>国家标准免费了，在哪里可以下载？</p>]]></description>
 </item><item>
-    <title>软件 - Keepass使用说明</title>
+    <title>软件 - Keepass 使用说明</title>
     <link>https://ll.sc.cn/posts/keepass_guidebook/</link>
     <pubDate>Tue, 30 Aug 2022 14:42:07 &#43;0800</pubDate>
     <author>作者</author>
@@ -30,10 +51,10 @@
 <p>由于<code>KeePass</code>自身不带同步功能，所以如果有多设备使用需求的人，可以搭配坚果云进行使用；</p>]]></description>
 </item><item>
     <title>2021 - 简短总结</title>
-    <link>https://ll.sc.cn/posts/2021-summarize/</link>
+    <link>https://ll.sc.cn/posts/2021_summarize/</link>
     <pubDate>Mon, 31 Jan 2022 23:59:59 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/2021-summarize/</guid>
+    <guid>https://ll.sc.cn/posts/2021_summarize/</guid>
     <description><![CDATA[<p>这份总结拖到除夕才写完发出来，是因为在交完公司的总结过后，才疏学浅 <del>因为同事们都太卷了🤣</del> ，实在写不出来，拖到最后时刻，草率简单总结一下。</p>]]></description>
 </item><item>
     <title>雷雷的人格测试</title>
@@ -47,7 +68,7 @@
 <p style="color: #50a9aa"><strong>守护者：</strong> 物流师、守卫者、总经理、执政官</p>
 <p style="color: #bf8f00"><strong>探险家：</strong> 鉴赏家、探险家、企业家、表演者</p>]]></description>
 </item><item>
-    <title>2022年职业资格考试安排</title>
+    <title>2022 年职业资格考试安排</title>
     <link>https://ll.sc.cn/posts/20220117151357/</link>
     <pubDate>Mon, 17 Jan 2022 15:13:57 &#43;0800</pubDate>
     <author>作者</author>
@@ -56,31 +77,10 @@
 <p>2022逢考必过！</p>]]></description>
 </item><item>
     <title>Excel - 使用技巧</title>
-    <link>https://ll.sc.cn/posts/excel-skills/</link>
+    <link>https://ll.sc.cn/posts/excel_skills/</link>
     <pubDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/excel-skills/</guid>
+    <guid>https://ll.sc.cn/posts/excel_skills/</guid>
     <description><![CDATA[]]></description>
-</item><item>
-    <title>打新债（捡钱）之路</title>
-    <link>https://ll.sc.cn/posts/34352642331522/</link>
-    <pubDate>Tue, 04 Jan 2022 09:56:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/34352642331522/</guid>
-    <description><![CDATA[<p>用运气换收益的理财之道……</p>]]></description>
-</item><item>
-    <title>薅电信卡羊毛（50元用一年）</title>
-    <link>https://ll.sc.cn/posts/20220103184133/</link>
-    <pubDate>Mon, 03 Jan 2022 18:41:33 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/20220103184133/</guid>
-    <description><![CDATA[<p>5G的到来，数据流量发飞逝，让我这本不富裕的套餐雪上加霜。</p>]]></description>
-</item><item>
-    <title>Auto CAD - 出电子版蓝图使用方法</title>
-    <link>https://ll.sc.cn/posts/cad-electronic-blueprint/</link>
-    <pubDate>Sun, 26 Dec 2021 12:13:40 &#43;0800</pubDate>
-    <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-electronic-blueprint/</guid>
-    <description><![CDATA[<p>仅作为项目内部使用，勿作他用，否则后果自负……</p>]]></description>
 </item></channel>
 </rss>

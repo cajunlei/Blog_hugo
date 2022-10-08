@@ -6,12 +6,12 @@
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
             <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><atom:link href="https://ll.sc.cn/categories/work/" rel="self" type="application/rss+xml" /><item>
     <title>Auto CAD - 使用技巧和疑难杂症解决办法</title>
-    <link>https://ll.sc.cn/posts/cad-skills-problem/</link>
+    <link>https://ll.sc.cn/posts/cad_skills_problem/</link>
     <pubDate>Thu, 21 Oct 2021 23:53:40 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-skills-problem/</guid>
+    <guid>https://ll.sc.cn/posts/cad_skills_problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Work/AutoCAD/01_Skill/Cover.webp" referrerpolicy="no-referrer">
             </div><p>本人在使用<code>Auto CAD</code>的过程中的一些学习笔记分享。持续更新中 ······</p>]]></description>
 </item><item>
     <title>国家标准免费下载整理</title>
@@ -21,7 +21,7 @@
     <guid>https://ll.sc.cn/posts/gb_free_download/</guid>
     <description><![CDATA[<p>国家标准免费了，在哪里可以下载？</p>]]></description>
 </item><item>
-    <title>2022年职业资格考试安排</title>
+    <title>2022 年职业资格考试安排</title>
     <link>https://ll.sc.cn/posts/20220117151357/</link>
     <pubDate>Mon, 17 Jan 2022 15:13:57 &#43;0800</pubDate>
     <author>作者</author>
@@ -30,54 +30,54 @@
 <p>2022逢考必过！</p>]]></description>
 </item><item>
     <title>Excel - 使用技巧</title>
-    <link>https://ll.sc.cn/posts/excel-skills/</link>
+    <link>https://ll.sc.cn/posts/excel_skills/</link>
     <pubDate>Tue, 11 Jan 2022 14:31:17 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/excel-skills/</guid>
+    <guid>https://ll.sc.cn/posts/excel_skills/</guid>
     <description><![CDATA[]]></description>
 </item><item>
     <title>Auto CAD - 出电子版蓝图使用方法</title>
-    <link>https://ll.sc.cn/posts/cad-electronic-blueprint/</link>
+    <link>https://ll.sc.cn/posts/cad_electronic_blueprint/</link>
     <pubDate>Sun, 26 Dec 2021 12:13:40 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-electronic-blueprint/</guid>
+    <guid>https://ll.sc.cn/posts/cad_electronic_blueprint/</guid>
     <description><![CDATA[<p>仅作为项目内部使用，勿作他用，否则后果自负……</p>]]></description>
 </item><item>
     <title>二级建造师 - 注册相关</title>
-    <link>https://ll.sc.cn/posts/associate-constructor-register/</link>
+    <link>https://ll.sc.cn/posts/associate_constructor_register/</link>
     <pubDate>Wed, 08 Dec 2021 16:35:59 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/associate-constructor-register/</guid>
+    <guid>https://ll.sc.cn/posts/associate_constructor_register/</guid>
     <description><![CDATA[<p>在通过二级建造师考试并取得相应证书后，需要对自己的证书进行注册，证书方可使用;</p>]]></description>
 </item><item>
     <title>Auto CAD - 基础知识介绍</title>
-    <link>https://ll.sc.cn/posts/cad-basics/</link>
+    <link>https://ll.sc.cn/posts/cad_basics/</link>
     <pubDate>Wed, 01 Dec 2021 20:15:26 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-basics/</guid>
+    <guid>https://ll.sc.cn/posts/cad_basics/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Work/AutoCAD/06_CAD_basics/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>本文为<code>Auto CAD</code>的入门知识，包括快捷命令的使用，以及需要注意的一些准则；</p>]]></description>
 </item><item>
     <title>Auto CAD - 自定义快捷命令</title>
-    <link>https://ll.sc.cn/posts/cad-short-command/</link>
+    <link>https://ll.sc.cn/posts/cad_short_command/</link>
     <pubDate>Thu, 18 Nov 2021 19:57:37 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-short-command/</guid>
+    <guid>https://ll.sc.cn/posts/cad_short_command/</guid>
     <description><![CDATA[<p>画CAD有两种方式：通过鼠标点击命令按钮来作图，或者是使用命令行。命令行作图便捷、快速、易于思路连贯，是首选。但有些命令行命令很长，输入它反倒还使作图速度减慢。</p>]]></description>
 </item><item>
     <title>Auto CAD - 关于参照的使用技巧</title>
-    <link>https://ll.sc.cn/posts/cad-xref-manager/</link>
+    <link>https://ll.sc.cn/posts/cad_xref_manager/</link>
     <pubDate>Tue, 02 Nov 2021 16:35:47 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-xref-manager/</guid>
+    <guid>https://ll.sc.cn/posts/cad_xref_manager/</guid>
     <description><![CDATA[<p>在绘图的过程中经常会用到 <strong>参照</strong>，如果没有正确使用参照文件，图纸发给别人就会出现参照文件丢失，比如图框显示不出来，那么该如何保证发出的图纸不丢失参照文件呢？</p>]]></description>
 </item><item>
     <title>Auto CAD - 源泉插件侧边栏</title>
-    <link>https://ll.sc.cn/posts/cad-plugin-yqarch-sidebar/</link>
+    <link>https://ll.sc.cn/posts/cad_plugin_yqarch_sidebar/</link>
     <pubDate>Mon, 01 Nov 2021 10:46:45 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/cad-plugin-yqarch-sidebar/</guid>
+    <guid>https://ll.sc.cn/posts/cad_plugin_yqarch_sidebar/</guid>
     <description><![CDATA[<p>源泉非官方侧边栏基于速腾CAD菜单工具</p>]]></description>
 </item></channel>
 </rss>

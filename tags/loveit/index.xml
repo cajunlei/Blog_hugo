@@ -11,7 +11,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-01-featured-image.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-01-featured-image.jpg" referrerpolicy="no-referrer">
             </div><p>探索 Hugo - <strong>LoveIt</strong> 主题的全部内容和背后的核心概念.</p>]]></description>
 </item><item>
     <title>主题文档 - 内容</title>
@@ -20,7 +20,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E5%AE%B9/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-02-featured-image.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-02-featured-image.jpg" referrerpolicy="no-referrer">
             </div><p>了解如何在 <strong>LoveIt</strong> 主题中快速, 直观地创建和组织内容.</p>]]></description>
 </item><item>
     <title>主题文档 - 内置 Shortcodes</title>
@@ -29,7 +29,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E5%86%85%E7%BD%AE-shortcodes/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-03-featured-image.png" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-03-featured-image.png" referrerpolicy="no-referrer">
             </div><p><strong>Hugo</strong> 提供了多个内置的 Shortcodes, 以方便作者保持 Markdown 内容的整洁.</p>]]></description>
 </item><item>
     <title>主题文档 - 扩展 Shortcodes</title>
@@ -38,7 +38,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/%E4%B8%BB%E9%A2%98%E6%96%87%E6%A1%A3-%E6%89%A9%E5%B1%95-shortcodes/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-04-featured-image.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-04-featured-image.jpg" referrerpolicy="no-referrer">
             </div><p><strong>LoveIt</strong> 主题在 Hugo 内置的 shortcode 的基础上提供多个扩展的 shortcode.</p>]]></description>
 </item><item>
     <title>Markdown 基本语法</title>
@@ -47,7 +47,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/markdown-%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-markdown-featured-image.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-markdown-featured-image.jpg" referrerpolicy="no-referrer">
             </div><p>这篇文章提供了可以在 Hugo 的文章中使用的基本 Markdown 语法示例.</p>]]></description>
 </item><item>
     <title>Emoji 支持</title>
@@ -56,7 +56,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/loveit/emoji-%E6%94%AF%E6%8C%81/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Loveit/themes-emoji-featured-image.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Loveit/themes-emoji-featured-image.jpg" referrerpolicy="no-referrer">
             </div><p>Emoji 可以通过多种方式在 Hugo 项目中启用.</p>]]></description>
 </item></channel>
 </rss>

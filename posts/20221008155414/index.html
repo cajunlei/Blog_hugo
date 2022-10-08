@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Backblaze B2 &#43; Cloudflare 搭建免费图床 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
+
+<meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Backblaze B2 &#43; Cloudflare 搭建免费图床" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ll.sc.cn/posts/20221008155414/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-08T15:54:14+08:00" />
+<meta property="article:modified_time" content="2022-10-08T15:54:14+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ll.sc.cn/images/logo.webp"/>
+
+<meta name="twitter:title" content="Backblaze B2 &#43; Cloudflare 搭建免费图床"/>
+<meta name="twitter:description" content=""/>
+<meta name="application-name" content="雷雷屋头">
+<meta name="apple-mobile-web-app-title" content="雷雷屋头"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ec5c6d"><link rel="manifest" href="/images/site.webmanifest"><link rel="canonical" href="https://ll.sc.cn/posts/20221008155414/" /><link rel="prev" href="https://ll.sc.cn/posts/email_settings/" /><link rel="next" href="https://ll.sc.cn/posts/cad_skills_problem/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><meta name="google-site-verification" content="google699009ae438f1e4d" /><meta name="msvalidate.01" content="0AA62D35A93C9239B95F5187EC12FAF1" /><meta name="baidu-site-verification" content="3f7de7fba11a61559c21d907904d0a1b" /><meta name="sogou_site_verification" content="VgMMts5sWb"/><meta name="360-site-verification" content="8eda9335dc386f7c204d42bfe6c012da" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Backblaze B2 + Cloudflare 搭建免费图床",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ll.sc.cn\/posts\/20221008155414\/"
+        },"genre": "posts","keywords": "图床, Cloudflare, Backblaze","wordcount":  2976 ,
+        "url": "https:\/\/ll.sc.cn\/posts\/20221008155414\/","datePublished": "2022-10-08T15:54:14+08:00","dateModified": "2022-10-08T15:54:14+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "守正","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
+                "@type": "Person",
+                "name": "守正"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 
+                                            <div>爱工作</div>
+                                        </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 
+                                            <div>爱学习</div>
+                                        </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 
+                                            <div>爱折腾</div>
+                                        </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> 
+                                            <div>Windows</div>
+                                        </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 
+                                            <div>软件类</div>
+                                        </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 
+                                            <div>杂　记</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 
+                                            <div>日　志</div>
+                                        </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 
+                                            <div>时　刻</div>
+                                        </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 
+                                            <div>留　言</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 
+                                            <div>友情链接</div>
+                                        </a><a href="/book/" title="" ><i class='fas fa-book'></i> 
+                                            <div>我的书单</div>
+                                        </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 
+                                            <div>常用站点</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> 
+                                            <div>Gitee站</div>
+                                        </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> 
+                                            <div>Github站</div>
+                                        </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> 
+                                            <div>Vercel站</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 日　志 </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 时　刻 </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 留　言 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                    </div>
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Backblaze B2 &#43; Cloudflare 搭建免费图床</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ll.sc.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>守正</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/z-turn/"><i class="far fa-folder fa-fw"></i>爱折腾</a></span></div>
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2022-10-08">2022-10-08</time>&nbsp;&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2022-10-08">2022-10-08</time>&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 2976 字&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 6 分钟&nbsp;&nbsp;<span id="/posts/20221008155414/" class="leancloud_visitors" data-flag-title="Backblaze B2 &#43; Cloudflare 搭建免费图床">
+                    <i class="far fa-eye fa-fw"></i>&nbsp;<span id="twikoo_visitors">0</span>&nbsp;次阅读
+                </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#backblaze-部分">Backblaze 部分</a>
+      <ol>
+        <li><a href="#注册-backblaze-账号">注册 Backblaze 账号</a></li>
+        <li><a href="#创建-b2-bucket存储桶">创建 B2 Bucket(存储桶)</a></li>
+        <li><a href="#获取存储桶所在服务器">获取存储桶所在服务器</a></li>
+      </ol>
+    </li>
+    <li><a href="#cloudflare-部分">Cloudflare 部分</a>
+      <ol>
+        <li><a href="#注册-cloudflare-账号">注册 Cloudflare 账号</a></li>
+        <li><a href="#将域名接入-cloudflare">将域名接入 Cloudflare</a></li>
+        <li><a href="#解析子域名">解析子域名</a></li>
+        <li><a href="#ssltls">SSL/TLS</a></li>
+        <li><a href="#添加规则">添加规则</a></li>
+      </ol>
+    </li>
+    <li><a href="#最后的-backblaze-设置">最后的 Backblaze 设置</a></li>
+    <li><a href="#精简链接">精简链接</a>
+      <ol>
+        <li><a href="#目的">目的</a></li>
+        <li><a href="#创建-workers-服务">创建 Workers 服务</a></li>
+        <li><a href="#添加-worker-路由规则">添加 Worker 路由规则</a></li>
+      </ol>
+    </li>
+    <li><a href="#防盗链">防盗链</a></li>
+    <li><a href="#参考链接">参考链接</a></li>
+  </ol>
+</nav></div>
+            </div><div class="content" id="content"><h2 id="backblaze-部分">Backblaze 部分</h2>
+<h3 id="注册-backblaze-账号">注册 Backblaze 账号</h3>
+<ol>
+<li>
+<p>打开 <a href="https://www.backblaze.com/b2/sign-up.html" target="_blank" rel="noopener noreffer">https://www.backblaze.com/b2/sign-up.html</a> ；</p>
+</li>
+<li>
+<p>输入 <strong>邮箱</strong>、<strong>密码</strong> 进行注册；</p>
+</li>
+</ol>
+<h3 id="创建-b2-bucket存储桶">创建 B2 Bucket(存储桶)</h3>
+<ol>
+<li>
+<p>点击右上角<code>My Account</code>进入后台；</p>
+</li>
+<li>
+<p>选择<code>Buckets</code>（桶），然后点击<code>Create a Bucket</code>，创建一个存储桶。</p>
+</li>
+</ol>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>说明<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ol>
+<li>
+<p><code>Bucket Unique Name</code>（桶唯一名称）：自己取一个名称；</p>
+</li>
+<li>
+<p><code>Files in Bucket are</code>（桶里面的档案是）：<code>Public</code>（公众）；</p>
+</li>
+</ol>
+</div>
+        </div>
+    </div>
+<ol start="3">
+<li>点击<code>Create a Bucket</code>（创作一个桶）完成创建；</li>
+</ol>
+<h3 id="获取存储桶所在服务器">获取存储桶所在服务器</h3>
+<ol>
+<li>
+<p>回到<code>Buckets</code>(存储桶) ；</p>
+</li>
+<li>
+<p>在刚刚创建的存储桶上，点击<code>Upload/Download</code>(上传/下载)；</p>
+</li>
+<li>
+<p>上传一个任意文件到存储桶中；</p>
+</li>
+<li>
+<p>然后点击刚上传文件后面的 <code>i</code>（<code>information</code>，信息）;</p>
+</li>
+<li>
+<p>记住<code>Friendly URL</code>的前部分，如：<code>https://f004.backblazeb2.com/</code></p>
+</li>
+</ol>
+<h2 id="cloudflare-部分">Cloudflare 部分</h2>
+<h3 id="注册-cloudflare-账号">注册 Cloudflare 账号</h3>
+<ol>
+<li>
+<p>打开<a href="https://dash.cloudflare.com/sign-up" target="_blank" rel="noopener noreffer">https://dash.cloudflare.com/sign-up</a>；</p>
+</li>
+<li>
+<p>输入 <strong>邮箱</strong>、<strong>密码</strong> 进行注册；</p>
+</li>
+</ol>
+<h3 id="将域名接入-cloudflare">将域名接入 Cloudflare</h3>
+<ol>
+<li>
+<p>在<code>Websites</code>（网站）标签，点击<code>Add a Site</code>（添加站点）</p>
+</li>
+<li>
+<p>输入你的有效域名并点击<code>Add site</code>（添加站点）</p>
+</li>
+<li>
+<p><code>Select a plan</code>（选择计划）：选择最下方的<code>Free</code> $0(0 美元)，点击<code>Continue</code>（继续）</p>
+</li>
+<li>
+<p>到你的域名服务商将<code>DNS</code>服务替换未<code>cloudflare</code>的</p>
+</li>
+</ol>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i>服务器地址<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>（<code>Nameserver 1</code>）名称服务器 1：
+<code>aldo.ns.cloudflare.com</code></p>
+<p>（<code>Nameserver 2</code>）名称服务器 2：
+<code>leanna.ns.cloudflare.com</code></p>
+</div>
+        </div>
+    </div>
+<h3 id="解析子域名">解析子域名</h3>
+<p>在接入的域名下，点击<code>DNS</code>标签，点击<code>Add record</code>（添加记录）</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">类型</th>
+<th style="text-align:center">名称</th>
+<th style="text-align:center">内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">CNAME</td>
+<td style="text-align:center">img</td>
+<td style="text-align:center">f004.backblazeb2.com</td>
+</tr>
+</tbody>
+</table>
+<div class="details admonition example open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ol fa-fw"></i>说明<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>类型：</strong> 为<code>CNAME</code>；</p>
+<p><strong>名称：</strong> 为子域名，一般有以下几种：</p>
+<ul>
+<li><code>img</code></li>
+<li><code>images</code></li>
+<li><code>image</code></li>
+<li><code>assets</code>（不仅存放图片，还有存放 <code>css</code>、<code>js</code>）</li>
+<li><code>static</code>（不仅存放图片，还有存放 <code>css</code>、<code>js</code>）</li>
+</ul>
+<p><strong>内容：</strong> 为<a href="#%e8%8e%b7%e5%8f%96%e5%ad%98%e5%82%a8%e6%a1%b6%e6%89%80%e5%9c%a8%e6%9c%8d%e5%8a%a1%e5%99%a8" rel="">此处第5条</a>我们获取的存储桶所在服务器；</p>
+</div>
+        </div>
+    </div>
+<p>输入后点击<code>Save</code>（保存）；</p>
+<p>完成后确保<code>Proxy status</code>（代理状态）下的橙色保护盾是开启的状态, 这代表请求是通过了<code>Cloudflare</code>的<code>CDN</code>代理；</p>
+<p><code>Cloudflare</code>默认的 <code>TTL</code> 将被设置为 <code>auto</code>(自动)；</p>
+<h3 id="ssltls">SSL/TLS</h3>
+<p>在接入的域名下，点击<code>SSL/TLS</code>标签，选择<code>Overview</code>（概述）设置为<code>Full (strict)</code>【完全（严格）】</p>
+<h3 id="添加规则">添加规则</h3>
+<p>我们需要新建<code>2</code>个规则：</p>
+<p>在接入的域名下，点击<code>Rules</code>（规则）标签，选择<code>Page Rules</code>（页面规则）；</p>
+<p>点击<code>Create Page Rule</code>（创建页面规则）</p>
+<p><strong>【规则一】</strong></p>
+<ul>
+<li><strong>URL：</strong> https://解析的名称.域名/file/存储桶名称/*</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">例如：https://img.baidu.com/file/blog/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>Pick a Settin（选取设置）：</strong> <code>Cache Level</code>（缓存级别）</p>
+</li>
+<li>
+<p><strong>Select Cache Level（选择缓存级别）：</strong> <code>Standard</code>（标准）</p>
+</li>
+</ul>
+<p><strong>【规则二】</strong></p>
+<ul>
+<li><strong>URL：</strong> https://解析的名称.域名/file/*/*</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">例如：https://img.baidu.com/file/*/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>Pick a Settin（选取设置）：</strong> <code>Forwarding URL</code>（转发URL）</p>
+</li>
+<li>
+<p><strong>Select status code（选择状态代码）：</strong> <code>302 - Temporary Redirect</code>（302 - 临时重定向）</p>
+</li>
+<li>
+<p><strong>Enter destination URL（输入目标 URL ）：</strong> <code>https://secure.backblaze.com/404notfound</code></p>
+</li>
+</ul>
+<h2 id="最后的-backblaze-设置">最后的 Backblaze 设置</h2>
+<ol>
+<li>
+<p>打开<code>Backblaze</code>并登录，点击右上角<code>My Account</code>进入后台；</p>
+</li>
+<li>
+<p>选择<code>Buckets</code>（桶），点击<code>Bucket Settings</code>（桶设定）</p>
+</li>
+<li>
+<p>在<code>Bucket Info</code>（桶信息）输入以下内容：</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">{&#34;cache-control&#34;:&#34;max-age=43200000&#34;}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="4">
+<li>
+<p>点击<code>Update Bucket</code>（更新桶）；</p>
+</li>
+<li>
+<p>点击<code>CORS Rules</code>（CORS规则）选择<code>Share everything in this bucket with all HTTPS origins</code>（与所有HTTPS来源共享此存储桶中的所有内容）</p>
+</li>
+<li>
+<p>点击<code>Update CORS Rules</code></p>
+</li>
+</ol>
+<p>至此，我们就拥有了一个自定义域名的免费图床。</p>
+<p><strong>地址形式为：</strong> https://解析的名称.域名/file/存储桶名称/上传的文件名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">例如：https://img.baidu.com/file/blog/test.png
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="精简链接">精简链接</h2>
+<h3 id="目的">目的</h3>
+<p>去掉<code>URL</code>中无用的<code>/file/&lt;bucket-name&gt;/</code>部分；</p>
+<p><strong>原链接：</strong> <a href="https://img.baidu.com/file/blog/test.png" target="_blank" rel="noopener noreffer">https://img.baidu.com/file/blog/test.png</a></p>
+<p><strong>精简链接：</strong> <a href="https://img.baidu.com/test.png" target="_blank" rel="noopener noreffer">https://img.baidu.com/test.png</a></p>
+<h3 id="创建-workers-服务">创建 Workers 服务</h3>
+<ol>
+<li>在<code>Cloudflare</code>控制台，点击<code>Workers</code>标签，选择<code>Overview</code>（概述）；</li>
+</ol>
+<p>首次使用按提示开通即可；</p>
+<ol start="2">
+<li>点击<code>Create a Service</code>（创建服务），输入自取<code>Service name</code>（服务名称）</li>
+</ol>
+<p><code>Select a starter</code>（选择启动器）：<code>HTTP router</code>（HTTP路由器）</p>
+<ol start="3">
+<li>
+<p>点击右下<code>Create service</code>（创建服务） → <code>Worker</code>右侧的<code>Quick edit</code>（快速编辑）</p>
+</li>
+<li>
+<p>清空窗口内默认的内容，并粘贴以下内容到窗口内；</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span><span class="lnt">82
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#39;use strict&#39;;
+</span></span><span class="line"><span class="cl">const b2Domain = &#39;img.domain.com&#39;; // configure this as per instructions above
+</span></span><span class="line"><span class="cl">const b2Bucket = &#39;bucket-name&#39;; // configure this as per instructions above
+</span></span><span class="line"><span class="cl">const b2UrlPath = `/file/${b2Bucket}/`;
+</span></span><span class="line"><span class="cl">addEventListener(&#39;fetch&#39;, event =&gt; {
+</span></span><span class="line"><span class="cl">	return event.respondWith(fileReq(event));
+</span></span><span class="line"><span class="cl">});
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// define the file extensions we wish to add basic access control headers to
+</span></span><span class="line"><span class="cl">const corsFileTypes = [&#39;png&#39;, &#39;jpg&#39;, &#39;gif&#39;, &#39;jpeg&#39;, &#39;webp&#39;];
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// backblaze returns some additional headers that are useful for debugging, but unnecessary in production. We can remove these to save some size
+</span></span><span class="line"><span class="cl">const removeHeaders = [
+</span></span><span class="line"><span class="cl">	&#39;x-bz-content-sha1&#39;,
+</span></span><span class="line"><span class="cl">	&#39;x-bz-file-id&#39;,
+</span></span><span class="line"><span class="cl">	&#39;x-bz-file-name&#39;,
+</span></span><span class="line"><span class="cl">	&#39;x-bz-info-src_last_modified_millis&#39;,
+</span></span><span class="line"><span class="cl">	&#39;X-Bz-Upload-Timestamp&#39;,
+</span></span><span class="line"><span class="cl">	&#39;Expires&#39;
+</span></span><span class="line"><span class="cl">];
+</span></span><span class="line"><span class="cl">const expiration = 31536000; // override browser cache for images - 1 year
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">// define a function we can re-use to fix headers
+</span></span><span class="line"><span class="cl">const fixHeaders = function(url, status, headers){
+</span></span><span class="line"><span class="cl">	let newHdrs = new Headers(headers);
+</span></span><span class="line"><span class="cl">	// add basic cors headers for images
+</span></span><span class="line"><span class="cl">	if(corsFileTypes.includes(url.pathname.split(&#39;.&#39;).pop())){
+</span></span><span class="line"><span class="cl">		newHdrs.set(&#39;Access-Control-Allow-Origin&#39;, &#39;*&#39;);
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	// override browser cache for files when 200
+</span></span><span class="line"><span class="cl">	if(status === 200){
+</span></span><span class="line"><span class="cl">		newHdrs.set(&#39;Cache-Control&#39;, &#34;public, max-age=&#34; + expiration);
+</span></span><span class="line"><span class="cl">	}else{
+</span></span><span class="line"><span class="cl">		// only cache other things for 5 minutes
+</span></span><span class="line"><span class="cl">		newHdrs.set(&#39;Cache-Control&#39;, &#39;public, max-age=300&#39;);
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	// set ETag for efficient caching where possible
+</span></span><span class="line"><span class="cl">	const ETag = newHdrs.get(&#39;x-bz-content-sha1&#39;) || newHdrs.get(&#39;x-bz-info-src_last_modified_millis&#39;) || newHdrs.get(&#39;x-bz-file-id&#39;);
+</span></span><span class="line"><span class="cl">	if(ETag){
+</span></span><span class="line"><span class="cl">		newHdrs.set(&#39;ETag&#39;, ETag);
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	// remove unnecessary headers
+</span></span><span class="line"><span class="cl">	removeHeaders.forEach(header =&gt; {
+</span></span><span class="line"><span class="cl">		newHdrs.delete(header);
+</span></span><span class="line"><span class="cl">	});
+</span></span><span class="line"><span class="cl">	return newHdrs;
+</span></span><span class="line"><span class="cl">};
+</span></span><span class="line"><span class="cl">async function fileReq(event){
+</span></span><span class="line"><span class="cl">	const cache = caches.default; // Cloudflare edge caching
+</span></span><span class="line"><span class="cl">	const url = new URL(event.request.url);
+</span></span><span class="line"><span class="cl">	if(url.host === b2Domain &amp;&amp; !url.pathname.startsWith(b2UrlPath)){
+</span></span><span class="line"><span class="cl">		url.pathname = b2UrlPath + url.pathname;
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	let response = await cache.match(url); // try to find match for this request in the edge cache
+</span></span><span class="line"><span class="cl">	if(response){
+</span></span><span class="line"><span class="cl">		// use cache found on Cloudflare edge. Set X-Worker-Cache header for helpful debug
+</span></span><span class="line"><span class="cl">		let newHdrs = fixHeaders(url, response.status, response.headers);
+</span></span><span class="line"><span class="cl">		newHdrs.set(&#39;X-Worker-Cache&#39;, &#34;true&#34;);
+</span></span><span class="line"><span class="cl">		return new Response(response.body, {
+</span></span><span class="line"><span class="cl">			status: response.status,
+</span></span><span class="line"><span class="cl">			statusText: response.statusText,
+</span></span><span class="line"><span class="cl">			headers: newHdrs
+</span></span><span class="line"><span class="cl">		});
+</span></span><span class="line"><span class="cl">	}
+</span></span><span class="line"><span class="cl">	// no cache, fetch image, apply Cloudflare lossless compression
+</span></span><span class="line"><span class="cl">	response = await fetch(url, {cf: {polish: &#34;lossless&#34;}});
+</span></span><span class="line"><span class="cl">	let newHdrs = fixHeaders(url, response.status, response.headers);
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">  if(response.status === 200){
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    response = new Response(response.body, {
+</span></span><span class="line"><span class="cl">      status: response.status,
+</span></span><span class="line"><span class="cl">      statusText: response.statusText,
+</span></span><span class="line"><span class="cl">      headers: newHdrs
+</span></span><span class="line"><span class="cl">    });
+</span></span><span class="line"><span class="cl">  }else{
+</span></span><span class="line"><span class="cl">    response = new Response(&#39;File not found!&#39;, { status: 404 })
+</span></span><span class="line"><span class="cl">  }
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	event.waitUntil(cache.put(url, response.clone()));
+</span></span><span class="line"><span class="cl">	return response;
+</span></span><span class="line"><span class="cl">}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition note open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-pencil-alt fa-fw"></i>注意<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>粘贴前请修改<code>b2Domain</code>和<code>b2Bucket</code>这两个变量的值；</p>
+<p><code>b2Domain</code>：为图床的二级域名；</p>
+<p><code>b2Bucket</code>：为<code>bucket</code>存储桶的名字；</p>
+</div>
+        </div>
+    </div>
+<ol start="5">
+<li>点击<code>Save and Deploy</code>（保存并部署），然后返回</li>
+</ol>
+<h3 id="添加-worker-路由规则">添加 Worker 路由规则</h3>
+<p>使访问<code>subdomain.domain.com/*</code>时，请求先由<code>worker</code>来处理。</p>
+<ol>
+<li>
+<p>在接入的域名下，点击<code>Workers Routes</code>（Workers路由）标签；</p>
+</li>
+<li>
+<p>点击<code>HTTP Routes</code>（HTTP 路由）右侧的<code>Add route</code>（添加路由）；</p>
+</li>
+</ol>
+<ul>
+<li><strong>Route（路由）：</strong> 解析的名称.域名/*</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">例如：img.baidu.com/*
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>
+<p><strong>Service（服务）：</strong> 选择上一步创建的服务名称；</p>
+</li>
+<li>
+<p><strong>Environment（环境）：</strong> 保持默认即可；</p>
+</li>
+</ul>
+<ol start="3">
+<li>点击<code>Save</code>（保存），完成设置。</li>
+</ol>
+<h2 id="防盗链">防盗链</h2>
+<ol>
+<li>
+<p>在接入的域名下，点击<code>Security</code>（安全性）标签，选择<code>WAF</code>；</p>
+</li>
+<li>
+<p>点击<code>Firewall rules</code>（防火墙规则）右侧的<code>Create firewall rule</code>（创建防火墙规则）</p>
+</li>
+</ol>
+<p><code>Rule name</code> （规则名称）： 自己取一个名称</p>
+<p><strong>When incoming requests match…（当传入请求匹配时&hellip;）</strong></p>
+<ul>
+<li>
+<p><code>Field</code>（字段）：<code>Referer</code>（引用方）</p>
+</li>
+<li>
+<p><code>Operator</code>（运算符）：<code>does not contain</code>（不包含）</p>
+</li>
+<li>
+<p><code>Value</code>（值）：博客地址，如：<a href="https://ll.sc.cn" target="_blank" rel="noopener noreffer">ll.sc.cn</a></p>
+</li>
+</ul>
+<p>点击右侧<code>And</code>，在下一行继续；</p>
+<ul>
+<li>
+<p><code>Field</code>（字段）：<code>URI Full</code>（URI 完整）</p>
+</li>
+<li>
+<p><code>Operator</code>（运算符）：<code>contains</code>（包含）</p>
+</li>
+<li>
+<p><code>Value</code>（值）：https://解析的名称.域名，如：https://img.baidu.com</p>
+</li>
+</ul>
+<p><strong>Then…（则&hellip;）</strong></p>
+<p><code>Choose an action</code>（选择操作）：<code>Block</code>（阻止）</p>
+<p>最后点击<code>Deploy firewall rule</code>（部署防火墙规则）完成设置；</p>
+<h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://zhujiwiki.com/14698/" target="_blank" rel="noopener noreffer">利用Backblaze的B2云存储，结合Cloudflare……</a></li>
+<li><a href="https://zhuanlan.zhihu.com/p/491649092" target="_blank" rel="noopener noreffer">我的图床解决方案，超详细！</a></li>
+<li><a href="https://blog.meow.page/archives/free-personal-image-hosting-with-backblaze-b2-and-cloudflare-workers/" target="_blank" rel="noopener noreffer">使用 Backblaze B2 和 Cloudflare Workers……</a></li>
+</ul><div class="weixin">
+    <div class="shears">
+        <hr class="end"></hr>
+    </div>
+    <ul class="post-copyright" id="post-copyright">
+        <li><b>文章作者：</b><a href="https://ll.sc.cn" target="_blank" one-link-mark="yes">守正</a></li>
+        <li><b>文章标题：</b>Backblaze B2 &#43; Cloudflare 搭建免费图床</li>
+        <li class="post-copyright-link"><b>原文链接：</b><a href="/posts/20221008155414/" target="_blank" one-link-mark="yes">https://ll.sc.cn/posts/20221008155414/</a></li>
+        <li><b>版权声明：</b>本站所有文章除特别声明外，均采用<a rel="external nofollow noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" one-link-mark="yes"><code>CC BY-NC-ND 4.0</code></a>国际许可协议，若转载请注明出处！</li>
+    </ul>
+    <h2 id="fab-fa-weixin-分享到朋友圈" class="headerLink" tabindex="-1" style="outline: none;"><i class="fab fa-weixin"></i>&nbsp;分享到朋友圈</h2>
+    <div class="images">
+        <img class="slogan" src="https://cdn.chiga.ga/images/scan-share.jpg">
+        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3a%2f%2fll.sc.cn%2fposts%2f20221008155414%2f&amp;size=300x300" alt="微信扫一扫 分享朋友圈" title="" />
+        <img class="avatar" src="https://cdn.chiga.ga/images/avatar.webp" alt="avatar">
+    </div>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://cdn.chiga.ga/reward/wechat.webp">
+        <span style="color: #22ab39;">微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://cdn.chiga.ga/reward/alipay.webp">
+        <span style="color: #1678ff;">支付宝打赏</span>
+      </label>
+  </div>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2022-10-08</span>
+            </div>
+            <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></div>            
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/20221008155414/" data-title="Backblaze B2 &#43; Cloudflare 搭建免费图床"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/20221008155414/" data-title="Backblaze B2 &#43; Cloudflare 搭建免费图床"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/20221008155414/" data-title="Backblaze B2 &#43; Cloudflare 搭建免费图床"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/%E5%9B%BE%E5%BA%8A/">图床</a>,&nbsp;<a href="/tags/cloudflare/">Cloudflare</a>,&nbsp;<a href="/tags/backblaze/">Backblaze</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/email_settings/" class="prev" rel="prev" title="第三方邮箱设置"><i class="fas fa-angle-left fa-fw"></i>第三方邮箱设置</a>
+            <a href="/posts/cad_skills_problem/" class="next" rel="next" title="Auto CAD - 使用技巧和疑难杂症解决办法">Auto CAD - 使用技巧和疑难杂症解决办法<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="tcomment"></div>
+            <script src="https://cdn.chiga.ga/file/ll-blog/static/js/twikoo@1.6.7/twikoo.all.min.js"></script>
+            
+            <script>
+                twikoo.init({
+                    envId: 'https:\/\/blog-twikoo-alpha.vercel.app\/',
+                    el: '#tcomment',
+                    region: '',
+                    path: '',
+                    lang: '',
+                })
+            </script></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span id="busuanzi_container_site_pv">
+                    <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;次
+                </span> | 
+                <span id="busuanzi_container_site_uv">
+                    <i class="fas fa-user"></i>&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人
+                </span>
+            </div>
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">
+                        <a href="/love/" target="_blank" one-link-mark="yes">
+                            &nbsp;
+                            <i class="fas fa-heartbeat"></i>
+                            &nbsp;
+                        </a>
+                        <a href="https://ll.sc.cn" target="_blank">守 正</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
+                <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
+                <span id="runtime_span"></span>
+                <script>
+                    var countDownDate = new Date('2021-09-25T00:00:00').getTime();
+                    window.setInterval(function() {
+                        var distance = new Date().getTime() - countDownDate;
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        document.getElementById("runtime_span").innerHTML = "本站已坚持运行 " + "<i class='far fa-clock'></i> " + days + ' 天 ' + hours + ' 时 ' + minutes + ' 分 ' + seconds + ' 秒';
+                    }, 1000);
+                </script>
+            </div>
+
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a><a href="javascript:void(0)" id="back-to-top" class="fixed-button" title="回到顶部">
+                <div class="per"></div>
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="javascript:void(0)" id="back-to-bottom" class="fixed-button" title="回到底部">
+                <i class="fas fa-arrow-down fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"GQDBYZDWLG","algoliaIndex":"index","algoliaSearchKey":"31f3b432d4c23d621a13f434db81e49c","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script src="/js/webfont.js"></script>
+<script> WebFont.load({
+  custom: {
+    families: ['LXGWFont'],
+  },
+  classes: false,
+  active() {
+    document.body.style.fontFamily = 'LXGWFont';
+  },
+}); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
+	 
+	var $cdnPrefix = "https://cdn.chiga.ga";
+</script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?37eb9d4da1f3a0120c43a02428b8f5cf";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script></body>
+</html>

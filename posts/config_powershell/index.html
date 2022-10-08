@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+        <title>Powershell - 美化配置 - 雷雷的个人博客</title><meta name="keywords" content="[Design Building 设计 雷雷]">
+
+<meta name="Description" content="爱生活，爱工作，爱折腾"><meta property="og:title" content="Powershell - 美化配置" />
+<meta property="og:description" content="原生的 PowerShell 界面太朴素了，配置一下焕然一新……" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://ll.sc.cn/posts/config_powershell/" /><meta property="og:image" content="https://ll.sc.cn/images/logo.webp"/><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-10-29T11:30:21+08:00" />
+<meta property="article:modified_time" content="2021-10-29T11:30:21+08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://ll.sc.cn/images/logo.webp"/>
+
+<meta name="twitter:title" content="Powershell - 美化配置"/>
+<meta name="twitter:description" content="原生的 PowerShell 界面太朴素了，配置一下焕然一新……"/>
+<meta name="application-name" content="雷雷屋头">
+<meta name="apple-mobile-web-app-title" content="雷雷屋头"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/images/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png"><link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#ec5c6d"><link rel="manifest" href="/images/site.webmanifest"><link rel="canonical" href="https://ll.sc.cn/posts/config_powershell/" /><link rel="prev" href="https://ll.sc.cn/posts/excel_enable_development_tools/" /><link rel="next" href="https://ll.sc.cn/posts/windows_refresh_ico/" /><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.min.css"><link rel="stylesheet" href="/css/style.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.13.0/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@3.7.2/animate.min.css"><meta name="google-site-verification" content="google699009ae438f1e4d" /><meta name="msvalidate.01" content="0AA62D35A93C9239B95F5187EC12FAF1" /><meta name="baidu-site-verification" content="3f7de7fba11a61559c21d907904d0a1b" /><meta name="sogou_site_verification" content="VgMMts5sWb"/><meta name="360-site-verification" content="8eda9335dc386f7c204d42bfe6c012da" /><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "Powershell - 美化配置",
+        "inLanguage": "",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/ll.sc.cn\/posts\/config_powershell\/"
+        },"genre": "posts","keywords": "PowerShell","wordcount":  867 ,
+        "url": "https:\/\/ll.sc.cn\/posts\/config_powershell\/","datePublished": "2021-10-29T11:30:21+08:00","dateModified": "2021-10-29T11:30:21+08:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "守正","logo": "https:\/\/ll.sc.cn\/images\/avatar.webp"},"author": {
+                "@type": "Person",
+                "name": "守正"
+            },"description": ""
+    }
+    </script></head>
+    <body header-desktop="fixed" header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                        </a>
+                        <div class="dropdown">
+                            <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 
+                                            <div>爱工作</div>
+                                        </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 
+                                            <div>爱学习</div>
+                                        </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 
+                                            <div>爱折腾</div>
+                                        </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> 
+                                            <div>Windows</div>
+                                        </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 
+                                            <div>软件类</div>
+                                        </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 
+                                            <div>杂　记</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                        </a>
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 
+                                            <div>日　志</div>
+                                        </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 
+                                            <div>时　刻</div>
+                                        </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 
+                                            <div>留　言</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 
+                                            <div>友情链接</div>
+                                        </a><a href="/book/" title="" ><i class='fas fa-book'></i> 
+                                            <div>我的书单</div>
+                                        </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 
+                                            <div>常用站点</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    
+                        <div class="dropdown">
+                            <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                            </a>
+                            <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> 
+                                            <div>Gitee站</div>
+                                        </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> 
+                                            <div>Github站</div>
+                                        </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> 
+                                            <div>Vercel站</div>
+                                        </a></div>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                        </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                        </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="雷雷的个人博客"><span class="header-title-pre"><i class='fas fa-infinity'></i></span>雷雷屋头</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="所有文章"><i class='fas fa-fw fa-archive'></i> 归档 
+                    </a>
+                    <div class="dropdown">
+                        <a href="/categories/" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-folder-open'></i> 分类 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/categories/work/" title="" ><i class='fas fa-briefcase'></i> 爱工作 </a><a href="/categories/study/" title="" ><i class='fas fa-graduation-cap'></i> 爱学习 </a><a href="/categories/z-turn/" title="" ><i class='fas fa-tools'></i> 爱折腾 </a><a href="/categories/windows/" title="" ><i class='fab fa-windows'></i> Windows </a><a href="/categories/software/" title="" ><i class='fab fa-app-store-ios'></i> 软件类 </a><a href="/categories/record/" title="" ><i class='fas fa-box'></i> 杂　记 </a></div>
+                    </div>
+                <a class="menu-item" href="/tags/"><i class='fas fa-tags'></i> 标签 
+                    </a>
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-atom fa-spin'></i> 动态 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/journal/" title="" ><i class='fas fa-comment'></i> 日　志 </a><a href="/moments/" title="" ><i class='fas fa-comments'></i> 时　刻 </a><a href="/board/" title="" ><i class='fas fa-clipboard'></i> 留　言 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-link'></i> 链接 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="/friend/" title="" ><i class='fas fa-user-friends'></i> 友情链接 </a><a href="/book/" title="" ><i class='fas fa-book'></i> 我的书单 </a><a href="/links/" title="" ><i class='fas fa-globe-asia'></i> 常用站点 </a></div>
+                    </div>
+                
+                    <div class="dropdown">
+                        <a href="javascript:void(0);" class="menu-item menu-more dropbtn" title="" ><i class='fas fa-inbox'></i> 镜像 
+                        </a>
+                        <div class="menu-more-content dropdown-content"><a href="https://cajunlei.gitee.io/" title="" target="_blank" rel="noopener"><i class='fab fa-goodreads'></i> Gitee站 </a><a href="https://cajunlei.github.io/" title="" target="_blank" rel="noopener"><i class='fab fa-github-square'></i> Github站 </a><a href="https://cajunlei-github-io-cajunlei.vercel.app" title="" target="_blank" rel="noopener"><i class='fas fa-caret-square-up'></i> Vercel站 </a></div>
+                    </div>
+                <a class="menu-item" href="/about/"><i class='fas fa-user'></i> 关于 
+                    </a><a class="menu-item" href="https://travellings.link" title="开往-友链接力" rel="noopener noreffer" target="_blank"><i class='fas fa-subway'></i> 开往 
+                    </a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw"></i>
+            </a></div>
+    </div>
+</header>
+<div class="search-dropdown desktop">
+    <div id="search-dropdown-desktop"></div>
+</div>
+<div class="search-dropdown mobile">
+    <div id="search-dropdown-mobile"></div>
+</div>
+<main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animated flipInX">Powershell - 美化配置</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="https://ll.sc.cn" title="Author" target="_blank" rel="noopener noreffer author" class="author"><i class="fas fa-user-circle fa-fw"></i>守正</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/windows/"><i class="far fa-folder fa-fw"></i>Windows</a></span></div>
+            <div class="post-meta-line"><i class="fas fa-file"></i>&nbsp;<time datetime="2021-10-29">2021-10-29</time>&nbsp;&nbsp;<i class="fas fa-file-upload"></i>&nbsp;<time datetime="2021-10-29">2021-10-29</time>&nbsp;&nbsp;<i class="fas fa-pencil-alt fa-fw"></i>&nbsp;约 867 字&nbsp;&nbsp;
+                <i class="far fa-clock fa-fw"></i>&nbsp;预计阅读 2 分钟&nbsp;&nbsp;<span id="/posts/config_powershell/" class="leancloud_visitors" data-flag-title="Powershell - 美化配置">
+                    <i class="far fa-eye fa-fw"></i>&nbsp;<span id="twikoo_visitors">0</span>&nbsp;次阅读
+                </span>&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  kept="">
+                <div class="details-summary toc-title">
+                    <span>目录</span>
+                    <span><i class="details-icon fas fa-angle-right"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ol>
+    <li><a href="#使用-winget-安装-powershell">使用 Winget 安装 PowerShell</a></li>
+    <li><a href="#开始配置-powershell">开始配置 PowerShell</a>
+      <ol>
+        <li><a href="#安装-oh-my-posh">安装 Oh-My-Posh</a></li>
+        <li><a href="#安装-posh-git">安装 Posh-Git</a></li>
+        <li><a href="#安装-psreadline">安装 PSReadLine</a></li>
+        <li><a href="#开启默认激活配置">开启默认激活配置</a></li>
+        <li><a href="#安装特殊符号字体">安装特殊符号字体</a>
+          <ol>
+            <li><a href="#字体下载">字体下载</a></li>
+          </ol>
+        </li>
+        <li><a href="#安装文件图标库">安装文件图标库</a></li>
+        <li><a href="#使用图标">使用图标</a></li>
+        <li><a href="#命令行自动补全和提示">命令行自动补全和提示</a></li>
+      </ol>
+    </li>
+    <li><a href="#参考链接">参考链接</a>
+      <ol>
+        <li><a href="#视频教程">视频教程</a></li>
+      </ol>
+    </li>
+  </ol>
+</nav></div>
+            </div><div class="content" id="content"><div class="details admonition warning open">
+			<div class="details-summary admonition-title">
+				<i class="icon fas fa-exclamation-triangle fa-fwwarning"></i>警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+		    </div>
+			<div class="details-content">
+				<div class="admonition-content">
+					本文最后更新于 <span class="timeago" datetime="2021-10-29T11:30:21" title="2021-10-29">2021年10月29日</span>，若内容或图片失效，请留言反馈。</div>
+			</div>
+		 </div><p>原生的 PowerShell 界面太朴素了，配置一下焕然一新……</p>
+<h2 id="使用-winget-安装-powershell">使用 Winget 安装 PowerShell</h2>
+<p><code>Windows</code> 包管理器 <code>Winget</code> 是一种命令行工具，开发人员可以使用它在 <code>Windows 10</code> 计算机上查找、安装、升级、删除和配置应用程序。 此工具是 <code>Windows</code> 程序包管理器服务的客户端接口。</p>
+<div class="details admonition info open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i> 备注<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">若要查看系统要求列表和安装说明，请参阅 <a href="#%e5%8f%82%e8%80%83%e9%93%be%e6%8e%a5" rel="">winget文档</a> 。</div>
+        </div>
+    </div>
+<p>通过以下命令，可使用已发布的 <code>winget</code> 包安装 <code>PowerShell</code>：</p>
+<p>搜索最新版本的 <code>PowerShell</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">search</span> <span class="n">Microsoft</span><span class="p">.</span><span class="n">PowerShell</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>提示是否同意条款，输入 <code>Y</code> 回车确认；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">Name               Id                           Version  Source
+</span></span><span class="line"><span class="cl">----------------------------------------------------------------
+</span></span><span class="line"><span class="cl">PowerShell         Microsoft.PowerShell         7.1.5.0  winget
+</span></span><span class="line"><span class="cl">Powershell Preview Microsoft.PowerShell.Preview 7.2.0.10 winget
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用 <code>--exact</code> 参数选择安装 <code>PowerShell</code> 版本；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="n">PowerShell</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
+</span></span><span class="line"><span class="cl"><span class="n">winget</span> <span class="n">install</span> <span class="p">-</span><span class="n">-name</span> <span class="nb">PowerShell-Preview</span> <span class="p">-</span><span class="o">-exact</span> <span class="p">-</span><span class="n">-source</span> <span class="n">winget</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_21-38-55.png" alt="安装成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 安装成功</span>
+</div>
+
+<h2 id="开始配置-powershell">开始配置 PowerShell</h2>
+<h3 id="安装-oh-my-posh">安装 Oh-My-Posh</h3>
+<p><code>Install-Module</code> 为 <code>PowerShell</code> 自带的程序安装工具；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-SkipPublisherCheck</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>遇到提示不信任的存储库，我们输入 <code>Y</code> ，确认；</p>
+<div class="details admonition warning open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-exclamation-triangle fa-fw"></i> 警告<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Untrusted repository</p>
+<p>You are installing the modules from an untrusted repository. If you trust this repository,change its InstallationPolicy value by running the Set-PSRepository cmdlet. Are you sure youwant to install the modules from &lsquo;PSGallery&rsquo; ?</p>
+</div>
+        </div>
+    </div>
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_21-57-58.png" alt="Oh-My-Posh安装成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ Oh-My-Posh安装成功</span>
+</div>
+
+<h3 id="安装-posh-git">安装 Posh-Git</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="nb">posh-git</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样的提示，重复上一步的操作，输入 <code>Y</code> ，确认即可；</p>
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_22-21-03.png" alt="Posh-Git安装成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ Posh-Git安装成功</span>
+</div>
+
+<h3 id="安装-psreadline">安装 PSReadLine</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="n">PSReadLine</span> <span class="n">-AllowPrerelease</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-Force</span> <span class="n">-SkipPublisherCheck</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_22-21-51.png" alt="PSReadLine安装成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ PSReadLine安装成功</span>
+</div>
+
+<h3 id="开启默认激活配置">开启默认激活配置</h3>
+<p><strong>第一步</strong> 使用记事本打开 <code>$PROFILE</code>，进行配置；</p>
+<p>命令行继续输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="n">notepad</span><span class="p">.</span><span class="n">exe</span> <span class="nv">$PROFILE</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第一次执行提示没有这个文件，点击「是」进行创建；</p>
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_22-45-38.png" alt="创建文件"  width="65%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 创建文件</span>
+</div>
+
+<p>复制一下内容到文档，保存；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">robbyrussel</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_22-46-17.png" alt="编辑文档内容"  width="65%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 编辑文档内容</span>
+</div>
+
+<div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw"></i> 代码解释<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">Import-Module posh-git　　　　　　　　　//导入 Posh-Git 模块<br>
+Import-Module oh-my-posh　　　　　　　//导入 Oh-My-Posh 模块<br>
+Set-PoshPrompt -Theme robbyrussel　　　//设置主题</div>
+        </div>
+    </div>
+<p>重新启动 <code>Windows Terminal</code> ，即可看到效果；</p>
+<h3 id="安装特殊符号字体">安装特殊符号字体</h3>
+<p>当使用某些带有特殊符号的主题时，会显示乱码，如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_23-07-06.png" alt="符号未正常显示"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 符号未正常显示</span>
+</div>
+
+<p>下载字体文件后，双击打开，在左上找到「安装」或<code>Install</code>并点击；</p>
+<h4 id="字体下载">字体下载</h4>
+<div class="details admonition info">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i> 百度云<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li><strong>链　接：</strong> <a href="https://pan.baidu.com/s/1ZXvAgqdKs1uXqfazHmA3Dg" target="_blank" rel="noopener noreffer">https://pan.baidu.com/s/1ZXvAgqdKs1uXqfazHmA3Dg</a></li>
+<li><strong>提取码：</strong> j3sv</li>
+</ul>
+</div>
+        </div>
+    </div>
+<div class="details admonition info">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-info-circle fa-fw"></i> 蓝奏云<i class="details-icon fas fa-angle-right fa-fw"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><ul>
+<li><strong>链　接：</strong> <a href="https://cajun.lanzoui.com/im4FAwo4ioh" target="_blank" rel="noopener noreffer">https://cajun.lanzoui.com/im4FAwo4ioh</a></li>
+<li><strong>密　码：</strong> a9rj</li>
+</ul>
+</div>
+        </div>
+    </div>
+<p>然后打开设置 &ndash;&gt; PowerShell &ndash;&gt; 外观 &ndash;&gt; 字体选择带 <code>Nerd Font</code> 的 &ndash;&gt; 保存即可。</p>
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_23-25-59.png" alt="设置字体"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 设置字体</span>
+</div>
+
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_23-26-20.png" alt="图标符号已正常显示"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标符号已正常显示</span>
+</div>
+
+<h3 id="安装文件图标库">安装文件图标库</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Install-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span> <span class="n">-Repository</span> <span class="n">PSGallery</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同样的提示，输入 <code>Y</code> ，确认即可；</p>
+<div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_23-40-21.png" alt="图标库安装成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标库安装成功</span>
+</div>
+
+<h3 id="使用图标">使用图标</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="caption-wrapper">
+  <img class="caption" src="https://cdn.chiga.ga/Posts/Windows/04_PowerShell/2021-10-28_23-40-50.png" alt="图标显示成功"  width="95%" >
+  <span class="caption" style="font-size: 0.9em; color: #999; text-align: center; display: block;" >▲ 图标显示成功</span>
+</div>
+
+<h3 id="命令行自动补全和提示">命令行自动补全和提示</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>输入命令其实字符，按 <code>tab</code> 键，跳出候选命令；</p>
+<p>最后可以将这些代码都放到配置文件中；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-PowerShell" data-lang="PowerShell"><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">posh-git</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="nb">oh-my</span><span class="n">-posh</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Import-Module</span> <span class="n">-Name</span> <span class="nb">Terminal-Icons</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PoshPrompt</span> <span class="n">-Theme</span> <span class="n">powerlevel10k_rainbow</span>
+</span></span><span class="line"><span class="cl"><span class="nb">Set-PSReadlineKeyHandler</span> <span class="n">-Key</span> <span class="n">Tab</span> <span class="n">-Function</span> <span class="n">MenuComplete</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="参考链接">参考链接</h2>
+<ul>
+<li><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/install/installing-powershell-on-windows?view=powershell-7.1#winget" target="_blank" rel="noopener noreffer">在 Windows 上安装 PowerShell</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/powershell/scripting/whats-new/migrating-from-windows-powershell-51-to-powershell-7?view=powershell-7.1" target="_blank" rel="noopener noreffer">从 Windows PowerShell 5.1 迁移到 PowerShell 7</a></li>
+<li><a href="https://ohmyposh.dev/docs" target="_blank" rel="noopener noreffer">Oh-My-Posh 文档</a></li>
+<li><a href="https://ohmyposh.dev/docs/themes" target="_blank" rel="noopener noreffer">更多 Oh-My-Posh 主题</a></li>
+<li><a href="https://docs.microsoft.com/zh-cn/windows/package-manager/winget/" target="_blank" rel="noopener noreffer">winget文档</a></li>
+</ul>
+<h3 id="视频教程">视频教程</h3>
+<div class="bilibili"><iframe src="//player.bilibili.com/player.html?bvid=BV12u411Z7Zo&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"></iframe></div><div class="weixin">
+    <div class="shears">
+        <hr class="end"></hr>
+    </div>
+    <ul class="post-copyright" id="post-copyright">
+        <li><b>文章作者：</b><a href="https://ll.sc.cn" target="_blank" one-link-mark="yes">守正</a></li>
+        <li><b>文章标题：</b>Powershell - 美化配置</li>
+        <li class="post-copyright-link"><b>原文链接：</b><a href="/posts/config_powershell/" target="_blank" one-link-mark="yes">https://ll.sc.cn/posts/config_powershell/</a></li>
+        <li><b>版权声明：</b>本站所有文章除特别声明外，均采用<a rel="external nofollow noopener noreferrer" target="_blank" href="https://creativecommons.org/licenses/by-nc-nd/4.0/deed.zh" one-link-mark="yes"><code>CC BY-NC-ND 4.0</code></a>国际许可协议，若转载请注明出处！</li>
+    </ul>
+    <h2 id="fab-fa-weixin-分享到朋友圈" class="headerLink" tabindex="-1" style="outline: none;"><i class="fab fa-weixin"></i>&nbsp;分享到朋友圈</h2>
+    <div class="images">
+        <img class="slogan" src="https://cdn.chiga.ga/images/scan-share.jpg">
+        <img class="qr-code" src="https://api.qrserver.com/v1/create-qr-code/?data=https%3a%2f%2fll.sc.cn%2fposts%2fconfig_powershell%2f&amp;size=300x300" alt="微信扫一扫 分享朋友圈" title="" />
+        <img class="avatar" src="https://cdn.chiga.ga/images/avatar.webp" alt="avatar">
+    </div>
+</div>
+<div class="post-reward">
+  <input type="checkbox" name="reward" id="reward" hidden />
+  <label class="reward-button" for="reward">赞赏支持</label>
+  <div class="qr-code">
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://cdn.chiga.ga/reward/wechat.webp">
+        <span style="color: #22ab39;">微信打赏</span>
+      </label>
+    <label class="qr-code-image" for="reward">
+        <img class="image" src="https://cdn.chiga.ga/reward/alipay.webp">
+        <span style="color: #1678ff;">支付宝打赏</span>
+      </label>
+  </div>
+</div>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2021-10-29</span>
+            </div>
+            <div class="post-info-license"><span><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span></div>            
+        </div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="分享到 微博" data-sharer="weibo" data-url="https://ll.sc.cn/posts/config_powershell/" data-title="Powershell - 美化配置"><i class="fab fa-weibo fa-fw"></i></a><a href="javascript:void(0);" title="分享到 百度" data-sharer="baidu" data-url="https://ll.sc.cn/posts/config_powershell/" data-title="Powershell - 美化配置"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@2.14.0/icons/baidu.svg"></i></a><a href="javascript:void(0);" title="分享到 Evernote" data-sharer="evernote" data-url="https://ll.sc.cn/posts/config_powershell/" data-title="Powershell - 美化配置"><i class="fab fa-evernote fa-fw"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw"></i>&nbsp;<a href="/tags/powershell/">PowerShell</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/excel_enable_development_tools/" class="prev" rel="prev" title="Excel - 开发工具基础知识"><i class="fas fa-angle-left fa-fw"></i>Excel - 开发工具基础知识</a>
+            <a href="/posts/windows_refresh_ico/" class="next" rel="next" title="Win10 - 强制刷新图标缓存">Win10 - 强制刷新图标缓存<i class="fas fa-angle-right fa-fw"></i></a></div>
+</div>
+<div id="comments"><div id="tcomment"></div>
+            <script src="https://cdn.chiga.ga/file/ll-blog/static/js/twikoo@1.6.7/twikoo.all.min.js"></script>
+            
+            <script>
+                twikoo.init({
+                    envId: 'https:\/\/blog-twikoo-alpha.vercel.app\/',
+                    el: '#tcomment',
+                    region: '',
+                    path: '',
+                    lang: '',
+                })
+            </script></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line"><span id="busuanzi_container_site_pv">
+                    <i class="fas fa-eye"></i>&nbsp;<span id="busuanzi_value_site_pv"></span>&nbsp;次
+                </span> | 
+                <span id="busuanzi_container_site_uv">
+                    <i class="fas fa-user"></i>&nbsp;<span id="busuanzi_value_site_uv"></span>&nbsp;人
+                </span>
+            </div>
+
+            <div class="footer-line"><i class="far fa-copyright fa-fw"></i><span itemprop="copyrightYear">2021 - 2022</span><span class="author" itemprop="copyrightHolder">
+                        <a href="/love/" target="_blank" one-link-mark="yes">
+                            &nbsp;
+                            <i class="fas fa-heartbeat"></i>
+                            &nbsp;
+                        </a>
+                        <a href="https://ll.sc.cn" target="_blank">守 正</a>
+                    </span></div><div class="footer-line">由 <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.100.0">Hugo</a> 强力驱动 | 主题 <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.10"> LoveIt</a>
+                </div><div class="footer-line"><span class="license"><a rel="license external nofollow noopener noreffer" href="https://creativecommons.org/licenses/by-nc/4.0/deed.zh" target="_blank">CC BY-NC 4.0</a></span>&nbsp;|
+                <span>萌ICP备</span><a href="https://icp.gov.moe/?keyword=20218899" target="_blank"> 20218899 </a><span>号</span></div><div class="footer-line">
+                <span id="runtime_span"></span>
+                <script>
+                    var countDownDate = new Date('2021-09-25T00:00:00').getTime();
+                    window.setInterval(function() {
+                        var distance = new Date().getTime() - countDownDate;
+                        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                        var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+                        document.getElementById("runtime_span").innerHTML = "本站已坚持运行 " + "<i class='far fa-clock'></i> " + days + ' 天 ' + hours + ' 时 ' + minutes + ' 分 ' + seconds + ' 秒';
+                    }, 1000);
+                </script>
+            </div>
+
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw"></i>
+            </a><a href="javascript:void(0)" id="back-to-top" class="fixed-button" title="回到顶部">
+                <div class="per"></div>
+                <i class="fas fa-arrow-up fa-fw"></i>
+            </a><a href="javascript:void(0)" id="back-to-bottom" class="fixed-button" title="回到底部">
+                <i class="fas fa-arrow-down fa-fw"></i>
+            </a>
+        </div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/css/lightgallery.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/smooth-scroll@16.1.3/dist/smooth-scroll.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.37.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.2.0/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.2.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery.js@1.2.0/dist/js/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-thumbnail.js@1.2.0/dist/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lg-zoom.js@1.2.0/dist/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.4.0/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightGallery":{"actualSize":false,"exThumbImage":"data-thumbnail","hideBarsDelay":2000,"selector":".lightgallery","speed":400,"thumbContHeight":80,"thumbWidth":80,"thumbnail":true},"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"GQDBYZDWLG","algoliaIndex":"index","algoliaSearchKey":"31f3b432d4c23d621a13f434db81e49c","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script src="/js/webfont.js"></script>
+<script> WebFont.load({
+  custom: {
+    families: ['LXGWFont'],
+  },
+  classes: false,
+  active() {
+    document.body.style.fontFamily = 'LXGWFont';
+  },
+}); </script><script type="text/javascript" src="//at.alicdn.com/t/font_2889553_v4cj3c0ahpc.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery-backstretch@2.1.18/jquery.backstretch.min.js"></script><script>
+	 
+	var $cdnPrefix = "https://cdn.chiga.ga";
+</script><script type="text/javascript" src="/js/custom.js"></script><script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script><script src="https://cdn.jsdelivr.net/npm/pace-js@latest/pace.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pace-js@latest/pace-theme-default.min.css"><script>
+            var _hmt = _hmt || [];
+            (function() {
+                var hm = document.createElement("script");
+                hm.src = "https://hm.baidu.com/hm.js?37eb9d4da1f3a0120c43a02428b8f5cf";
+                var s = document.getElementsByTagName("script")[0]; 
+                s.parentNode.insertBefore(hm, s);
+            })();
+        </script></body>
+</html>

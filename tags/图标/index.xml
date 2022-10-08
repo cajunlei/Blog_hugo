@@ -6,10 +6,10 @@
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
             <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 30 Oct 2021 11:25:46 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/%E5%9B%BE%E6%A0%87/" rel="self" type="application/rss+xml" /><item>
     <title>Win10 - 强制刷新图标缓存</title>
-    <link>https://ll.sc.cn/posts/windows-refresh-ico/</link>
+    <link>https://ll.sc.cn/posts/windows_refresh_ico/</link>
     <pubDate>Sat, 30 Oct 2021 11:25:46 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/windows-refresh-ico/</guid>
+    <guid>https://ll.sc.cn/posts/windows_refresh_ico/</guid>
     <description><![CDATA[<p>图标显示不正常？试试强制刷新 Windows 图标缓存……</p>]]></description>
 </item></channel>
 </rss>

@@ -6,12 +6,12 @@
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
             <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 29 Sep 2021 14:08:12 &#43;0000</lastBuildDate><atom:link href="https://ll.sc.cn/tags/%E6%B3%A8%E5%86%8C%E8%A1%A8/" rel="self" type="application/rss+xml" /><item>
     <title>Win10 - 用注册表修改键位映射</title>
-    <link>https://ll.sc.cn/posts/windows10-registry-key-mapping/</link>
+    <link>https://ll.sc.cn/posts/windows10_registry_key_mapping/</link>
     <pubDate>Wed, 29 Sep 2021 14:08:12 &#43;0000</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/windows10-registry-key-mapping/</guid>
+    <guid>https://ll.sc.cn/posts/windows10_registry_key_mapping/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Windows/01_keyboard/Cover.webp" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Windows/01_keyboard/Cover.webp" referrerpolicy="no-referrer">
             </div><p>因键盘布局不符合个人使用习惯，键盘某个按键失灵等等情况，我们可以通过修改键位映射来很好的解决这些问题。</p>]]></description>
 </item></channel>
 </rss>

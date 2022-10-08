@@ -4,14 +4,21 @@
         <link>https://ll.sc.cn/tags/vercel/</link>
         <description>Vercel - 标签 - 雷雷的个人博客</description>
         <generator>Hugo -- gohugo.io</generator><managingEditor>i@ll.sc.cn (守 正)</managingEditor>
-            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 23 Oct 2021 20:39:56 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/vercel/" rel="self" type="application/rss+xml" /><item>
-    <title>Vercel &amp; Github 搭建个人博客</title>
-    <link>https://ll.sc.cn/posts/vercel-github-building-blog/</link>
+            <webMaster>i@ll.sc.cn (守 正)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 04 Oct 2022 18:22:15 &#43;0800</lastBuildDate><atom:link href="https://ll.sc.cn/tags/vercel/" rel="self" type="application/rss+xml" /><item>
+    <title>GitHub &#43; Vercel 展示个人网页</title>
+    <link>https://ll.sc.cn/posts/hugo_github_vercel/</link>
+    <pubDate>Tue, 04 Oct 2022 18:22:15 &#43;0800</pubDate>
+    <author>作者</author>
+    <guid>https://ll.sc.cn/posts/hugo_github_vercel/</guid>
+    <description><![CDATA[<p>不管是搭建静态博客，还是展示个人网页，我们都可以这个方法达到网络访问的目的。</p>]]></description>
+</item><item>
+    <title>Vercel &#43; Github 搭建个人博客</title>
+    <link>https://ll.sc.cn/posts/vercel_github_building_blog/</link>
     <pubDate>Sat, 23 Oct 2021 20:39:56 &#43;0800</pubDate>
     <author>作者</author>
-    <guid>https://ll.sc.cn/posts/vercel-github-building-blog/</guid>
+    <guid>https://ll.sc.cn/posts/vercel_github_building_blog/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://f004.backblazeb2.com/file/ll-blog/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>解决 Github pages 访问速度慢的问题……</p>]]></description>
 </item></channel>
 </rss>
