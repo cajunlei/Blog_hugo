@@ -46,7 +46,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/vercel_github_building_blog/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/Posts/Z-Turn/00_02_vercel_github/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>解决 Github pages 访问速度慢的问题……</p>]]></description>
 </item><item>
     <title>v2rayN - 使用笔记</title>
@@ -55,7 +55,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/v2rayn_use_notes/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Z-Turn/02_v2rayN/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/Posts/Z-Turn/02_v2rayN/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>在使用 v2rayN 过程中学习的一些笔记分享……</p>]]></description>
 </item><item>
     <title>Git - 使用手册</title>
@@ -64,7 +64,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/git_manual/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Z-Turn/01_Git/Cover.jpg" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/Posts/Z-Turn/01_Git/Cover.jpg" referrerpolicy="no-referrer">
             </div><p>在使用 Git 过程中学习的一些笔记分享……</p>]]></description>
 </item><item>
     <title>Blog 搭建笔记</title>
@@ -80,7 +80,7 @@
     <author>作者</author>
     <guid>https://ll.sc.cn/posts/sublime_text_common_problem/</guid>
     <description><![CDATA[<div class="featured-image">
-                <img src="https://cdn.chiga.ga/file/ll-blog/Posts/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
+                <img src="https://cdn.chiga.ga/Posts/Z-Turn/Sublime_Text_02/2021-10-15_21-04-30.png" referrerpolicy="no-referrer">
             </div><p>关于在使用 <code>Sublime Text3</code> 所遇到的一系列报错等问题的解决办法。</p>]]></description>
 </item></channel>
 </rss>
